@@ -62,8 +62,6 @@ for nootropic in nootropics_list:
     # form.text_input(label="{} rating".format(nootropic))
     # form_dic[nootropic] = form
     # submit_button = st.form_submit_button(label='Submit')
-print(checkbox_dic)
-print(slider_dic)
 
 if st.button("I'm done rating and would like to see predictions"):
     new_result_df = predict(slider_dic)
