@@ -129,9 +129,6 @@ def evaluate(rating_dic):
         rating_dic_copy = deepcopy(rating_dic)
     item_baselines_df = get_item_baseline()
     item_baselines = item_baselines_df[item_baselines_df["nootropic"].isin(rating_dic.keys())]["item_baselines"].values
-    print(item_baselines)
-    print(len(item_baselines))
-    print(len(loo_ratings))
     return pd.DataFrame({"nootropic": rating_dic.keys(),
                          "Your rating": rating_dic.values(),
                          "Predicted rating": loo_ratings,
