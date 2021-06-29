@@ -65,10 +65,10 @@ for nootropic in nootropics_list:
 
 if st.button("I'm done rating and would like to see predictions"):
     new_result_df = predict(slider_dic)
-    st.write("Our model predicted this ratings for you:")
+    st.write("Our model predicted these ratings for you:")
     st.write(new_result_df)
 
-if st.button("How accurate is your model ?"):
+if st.button("How accurate is our model ?"):
     if len(slider_dic) < 2:
         st.error("Please rate at least two nootropics")
     else:
