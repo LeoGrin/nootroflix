@@ -13,8 +13,6 @@ GitPython==3.1.18
 idna==2.10
 jedi==0.17.0
 jupyter==1.0.0
-mkl-fft==1.3.0
-mkl-service==2.3.0
 olefile==0.46
 pandas==1.2.5
 protobuf==3.17.3
