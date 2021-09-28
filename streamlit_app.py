@@ -1,11 +1,6 @@
 #import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-import streamlit as st
 
-from surprise import KNNBaseline
-from surprise import Dataset
-from surprise import Reader
+import streamlit as st
 
 from train_model import predict, evaluate
 
