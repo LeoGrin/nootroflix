@@ -51,7 +51,7 @@ nootropics_list = rating_example.keys()
 
 
 def get_item_baseline():
-    df_clean = pd.read_csv("dataset_clean.csv")
+    df_clean = pd.read_csv("data/dataset_clean.csv")
     #######################
     # Fit surprise model
     #######################
@@ -78,7 +78,7 @@ def get_item_baseline():
 
 def predict(rating_dic):
 
-    df_clean = pd.read_csv("dataset_clean.csv")
+    df_clean = pd.read_csv("data/dataset_clean.csv")
     #######################
     # Fit surprise model
     #######################

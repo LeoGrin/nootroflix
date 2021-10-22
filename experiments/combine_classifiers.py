@@ -15,7 +15,7 @@ from surprise import Reader
 #from surprise.model_selection import cross_validate, RandomizedSearchCV
 
 
-df = pd.read_csv('dataset_clean_features.csv')
+df = pd.read_csv('experiments/dataset_clean_features.csv')
 
 def compute_metrics(classifier=GradientBoostingRegressor, stacking_classifier=RandomForestRegressor, prop_val = 0.3):
     res_dic = {}
@@ -25,10 +25,11 @@ def compute_metrics(classifier=GradientBoostingRegressor, stacking_classifier=Ra
     train_indices, val_indices, test_indices = indices[int(0.2 * len(indices)):],  indices[int(0.2 * len(indices)):int((0.2 + prop_val) * len(indices))], indices[:int(0.5 * len(indices))]
 
     ct = ColumnTransformer(
-        [("categorical", OneHotEncoder(sparse=False), ['CountryofResidence', 'Sex', 'MentalHealthDepression',
-           'MentalHealthAnxiety', 'MentalHealthADHD', 'itemID'])])
+        [("categorical", OneHotEncoder(sparse=False), ['itemID', 'MentalHealthAnxiety'])])
 
-    X = ct.fit_transform(df.drop("rating", axis=1))
+    X = ct.fit_transform(df.drop(["userID", "CountryofResidence", "rating", 'Sex', "Age", 'MentalHealthDepression',
+           'MentalHealthADHD', ], axis=1))
+
     y = df["rating"]
     X_train, X_test, X_val, y_train, y_test, y_val = X[train_indices], \
                                                      X[test_indices], \
@@ -50,6 +51,7 @@ def compute_metrics(classifier=GradientBoostingRegressor, stacking_classifier=Ra
     df_surprise_train = df[["userID", "itemID", "rating"]].iloc[train_indices]
     df_surprise_test = df[["userID", "itemID", "rating"]].iloc[test_indices]
     df_surprise_val = df[["userID", "itemID", "rating"]].iloc[val_indices]
+    df_surprise_train_val = df[["userID", "itemID", "rating"]].iloc[list(train_indices) + list(val_indices)]
 
 
     final_model = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
@@ -85,11 +87,40 @@ def compute_metrics(classifier=GradientBoostingRegressor, stacking_classifier=Ra
     res_dic["clf_trained_val_suprise_rmse"] = mean_squared_error(y_test, clf.predict(X_test), squared=False)
     res_dic["clf_trained_val_suprise_mae"] = mean_absolute_error(y_test, clf.predict(X_test))
 
+    X_val = val_predictions_surprise.values.reshape(-1, 1)
+    X_test = test_predictions_surprise.values.reshape(-1, 1)
+
+
+    clf.fit(X_val, y_val)
+    #print("clf error on test (trained on val with suprise predictions)")
+    #print(mean_squared_error(y_test, clf.predict(X_test), squared=False))
+    #print(mean_absolute_error(y_test, clf.predict(X_test)))
+    res_dic["clf_trained_val_only_surprise_rmse"] = mean_squared_error(y_test, clf.predict(X_test), squared=False)
+    res_dic["clf_trained_val_only_surprise_mae"] = mean_absolute_error(y_test, clf.predict(X_test))
+
     #print("surprise error on test")
     #print(mean_squared_error(y_test, test_predictions_surprise, squared=False))
     #print(mean_absolute_error(y_test, test_predictions_surprise))
     res_dic["surprise_test_rmse"] = mean_squared_error(y_test, test_predictions_surprise, squared=False)
     res_dic["surprise_test_mae"] = mean_absolute_error(y_test, test_predictions_surprise)
+
+    final_model_train_val = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
+
+    # A reader is still needed but only the rating_scale param is requiered.
+    reader = Reader(rating_scale=(0, 10))
+
+    # The columns must correspond to user id, item id and ratings (in that order).
+    new_trainset = Dataset.load_from_df(df_surprise_train_val, reader).build_full_trainset()
+
+    final_model_train_val.fit(new_trainset)
+
+    prediction_train_val = lambda row: final_model_train_val.predict(uid=row["userID"], iid=row["itemID"]).est
+    test_predictions_surprise_train_val = df_surprise_test.apply(prediction_train_val, axis=1)
+    res_dic["surprise_test_rmse_train_val"] = mean_squared_error(y_test, test_predictions_surprise_train_val, squared=False)
+    res_dic["surprise_test_mae_train_val"] = mean_absolute_error(y_test, test_predictions_surprise_train_val)
+
+
+
 
     #print("stacking predictions (using all features)")
     X_val = np.concatenate((X_val, val_predictions_clf.reshape(-1, 1)), axis=1)
@@ -121,7 +152,7 @@ if __name__ == "__main__":
     res_df = pd.DataFrame()
     classifier = RandomForestRegressor(**{'n_estimators': 100, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 100}) #best param #TODO automate
 
-    for _ in range(3):
+    for _ in range(4):
         res_dic = compute_metrics(classifier=classifier)
         res_df = res_df.append(res_dic, ignore_index=True)
     new_df = pd.DataFrame({"mean": res_df.mean(), "std":res_df.std()})

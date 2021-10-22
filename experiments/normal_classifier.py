@@ -9,21 +9,29 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 import matplotlib.pyplot as plt
 
 
-df = pd.read_csv('dataset_clean_features.csv').drop(['userID'], axis=1)
+df = pd.read_csv('experiments/dataset_clean_features.csv').drop(['userID', 'CountryofResidence'], axis=1)
+
 
 clf = RandomForestRegressor()
 #clf = GradientBoostingRegressor()
 
+numerical_columns = ["Age"]
+categorical_columns = ['Sex', 'MentalHealthDepression',
+       'MentalHealthAnxiety', 'MentalHealthADHD', 'itemID']
+
 ct = ColumnTransformer(
-    [("categorical", OneHotEncoder(sparse=False), ['CountryofResidence', 'Sex', 'MentalHealthDepression',
-       'MentalHealthAnxiety', 'MentalHealthADHD', 'itemID'])])
+    [("categorical", OneHotEncoder(sparse=False), categorical_columns)])
 
 #pipeline = Pipeline([("transfomer", ct), ("classifier", clf)])
 #careful data leakage if I scale
 
 X = ct.fit_transform(df.drop("rating", axis=1))
 y = df["rating"]
-#
+
+onehot_columns = ct.named_transformers_['categorical'].get_feature_names(input_features=categorical_columns)
+
+total_columns = numerical_columns + list(onehot_columns)
+interesting_features_names = [name for name in total_columns if "item" not in name]
 #
 # random_grid = {#'bootstrap': [True, False],
 #                'max_depth': [10, 50, 100, None],
@@ -77,12 +85,10 @@ elapsed_time = time.time() - start_time
 print(f"Elapsed time to compute the importances: "
       f"{elapsed_time:.3f} seconds")
 
-
-forest_importances = pd.Series(importances[:5], index = ['CountryofResidence', 'Sex', 'MentalHealthDepression',
-       'MentalHealthAnxiety', 'MentalHealthADHD'])
+forest_importances = pd.Series(importances[:len(interesting_features_names)], index = interesting_features_names)
 
 fig, ax = plt.subplots()
-forest_importances.plot.bar(yerr=std[:5], ax=ax)
+forest_importances.plot.bar(yerr=std[:len(interesting_features_names)], ax=ax)
 ax.set_title("Feature importances using MDI")
 ax.set_ylabel("Mean decrease in impurity")
 fig.tight_layout()
@@ -95,16 +101,15 @@ from sklearn.inspection import permutation_importance
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 start_time = time.time()
 result = permutation_importance(
-    best_clf, X_test, y_test, n_repeats=10, random_state=42, n_jobs=2)
+    best_clf, X_test, y_test, n_repeats=10, random_state=42, n_jobs=-1, scoring="neg_root_mean_squared_error")
 elapsed_time = time.time() - start_time
 print(f"Elapsed time to compute the importances: "
       f"{elapsed_time:.3f} seconds")
 
-forest_importances = pd.Series(result.importances_mean[:5], index=['CountryofResidence', 'Sex', 'MentalHealthDepression',
-       'MentalHealthAnxiety', 'MentalHealthADHD'])
+forest_importances = pd.Series(result.importances_mean[:len(interesting_features_names)], index=interesting_features_names)
 
 fig, ax = plt.subplots()
-forest_importances.plot.bar(yerr=result.importances_std[:5], ax=ax)
+forest_importances.plot.bar(yerr=result.importances_std[:len(interesting_features_names)], ax=ax)
 ax.set_title("Feature importances using permutation on full model")
 ax.set_ylabel("Mean accuracy decrease")
 fig.tight_layout()

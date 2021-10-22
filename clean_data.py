@@ -3,7 +3,7 @@ import pandas as pd
 #######################
 # Load and clean data
 #######################
-ssc_df = pd.read_csv("fixed.csv")
+ssc_df = pd.read_csv("data/fixed.csv")
 
 # select all columns which are not nootropics ratings
 person_features_columns = ssc_df.columns[0:6]
