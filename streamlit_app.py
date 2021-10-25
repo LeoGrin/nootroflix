@@ -66,12 +66,14 @@ else:
        print("cookie set")
 
 
-
-
-
-st.title('Nootropics recommandation system (MVP)')
-st.warning(
-    "Tell us which nootropics you have tried. For each substance, please rate your subjective experience on a scale of 0 to 10. 0 means a substance was totally useless, or had so many side effects you couldn't continue taking it. 1 - 4 means for subtle effects, maybe placebo but still useful. 5 - 9 means strong effects, definitely not placebo. 10 means life-changing.")
+st.title('Nootropics recommandation system')
+#st.info("")
+st.markdown(""" **Tell us which nootropics you have tried, and rate your subjective experience on a scale of 0 to 10.**
+- 0 means a substance was totally useless, or had so many side effects you couldn't continue taking it.
+- 1 - 4 means for subtle effects, maybe placebo but still useful.
+- 5 - 9 means strong effects, definitely not placebo.
+- 10 means life-changing.""")
+st.text("")
 col1, col2 = st.columns(2)
 col_list = [col1, col2]
 slider_dic = {}
