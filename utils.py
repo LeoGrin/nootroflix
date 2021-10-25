@@ -33,7 +33,7 @@ def save_new_ratings(rating_dic, is_true_ratings, accuracy_check, user_id, pseud
 
 
 
-@st.cache
+#@st.cache
 def generate_user_id(dataset_path):
     #generate a user_id
     user_id = np.random.randint(1000, 1e8)
