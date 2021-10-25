@@ -3,7 +3,8 @@ import extra_streamlit_components as stx
 import datetime
 import time
 from train_model import predict, evaluate
-from utils import save_new_ratings, generate_user_id
+from utils import save_new_ratings, generate_user_id, load_collection
+
 
 rating_example = {'Modafinil': 6,
 'Caffeine': 6,
@@ -43,11 +44,10 @@ rating_example = {'Modafinil': 6,
 "Nicotine": 7}
 
 
-
+collection = load_collection()
 
 nootropics_list = rating_example.keys()
 
-pseudo = st.text_input("Pseudo")
 
 
 cookie_manager = stx.CookieManager()
@@ -88,11 +88,14 @@ for i, nootropic in enumerate(nootropics_list):
     # submit_button = st.form_submit_button(label='Submit')
 st.text("")
 st.text("")
+pseudo = st.text_input("Pseudo")
+st.text("")
 not_true_ratings = st.checkbox("Check this box if you're not entering your true ratings (prevents our model from training on your data)")
 if st.button("I'm done rating and would like to see predictions"):
     new_result_df = predict(slider_dic)
     st.write("Our model predicted these ratings for you:")
     st.write(new_result_df)
+    #st.balloons()
     if not not_true_ratings:
         print("saving...")
         save_new_ratings(rating_dic=slider_dic,
@@ -100,7 +103,8 @@ if st.button("I'm done rating and would like to see predictions"):
                          accuracy_check=False,
                          user_id=user_id,
                          pseudo = pseudo,
-                         time = time.time())
+                         time = time.time(),
+                         collection=collection)
 
 if st.button("How accurate is our model ?"):
     if len(slider_dic) < 2:
@@ -109,11 +113,13 @@ if st.button("How accurate is our model ?"):
         accuracy_df = evaluate(slider_dic)
         st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
         st.write(accuracy_df)
+        #st.balloons()
         print("saving...")
         save_new_ratings(rating_dic=slider_dic,
                          is_true_ratings=not not_true_ratings,
                          accuracy_check=True,
                          user_id=user_id,
                          pseudo = pseudo,
-                         time=time.time())
+                         time=time.time(),
+                         collection=collection)
 
