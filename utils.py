@@ -2,7 +2,6 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 from google.cloud import firestore
-
 import json
 from google.cloud import firestore
 from google.oauth2 import service_account
@@ -33,8 +32,8 @@ def save_new_ratings(rating_dic, is_true_ratings, accuracy_check, user_id, pseud
 
 
 
-#@st.cache
-def generate_user_id(dataset_path):
+@st.cache
+def generate_user_id(dataset_path, session_id):
     #generate a user_id
     user_id = np.random.randint(1000, 1e8)
     df_clean = pd.read_csv(dataset_path)
@@ -43,7 +42,7 @@ def generate_user_id(dataset_path):
         user_id = np.random.randint(1000, 1e8)
     return user_id
 
-@st.cache(hash_funcs={"_thread.RLock": lambda _:None, "builtins.weakref":lambda _:None, "google.cloud.firestore_v1.client.Client": lambda _:None})
+@st.cache(ttl=600, hash_funcs={"_thread.RLock": lambda _:None, "builtins.weakref":lambda _:None, "google.cloud.firestore_v1.client.Client": lambda _:None})
 def load_collection():
     key_dict = json.loads(st.secrets["textkey"])
     creds = service_account.Credentials.from_service_account_info(key_dict)

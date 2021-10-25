@@ -4,6 +4,8 @@ import datetime
 import time
 from train_model import predict, evaluate
 from utils import save_new_ratings, generate_user_id, load_collection
+from streamlit.report_thread import get_report_ctx
+
 
 
 rating_example = {'Modafinil': 6,
@@ -48,8 +50,7 @@ collection = load_collection()
 
 nootropics_list = rating_example.keys()
 
-
-
+session_id = get_report_ctx().session_id
 cookie_manager = stx.CookieManager()
 
 if "already_run" not in st.session_state.keys():
@@ -60,7 +61,7 @@ else:
    print(user_id)
    if not user_id:
        print("No username found, generating one...")
-       user_id = generate_user_id("data/dataset_clean.csv")
+       user_id = generate_user_id("data/dataset_clean.csv", session_id)
        print("UserID: {}".format(user_id))
        cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
        print("cookie set")
@@ -79,15 +80,11 @@ col_list = [col1, col2]
 slider_dic = {}
 checkbox_dic = {}
 for i, nootropic in enumerate(nootropics_list):
-    with col_list[i%2]:
+    with col_list[i % 2]:
         checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
         if checkbox_dic[nootropic]:
             slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
 
-    # form = st.form(key=nootropic)
-    # form.text_input(label="{} rating".format(nootropic))
-    # form_dic[nootropic] = form
-    # submit_button = st.form_submit_button(label='Submit')
 st.text("")
 st.text("")
 pseudo = st.text_input("Pseudo")
