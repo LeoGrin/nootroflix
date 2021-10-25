@@ -1,11 +1,9 @@
-PyMySQL==1.0.2
-SQLAlchemy==1.4.26
-scikit_surprise==1.1.1
-numpy==1.20.2
-extra_streamlit_components==0.1.46
-matplotlib==3.3.4
 pandas==1.2.5
+scikit_surprise==1.1.1
+matplotlib==3.3.4
+extra_streamlit_components==0.1.46
 streamlit==1.1.0
-mysql_connector_repackaged==0.3.1
+numpy==1.20.2
+protobuf==3.19.0
 scikit_learn==1.0.1
 surprise==0.1
