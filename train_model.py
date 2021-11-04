@@ -109,11 +109,17 @@ def predict(rating_dic):
     for nootropic in nootropics_list:
         predicted_ratings.append(final_model.predict(new_user_id, nootropic).est)
 
-    item_baselines = final_model.default_prediction() + final_model.compute_baselines()[
-        1]  # mean rating + item baseline ?
+    item_baselines = final_model.default_prediction() + final_model.compute_baselines()[1]  # mean rating + item baseline ?
+
+    print(final_model.compute_baselines()[0][-1])
+    item_baselines_user = final_model.default_prediction() + final_model.compute_baselines()[1] +\
+                          final_model.compute_baselines()[0][-1] #not sure
 
     result_df = pd.DataFrame(
-        {"nootropic": nootropics_list, "predicted_rating": predicted_ratings, "baseline_rating": item_baselines})
+        {"nootropic": nootropics_list,
+         "predicted_rating": predicted_ratings,
+         "baseline_rating": item_baselines,
+         "baseline_rating_user": item_baselines_user})
 
     nootropics_without_ratings = [nootropic for nootropic in nootropics_list if (nootropic not in rating_dic.keys())]
     new_result_df = result_df[result_df["nootropic"].isin(nootropics_without_ratings)]
