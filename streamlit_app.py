@@ -87,7 +87,8 @@ for i, nootropic in enumerate(nootropics_list):
 
 st.text("")
 st.text("")
-pseudo = st.text_input("Pseudo")
+#pseudo = st.text_input("Pseudo")
+pseudo = "default"
 st.text("")
 not_true_ratings = st.checkbox("Check this box if you're not entering your true ratings (prevents our model from training on your data)")
 if st.button("I'm done rating and would like to see predictions"):
