@@ -1,0 +1,95 @@
+import pandas as pd
+import numpy as np
+
+# df_ssc = pd.read_csv("data/dataset_clean.csv")
+# df_reddit = pd.read_csv("data/nootropics_survey_reddit_converted.csv")
+# df_darkha = pd.read_csv("data/nootropics_survey_darkha_converted.csv")
+#
+# print(df_ssc.groupby("itemID").aggregate(lambda x:sum(~pd.isnull(x))).sort_values(by="rating"))
+# print("####")
+# print(pd.isnull(df_reddit).sum(axis=0))
+# print("######")
+# print(pd.isnull(df_darkha).sum(axis=0))
+#
+# columns = set(df_ssc["itemID"]).union(df_darkha.columns).union(df_reddit.columns)
+# print("columns")
+# print(np.sort(list(columns)))
+#
+# intersection_features = set(df_reddit.columns).intersection(set(df_darkha.columns))
+# print(intersection_features)
+# print(np.sort([col for col in df_reddit.columns if col not in intersection_features]))
+#
+# print(np.sort([col for col in df_darkha.columns if col not in intersection_features]))
+
+# df_reddit.columns = ['ALCAR', 'Cerebrolysin', 'Dextroamphetamine (Speed)', 'Dihexa', 'Etifoxine',
+#                      'Gingko, Biloba', 'IDRA-21', 'Inositol', 'Kratom', 'MAOI',
+#                      'N-acetyl Cysteine (NAC)', 'N-methyl-cyclazodone', 'P21', 'Palmitoylethano', 'Phosphatidyl Serine', 'Pregenolone', 'Psilocybin Microdose', 'Methylphenidate (Ritalin)',
+#                      'Tryptophan', 'Valerian Root', 'rgpu-95']
+#
+# df_darkha.columns = ['Adderall', 'Adrafinil', 'Agmatine', 'Aniracetam', 'Armodafinil', 'BPC-157',
+#                      'Boswellia', 'Carnitine, /, Acetyl-L-Carnitine', 'Choline', 'Creatine'
+# , 'Curcumin', 'DMHA', 'Doepezil', 'Fasoracetam', 'GABA', 'Ginkgo, Biloba'
+# , 'Guanfacine', 'Kava', 'L-Deprenyl', 'MethyleneBlue', 'Methylphenidate, (Ritalin)'
+# , 'N-Acetyl-L-Tyrosine', 'Nefiracetam', 'Pramiracetam', 'Sarcosine'
+# , 'SelankandNASelanketc', "St, John's, Wort", 'Sulbutiamine', 'Sunifiram'
+# , 'Tianeptine']
+
+
+old_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
+             "AlphaBrainproprietaryblend",
+             'Aniracetam', 'Armodafinil', 'Ashwagandha', 'BPC-157', 'Bacopa',
+             'Black Seed Oil', 'Boswellia', 'CBD', 'Caffeine',
+             'Carnitine / Acetyl-L-Carnitine', 'Cerebrolysin', 'Choline', 'Coluracetam',
+             'Creatine', 'Curcumin', "DMAE", 'DMHA', 'Dextroamphetamine, (Speed)', 'Dihexa',
+             'Doepezil', "Emoxypine", "Epicorasimmunebooster", 'Etifoxine', 'Fasoracetam', 'GABA', 'Gingko Biloba',
+             'Ginkgo biloba', 'Ginseng', 'Guanfacine', 'Huperzine A', 'IDRA-21', 'Inositol',
+             'Kava', 'Kratom', 'L-Deprenyl', 'LSD', "Lion's Mane", 'MAOI', 'Magnesium',
+             'Melatonin', 'MethyleneBlue', 'Methylphenidate', 'Modafinil',
+             'N-Acetyl-L-Tyrosine', 'N-acetyl Cysteine (NAC)', 'N-methyl-cyclazodone',
+             'NSI-189', 'Nefiracetam', 'Nicotine', 'Noopept', 'Omega-3 Supplements',
+             'Oxiracetam', 'P21', 'PRL853', 'Palmitoylethano', 'Phenibut',
+             'Phenylpiracetam', 'Phosphatidyl Serine', 'Piracetam', 'Pramiracetam',
+             'Pregenolone', 'Psilocybin Microdose', 'Rhodiola', 'Ritalin LA', 'Sarcosine',
+             'SelankandNASelanketc', 'Seligiline', 'SemaxandNASemaxetc', "St John's Wort",
+             'Sulbutiamine', 'Sunifiram', 'Theanine', 'Tianeptine', 'Tryptophan',
+             'Tyrosine', 'Uridine', 'Valerian Root', 'rgpu-95']
+
+new_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
+             'Aniracetam', 'Armodafinil', 'Ashwagandha', 'BPC-157', 'Bacopa',
+             'Black Seed Oil', 'Boswellia', 'CBD', 'Caffeine',
+             'Carnitine / Acetyl-L-Carnitine', 'Cerebrolysin', 'Choline', 'Coluracetam',
+             'Creatine', 'Curcumin', "DMAE", 'DMHA', 'Dextroamphetamine, (Speed)', 'Dihexa',
+             'Doepezil', "Emoxypine", "Epicorasimmunebooster", 'Etifoxine', 'Fasoracetam', 'GABA', 'Ginkgo Biloba',
+             'Ginkgo Biloba', 'Ginseng', 'Guanfacine', 'Huperzine-A', 'IDRA-21', 'Inositol',
+             'Kava', 'Kratom', 'L-Deprenyl', 'LSD (microdose)', "Lion's Mane", 'MAOI', 'Magnesium',
+             'Melatonin', 'Methylene blue', 'Methylphenidate (Ritalin)', 'Modafinil',
+             'N-Acetyl-L-Tyrosine', 'N-acetyl Cysteine (NAC)', 'N-methyl-cyclazodone',
+             'NSI-189', 'Nefiracetam', 'Nicotine', 'Noopept', 'Omega-3 Supplements',
+             'Oxiracetam', 'P21', 'PRL-8-53', 'PEA', 'Phenibut',
+             'Phenylpiracetam', 'Phosphatidylserine', 'Piracetam', 'Pramiracetam',
+             'Pregenolone', 'Psilocybin (microdose)', 'Rhodiola', 'Methylphenidate (Ritalin)', 'Sarcosine',
+             'Selank (or NA-Selank etc)', 'Selegiline', 'Semax (or NA-Semax etc)', "St John's Wort",
+             'Sulbutiamine', 'Sunifiram', 'Theanine', 'Tianeptine', 'Tryptophan',
+             'Tyrosine', 'Uridine', 'Valerian Root', 'RGPU-95 (Cebaracetam, p-Cl-phenylpiracetam)']
+
+
+other_nootropics = ["Kanna (except Zembrin)", "Zembrin", "Shilajit", "Cordyceps", "Lemon balm",
+                    "Nicotinamide riboside", "Nicotinamide mononucleotide", "Polygala tenuifolia",
+                    "Maca", "Bromantane", "Agmatine", "Niacin", "Saffron", "Glycine", "Berberine",
+                    "White jelly mushrooms", "Theacrine (aka Teacrine)", "Methylliberine (aka Dynamine)",
+                    "Red reishi mushrooms", "7,8-dihydroxyflavone", "9-MBC"]
+
+lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "No Fap (or otherwise avoiding masturbation)",
+                        "Bright lights in morning / Dawn simulator", "Trying to get more sleep",
+                        "Trying to get less sleep"]
+
+classic_nootropics = ["Rhodiola", "Aniracetam", "Phenibut", "Ashwagandha", "Bacopa", "Piracetam", "Choline",
+                      "Noopept", "Adderall", "Nicotine", "Creatine", "Theanine", "Modafinil", "Melatonin", "Caffeine",
+                      "Magnesium", "Ginseng", "CBD", "Omega-3 Supplements", "Noopept"]
+
+
+weird_nootropics = list(set(new_names).union(set(other_nootropics)).difference(classic_nootropics))
+print(weird_nootropics)
+
+classic_nootropics, lifestyle_nootropics, weird_nootropics = np.sort(list(set(classic_nootropics))), np.sort(list(set(lifestyle_nootropics))), np.sort(list(set(weird_nootropics)))
+

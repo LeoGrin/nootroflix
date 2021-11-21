@@ -79,17 +79,19 @@ def get_item_baseline():
 def predict(rating_dic):
 
     df_clean = pd.read_csv("data/dataset_clean.csv")
+    avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
     #######################
     # Fit surprise model
     #######################
 
     final_model = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
 
-    new_user_id = max(df_clean["userID"]) + 1
-    ratings = np.array(list(rating_dic.values()))
+    new_user_id = max(df_clean["userID"]) + 1 #TODO if merge
+    items = np.array([item for item in list(rating_dic.keys()) if item in avalaible_nootropics])
+    ratings = np.array([rating_dic[item] for item in items])
     rated_mask = ratings != None
     ratings = ratings[rated_mask]
-    items = np.array(list(rating_dic.keys()))[rated_mask]
+    items = items[rated_mask]
     user = np.ones(len(items), dtype="int") * new_user_id
     new_user_df = pd.DataFrame({"userID": user, "itemID": items, "rating": ratings})
 
@@ -107,7 +109,8 @@ def predict(rating_dic):
 
     predicted_ratings = []
     for nootropic in nootropics_list:
-        predicted_ratings.append(final_model.predict(new_user_id, nootropic).est)
+        if nootropic in avalaible_nootropics:
+            predicted_ratings.append(final_model.predict(new_user_id, nootropic).est)
 
     item_baselines = final_model.default_prediction() + final_model.compute_baselines()[1]  # mean rating + item baseline ?
 
@@ -116,27 +119,31 @@ def predict(rating_dic):
                           final_model.compute_baselines()[0][-1] #not sure
 
     result_df = pd.DataFrame(
-        {"nootropic": nootropics_list,
-         "predicted_rating": predicted_ratings,
-         "baseline_rating": item_baselines,
-         "baseline_rating_user": item_baselines_user})
+        {"nootropic": avalaible_nootropics,
+         "Your predicted rating": predicted_ratings,
+         "Mean rating of this nootropic": item_baselines})
+         #"baseline_rating_user": item_baselines_user}) #TODO ?
 
     nootropics_without_ratings = [nootropic for nootropic in nootropics_list if (nootropic not in rating_dic.keys())]
     new_result_df = result_df[result_df["nootropic"].isin(nootropics_without_ratings)]
-    return new_result_df.sort_values("predicted_rating", ascending=False, ignore_index=True)
+    return new_result_df.sort_values("Your predicted rating", ascending=False, ignore_index=True)
 
 def evaluate(rating_dic):
+    df_clean = pd.read_csv("data/dataset_clean.csv")
+    avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
     loo_ratings = []
     rating_dic_copy = deepcopy(rating_dic)
-    for nootropic in rating_dic.keys():
-        rating_dic_copy.pop(nootropic)
-        new_result_df = predict(rating_dic_copy)
-        loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["predicted_rating"].values[0])
-        rating_dic_copy = deepcopy(rating_dic)
+    rated_avalaible_nootropics = [nootropic for nootropic in rating_dic.keys() if nootropic in avalaible_nootropics]
+    for nootropic in rated_avalaible_nootropics:
+            rating_dic_copy.pop(nootropic)
+            new_result_df = predict(rating_dic_copy)
+            loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Your predicted rating"].values[0])
+            rating_dic_copy = deepcopy(rating_dic)
     item_baselines_df = get_item_baseline()
     item_baselines = item_baselines_df[item_baselines_df["nootropic"].isin(rating_dic.keys())]["item_baselines"].values
-    return pd.DataFrame({"nootropic": rating_dic.keys(),
-                         "Your rating": rating_dic.values(),
+
+    return pd.DataFrame({"nootropic": rated_avalaible_nootropics,
+                         "Your rating": [rating_dic[nootropic] for nootropic in rated_avalaible_nootropics],
                          "Predicted rating": loo_ratings,
                          "Baseline rating": item_baselines})
 

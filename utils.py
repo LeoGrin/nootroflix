@@ -5,6 +5,7 @@ from google.cloud import firestore
 import json
 from google.cloud import firestore
 from google.oauth2 import service_account
+import os
 
 
 # def save_new_ratings(rating_dic, is_true_ratings, accuracy_check, user_id, pseudo, time, database = "data/new_database.csv"):
@@ -19,13 +20,14 @@ from google.oauth2 import service_account
 #                          "time":time}, ignore_index=True)
 #     df.to_csv(database, index=False)
 
-def save_new_ratings(rating_dic, is_true_ratings, accuracy_check, user_id, pseudo, time, collection):
+def save_new_ratings(rating_dic, issues_dic, question_dic, is_true_ratings, accuracy_check, user_id, pseudo, time, collection):
     for item in rating_dic.keys():
         doc_ref = collection.document()
         doc_ref.set({"userID":user_id,
-        "pseudo": pseudo,
+            "pseudo": pseudo,
            "itemID":item,
            "rating":rating_dic[item],
+            "issue":issues_dic[item],
            "is_true_ratings":is_true_ratings,
            "accuracy_check": accuracy_check,
          "time":time})
@@ -44,10 +46,12 @@ def generate_user_id(dataset_path, session_id):
 
 @st.cache(ttl=600, hash_funcs={"_thread.RLock": lambda _:None, "builtins.weakref":lambda _:None, "google.cloud.firestore_v1.client.Client": lambda _:None})
 def load_collection():
-    key_dict = json.loads(st.secrets["textkey"])
+    key_dict = json.loads(os.environ.get("textkey"))
+    #key_dict = json.loads(st.secrets["textkey"])
     creds = service_account.Credentials.from_service_account_info(key_dict)
     db = firestore.Client(credentials=creds, project="nootropics-2a049")
 
     # Once the user has submitted, upload it to the database
-    collection = db.collection("ratings")
-    return collection
+    collection_ratings = db.collection("ratings")
+    collection_users = db.collection("users")
+    return collection_ratings, collection_users
