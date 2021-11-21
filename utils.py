@@ -44,7 +44,7 @@ def generate_user_id(dataset_path, session_id):
         user_id = np.random.randint(1000, 1e8)
     return user_id
 
-@st.cache(ttl=600, hash_funcs={"_thread.RLock": lambda _:None, "builtins.weakref":lambda _:None, "google.cloud.firestore_v1.client.Client": lambda _:None})
+#@st.cache(ttl=600, hash_funcs={"_thread.RLock": lambda _:None, "builtins.weakref":lambda _:None, "google.cloud.firestore_v1.client.Client": lambda _:None})
 def load_collection():
     key_dict = json.loads(os.environ.get("textkey"))
     #key_dict = json.loads(st.secrets["textkey"])
