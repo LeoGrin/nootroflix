@@ -48,7 +48,7 @@ rating_example = {'Modafinil': 6,
 
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-collection = load_collection()
+collection_ratings, collection_users = load_collection()
 
 nootropics_list = list(rating_example.keys())
 
@@ -101,12 +101,18 @@ slider_dic = {}
 radio_dic = {}
 checkbox_dic = {}
 st.header("🧠 Classic nootropics")
+possible_issues_list = ["None / Unsure",
+                        "I developed tolerance",
+                        "I developed addiction",
+                        "I had to stop taking it because of side effects",
+                        "I had to stop taking it because of side effects, and the side effects persisted for some time after cessation",
+                        "Other issues"]
 for i, nootropic in enumerate(classic_nootropics):
      #with col_list[i >= len(nootropics_list) / 2]:
     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
     if checkbox_dic[nootropic]:
         slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
-        radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), ["None / Unsure", "I developed tolerance", "I developed addiction", "I had to stop taking it because of side effects", "Other issues"])
+        radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
 st.write("")
 st.header("🧠 Other nootropics")
 for i, nootropic in enumerate(weird_nootropics):
@@ -114,7 +120,7 @@ for i, nootropic in enumerate(weird_nootropics):
     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
     if checkbox_dic[nootropic]:
         slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
-        radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), ["None / Unsure", "I developed tolerance", "I developed addiction",  "I had to stop taking it because of side effects", "Other issues"])
+        radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
 st.header("🧠 Lifestyle")
 st.caption("Please rate cognitive improvement only")
 for i, nootropic in enumerate(lifestyle_nootropics):
@@ -122,7 +128,7 @@ for i, nootropic in enumerate(lifestyle_nootropics):
     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
     if checkbox_dic[nootropic]:
         slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
-        radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), ["None / Unsure", "I developed tolerance", "I developed addiction",  "I had to stop taking it because of side effects",  "Other issues"])
+        radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
 st.header("🧠 A few questions")
 question_dic = {}
 question_dic["gender"] = st.selectbox("Gender", ["-", "Male", "Female", "Other"])
@@ -158,7 +164,8 @@ if st.button("I'm done rating and would like to see predictions"):
                          user_id=user_id,
                          pseudo = pseudo,
                          time = time.time(),
-                         collection=collection)
+                         collection_ratings=collection_ratings,
+                         collection_users=collection_users)
 
 if st.button("How accurate is our model ?"):
     if len(slider_dic) < 2:
@@ -177,7 +184,8 @@ if st.button("How accurate is our model ?"):
                          user_id=user_id,
                          pseudo = pseudo,
                          time=time.time(),
-                         collection=collection)
+                         collection_ratings=collection_ratings,
+                         collection_users=collection_users)
 
 if st.button("About"):
     st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
