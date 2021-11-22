@@ -9,7 +9,7 @@ from new_names import weird_nootropics, classic_nootropics, lifestyle_nootropics
 
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-#collection_ratings, collection_users = load_collection()
+collection_ratings, collection_users = load_collection()
 
 session_id = get_report_ctx().session_id
 cookie_manager = stx.CookieManager()
@@ -101,16 +101,16 @@ if st.button("I'm done rating and would like to see predictions"):
     st.write(new_result_df.set_index("nootropic").style.format("{:.2}"))
     if not not_true_ratings:
         print("saving...")
-        # save_new_ratings(rating_dic=slider_dic,
-        #                  issues_dic = radio_dic,
-        #                  question_dic = question_dic,
-        #                  is_true_ratings=not not_true_ratings,
-        #                  accuracy_check=False,
-        #                  user_id=user_id,
-        #                  pseudo = pseudo,
-        #                  time = time.time(),
-        #                  collection_ratings=collection_ratings,
-        #                  collection_users=collection_users)
+        save_new_ratings(rating_dic=slider_dic,
+                         issues_dic = radio_dic,
+                         question_dic = question_dic,
+                         is_true_ratings=not not_true_ratings,
+                         accuracy_check=False,
+                         user_id=user_id,
+                         pseudo = pseudo,
+                         time = time.time(),
+                         collection_ratings=collection_ratings,
+                         collection_users=collection_users)
 
 if st.button("How accurate is our model ?"):
     if len(slider_dic) < 2:
@@ -121,16 +121,16 @@ if st.button("How accurate is our model ?"):
         st.caption("Some nootropics don't have enough data right now to be included.")
         st.write(accuracy_df)
         print("saving...")
-        # save_new_ratings(rating_dic=slider_dic,
-        #                  issues_dic=radio_dic,
-        #                  question_dic=question_dic,
-        #                  is_true_ratings=not not_true_ratings,
-        #                  accuracy_check=True,
-        #                  user_id=user_id,
-        #                  pseudo = pseudo,
-        #                  time=time.time(),
-        #                  collection_ratings=collection_ratings,
-        #                  collection_users=collection_users)
+        save_new_ratings(rating_dic=slider_dic,
+                         issues_dic=radio_dic,
+                         question_dic=question_dic,
+                         is_true_ratings=not not_true_ratings,
+                         accuracy_check=True,
+                         user_id=user_id,
+                         pseudo = pseudo,
+                         time=time.time(),
+                         collection_ratings=collection_ratings,
+                         collection_users=collection_users)
 
 if st.button("About"):
     st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
