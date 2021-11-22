@@ -105,7 +105,7 @@ possible_issues_list = ["None / Unsure",
                         "I developed tolerance",
                         "I developed addiction",
                         "I had to stop taking it because of side effects",
-                        "I had to stop taking it because of side effects, and the side effects persisted for some time after cessation",
+                        "... and the side effects persisted for some time after cessation",
                         "Other issues"]
 for i, nootropic in enumerate(classic_nootropics):
      #with col_list[i >= len(nootropics_list) / 2]:
@@ -189,5 +189,5 @@ if st.button("How accurate is our model ?"):
 
 if st.button("About"):
     st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
-    st.write("The data comes from the 2016 SlateStarCodex Nootropics survey, [this Github](https://github.com/darktka/darktka.github.io), and data I got from redditor u/stupidlittlekids.")
-    st.write("Some of the question are taken from 2016 and 2020 SlateStarCodex nootropics surveys.")
+    st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
+    st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
