@@ -47,12 +47,17 @@ def generate_user_id(dataset_path, session_id):
 
 #@st.cache(ttl=600, hash_funcs={"_thread.RLock": lambda _:None, "builtins.weakref":lambda _:None, "google.cloud.firestore_v1.client.Client": lambda _:None})
 def load_collection():
-    key_dict = json.loads(os.environ.get("textkey"))
-    print(key_dict)
-    print(type(key_dict))
+    keys = ["project_id", "type", "private_key_id", "private_key",
+            "client_email", "client_id", "auth_uri", "token_uri",
+            "auth_provider_x509_cert_url", "client_x509_cert_url"]
+    cred_dic = {}
+    for key in keys:
+        cred_dic[key] = os.environ.get("key")
+    print(cred_dic)
+    print(type(cred_dic))
     sys.stdout.flush()
     #key_dict = json.loads(st.secrets["textkey"])
-    creds = service_account.Credentials.from_service_account_info(key_dict)
+    creds = service_account.Credentials.from_service_account_info(cred_dic)
     db = firestore.Client(credentials=creds, project="nootropics-2a049")
 
     # Once the user has submitted, upload it to the database
