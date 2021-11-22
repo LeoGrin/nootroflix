@@ -49,6 +49,7 @@ def generate_user_id(dataset_path, session_id):
 def load_collection():
     key_dict = json.loads(os.environ.get("textkey"))
     print(key_dict)
+    print(type(key_dict))
     sys.stdout.flush()
     #key_dict = json.loads(st.secrets["textkey"])
     creds = service_account.Credentials.from_service_account_info(key_dict)
