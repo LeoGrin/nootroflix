@@ -31,10 +31,10 @@ def save_new_ratings(rating_dic, issues_dic, question_dic, is_true_ratings, accu
            "is_true_ratings":is_true_ratings,
            "accuracy_check": accuracy_check,
          "time":time})
-        doc_ref_user = collection_users.document()
-        user_dic = {"userID":user_id, "time":time, "pseudo":pseudo}
-        user_dic.update(question_dic)
-        doc_ref_user.set(user_dic)
+    doc_ref_user = collection_users.document()
+    user_dic = {"userID":user_id, "time":time, "pseudo":pseudo}
+    user_dic.update(question_dic)
+    doc_ref_user.set(user_dic)
 
 
 
