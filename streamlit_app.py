@@ -73,10 +73,8 @@ else:
 
 
 st.title('Nootroflix')
-#st.info("")
 original_title = '<p style="color:Pink; font-size: 20px;">Rate the nootropics you\'ve tried, and we\'ll tell you which one should work for you!</p>'
 st.markdown(original_title, unsafe_allow_html=True)
-#st.error("****")
 st.header("🧠 How do I use it?")
 st.markdown(""" **Tell us which nootropics you have tried, and rate your subjective experience on a scale of 0 to 10.**
 \n 🧠 0 means a substance was totally useless, or had so many side effects you couldn't continue taking it.
@@ -84,19 +82,13 @@ st.markdown(""" **Tell us which nootropics you have tried, and rate your subject
 \n 🧠 5 - 9 means strong effects, definitely not placebo.
 \n 🧠 10 means life-changing.""")
 
-# st.markdown(""" **Tell us which nootropics you have tried, and rate your subjective experience on a scale of 0 to 10.**
-# \n 🧠 0 - 4 means the nootropic effect was negative.
-# \n 🧠 5 - 7 means slight positive reaction, maybe placebo but still useful
-# \n 🧠 8 - 9 means strong effects, definitely not placebo.
-# \n 🧠 10 means life-changing.""")
 col1, col2 = st.columns([1, 1.25])
 with col1:
     st.markdown("**Your results await at the bottom of the page **")
 with col2:
     st.image("images/arrow.png", width=25)
 st.text("")
-#col1, col2 = st.columns(2)
-#col_list = [col1, col2]
+
 slider_dic = {}
 radio_dic = {}
 checkbox_dic = {}
@@ -108,7 +100,6 @@ possible_issues_list = ["None / Unsure",
                         "... and the side effects persisted for some time after cessation",
                         "Other issues"]
 for i, nootropic in enumerate(classic_nootropics):
-     #with col_list[i >= len(nootropics_list) / 2]:
     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
     if checkbox_dic[nootropic]:
         slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
@@ -116,7 +107,6 @@ for i, nootropic in enumerate(classic_nootropics):
 st.write("")
 st.header("🧠 Other nootropics")
 for i, nootropic in enumerate(weird_nootropics):
-     #with col_list[i >= len(nootropics_list) / 2]:
     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
     if checkbox_dic[nootropic]:
         slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
@@ -124,7 +114,6 @@ for i, nootropic in enumerate(weird_nootropics):
 st.header("🧠 Lifestyle")
 st.caption("Please rate cognitive improvement only")
 for i, nootropic in enumerate(lifestyle_nootropics):
-     #with col_list[i >= len(nootropics_list) / 2]:
     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
     if checkbox_dic[nootropic]:
         slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
@@ -153,7 +142,6 @@ if st.button("I'm done rating and would like to see predictions"):
     new_result_df = predict(slider_dic)
     st.write("Our model predicted these ratings for you:")
     st.write(new_result_df.set_index("nootropic").style.format("{:.2}"))
-    #st.balloons()
     if not not_true_ratings:
         print("saving...")
         save_new_ratings(rating_dic=slider_dic,
@@ -174,7 +162,6 @@ if st.button("How accurate is our model ?"):
         accuracy_df = evaluate(slider_dic)
         st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
         st.write(accuracy_df)
-        #st.balloons()
         print("saving...")
         save_new_ratings(rating_dic=slider_dic,
                          issues_dic=radio_dic,

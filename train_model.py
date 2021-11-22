@@ -52,9 +52,6 @@ nootropics_list = rating_example.keys()
 
 def get_item_baseline():
     df_clean = pd.read_csv("data/dataset_clean.csv")
-    #######################
-    # Fit surprise model
-    #######################
 
     final_model = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
 
@@ -114,9 +111,9 @@ def predict(rating_dic):
 
     item_baselines = final_model.default_prediction() + final_model.compute_baselines()[1]  # mean rating + item baseline ?
 
-    print(final_model.compute_baselines()[0][-1])
-    item_baselines_user = final_model.default_prediction() + final_model.compute_baselines()[1] +\
-                          final_model.compute_baselines()[0][-1] #not sure
+    #print(final_model.compute_baselines()[0][-1])
+    #item_baselines_user = final_model.default_prediction() + final_model.compute_baselines()[1] +\
+    #                      final_model.compute_baselines()[0][-1] #not sure
 
     result_df = pd.DataFrame(
         {"nootropic": avalaible_nootropics,
