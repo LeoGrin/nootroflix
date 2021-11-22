@@ -52,7 +52,7 @@ def load_collection():
             "auth_provider_x509_cert_url", "client_x509_cert_url"]
     cred_dic = {}
     for key in keys:
-        cred_dic[key] = os.environ.get("key")
+        cred_dic[key] = os.environ.get(key)
     print(cred_dic)
     print(type(cred_dic))
     sys.stdout.flush()
