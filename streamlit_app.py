@@ -93,7 +93,7 @@ col1, col2 = st.columns([1, 1.25])
 with col1:
     st.markdown("**Your results await at the bottom of the page **")
 with col2:
-    st.image("arrow.png", width=25)
+    st.image("images/arrow.png", width=25)
 st.text("")
 #col1, col2 = st.columns(2)
 #col_list = [col1, col2]

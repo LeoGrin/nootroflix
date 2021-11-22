@@ -6,7 +6,6 @@ import json
 from google.cloud import firestore
 from google.oauth2 import service_account
 import os
-import sys
 
 
 # def save_new_ratings(rating_dic, is_true_ratings, accuracy_check, user_id, pseudo, time, database = "data/new_database.csv"):
@@ -59,7 +58,6 @@ def load_collection():
     cred_dic = {}
     for key in keys:
         cred_dic[key] = os.environ.get(key).replace("\\n", "\n")
-    sys.stdout.flush()
     #key_dict = json.loads(st.secrets["textkey"])
     creds = service_account.Credentials.from_service_account_info(cred_dic)
     db = firestore.Client(credentials=creds, project="nootropics-2a049")
