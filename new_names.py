@@ -116,4 +116,4 @@ classic_nootropics, lifestyle_nootropics, weird_nootropics = np.sort(list(set(cl
 #
 # df_ssc["itemID"] = list(map(lambda x:rosetta_dic[x], df_ssc["itemID"]))
 #
-# df_ssc.to_csv("../data/dataset_clean_right_names.csv")
+# df_ssc.to_csv("../data/dataset_clean_right_names.csv", index=False)

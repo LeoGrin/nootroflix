@@ -105,8 +105,7 @@ def predict(rating_dic):
     final_model.fit(new_trainset)
 
     predicted_ratings = []
-    for nootropic in nootropics_list:
-        if nootropic in avalaible_nootropics:
+    for nootropic in avalaible_nootropics:
             predicted_ratings.append(final_model.predict(new_user_id, nootropic).est)
 
     item_baselines = final_model.default_prediction() + final_model.compute_baselines()[1]  # mean rating + item baseline ?
@@ -114,16 +113,14 @@ def predict(rating_dic):
     #print(final_model.compute_baselines()[0][-1])
     #item_baselines_user = final_model.default_prediction() + final_model.compute_baselines()[1] +\
     #                      final_model.compute_baselines()[0][-1] #not sure
-
     result_df = pd.DataFrame(
         {"nootropic": avalaible_nootropics,
          "Your predicted rating": predicted_ratings,
          "Mean rating of this nootropic": item_baselines})
          #"baseline_rating_user": item_baselines_user}) #TODO ?
 
-    nootropics_without_ratings = [nootropic for nootropic in nootropics_list if (nootropic not in rating_dic.keys())]
-    new_result_df = result_df[result_df["nootropic"].isin(nootropics_without_ratings)]
-    return new_result_df.sort_values("Your predicted rating", ascending=False, ignore_index=True)
+
+    return result_df.sort_values("Your predicted rating", ascending=False, ignore_index=True)
 
 def evaluate(rating_dic):
     df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
