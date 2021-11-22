@@ -1,19 +1,19 @@
 import pandas as pd
 import numpy as np
 
-# df_ssc = pd.read_csv("data/dataset_clean.csv")
-# df_reddit = pd.read_csv("data/nootropics_survey_reddit_converted.csv")
-# df_darkha = pd.read_csv("data/nootropics_survey_darkha_converted.csv")
-#
+# df_ssc = pd.read_csv("../data/dataset_clean.csv")
+# df_reddit = pd.read_csv("../data/nootropics_survey_reddit_converted.csv")
+# df_darkha = pd.read_csv("../data/nootropics_survey_darkha_converted.csv")
+# #
 # print(df_ssc.groupby("itemID").aggregate(lambda x:sum(~pd.isnull(x))).sort_values(by="rating"))
 # print("####")
 # print(pd.isnull(df_reddit).sum(axis=0))
 # print("######")
 # print(pd.isnull(df_darkha).sum(axis=0))
 #
-# columns = set(df_ssc["itemID"]).union(df_darkha.columns).union(df_reddit.columns)
+#columns = set(df_ssc["itemID"]).union(set(df_darkha.columns)).union(set(df_reddit.columns))
 # print("columns")
-# print(np.sort(list(columns)))
+#print(np.sort(list(columns)))
 #
 # intersection_features = set(df_reddit.columns).intersection(set(df_darkha.columns))
 # print(intersection_features)
@@ -40,7 +40,7 @@ old_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
              'Aniracetam', 'Armodafinil', 'Ashwagandha', 'BPC-157', 'Bacopa',
              'Black Seed Oil', 'Boswellia', 'CBD', 'Caffeine',
              'Carnitine / Acetyl-L-Carnitine', 'Cerebrolysin', 'Choline', 'Coluracetam',
-             'Creatine', 'Curcumin', "DMAE", 'DMHA', 'Dextroamphetamine, (Speed)', 'Dihexa',
+             'Creatine', 'Curcumin', "DMAE", 'DMHA', 'Dextroamphetamine (Speed)', 'Dihexa',
              'Doepezil', "Emoxypine", "Epicorasimmunebooster", 'Etifoxine', 'Fasoracetam', 'GABA', 'Gingko Biloba',
              'Ginkgo biloba', 'Ginseng', 'Guanfacine', 'Huperzine A', 'IDRA-21', 'Inositol',
              'Kava', 'Kratom', 'L-Deprenyl', 'LSD', "Lion's Mane", 'MAOI', 'Magnesium',
@@ -48,13 +48,13 @@ old_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
              'N-Acetyl-L-Tyrosine', 'N-acetyl Cysteine (NAC)', 'N-methyl-cyclazodone',
              'NSI-189', 'Nefiracetam', 'Nicotine', 'Noopept', 'Omega-3 Supplements',
              'Oxiracetam', 'P21', 'PRL853', 'Palmitoylethano', 'Phenibut',
-             'Phenylpiracetam', 'Phosphatidyl Serine', 'Piracetam', 'Pramiracetam',
+             'Phenylpiracetam', 'Phosphatidyl Serine', "Picamilon", 'Piracetam', 'Pramiracetam',
              'Pregenolone', 'Psilocybin Microdose', 'Rhodiola', 'Ritalin LA', 'Sarcosine',
              'SelankandNASelanketc', 'Seligiline', 'SemaxandNASemaxetc', "St John's Wort",
              'Sulbutiamine', 'Sunifiram', 'Theanine', 'Tianeptine', 'Tryptophan',
-             'Tyrosine', 'Uridine', 'Valerian Root', 'rgpu-95']
+             'Tyrosine', "Unifiram", 'Uridine', 'Valerian Root', 'rgpu-95']
 
-new_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
+new_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC', "AlphaBrainproprietaryblend",
              'Aniracetam', 'Armodafinil', 'Ashwagandha', 'BPC-157', 'Bacopa',
              'Black Seed Oil', 'Boswellia', 'CBD', 'Caffeine',
              'Carnitine / Acetyl-L-Carnitine', 'Cerebrolysin', 'Choline', 'Coluracetam',
@@ -66,16 +66,16 @@ new_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
              'N-Acetyl-L-Tyrosine', 'N-acetyl Cysteine (NAC)', 'N-methyl-cyclazodone',
              'NSI-189', 'Nefiracetam', 'Nicotine', 'Noopept', 'Omega-3 Supplements',
              'Oxiracetam', 'P21', 'PRL-8-53', 'PEA', 'Phenibut',
-             'Phenylpiracetam', 'Phosphatidylserine', 'Piracetam', 'Pramiracetam',
+             'Phenylpiracetam', 'Phosphatidylserine', "Picamilon", 'Piracetam', 'Pramiracetam',
              'Pregenolone', 'Psilocybin (microdose)', 'Rhodiola', 'Methylphenidate (Ritalin)', 'Sarcosine',
              'Selank (or NA-Selank etc)', 'Selegiline', 'Semax (or NA-Semax etc)', "St John's Wort",
              'Sulbutiamine', 'Sunifiram', 'Theanine', 'Tianeptine', 'Tryptophan',
-             'Tyrosine', 'Uridine', 'Valerian Root', 'RGPU-95 (Cebaracetam, p-Cl-phenylpiracetam)']
+             'Tyrosine', "Unifiram", 'Uridine', 'Valerian Root', 'RGPU-95 (Cebaracetam, p-Cl-phenylpiracetam)']
 
 
 other_nootropics = ["Kanna (except Zembrin)", "Zembrin", "Shilajit", "Cordyceps", "Lemon balm",
                     "Nicotinamide riboside", "Nicotinamide mononucleotide", "Polygala tenuifolia",
-                    "Maca", "Bromantane", "Agmatine", "Niacin", "Saffron", "Glycine", "Berberine",
+                    "Maca", "Bromantane", "Niacin", "Saffron", "Glycine", "Berberine",
                     "White jelly mushrooms", "Theacrine (aka Teacrine)", "Methylliberine (aka Dynamine)",
                     "Red reishi mushrooms", "7,8-dihydroxyflavone", "9-MBC"]
 
@@ -89,7 +89,31 @@ classic_nootropics = ["Rhodiola", "Aniracetam", "Phenibut", "Ashwagandha", "Baco
 
 
 weird_nootropics = list(set(new_names).union(set(other_nootropics)).difference(classic_nootropics))
-print(weird_nootropics)
 
 classic_nootropics, lifestyle_nootropics, weird_nootropics = np.sort(list(set(classic_nootropics))), np.sort(list(set(lifestyle_nootropics))), np.sort(list(set(weird_nootropics)))
 
+# print(len(classic_nootropics))
+# print(len(list(set(classic_nootropics).intersection(set(new_names)))))
+# print(set(other_nootropics).intersection(set(new_names)))
+# print(set(lifestyle_nootropics).intersection(set(new_names)))
+# to_drop = ["AlphaBrainproprietaryblend", "Epicorasimmunebooster"]
+# rosetta_dic = {}
+# print(len(old_names))
+# print(len(new_names))
+# for i, nootropic in enumerate(old_names):
+#     if nootropic not in to_drop:
+#         print(i)
+#         print(nootropic)
+#         print(new_names[i])
+#         print("######")
+#     rosetta_dic[nootropic] = new_names[i]
+#
+# print(rosetta_dic)
+#
+# df_ssc = pd.read_csv("../data/dataset_clean.csv")
+#
+# print(np.sort(np.unique(df_ssc["itemID"])))
+#
+# df_ssc["itemID"] = list(map(lambda x:rosetta_dic[x], df_ssc["itemID"]))
+#
+# df_ssc.to_csv("../data/dataset_clean_right_names.csv")

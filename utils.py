@@ -66,3 +66,7 @@ def load_collection():
     collection_ratings = db.collection("ratings")
     collection_users = db.collection("users")
     return collection_ratings, collection_users
+
+
+if __name__ == "__main__":
+    load_collection()

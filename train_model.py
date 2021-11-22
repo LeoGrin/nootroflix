@@ -51,7 +51,7 @@ nootropics_list = rating_example.keys()
 
 
 def get_item_baseline():
-    df_clean = pd.read_csv("data/dataset_clean.csv")
+    df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
 
     final_model = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
 
@@ -75,7 +75,7 @@ def get_item_baseline():
 
 def predict(rating_dic):
 
-    df_clean = pd.read_csv("data/dataset_clean.csv")
+    df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
     #######################
     # Fit surprise model
@@ -126,7 +126,7 @@ def predict(rating_dic):
     return new_result_df.sort_values("Your predicted rating", ascending=False, ignore_index=True)
 
 def evaluate(rating_dic):
-    df_clean = pd.read_csv("data/dataset_clean.csv")
+    df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
     loo_ratings = []
     rating_dic_copy = deepcopy(rating_dic)

@@ -7,53 +7,9 @@ from utils import save_new_ratings, generate_user_id, load_collection
 from streamlit.report_thread import get_report_ctx
 from new_names import weird_nootropics, classic_nootropics, lifestyle_nootropics
 
-
-
-rating_example = {'Modafinil': 6,
-'Caffeine': 6,
-'Coluracetam': None,
-'Phenylpiracetam': None,
-'Theanine': 7,
-'Noopept': None,
-'Oxiracetam': None,
-'Aniracetam': None,
-'Rhodiola': None,
-'Creatine': 4,
-'Piracetam': None,
-'Ashwagandha': None,
-'Bacopa': None,
-'Choline': None,
-'DMAE': None,
-'Fasoracetam': None,
-'SemaxandNASemaxetc': None,
-'SelankandNASelanketc': None,
-'Inositol': None,
-'Seligiline': None,
-'AlphaBrainproprietaryblend': None,
-'Cerebrolysin': None,
-'Melatonin': 8,
-'Uridine': None,
-'Tianeptine': None,
-'MethyleneBlue': None,
-'Unifiram': None,
-'PRL853': None,
-'Emoxypine': None,
-'Picamilon': None,
-'Dihexa': None,
-'Epicorasimmunebooster': None,
-'LSD': 7,
-'Adderall': 8,
-"Phenibut": 6,
-"Nicotine": 7}
-
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 collection_ratings, collection_users = load_collection()
-
-nootropics_list = list(rating_example.keys())
-
-nootropics_list.sort()
-
 
 session_id = get_report_ctx().session_id
 cookie_manager = stx.CookieManager()
@@ -66,7 +22,7 @@ else:
    print(user_id)
    if not user_id:
        print("No username found, generating one...")
-       user_id = generate_user_id("data/dataset_clean.csv", session_id)
+       user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id)
        print("UserID: {}".format(user_id))
        cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
        print("cookie set")
@@ -96,7 +52,7 @@ st.header("🧠 Classic nootropics")
 possible_issues_list = ["None / Unsure",
                         "I developed tolerance",
                         "I developed addiction",
-                        "I had to stop taking it because of side effects",
+                        "I had to stop because of side effects",
                         "... and the side effects persisted for some time after cessation",
                         "Other issues"]
 for i, nootropic in enumerate(classic_nootropics):
@@ -132,6 +88,7 @@ question_dic["for_motivation"] = st.radio("Do you take nootropics to help with m
 favorite_noot = st.text_input("What is your favorite nootropics not mentioned here?")
 if favorite_noot:
     slider_dic[favorite_noot] = st.slider("{} rating".format(favorite_noot), min_value=0, max_value=10)
+    radio_dic[favorite_noot] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
 st.text("")
 st.text("")
 st.header("🧠 Your results")
@@ -161,6 +118,7 @@ if st.button("How accurate is our model ?"):
     else:
         accuracy_df = evaluate(slider_dic)
         st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
+        st.caption("Some nootropics don't have enough data right now to be included.")
         st.write(accuracy_df)
         print("saving...")
         save_new_ratings(rating_dic=slider_dic,
