@@ -118,7 +118,7 @@ to_drop = ["AlphaBrainproprietaryblend", "Epicorasimmunebooster"]
 weird_nootropics = [noot for noot in weird_nootropics if noot not in to_drop]
 
 short_dic = {}
-for i, nootropic in enumerate(old_names):
+for i, nootropic in enumerate(new_names):
         short_dic[nootropic] = short_names[i]
 
 # print(len(classic_nootropics))
