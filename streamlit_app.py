@@ -7,25 +7,31 @@ from utils import save_new_ratings, generate_user_id, load_collection
 from streamlit.report_thread import get_report_ctx
 from new_names import weird_nootropics, classic_nootropics, lifestyle_nootropics
 
+t = time.time()
+
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-collection_ratings, collection_users = load_collection()
+deployed = False
+
+if deployed:
+    collection_ratings, collection_users = load_collection()
 
 session_id = get_report_ctx().session_id
 cookie_manager = stx.CookieManager()
 
+
 if "already_run" not in st.session_state.keys():
-   st.session_state.already_run = True
-   cookie_manager.get("userID")
+    st.session_state.already_run = True
+    cookie_manager.get("userID")
 else:
-   user_id = cookie_manager.get("userID")
-   #print(user_id)
-   if not user_id:
-       #print("No username found, generating one...")
-       user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id)
-       #print("UserID: {}".format(user_id))
-       cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
-       #print("cookie set")
+    user_id = cookie_manager.get("userID")
+    #print(user_id)
+    if not user_id:
+        #print("No username found, generating one...")
+        user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id)
+        #print("UserID: {}".format(user_id))
+        cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
+        #print("cookie set")
 
 
 st.title('Nootroflix')
@@ -103,7 +109,8 @@ if st.button("I'm done rating and would like to see predictions"):
     st.write(new_result_df.set_index("nootropic").style.format("{:.2}"))
     if not not_true_ratings:
         #print("saving...")
-        save_new_ratings(rating_dic=slider_dic,
+        if deployed:
+            save_new_ratings(rating_dic=slider_dic,
                          issues_dic = radio_dic,
                          question_dic = question_dic,
                          is_true_ratings=not not_true_ratings,
@@ -123,7 +130,8 @@ if st.button("How accurate is our model ?"):
         st.caption("Some nootropics don't have enough data right now to be included.")
         st.write(accuracy_df)
         #print("saving...")
-        save_new_ratings(rating_dic=slider_dic,
+        if deployed:
+            save_new_ratings(rating_dic=slider_dic,
                          issues_dic=radio_dic,
                          question_dic=question_dic,
                          is_true_ratings=not not_true_ratings,
@@ -138,3 +146,5 @@ if st.button("About"):
     st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
     st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
     st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
+
+print(time.time() - t)
