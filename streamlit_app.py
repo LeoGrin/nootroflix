@@ -7,11 +7,9 @@ from utils import save_new_ratings, generate_user_id, load_collection
 from streamlit.report_thread import get_report_ctx
 from new_names import weird_nootropics, classic_nootropics, lifestyle_nootropics
 
-t = time.time()
-
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-deployed = False
+deployed = True
 
 if deployed:
     collection_ratings, collection_users = load_collection()
@@ -32,9 +30,6 @@ else:
         #print("UserID: {}".format(user_id))
         cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
         #print("cookie set")
-
-print("user")
-print(time.time() - t)
 
 
 
@@ -150,5 +145,3 @@ if st.button("About"):
     st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
     st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
     st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
-
-print(time.time() - t)
