@@ -97,7 +97,7 @@ st.header("🧠 Your results")
 #pseudo = st.text_input("Pseudo")
 pseudo = "default"
 not_true_ratings = st.checkbox("Check this box if you're not entering your true ratings (prevents training on your data)")
-if st.form_submit_button("I'm done rating and would like to see predictions"):
+if st.button("I'm done rating and would like to see predictions"):
     new_result_df = predict(slider_dic)
     st.write("Our model predicted these ratings for you:")
     st.write(new_result_df.set_index("nootropic").style.format("{:.2}"))
@@ -114,7 +114,7 @@ if st.form_submit_button("I'm done rating and would like to see predictions"):
                          collection_ratings=collection_ratings,
                          collection_users=collection_users)
 
-if st.form_submit_button("How accurate is our model ?"):
+if st.button("How accurate is our model ?"):
     if len(slider_dic) < 2:
         st.error("Please rate at least two nootropics")
     else:
