@@ -114,16 +114,17 @@ classic_nootropics = ["Rhodiola", "Aniracetam", "Phenibut", "Ashwagandha", "Baco
 weird_nootropics = list(set(new_names).union(set(other_nootropics)).difference(classic_nootropics))
 
 classic_nootropics, lifestyle_nootropics, weird_nootropics = np.sort(list(set(classic_nootropics))), np.sort(list(set(lifestyle_nootropics))), np.sort(list(set(weird_nootropics)))
+to_drop = ["AlphaBrainproprietaryblend", "Epicorasimmunebooster"]
+weird_nootropics = [noot for noot in weird_nootropics if noot not in to_drop]
+
 short_dic = {}
 for i, nootropic in enumerate(old_names):
         short_dic[nootropic] = short_names[i]
-
 
 # print(len(classic_nootropics))
 # print(len(list(set(classic_nootropics).intersection(set(new_names)))))
 # print(set(other_nootropics).intersection(set(new_names)))
 # print(set(lifestyle_nootropics).intersection(set(new_names)))
-# to_drop = ["AlphaBrainproprietaryblend", "Epicorasimmunebooster"]
 # rosetta_dic = {}
 # short_dic = {}
 # print(len(old_names))
@@ -154,5 +155,7 @@ for i, nootropic in enumerate(old_names):
 #
 # df_ssc.to_csv("../data/dataset_clean_right_names.csv", index=False)
 #
-# #TODO remove alphabrain...
-# #TODO make shorter names
+# avalaible_nootropics = np.unique(df_ssc["itemID"])
+#
+# print(avalaible_nootropics)
+#

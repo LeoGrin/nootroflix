@@ -55,47 +55,50 @@ possible_issues_list = ["None / Unsure",
                         "I had to stop because of side effects",
                         "... and the side effects persisted for some time after cessation",
                         "Other issues"]
+
+form = st.form(key='my-form')
+
 for i, nootropic in enumerate(classic_nootropics):
     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
     if checkbox_dic[nootropic]:
-        slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
-        radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
+        slider_dic[nootropic] = form.slider("{} rating".format(nootropic), min_value=0, max_value=10)
+        radio_dic[nootropic] = form.selectbox("Issues with {}".format(nootropic), possible_issues_list)
 st.write("")
 st.header("🧠 Other nootropics")
 for i, nootropic in enumerate(weird_nootropics):
     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
     if checkbox_dic[nootropic]:
-        slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
-        radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
+        slider_dic[nootropic] = form.slider("{} rating".format(nootropic), min_value=0, max_value=10)
+        radio_dic[nootropic] = form.selectbox("Issues with {}".format(nootropic), possible_issues_list)
 st.header("🧠 Lifestyle")
 st.caption("Please rate cognitive improvement only")
 for i, nootropic in enumerate(lifestyle_nootropics):
     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
     if checkbox_dic[nootropic]:
-        slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
-        radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
+        slider_dic[nootropic] = form.slider("{} rating".format(nootropic), min_value=0, max_value=10)
+        radio_dic[nootropic] = form.selectbox("Issues with {}".format(nootropic), possible_issues_list)
 st.header("🧠 A few questions")
 question_dic = {}
-question_dic["gender"] = st.selectbox("Gender", ["-", "Male", "Female", "Other"])
-question_dic["age"] = st.number_input("Age", min_value=0, max_value=100, value=0)
-question_dic["for_anxiety"] = st.radio("Do you take nootropics to help with anxiety?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
-question_dic["for_focus"] = st.radio("Do you take nootropics to help with focus?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
-question_dic["for_mood"] = st.radio("Do you take nootropics to help with mood?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
-question_dic["for_cognition"] = st.radio("Do you take nootropics to help with cognition / memory?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
-question_dic["for_motivation"] = st.radio("Do you take nootropics to help with motivation?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
+question_dic["gender"] = form.selectbox("Gender", ["-", "Male", "Female", "Other"])
+question_dic["age"] = form.number_input("Age", min_value=0, max_value=100, value=0)
+question_dic["for_anxiety"] = form.radio("Do you take nootropics to help with anxiety?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
+question_dic["for_focus"] = form.radio("Do you take nootropics to help with focus?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
+question_dic["for_mood"] = form.radio("Do you take nootropics to help with mood?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
+question_dic["for_cognition"] = form.radio("Do you take nootropics to help with cognition / memory?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
+question_dic["for_motivation"] = form.radio("Do you take nootropics to help with motivation?", options=["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"])
 
 
 favorite_noot = st.text_input("What is your favorite nootropics not mentioned here?")
 if favorite_noot:
-    slider_dic[favorite_noot] = st.slider("{} rating".format(favorite_noot), min_value=0, max_value=10)
-    radio_dic[favorite_noot] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
+    slider_dic[favorite_noot] = form.slider("{} rating".format(favorite_noot), min_value=0, max_value=10)
+    radio_dic[favorite_noot] = form.selectbox("Issues with {}".format(nootropic), possible_issues_list)
 st.text("")
 st.text("")
 st.header("🧠 Your results")
 #pseudo = st.text_input("Pseudo")
 pseudo = "default"
-not_true_ratings = st.checkbox("Check this box if you're not entering your true ratings (prevents training on your data)")
-if st.button("I'm done rating and would like to see predictions"):
+not_true_ratings = form.checkbox("Check this box if you're not entering your true ratings (prevents training on your data)")
+if form.form_submit_button("I'm done rating and would like to see predictions"):
     new_result_df = predict(slider_dic)
     st.write("Our model predicted these ratings for you:")
     st.write(new_result_df.set_index("nootropic").style.format("{:.2}"))
@@ -112,7 +115,7 @@ if st.button("I'm done rating and would like to see predictions"):
                          collection_ratings=collection_ratings,
                          collection_users=collection_users)
 
-if st.button("How accurate is our model ?"):
+if form.form_submit_button("How accurate is our model ?"):
     if len(slider_dic) < 2:
         st.error("Please rate at least two nootropics")
     else:
