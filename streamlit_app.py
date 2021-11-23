@@ -105,7 +105,7 @@ not_true_ratings = st.checkbox("Check this box if you're not entering your true 
 if st.button("I'm done rating and would like to see predictions"):
     new_result_df = predict(slider_dic)
     st.write("Our model predicted these ratings for you:")
-    st.write(new_result_df.set_index("nootropic").style.format("{:.2}"))
+    st.write(new_result_df.set_index("nootropic").style.format("{:.1f}"))
     if not not_true_ratings:
         #print("saving...")
         if deployed:
@@ -128,7 +128,7 @@ if st.button("How accurate is our model ?"):
         if not accuracy_df is None:
             st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
             st.caption("Some nootropics don't have enough data right now to be included.")
-            st.write(accuracy_df)
+            st.write(accuracy_df.set_index("nootropic").style.format("{:.1f}"))
             #print("saving...")
             if deployed:
                 save_new_ratings(rating_dic=slider_dic,
