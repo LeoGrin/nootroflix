@@ -95,7 +95,7 @@ question_dic["for_motivation"] = st.radio("Do you take nootropics to help with m
 favorite_noot = st.text_input("What is your favorite nootropics not mentioned here?")
 if favorite_noot:
     slider_dic[favorite_noot] = st.slider("{} rating".format(favorite_noot), min_value=0, max_value=10)
-    radio_dic[favorite_noot] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
+    radio_dic[favorite_noot] = st.selectbox("Issues with {}".format(favorite_noot), possible_issues_list)
 st.text("")
 st.text("")
 st.header("🧠 Your results")
