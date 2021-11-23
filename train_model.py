@@ -48,11 +48,11 @@ rating_example = {'Modafinil': 6,
 "Phenibut": 6,
 "Nicotine": 7}
 
-nootropics_list = rating_example.keys()
 
 
 def get_item_baseline():
     df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
+    avalaible_nootropics = np.unique(df_clean["itemID"])
 
     final_model = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
 
@@ -71,7 +71,7 @@ def get_item_baseline():
     item_baselines = final_model.default_prediction() + final_model.compute_baselines()[
         1]  # mean rating + item baseline ?
 
-    return pd.DataFrame({"nootropic": nootropics_list, "item_baselines":item_baselines})
+    return pd.DataFrame({"nootropic": avalaible_nootropics, "item_baselines":item_baselines})
 
 
 def predict(rating_dic):
