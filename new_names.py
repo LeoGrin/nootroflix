@@ -1,6 +1,5 @@
-import pandas as pd
+#import pandas as pd
 import numpy as np
-import time
 
 # df_ssc = pd.read_csv("../data/dataset_clean.csv")
 # df_reddit = pd.read_csv("../data/nootropics_survey_reddit_converted.csv")
@@ -120,6 +119,7 @@ weird_nootropics = [noot for noot in weird_nootropics if noot not in to_drop]
 short_dic = {}
 for i, nootropic in enumerate(new_names):
         short_dic[nootropic] = short_names[i]
+#TODO make other noot short when I use all data
 
 # print(len(classic_nootropics))
 # print(len(list(set(classic_nootropics).intersection(set(new_names)))))

@@ -1,52 +1,11 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 import numpy as np
-
 from surprise import KNNBaseline
 from surprise import Dataset
 from surprise import Reader
 from new_names import short_dic
-
-import streamlit as st
 from copy import deepcopy
 
-
-rating_example = {'Modafinil': 6,
-'Caffeine': 6,
-'Coluracetam': None,
-'Phenylpiracetam': None,
-'Theanine': 7,
-'Noopept': None,
-'Oxiracetam': None,
-'Aniracetam': None,
-'Rhodiola': None,
-'Creatine': 4,
-'Piracetam': None,
-'Ashwagandha': None,
-'Bacopa': None,
-'Choline': None,
-'DMAE': None,
-'Fasoracetam': None,
-'SemaxandNASemaxetc': None,
-'SelankandNASelanketc': None,
-'Inositol': None,
-'Seligiline': None,
-'AlphaBrainproprietaryblend': None,
-'Cerebrolysin': None,
-'Melatonin': 8,
-'Uridine': None,
-'Tianeptine': None,
-'MethyleneBlue': None,
-'Unifiram': None,
-'PRL853': None,
-'Emoxypine': None,
-'Picamilon': None,
-'Dihexa': None,
-'Epicorasimmunebooster': None,
-'LSD': 7,
-'Adderall': 8,
-"Phenibut": 6,
-"Nicotine": 7}
 
 
 
@@ -144,4 +103,40 @@ def evaluate(rating_dic):
                          "Baseline rating": item_baselines})
 
 if __name__ == """__main__""":
+    rating_example = {'Modafinil': 6,
+                      'Caffeine': 6,
+                      'Coluracetam': None,
+                      'Phenylpiracetam': None,
+                      'Theanine': 7,
+                      'Noopept': None,
+                      'Oxiracetam': None,
+                      'Aniracetam': None,
+                      'Rhodiola': None,
+                      'Creatine': 4,
+                      'Piracetam': None,
+                      'Ashwagandha': None,
+                      'Bacopa': None,
+                      'Choline': None,
+                      'DMAE': None,
+                      'Fasoracetam': None,
+                      'SemaxandNASemaxetc': None,
+                      'SelankandNASelanketc': None,
+                      'Inositol': None,
+                      'Seligiline': None,
+                      'AlphaBrainproprietaryblend': None,
+                      'Cerebrolysin': None,
+                      'Melatonin': 8,
+                      'Uridine': None,
+                      'Tianeptine': None,
+                      'MethyleneBlue': None,
+                      'Unifiram': None,
+                      'PRL853': None,
+                      'Emoxypine': None,
+                      'Picamilon': None,
+                      'Dihexa': None,
+                      'Epicorasimmunebooster': None,
+                      'LSD': 7,
+                      'Adderall': 8,
+                      "Phenibut": 6,
+                      "Nicotine": 7}
     print(predict(rating_example))
