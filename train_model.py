@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from surprise import KNNBaseline
+from surprise import SVD#KNNBaseline
 from surprise import Dataset
 from surprise import Reader
 from new_names import short_dic
@@ -14,7 +14,9 @@ def get_item_baseline():
     df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"])
 
-    final_model = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
+    #final_model = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
+    final_model = SVD(**{'n_factors': 10, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
+
 
     total_df = df_clean
 
@@ -43,7 +45,8 @@ def predict(rating_dic):
     # Fit surprise model
     #######################
 
-    final_model = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
+    #final_model = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
+    final_model = SVD(**{'n_factors': 10, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
 
     new_user_id = max(df_clean["userID"]) + 1 #TODO if merge
     items = np.array([item for item in list(rating_dic.keys()) if item in avalaible_nootropics])
@@ -79,7 +82,11 @@ def predict(rating_dic):
         {"nootropic": [short_dic[noot] for noot in avalaible_nootropics],
          "Your predicted rating": predicted_ratings,
          "Mean rating of this nootropic": item_baselines})
-         #"baseline_rating_user": item_baselines_user}) #TODO ?
+    # "baseline_rating_user": item_baselines_user}) #TODO ?
+    mask = [noot not in rating_dic.keys() for noot in avalaible_nootropics]
+    result_df = result_df.iloc[mask]
+
+
 
 
     return result_df.sort_values("Your predicted rating", ascending=False, ignore_index=True)
