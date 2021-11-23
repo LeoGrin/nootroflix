@@ -122,24 +122,25 @@ if st.button("I'm done rating and would like to see predictions"):
 
 if st.button("How accurate is our model ?"):
     if len(slider_dic) < 2:
-        st.error("Please rate at least two nootropics")
+        st.error("Please rate more nootropics")
     else:
         accuracy_df = evaluate(slider_dic)
-        st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
-        st.caption("Some nootropics don't have enough data right now to be included.")
-        st.write(accuracy_df)
-        #print("saving...")
-        if deployed:
-            save_new_ratings(rating_dic=slider_dic,
-                         issues_dic=radio_dic,
-                         question_dic=question_dic,
-                         is_true_ratings=not not_true_ratings,
-                         accuracy_check=True,
-                         user_id=user_id,
-                         pseudo = pseudo,
-                         time=time.time(),
-                         collection_ratings=collection_ratings,
-                         collection_users=collection_users)
+        if not accuracy_df is None:
+            st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
+            st.caption("Some nootropics don't have enough data right now to be included.")
+            st.write(accuracy_df)
+            #print("saving...")
+            if deployed:
+                save_new_ratings(rating_dic=slider_dic,
+                             issues_dic=radio_dic,
+                             question_dic=question_dic,
+                             is_true_ratings=not not_true_ratings,
+                             accuracy_check=True,
+                             user_id=user_id,
+                             pseudo = pseudo,
+                             time=time.time(),
+                             collection_ratings=collection_ratings,
+                             collection_users=collection_users)
 
 if st.button("About"):
     st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")

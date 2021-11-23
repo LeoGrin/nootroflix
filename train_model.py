@@ -5,6 +5,7 @@ from surprise import Dataset
 from surprise import Reader
 from new_names import short_dic
 from copy import deepcopy
+import streamlit as st
 
 
 
@@ -89,11 +90,16 @@ def evaluate(rating_dic):
     loo_ratings = []
     rating_dic_copy = deepcopy(rating_dic)
     rated_avalaible_nootropics = [nootropic for nootropic in rating_dic.keys() if nootropic in avalaible_nootropics]
-    for nootropic in rated_avalaible_nootropics:
-            rating_dic_copy.pop(nootropic)
-            new_result_df = predict(rating_dic_copy)
-            loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Your predicted rating"].values[0])
-            rating_dic_copy = deepcopy(rating_dic)
+    if len(rated_avalaible_nootropics) < 2:
+        st.error("Please rate more nootropics")
+        return None
+    else:
+        for nootropic in rated_avalaible_nootropics:
+                rating_dic_copy.pop(nootropic)
+                new_result_df = predict(rating_dic_copy)
+                loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Your predicted rating"].values[0])
+                rating_dic_copy = deepcopy(rating_dic)
+
     item_baselines_df = get_item_baseline()
     item_baselines = item_baselines_df[item_baselines_df["nootropic"].isin(rating_dic.keys())]["item_baselines"].values
 
