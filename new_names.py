@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import time
 
 # df_ssc = pd.read_csv("../data/dataset_clean.csv")
 # df_reddit = pd.read_csv("../data/nootropics_survey_reddit_converted.csv")
@@ -58,7 +59,7 @@ new_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
              'Aniracetam', 'Armodafinil', 'Ashwagandha', 'BPC-157', 'Bacopa',
              'Black Seed Oil', 'Boswellia', 'CBD', 'Caffeine',
              'Carnitine / Acetyl-L-Carnitine', 'Cerebrolysin', 'Choline', 'Coluracetam',
-             'Creatine', 'Curcumin', "DMAE", 'DMHA', 'Dextroamphetamine, (Speed)', 'Dihexa',
+             'Creatine', 'Curcumin', "DMAE", 'DMHA', 'Dextroamphetamine (Speed)', 'Dihexa',
              'Doepezil', "Emoxypine", "Epicorasimmunebooster", 'Etifoxine', 'Fasoracetam', 'GABA', 'Ginkgo Biloba',
              'Ginkgo Biloba', 'Ginseng', 'Guanfacine', 'Huperzine-A', 'IDRA-21', 'Inositol',
              'Kava', 'Kratom', 'L-Deprenyl', 'LSD (microdose)', "Lion's Mane", 'MAOI', 'Magnesium',
@@ -72,6 +73,28 @@ new_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
              'Sulbutiamine', 'Sunifiram', 'Theanine', 'Tianeptine', 'Tryptophan',
              'Tyrosine', "Unifiram", 'Uridine', 'Valerian Root', 'RGPU-95 (Cebaracetam, p-Cl-phenylpiracetam)']
 
+
+
+short_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC', "AlphaBrainproprietaryblend",
+             'Aniracetam', 'Armodafinil', 'Ashwagandha', 'BPC-157', 'Bacopa',
+             'Black Seed Oil', 'Boswellia', 'CBD', 'Caffeine',
+             'Carnitine', 'Cerebrolysin', 'Choline', 'Coluracetam',
+             'Creatine', 'Curcumin', "DMAE", 'DMHA', 'Dextroamphetamine', 'Dihexa',
+             'Doepezil', "Emoxypine", "Epicorasimmunebooster", 'Etifoxine', 'Fasoracetam', 'GABA', 'Ginkgo Biloba',
+             'Ginkgo Biloba', 'Ginseng', 'Guanfacine', 'Huperzine-A', 'IDRA-21', 'Inositol',
+             'Kava', 'Kratom', 'L-Deprenyl', 'LSD', "Lion's Mane", 'MAOI', 'Magnesium',
+             'Melatonin', 'Methylene blue', 'Methylphenidate', 'Modafinil',
+             'N-Acetyl-L-Tyrosine', 'NAC', 'N-methyl-cyclazodone',
+             'NSI-189', 'Nefiracetam', 'Nicotine', 'Noopept', 'Omega-3',
+             'Oxiracetam', 'P21', 'PRL-8-53', 'PEA', 'Phenibut',
+             'Phenylpiracetam', 'Phosphatidylserine', "Picamilon", 'Piracetam', 'Pramiracetam',
+             'Pregenolone', 'Psilocybin', 'Rhodiola', 'Methylphenidate', 'Sarcosine',
+             'Selank', 'Selegiline', 'Semax', "St John's Wort",
+             'Sulbutiamine', 'Sunifiram', 'Theanine', 'Tianeptine', 'Tryptophan',
+             'Tyrosine', "Unifiram", 'Uridine', 'Valerian Root', 'RGPU-95']
+
+#indices = list(map(len, short_names))
+#print(np.array(short_names)[np.argsort(indices)])
 
 other_nootropics = ["Kanna (except Zembrin)", "Zembrin", "Shilajit", "Cordyceps", "Lemon balm",
                     "Nicotinamide riboside", "Nicotinamide mononucleotide", "Polygala tenuifolia",
@@ -91,6 +114,10 @@ classic_nootropics = ["Rhodiola", "Aniracetam", "Phenibut", "Ashwagandha", "Baco
 weird_nootropics = list(set(new_names).union(set(other_nootropics)).difference(classic_nootropics))
 
 classic_nootropics, lifestyle_nootropics, weird_nootropics = np.sort(list(set(classic_nootropics))), np.sort(list(set(lifestyle_nootropics))), np.sort(list(set(weird_nootropics)))
+short_dic = {}
+for i, nootropic in enumerate(old_names):
+        short_dic[nootropic] = short_names[i]
+
 
 # print(len(classic_nootropics))
 # print(len(list(set(classic_nootropics).intersection(set(new_names)))))
@@ -98,22 +125,34 @@ classic_nootropics, lifestyle_nootropics, weird_nootropics = np.sort(list(set(cl
 # print(set(lifestyle_nootropics).intersection(set(new_names)))
 # to_drop = ["AlphaBrainproprietaryblend", "Epicorasimmunebooster"]
 # rosetta_dic = {}
+# short_dic = {}
 # print(len(old_names))
 # print(len(new_names))
+#
 # for i, nootropic in enumerate(old_names):
 #     if nootropic not in to_drop:
 #         print(i)
 #         print(nootropic)
 #         print(new_names[i])
 #         print("######")
-#     rosetta_dic[nootropic] = new_names[i]
+#         rosetta_dic[nootropic] = new_names[i]
+#         short_dic[nootropic] = short_names[i]
 #
 # print(rosetta_dic)
 #
 # df_ssc = pd.read_csv("../data/dataset_clean.csv")
 #
 # print(np.sort(np.unique(df_ssc["itemID"])))
+# print(len(np.sort(np.unique(df_ssc["itemID"]))))
+#
+# df_ssc = df_ssc[~np.isin(df_ssc["itemID"], to_drop)]
+#
+# print(np.sort(np.unique(df_ssc["itemID"])))
+# print(len(np.sort(np.unique(df_ssc["itemID"]))))
 #
 # df_ssc["itemID"] = list(map(lambda x:rosetta_dic[x], df_ssc["itemID"]))
 #
 # df_ssc.to_csv("../data/dataset_clean_right_names.csv", index=False)
+#
+# #TODO remove alphabrain...
+# #TODO make shorter names

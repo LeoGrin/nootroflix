@@ -19,13 +19,13 @@ if "already_run" not in st.session_state.keys():
    cookie_manager.get("userID")
 else:
    user_id = cookie_manager.get("userID")
-   print(user_id)
+   #print(user_id)
    if not user_id:
-       print("No username found, generating one...")
+       #print("No username found, generating one...")
        user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id)
-       print("UserID: {}".format(user_id))
+       #print("UserID: {}".format(user_id))
        cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
-       print("cookie set")
+       #print("cookie set")
 
 
 st.title('Nootroflix')
@@ -100,7 +100,7 @@ if st.button("I'm done rating and would like to see predictions"):
     st.write("Our model predicted these ratings for you:")
     st.write(new_result_df.set_index("nootropic").style.format("{:.2}"))
     if not not_true_ratings:
-        print("saving...")
+        #print("saving...")
         save_new_ratings(rating_dic=slider_dic,
                          issues_dic = radio_dic,
                          question_dic = question_dic,
@@ -120,7 +120,7 @@ if st.button("How accurate is our model ?"):
         st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
         st.caption("Some nootropics don't have enough data right now to be included.")
         st.write(accuracy_df)
-        print("saving...")
+        #print("saving...")
         save_new_ratings(rating_dic=slider_dic,
                          issues_dic=radio_dic,
                          question_dic=question_dic,

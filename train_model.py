@@ -5,6 +5,7 @@ import numpy as np
 from surprise import KNNBaseline
 from surprise import Dataset
 from surprise import Reader
+from new_names import short_dic
 
 import streamlit as st
 from copy import deepcopy
@@ -114,7 +115,7 @@ def predict(rating_dic):
     #item_baselines_user = final_model.default_prediction() + final_model.compute_baselines()[1] +\
     #                      final_model.compute_baselines()[0][-1] #not sure
     result_df = pd.DataFrame(
-        {"nootropic": avalaible_nootropics,
+        {"nootropic": [short_dic[noot] for noot in avalaible_nootropics],
          "Your predicted rating": predicted_ratings,
          "Mean rating of this nootropic": item_baselines})
          #"baseline_rating_user": item_baselines_user}) #TODO ?
@@ -136,7 +137,7 @@ def evaluate(rating_dic):
     item_baselines_df = get_item_baseline()
     item_baselines = item_baselines_df[item_baselines_df["nootropic"].isin(rating_dic.keys())]["item_baselines"].values
 
-    return pd.DataFrame({"nootropic": rated_avalaible_nootropics,
+    return pd.DataFrame({"nootropic": [short_dic[noot] for noot in rated_avalaible_nootropics],
                          "Your rating": [rating_dic[nootropic] for nootropic in rated_avalaible_nootropics],
                          "Predicted rating": loo_ratings,
                          "Baseline rating": item_baselines})
