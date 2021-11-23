@@ -33,6 +33,10 @@ else:
         cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
         #print("cookie set")
 
+print("user")
+print(time.time() - t)
+
+
 
 st.title('Nootroflix')
 original_title = '<p style="color:Pink; font-size: 20px;">Rate the nootropics you\'ve tried, and we\'ll tell you which one should work for you!</p>'
