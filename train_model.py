@@ -82,8 +82,8 @@ def predict(rating_dic):
     mean_rating = [np.mean(df_clean[df_clean["itemID"] == noot]["rating"]) for noot in avalaible_nootropics]
     result_df = pd.DataFrame(
         {"nootropic": [short_dic[noot] for noot in avalaible_nootropics],
-         "Your predicted rating": predicted_ratings,
-         "Mean rating of this nootropic": mean_rating})
+         "Prediction": predicted_ratings,
+         "Mean rating": mean_rating})
     # "baseline_rating_user": item_baselines_user}) #TODO ?
     mask = [noot not in rating_dic.keys() for noot in avalaible_nootropics]
     result_df = result_df.iloc[mask]
@@ -91,7 +91,7 @@ def predict(rating_dic):
 
 
 
-    return result_df.sort_values("Your predicted rating", ascending=False, ignore_index=True)
+    return result_df.sort_values("Prediction", ascending=False, ignore_index=True)
 
 def evaluate(rating_dic):
     df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
@@ -106,7 +106,7 @@ def evaluate(rating_dic):
         for nootropic in rated_avalaible_nootropics:
                 rating_dic_copy.pop(nootropic)
                 new_result_df = predict(rating_dic_copy)
-                loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Your predicted rating"].values[0])
+                loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Prediction"].values[0])
                 rating_dic_copy = deepcopy(rating_dic)
 
     #item_baselines_df = get_item_baseline()

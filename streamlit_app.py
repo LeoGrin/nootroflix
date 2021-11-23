@@ -9,7 +9,7 @@ from new_names import weird_nootropics, classic_nootropics, lifestyle_nootropics
 
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-deployed = True
+deployed = False
 
 if deployed:
     collection_ratings, collection_users = load_collection()
@@ -128,7 +128,7 @@ if st.button("How accurate is our model ?"):
         if not accuracy_df is None:
             st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
             st.caption("Some nootropics don't have enough data right now to be included.")
-            st.write(accuracy_df.set_index("nootropic").style.format("{:.1f}"))
+            st.table(accuracy_df.set_index("nootropic").style.format("{:.1f}"))
             #print("saving...")
             if deployed:
                 save_new_ratings(rating_dic=slider_dic,
