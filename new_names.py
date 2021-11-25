@@ -70,7 +70,7 @@ new_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
              'Pregenolone', 'Psilocybin (microdose)', 'Rhodiola', 'Methylphenidate (Ritalin)', 'Sarcosine',
              'Selank (or NA-Selank etc)', 'Selegiline', 'Semax (or NA-Semax etc)', "St John's Wort",
              'Sulbutiamine', 'Sunifiram', 'Theanine', 'Tianeptine', 'Tryptophan',
-             'Tyrosine', "Unifiram", 'Uridine', 'Valerian Root', 'RGPU-95 (Cebaracetam, p-Cl-phenylpiracetam)']
+             'Tyrosine', "Unifiram", 'Uridine', 'Valerian Root', 'RGPU-95 (Cebaracetam...)']
 
 
 
@@ -116,6 +116,7 @@ weird_nootropics = list(set(new_names).union(set(other_nootropics)).difference(c
 classic_nootropics, lifestyle_nootropics, weird_nootropics = np.sort(list(set(classic_nootropics))), np.sort(list(set(lifestyle_nootropics))), np.sort(list(set(weird_nootropics)))
 to_drop = ["AlphaBrainproprietaryblend", "Epicorasimmunebooster"]
 weird_nootropics = [noot for noot in weird_nootropics if noot not in to_drop]
+all_nootropics = np.sort(np.concatenate([classic_nootropics, lifestyle_nootropics, weird_nootropics]))
 
 short_dic = {}
 for i, nootropic in enumerate(new_names):

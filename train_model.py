@@ -37,7 +37,6 @@ def get_item_baseline():
 
 
 def predict(rating_dic):
-
     df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
 
@@ -100,7 +99,7 @@ def evaluate(rating_dic):
     rating_dic_copy = deepcopy(rating_dic)
     rated_avalaible_nootropics = [nootropic for nootropic in rating_dic.keys() if nootropic in avalaible_nootropics]
     if len(rated_avalaible_nootropics) < 2:
-        st.error("Please rate more nootropics")
+        st.warning("Please rate more nootropics")
         return None
     else:
         for nootropic in rated_avalaible_nootropics:
