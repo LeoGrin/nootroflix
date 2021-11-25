@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-deployed = False
+deployed = True
 
 if deployed:
     collection_ratings, collection_users = load_collection()
@@ -248,6 +248,7 @@ if st.session_state["mode"] == "results":
     new_result_df = predict(slider_dic)
     st.header("🧠 Your results")
     st.write("Our model predicted these ratings for you:")
+    st.caption("Some nootropics don't have enough data right now to be included.")
     st.table(new_result_df.set_index("nootropic").style.format("{:.1f}").applymap(left_align))
     if not st.session_state["permanent_not_true_ratings"]:
         #print("saving...")
@@ -287,6 +288,12 @@ if st.session_state["mode"] == "results":
 
     st.button("Back", on_click=go_to_mode("questions"), key="results_2")
     st.button("Start again", on_click=go_to_mode("selection"))
+    st.write("")
+    st.write("")
+    if st.button("More infos"):
+       st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
+       st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
+       st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
 
 
 
