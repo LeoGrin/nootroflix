@@ -35,7 +35,6 @@ def get_item_baseline():
 
     return pd.DataFrame({"nootropic": avalaible_nootropics, "item_baselines":item_baselines})
 
-
 def predict(rating_dic):
     df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df

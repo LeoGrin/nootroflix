@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-deployed = True
+deployed = False
 
 if deployed:
     collection_ratings, collection_users = load_collection()
@@ -124,6 +124,7 @@ if st.session_state["mode"] == "rating":
     \n 🧠 5 - 9 means strong effects, definitely not placebo.
     \n 🧠 10 means life - changing.""")
     st.write("")
+    st.caption("For lifestyle interventions like diets, please only rate direct cogntive improvement.")
     st.write("")
 
     #checkbox_dic = st.session_state["checkbox_dic"]
@@ -188,8 +189,8 @@ if st.session_state["mode"] == "questions":
         st.header("🧠 A few questions")
         retrieve_widget_value("question_gender")
         st.selectbox("Gender", ["-", "Male", "Female", "Other"], key="question_gender")
-        #retrieve_widget_value("question_age") #TODO fix issue
-        st.number_input("Age", min_value=0, max_value=100, key="question_age")
+        retrieve_widget_value("question_age")
+        st.number_input("Age", max_value=100, key="question_age")
         options = ["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"]
         retrieve_widget_value("question_anxiety")
         st.radio("Do you take nootropics to help with anxiety?", options=options, key="question_anxiety")
@@ -274,26 +275,15 @@ if st.session_state["mode"] == "results":
             st.caption("Some nootropics don't have enough data right now to be included.")
             st.table(accuracy_df.set_index("nootropic").style.format("{:.1f}").applymap(left_align))
             #print("saving...")
-            if deployed:
-                save_new_ratings(rating_dic=slider_dic,
-                             issues_dic=radio_dic,
-                             question_dic=question_dic,
-                             is_true_ratings=not st.session_state["permanent_not_true_ratings"],
-                             accuracy_check=True,
-                             user_id=user_id,
-                             pseudo = pseudo,
-                             time=time.time(),
-                             collection_ratings=collection_ratings,
-                             collection_users=collection_users)
 
     st.button("Back", on_click=go_to_mode("questions"), key="results_2")
     st.button("Start again", on_click=go_to_mode("selection"))
     st.write("")
     st.write("")
-    if st.button("More infos"):
-       st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
-       st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
-       st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
+    st.subheader("More infos")
+    st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
+    st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
+    st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
 
 
 
