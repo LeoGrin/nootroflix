@@ -58,7 +58,6 @@ if "mode" not in st.session_state.keys():
 
 
 def go_to_mode_rating():
-    print(st.session_state)
     for key in st.session_state.keys():
         if key.startswith("checkbox"):
             if st.session_state[key]:
@@ -268,7 +267,6 @@ if st.session_state["mode"] == "results":
     if len(slider_dic) < 2:
         st.warning("Please rate more nootropics")
     else:
-        print(slider_dic)
         accuracy_df = evaluate(slider_dic)
         if not accuracy_df is None:
             st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
