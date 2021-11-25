@@ -39,6 +39,7 @@ def get_item_baseline():
 def predict(rating_dic):
     df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
+    print(avalaible_nootropics)
 
     #######################
     # Fit surprise model
@@ -105,7 +106,7 @@ def evaluate(rating_dic):
         for nootropic in rated_avalaible_nootropics:
                 rating_dic_copy.pop(nootropic)
                 new_result_df = predict(rating_dic_copy)
-                loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Prediction"].values[0])
+                loo_ratings.append(new_result_df[new_result_df["nootropic"] == short_dic[nootropic]]["Prediction"].values[0])
                 rating_dic_copy = deepcopy(rating_dic)
 
     #item_baselines_df = get_item_baseline()

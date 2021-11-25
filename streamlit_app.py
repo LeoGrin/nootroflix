@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-deployed = True
+deployed = False
 
 if deployed:
     collection_ratings, collection_users = load_collection()
@@ -186,17 +186,26 @@ if st.session_state["mode"] == "questions":
     with question_form:
         #st.form_submit_button("Back", on_click=go_to_mode("ratings"))
         st.header("🧠 A few questions")
+        retrieve_widget_value("question_gender")
         st.selectbox("Gender", ["-", "Male", "Female", "Other"], key="question_gender")
-        st.number_input("Age", min_value=0, max_value=100, value=0, key="question_age")
+        #retrieve_widget_value("question_age") #TODO fix issue
+        st.number_input("Age", min_value=0, max_value=100, key="question_age")
         options = ["Not at all a reason", "Yes, a minor reason", "Yes, a major reason"]
+        retrieve_widget_value("question_anxiety")
         st.radio("Do you take nootropics to help with anxiety?", options=options, key="question_anxiety")
+        retrieve_widget_value("question_focus")
         st.radio("Do you take nootropics to help with focus?", options=options, key="question_focus")
+        retrieve_widget_value("question_mood")
         st.radio("Do you take nootropics to help with mood?", options=options, key="question_mood")
+        retrieve_widget_value("question_cognition")
         st.radio("Do you take nootropics to help with cognition / memory?", options=options, key="question_cognition")
+        retrieve_widget_value("question_motivation")
         st.radio("Do you take nootropics to help with motivation?", options=options, key="question_motivation")
         st.write("")
-        favorite_noot = st.text_input("What is your favorite nootropics not mentioned here?")
+        retrieve_widget_value("favorite_noot")
+        favorite_noot = st.text_input("What is your favorite nootropics not mentioned here?", key="favorite_noot")
         st.text("")
+        retrieve_widget_value("not_true_ratings")
         st.checkbox("Check this box if you're not entering your true ratings / infos (prevents training on your data)", key="not_true_ratings")
         st.text("")
         col1, col2 = st.columns([1, 9])
@@ -205,6 +214,16 @@ if st.session_state["mode"] == "questions":
         with col2:
             st.form_submit_button("Get results!", on_click=go_to_mode("results"))
 
+
+components.html(
+    f"""
+        <p>{st.session_state.counter}</p>
+        <script>
+            window.parent.document.querySelector('section.main').scrollTo(0, 0);
+        </script>
+    """,
+    height=0
+)
 
 if st.session_state["mode"] == "results":
     slider_dic = {}
@@ -217,6 +236,7 @@ if st.session_state["mode"] == "results":
             radio_dic[key[len("permanent_radio_"):]] = st.session_state[key]
         elif key.startswith("permanent_question_"):
             question_dic[key[len("permanent_question_"):]] = st.session_state[key]
+    question_dic["permanent_favorite_noot"] = st.session_state["permanent_favorite_noot"]
 
     #pseudo = st.text_input("Pseudo")
     pseudo = "default"
@@ -246,6 +266,7 @@ if st.session_state["mode"] == "results":
     if len(slider_dic) < 2:
         st.warning("Please rate more nootropics")
     else:
+        print(slider_dic)
         accuracy_df = evaluate(slider_dic)
         if not accuracy_df is None:
             st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
@@ -270,12 +291,3 @@ if st.session_state["mode"] == "results":
 
 
 
-components.html(
-    f"""
-        <p>{st.session_state.counter}</p>
-        <script>
-            window.parent.document.querySelector('section.main').scrollTo(0, 0);
-        </script>
-    """,
-    height=0
-)
