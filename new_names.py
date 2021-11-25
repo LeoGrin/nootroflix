@@ -100,9 +100,9 @@ other_nootropics = ["Kanna (except Zembrin)", "Zembrin", "Shilajit", "Cordyceps"
                     "Maca", "Bromantane", "Niacin", "Saffron", "Glycine", "Berberine",
                     "White jelly mushrooms", "Theacrine (aka Teacrine)", "Methylliberine (aka Dynamine)",
                     "Red reishi mushrooms", "7,8-dihydroxyflavone", "9-MBC", "SSRIs (Prozac, Lexapro...)", "Bupropion (Wellbutrin, Zyban...)",
-                    "MAOIs (except Selegiline)", "Alprazolam (Xanax)", "SNRIs (Cymbalta, Effexor...)"]
+                    "MAOIs (except Selegiline)", "Alprazolam (Xanax)", "SNRIs (Cymbalta, Effexor...)", "SAM-e", "Fermented drinks (Kefir, Kombucha...)", "Probiotics"]
 
-lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "No Fap (or otherwise avoiding masturbation)",
+lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "Vegetarian diet", "Vegan diet", "No Fap (or otherwise avoiding masturbation)",
                         "Bright lights in morning / Dawn simulator", "Trying to get more sleep",
                         "Trying to get less sleep"]
 
