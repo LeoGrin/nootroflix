@@ -135,10 +135,10 @@ if st.session_state["mode"] == "rating":
     #             st.button("{} 🗑".format(nootropic))
     #         i+=1
     possible_issues_list = ["None / Unsure",
-                            "I developed tolerance",
-                            "I developed addiction",
-                            "I had to stop because of side effects",
-                            "... and they persisted for some time after cessation",
+                            "Developed tolerance",
+                            "Developed addiction",
+                            "Had to stop because of side effects",
+                            "Persistent side effects",
                             "Other issues"]
 
     rating_form = st.form("rating-form")
