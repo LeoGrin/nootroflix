@@ -58,6 +58,7 @@ if "mode" not in st.session_state.keys():
 
 
 def go_to_mode_rating():
+    print(st.session_state)
     for key in st.session_state.keys():
         if key.startswith("checkbox"):
             if st.session_state[key]:
@@ -85,14 +86,13 @@ def reset_selection():
         if key.startswith("checkbox") or key.startswith("permanent_checkbox"):
             st.session_state[key] = False
 
-
 if st.session_state["mode"] == "selection":
     st.header("How do I use it?")
     st.markdown(""" **First tell us which nootropics you have tried, then rate your subjective experience on a scale of 0 to 10.**""")
 
-    st.button("Reset 🗑", on_click=reset_selection)
     select_form = st.form("select-form")
     with select_form:
+        st.form_submit_button("Reset 🗑", on_click=reset_selection)
         n_cols = 2 #TODO align columns ?
         st.header("🧠 Classic nootropics")
         cols_classic = st.columns(n_cols)
