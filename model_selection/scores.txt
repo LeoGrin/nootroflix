@@ -1,0 +1,4 @@
+{"rmse": {"k": 60, "min_k": 2, "sim_options": {"name": "cosine", "user_based": true}}, "mae": {"k": 60, "min_k": 2, "sim_options": {"name": "cosine", "user_based": true}}}
+{"rmse": 2.4159985092184693, "mae": 1.9305983863145229}
+{"rmse": {"n_factors": 10, "n_epochs": 20, "lr_all": 0.005, "reg_all": 0.1}, "mae": {"n_factors": 10, "n_epochs": 20, "lr_all": 0.005, "reg_all": 0.1}}
+{"rmse": 2.3939619673190315, "mae": 1.9118054974008696}

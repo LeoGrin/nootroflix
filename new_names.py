@@ -102,26 +102,43 @@ other_nootropics = ["Kanna (except Zembrin)", "Zembrin", "Shilajit", "Cordyceps"
                     "Red reishi mushrooms", "7,8-dihydroxyflavone", "9-MBC", "SSRIs (Prozac, Lexapro...)", "Bupropion (Wellbutrin, Zyban...)",
                     "MAOIs (except Selegiline)", "Alprazolam (Xanax)", "SNRIs (Cymbalta, Effexor...)", "SAM-e", "Fermented drinks (Kefir, Kombucha...)", "Probiotics"]
 
+short_other_nootropics = ["Kanna", "Zembrin", "Shilajit", "Cordyceps", "Lemon balm",
+                    "Nicotinamide riboside", "Nicotinamide mononucleotide", "Polygala tenuifolia",
+                    "Maca", "Bromantane", "Niacin", "Saffron", "Glycine", "Berberine",
+                    "White jelly mushrooms", "Theacrine", "Methylliberine",
+                    "Red reishi mushrooms", "7,8-dihydroxyflavone", "9-MBC", "SSRIs", "Bupropion",
+                    "MAOIs", "Alprazolam (Xanax)", "SNRIs", "SAM-e", "Fermented drinks", "Probiotics"]
+
 lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "Vegetarian diet", "Vegan diet", "No Fap (or otherwise avoiding masturbation)",
                         "Bright lights in morning / Dawn simulator", "Trying to get more sleep",
                         "Trying to get less sleep"]
 
+short_lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "Vegetarian diet", "Vegan diet", "No Fap", "Morning lights", "More sleep", "Less sleep"]
+
 classic_nootropics = ["Rhodiola", "Aniracetam", "Phenibut", "Ashwagandha", "Bacopa", "Piracetam", "Choline",
                       "Noopept", "Adderall", "Nicotine", "Creatine", "Theanine", "Modafinil", "Melatonin", "Caffeine",
-                      "Magnesium", "Ginseng", "CBD", "Omega-3 Supplements", "Noopept"]
+                      "Magnesium", "Ginseng", "CBD", "Omega-3 Supplements"]
+
+assert len(list(set(new_names).union(set(other_nootropics)).union(lifestyle_nootropics).intersection(set(classic_nootropics)))) == len(classic_nootropics)
+
+short_dic = {}
+for i, nootropic in enumerate(new_names):
+        short_dic[nootropic] = short_names[i]
+for i, nootropic in enumerate(lifestyle_nootropics):
+    short_dic[nootropic] = short_lifestyle_nootropics[i]
+for i, nootropic in enumerate(other_nootropics):
+    short_dic[nootropic] = short_other_nootropics[i]
+
+
 
 
 weird_nootropics = list(set(new_names).union(set(other_nootropics)).difference(classic_nootropics))
-
 classic_nootropics, lifestyle_nootropics, weird_nootropics = np.sort(list(set(classic_nootropics))), np.sort(list(set(lifestyle_nootropics))), np.sort(list(set(weird_nootropics)))
 to_drop = ["AlphaBrainproprietaryblend", "Epicorasimmunebooster"]
 weird_nootropics = [noot for noot in weird_nootropics if noot not in to_drop]
 all_nootropics = np.sort(np.concatenate([classic_nootropics, lifestyle_nootropics, weird_nootropics]))
 
-short_dic = {}
-for i, nootropic in enumerate(new_names):
-        short_dic[nootropic] = short_names[i]
-#TODO make other noot short when I use all data
+
 
 # print(len(classic_nootropics))
 # print(len(list(set(classic_nootropics).intersection(set(new_names)))))

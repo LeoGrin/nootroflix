@@ -117,7 +117,7 @@ if st.session_state["mode"] == "selection":
         st.form_submit_button("Next", on_click=go_to_mode_rating)
 
 if st.session_state["mode"] == "rating":
-    st.subheader("Please rate your experience with each nootropic.")
+    st.subheader("Please rate the net benefit of each nootropic for you:")
     st.markdown("""    \n 🧠 0 means a substance was totally useless, or had so many side effects you couldn't continue taking it.
     \n 🧠 1 - 4 means subtle effects, maybe placebo but still useful.
     \n 🧠 5 - 9 means strong effects, definitely not placebo.
@@ -250,6 +250,7 @@ if st.session_state["mode"] == "results":
     st.write("Our model predicted these ratings for you:")
     st.caption("Some nootropics don't have enough data right now to be included.")
     st.table(new_result_df.set_index("nootropic").style.format("{:.1f}").applymap(left_align))
+    st.caption("Some of these substances may be dangerous: be careful and do your research!")
     if not st.session_state["permanent_not_true_ratings"]:
         #print("saving...")
         if deployed:

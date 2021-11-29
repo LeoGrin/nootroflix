@@ -23,10 +23,10 @@ def save_new_ratings(rating_dic, issues_dic, question_dic, is_true_ratings, accu
         doc_ref = collection_ratings.document()
         doc_ref.set({"userID":user_id,
             "pseudo": pseudo,
-           "itemID":item,
-           "rating":rating_dic[item],
-            "issue":issues_dic[item],
-           "is_true_ratings":is_true_ratings,
+           "itemID": item,
+           "rating": rating_dic[item],
+            "issue": issues_dic[item],
+           "is_true_ratings": is_true_ratings,
            "accuracy_check": accuracy_check,
          "time":time})
     doc_ref_user = collection_users.document()
@@ -56,6 +56,8 @@ def load_collection():
     cred_dic = {}
     for key in keys:
         cred_dic[key] = os.environ.get(key).replace("\\n", "\n")
+    #for key in dic.keys():
+    #    cred_dic[key] = dic[key].replace("\\n", "\n")
     #key_dict = json.loads(st.secrets["textkey"])
     creds = service_account.Credentials.from_service_account_info(cred_dic)
     db = firestore.Client(credentials=creds, project="nootropics-2a049")

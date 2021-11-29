@@ -10,30 +10,30 @@ import streamlit as st
 
 
 
-def get_item_baseline():
-    df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
-    avalaible_nootropics = np.unique(df_clean["itemID"])
-
-    final_model = KNNBaseline(k=100, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
-    #final_model = SVD(**{'n_factors': 10, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
-
-
-    total_df = df_clean
-
-    # A reader is still needed but only the rating_scale param is requiered.
-    reader = Reader(rating_scale=(0, 10))
-
-    # The columns must correspond to user id, item id and ratings (in that order).
-    new_trainset = Dataset.load_from_df(total_df, reader).build_full_trainset()
-
-    ## Fit the best model
-
-    final_model.fit(new_trainset)
-
-    item_baselines = final_model.default_prediction() + final_model.compute_baselines()[
-        1]  # mean rating + item baseline ?
-
-    return pd.DataFrame({"nootropic": avalaible_nootropics, "item_baselines":item_baselines})
+# def get_item_baseline():
+#     df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
+#     avalaible_nootropics = np.unique(df_clean["itemID"])
+#
+#     final_model = KNNBaseline(k=100, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
+#     #final_model = SVD(**{'n_factors': 10, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
+#
+#
+#     total_df = df_clean
+#
+#     # A reader is still needed but only the rating_scale param is requiered.
+#     reader = Reader(rating_scale=(0, 10))
+#
+#     # The columns must correspond to user id, item id and ratings (in that order).
+#     new_trainset = Dataset.load_from_df(total_df, reader).build_full_trainset()
+#
+#     ## Fit the best model
+#
+#     final_model.fit(new_trainset)
+#
+#     item_baselines = final_model.default_prediction() + final_model.compute_baselines()[
+#         1]  # mean rating + item baseline ?
+#
+#     return pd.DataFrame({"nootropic": avalaible_nootropics, "item_baselines":item_baselines})
 
 def predict(rating_dic):
     df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
