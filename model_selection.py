@@ -214,5 +214,5 @@ df_total = df1.append(df2)
 print(df_total.groupby("model").agg([np.mean, np.std]))
 
 if OVERWRITE:
-    df_total.groupby("model").agg([np.mean, np.std]).to_csv("score_on_original_mean.csv")
+    df_total.groupby("model").agg([np.mean, np.std]).to_csv("model_selection/score_on_original_mean.csv")
 
