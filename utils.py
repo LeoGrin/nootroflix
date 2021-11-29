@@ -4,12 +4,14 @@ import numpy as np
 from google.cloud import firestore
 from google.oauth2 import service_account
 import os
+from firebase_admin.firestore import SERVER_TIMESTAMP
+
 
 
 # def save_new_ratings(rating_dic, is_true_ratings, accuracy_check, user_id, pseudo, time, database = "data/new_database.csv"):
 #     df = pd.read_csv(database)
 #     for item in rating_dic.keys():
-#         df = df.append({"userID":user_id,
+#         df = df.append({"userID":user_id,str
 #                         "pseudo": pseudo,
 #                            "itemID":item,
 #                            "rating":rating_dic[item],
@@ -28,7 +30,8 @@ def save_new_ratings(rating_dic, issues_dic, question_dic, is_true_ratings, accu
             "issue": issues_dic[item],
            "is_true_ratings": is_true_ratings,
            "accuracy_check": accuracy_check,
-         "time":time})
+           "time":time,
+           "time_server": SERVER_TIMESTAMP})
     doc_ref_user = collection_users.document()
     user_dic = {"userID":user_id, "time":time, "pseudo":pseudo}
     user_dic.update(question_dic)

@@ -61,7 +61,7 @@ new_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC',
              'Creatine', 'Curcumin', "DMAE", 'DMHA', 'Dextroamphetamine (Speed)', 'Dihexa',
              'Doepezil', "Emoxypine", "Epicorasimmunebooster", 'Etifoxine', 'Fasoracetam', 'GABA', 'Ginkgo Biloba',
              'Ginkgo Biloba', 'Ginseng', 'Guanfacine', 'Huperzine-A', 'IDRA-21', 'Inositol',
-             'Kava', 'Kratom', 'L-Deprenyl', 'LSD (microdose)', "Lion's Mane", 'MAOI', 'Magnesium',
+             'Kava', 'Kratom', 'L-Deprenyl', 'LSD (microdose)', "Lion's Mane", 'MAOIs (except Selegiline)', 'Magnesium',
              'Melatonin', 'Methylene blue', 'Methylphenidate (Ritalin)', 'Modafinil',
              'N-Acetyl-L-Tyrosine', 'N-acetyl Cysteine (NAC)', 'N-methyl-cyclazodone',
              'NSI-189', 'Nefiracetam', 'Nicotine', 'Noopept', 'Omega-3 Supplements',
@@ -81,7 +81,7 @@ short_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC
              'Creatine', 'Curcumin', "DMAE", 'DMHA', 'Dextroamphetamine', 'Dihexa',
              'Doepezil', "Emoxypine", "Epicorasimmunebooster", 'Etifoxine', 'Fasoracetam', 'GABA', 'Ginkgo Biloba',
              'Ginkgo Biloba', 'Ginseng', 'Guanfacine', 'Huperzine-A', 'IDRA-21', 'Inositol',
-             'Kava', 'Kratom', 'L-Deprenyl', 'LSD', "Lion's Mane", 'MAOI', 'Magnesium',
+             'Kava', 'Kratom', 'L-Deprenyl', 'LSD', "Lion's Mane", 'MAOIs', 'Magnesium',
              'Melatonin', 'Methylene blue', 'Methylphenidate', 'Modafinil',
              'N-Acetyl-L-Tyrosine', 'NAC', 'N-methyl-cyclazodone',
              'NSI-189', 'Nefiracetam', 'Nicotine', 'Noopept', 'Omega-3',
@@ -100,14 +100,13 @@ other_nootropics = ["Kanna (except Zembrin)", "Zembrin", "Shilajit", "Cordyceps"
                     "Maca", "Bromantane", "Niacin", "Saffron", "Glycine", "Berberine",
                     "White jelly mushrooms", "Theacrine (aka Teacrine)", "Methylliberine (aka Dynamine)",
                     "Red reishi mushrooms", "7,8-dihydroxyflavone", "9-MBC", "SSRIs (Prozac, Lexapro...)", "Bupropion (Wellbutrin, Zyban...)",
-                    "MAOIs (except Selegiline)", "Alprazolam (Xanax)", "SNRIs (Cymbalta, Effexor...)", "SAM-e", "Fermented drinks (Kefir, Kombucha...)", "Probiotics"]
+                    "Alprazolam (Xanax)", "SNRIs (Cymbalta, Effexor...)", "SAM-e", "Fermented drinks (Kefir, Kombucha...)", "Probiotics"]
 
 short_other_nootropics = ["Kanna", "Zembrin", "Shilajit", "Cordyceps", "Lemon balm",
                     "Nicotinamide riboside", "Nicotinamide mononucleotide", "Polygala tenuifolia",
                     "Maca", "Bromantane", "Niacin", "Saffron", "Glycine", "Berberine",
                     "White jelly mushrooms", "Theacrine", "Methylliberine",
-                    "Red reishi mushrooms", "7,8-dihydroxyflavone", "9-MBC", "SSRIs", "Bupropion",
-                    "MAOIs", "Alprazolam (Xanax)", "SNRIs", "SAM-e", "Fermented drinks", "Probiotics"]
+                    "Red reishi mushrooms", "7,8-dihydroxyflavone", "9-MBC", "SSRIs", "Bupropion", "Alprazolam (Xanax)", "SNRIs", "SAM-e", "Fermented drinks", "Probiotics"]
 
 lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "Vegetarian diet", "Vegan diet", "No Fap (or otherwise avoiding masturbation)",
                         "Bright lights in morning / Dawn simulator", "Trying to get more sleep",

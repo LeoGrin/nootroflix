@@ -33,7 +33,12 @@ df = df.set_index("userID").join(to_join)
 
 print(df)
 
+start_time = 1638206167
+df = df[df["time"] > start_time]
+
 df = df[df["time"] == df["min_time"]]
+
+
 
 df = df[["itemID", "rating"]].reset_index()
 
@@ -51,6 +56,7 @@ for noot in all_nootropics:
 print(set(nootropics_with_enough_ratings).difference(set(all_nootropics)))
 
 total_df = total_df[total_df["itemID"].isin(nootropics_with_enough_ratings)]
+
 
 total_df.to_csv("data/total_df.csv", index=False)
 

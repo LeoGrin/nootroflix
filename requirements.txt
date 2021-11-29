@@ -8,3 +8,4 @@ protobuf==3.19.1
 scikit_learn==1.0.1
 surprise==0.1
 google-cloud-firestore
+firebase_admin==5.1.0
