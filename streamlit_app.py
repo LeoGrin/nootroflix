@@ -251,19 +251,17 @@ if st.session_state["mode"] == "results":
     st.caption("Some nootropics don't have enough data right now to be included.")
     st.table(new_result_df.set_index("nootropic").style.format("{:.1f}").applymap(left_align))
     st.caption("Some of these substances may be dangerous: be careful and do your research!")
-    if not st.session_state["permanent_not_true_ratings"]:
-        #print("saving...")
-        if deployed:
-            save_new_ratings(rating_dic=slider_dic,
-                         issues_dic = radio_dic,
-                         question_dic = question_dic,
-                         is_true_ratings=not st.session_state["permanent_not_true_ratings"],
-                         accuracy_check=False,
-                         user_id=user_id,
-                         pseudo = pseudo,
-                         time = time.time(),
-                         collection_ratings=collection_ratings,
-                         collection_users=collection_users)
+    if deployed:
+        save_new_ratings(rating_dic=slider_dic,
+                     issues_dic = radio_dic,
+                     question_dic = question_dic,
+                     is_true_ratings=not st.session_state["permanent_not_true_ratings"],
+                     accuracy_check=False,
+                     user_id=user_id,
+                     pseudo = pseudo,
+                     time = time.time(),
+                     collection_ratings=collection_ratings,
+                     collection_users=collection_users)
     st.header("🧠 How accurate is our model?")
     if len(slider_dic) < 2:
         st.warning("Please rate more nootropics")
