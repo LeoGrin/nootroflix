@@ -110,9 +110,10 @@ short_other_nootropics = ["Kanna", "Zembrin", "Shilajit", "Cordyceps", "Lemon ba
 
 lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "Vegetarian diet", "Vegan diet", "No Fap (or otherwise avoiding masturbation)",
                         "Bright lights in morning / Dawn simulator", "Trying to get more sleep",
-                        "Trying to get less sleep"]
+                        "Trying to get less sleep", "Weightlifting", "Low intensity cardio (hiking, light jogging...)", "High intensity cardio (HIIT, soccer...)"]
 
-short_lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "Vegetarian diet", "Vegan diet", "No Fap", "Morning lights", "More sleep", "Less sleep"]
+short_lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "Vegetarian diet", "Vegan diet", "No Fap", "Morning lights", "More sleep", "Less sleep",
+                              "Weightlifting", "Low intensity cardio", "High intensity cardio"]
 
 classic_nootropics = ["Rhodiola", "Aniracetam", "Phenibut", "Ashwagandha", "Bacopa", "Piracetam", "Choline",
                       "Noopept", "Adderall", "Nicotine", "Creatine", "Theanine", "Modafinil", "Melatonin", "Caffeine",

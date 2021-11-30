@@ -53,6 +53,23 @@ userID,itemID,rating
 10374536,ALCAR,7
 10374536,GABA,5
 10374536,Agmatine,6
+10419759,Piracetam,5
+10419759,Adrafinil,6
+10419759,Kratom,6
+10419759,Phenibut,6
+10419759,"Fermented drinks (Kefir, Kombucha...)",4
+10419759,Nicotine,5
+10419759,Noopept,3
+10419759,Alpha-GPC,5
+10419759,Aniracetam,5
+10419759,Ginkgo Biloba,4
+10419759,Ginseng,4
+10419759,Modafinil,6
+10419759,Choline,5
+10419759,Theanine,5
+10419759,Magnesium,5
+10419759,Adderall,7
+10419759,Caffeine,6
 10481053,Caffeine,9
 10481053,5-HTP,6
 10481053,Nicotine,1
@@ -82,6 +99,41 @@ userID,itemID,rating
 10518152,Lemon balm,1
 10518152,Melatonin,6
 10518152,Methylene blue,0
+11026440,Omega-3 Supplements,0
+11026440,St John's Wort,0
+11026440,Alpha-GPC,0
+11026440,Ginkgo Biloba,0
+11026440,Carnitine / Acetyl-L-Carnitine,0
+11026440,"Fermented drinks (Kefir, Kombucha...)",0
+11026440,Alprazolam (Xanax),0
+11026440,Bright lights in morning / Dawn simulator,0
+11026440,SAM-e,0
+11026440,Caffeine,0
+11026440,Carnivore diet,0
+11026440,Melatonin,0
+11026440,N-Acetyl-L-Tyrosine,0
+11026440,Piracetam,0
+11026440,Lion's Mane,0
+11026440,Maca,0
+11026440,LSD (microdose),0
+11026440,Choline,0
+11026440,9-MBC,0
+11026440,Niacin,0
+11026440,Trying to get more sleep,0
+11026440,Ketogenic diet,0
+11026440,5-HTP,0
+11026440,Phenylpiracetam,0
+11026440,Tyrosine,0
+11026440,Semax (or NA-Semax etc),0
+11026440,ALCAR,0
+11026440,Ginseng,0
+11026440,Phenibut,0
+11026440,Creatine,0
+11026440,Nicotine,0
+11026440,No Fap (or otherwise avoiding masturbation),0
+11026440,Oxiracetam,0
+11026440,Trying to get less sleep,0
+11026440,Psilocybin (microdose),0
 11089131,Omega-3 Supplements,3
 11089131,Ketogenic diet,5
 11089131,Theanine,4
@@ -111,6 +163,31 @@ userID,itemID,rating
 11119290,Tryptophan,1
 11119290,Nicotine,6
 11119290,Magnesium,4
+11471157,Ashwagandha,2
+11471157,Creatine,2
+11471157,No Fap (or otherwise avoiding masturbation),5
+11471157,Omega-3 Supplements,1
+11471157,Trying to get more sleep,5
+11471157,Shilajit,5
+11471157,Caffeine,7
+11471157,Ginseng,2
+11471157,Tyrosine,2
+11471157,Lion's Mane,1
+11471157,Nicotine,7
+11471157,"Fermented drinks (Kefir, Kombucha...)",1
+11471157,Bright lights in morning / Dawn simulator,4
+11471157,Choline,2
+11471157,Trying to get less sleep,4
+11520967,Magnesium,0
+11520967,Caffeine,0
+11520967,Omega-3 Supplements,0
+11520967,LSD (microdose),0
+11520967,Theanine,0
+11520967,Ashwagandha,0
+11520967,5-HTP,0
+11520967,Creatine,0
+11520967,Nicotine,0
+11520967,Trying to get more sleep,0
 11621031,Alprazolam (Xanax),4
 11621031,Melatonin,6
 11621031,Vegan diet,10
@@ -128,7 +205,6 @@ userID,itemID,rating
 11621031,Omega-3 Supplements,4
 11621031,Psilocybin (microdose),10
 11621031,Theanine,7
-11621031,Dextroamphetamine (Speed),9
 11621031,CBD,4
 11621031,LSD (microdose),10
 11629779,Modafinil,8
@@ -245,6 +321,59 @@ userID,itemID,rating
 1215993,Magnesium,0
 1215993,No Fap (or otherwise avoiding masturbation),10
 1215993,Ashwagandha,7
+121698,"SSRIs (Prozac, Lexapro...)",5
+121698,Lion's Mane,6
+121698,Phenylpiracetam,6
+121698,Magnesium,4
+121698,ALCAR,1
+121698,Caffeine,8
+121698,Omega-3 Supplements,3
+121698,Nicotine,7
+121698,Tyrosine,1
+121698,CBD,5
+121698,Melatonin,2
+121698,Kratom,6
+121698,Ketogenic diet,7
+121698,Theanine,6
+121698,Choline,2
+121698,Bacopa,1
+121698,Ashwagandha,2
+121698,Bright lights in morning / Dawn simulator,3
+121698,Cordyceps,5
+121698,Ginkgo Biloba,2
+121698,Trying to get more sleep,8
+121698,Modafinil,5
+121698,Alpha-GPC,3
+121698,Creatine,5
+121698,Rhodiola,4
+121698,Noopept,5
+12450449,Choline,3
+12450449,St John's Wort,4
+12450449,Sarcosine,2
+12450449,Bacopa,4
+12450449,Niacin,3
+12450449,Magnesium,5
+12450449,Phenibut,7
+12450449,Sulbutiamine,3
+12450449,Fasoracetam,4
+12450449,Omega-3 Supplements,3
+12450449,Noopept,6
+12450449,Guanfacine,6
+12450449,Adrafinil,7
+12450449,Aniracetam,5
+12450449,Bromantane,6
+12450449,Tianeptine,5
+12450449,Nicotine,3
+12450449,Uridine,5
+12450449,Ginseng,4
+12450449,Modafinil,7
+12450449,Ginkgo Biloba,4
+12450449,Agmatine,2
+12450449,Adderall,8
+12450449,Alprazolam (Xanax),2
+12450449,IDRA-21,4
+12450449,9-MBC,7
+12450449,Semax (or NA-Semax etc),5
 12620040,Alprazolam (Xanax),1
 12620040,Ginseng,5
 12620040,Magnesium,6
@@ -268,9 +397,57 @@ userID,itemID,rating
 12695588,Vegetarian diet,0
 12695588,Trying to get more sleep,10
 12695588,Magnesium,0
+12857099,Theanine,4
+12857099,N-acetyl Cysteine (NAC),9
+12857099,Caffeine,8
+12857099,Lion's Mane,5
+12857099,Nicotine,5
+12857099,Magnesium,4
+12857099,Melatonin,5
+12857099,Carnitine / Acetyl-L-Carnitine,7
+12857099,Maca,0
+12857099,Probiotics,5
+12857099,Vegan diet,0
+12860855,Melatonin,7
+12860855,Magnesium,4
+12860855,Omega-3 Supplements,4
+12860855,Caffeine,5
+12860855,Theanine,4
+12860855,Phenibut,2
+13016001,Bacopa,9
+13016001,Lion's Mane,5
+13016001,Omega-3 Supplements,0
+13016001,Creatine,10
+13016001,No Fap (or otherwise avoiding masturbation),5
+13016001,Ginkgo Biloba,7
+13016001,Curcumin,4
+13016001,Vegan diet,0
+13016001,Ketogenic diet,7
+13016001,Ginseng,7
+13016001,Carnivore diet,9
+13016001,Choline,10
+13016001,Probiotics,6
 13318025,Trying to get more sleep,10
 13318025,No Fap (or otherwise avoiding masturbation),4
 13318025,Caffeine,0
+13509178,Caffeine,4
+13509178,Melatonin,1
+13509178,Bright lights in morning / Dawn simulator,0
+13509178,Vegetarian diet,0
+13509178,Adderall,10
+13509178,"Fermented drinks (Kefir, Kombucha...)",0
+13509178,Vegan diet,0
+13509178,Trying to get less sleep,0
+13509178,Ketogenic diet,0
+13509178,Trying to get more sleep,1
+13669917,Trying to get more sleep,10
+13669917,Ketogenic diet,0
+13669917,Caffeine,0
+13669917,Trying to get less sleep,0
+13669917,No Fap (or otherwise avoiding masturbation),0
+13669917,5-HTP,0
+13982643,Theanine,6
+13982643,Alpha-GPC,8
 14032156,Modafinil,5
 14032156,CBD,2
 14032156,Caffeine,7
@@ -299,6 +476,20 @@ userID,itemID,rating
 14355885,Trying to get more sleep,6
 14355885,Vegetarian diet,4
 14355885,Vegan diet,7
+14448509,Magnesium,4
+14448509,Adderall,10
+14448509,Trying to get less sleep,1
+14448509,CBD,1
+14448509,Caffeine,5
+14448509,Ketogenic diet,1
+14448509,Creatine,4
+14448509,Theanine,9
+14448509,"SSRIs (Prozac, Lexapro...)",1
+14448509,"SNRIs (Cymbalta, Effexor...)",1
+14448509,Trying to get more sleep,7
+14448509,Nicotine,2
+14448509,No Fap (or otherwise avoiding masturbation),10
+14448509,Melatonin,4
 1453692,Valerian Root,2
 1453692,Uridine,0
 1453692,Choline,3
@@ -351,7 +542,6 @@ userID,itemID,rating
 14639524,"Bupropion (Wellbutrin, Zyban...)",8
 14639524,Piracetam,5
 14639524,SAM-e,6
-14639524,Dextroamphetamine (Speed),8
 14639524,Adrafinil,5
 14639524,ALCAR,5
 14639524,Phenylpiracetam,5
@@ -401,6 +591,33 @@ userID,itemID,rating
 14882616,Adrafinil,5
 14882616,Creatine,4
 14882616,Nicotine,7
+14899825,"Fermented drinks (Kefir, Kombucha...)",1
+14899825,"SSRIs (Prozac, Lexapro...)",2
+14899825,Melatonin,2
+14899825,Modafinil,8
+14899825,Kratom,6
+14899825,Ginkgo Biloba,1
+14899825,Alprazolam (Xanax),8
+14899825,ALCAR,2
+14899825,Semax (or NA-Semax etc),6
+14899825,Trying to get more sleep,7
+14899825,Kava,5
+14899825,5-HTP,7
+14899825,Ashwagandha,2
+14899825,Armodafinil,8
+14899825,Phenibut,7
+14899825,LSD (microdose),5
+14899825,Noopept,7
+14899825,Creatine,1
+14899825,Caffeine,2
+14899825,CBD,7
+14899825,Probiotics,0
+14899825,Cerebrolysin,10
+14899825,Selank (or NA-Selank etc),5
+14899825,N-acetyl Cysteine (NAC),1
+14899825,Omega-3 Supplements,1
+14899825,Berberine,7
+14899825,Psilocybin (microdose),6
 14957470,Magnesium,2
 14957470,"Bupropion (Wellbutrin, Zyban...)",4
 14957470,Adderall,6
@@ -420,6 +637,17 @@ userID,itemID,rating
 14992077,Phenylpiracetam,5
 14992077,Modafinil,3
 14992077,Bright lights in morning / Dawn simulator,0
+15445525,Magnesium,2
+15445525,Probiotics,1
+15445525,Curcumin,0
+15445525,Trying to get less sleep,0
+15445525,Adderall,7
+15445525,Melatonin,1
+15445525,Caffeine,5
+15445525,Omega-3 Supplements,0
+15445525,"Fermented drinks (Kefir, Kombucha...)",0
+15445525,Creatine,0
+15445525,No Fap (or otherwise avoiding masturbation),0
 15836702,Caffeine,8
 15836702,Piracetam,0
 15836702,Vegetarian diet,0
@@ -428,6 +656,28 @@ userID,itemID,rating
 15836702,Nicotine,6
 15836702,Carnivore diet,2
 15836702,CBD,0
+15868382,Alpha-GPC,6
+15868382,Modafinil,6
+15868382,N-acetyl Cysteine (NAC),1
+15868382,Kava,3
+15868382,Bacopa,5
+15868382,Melatonin,0
+15868382,CBD,2
+15868382,Ginkgo Biloba,3
+15868382,Dextroamphetamine,7
+15868382,St John's Wort,0
+15868382,Magnesium,1
+15868382,5-HTP,1
+15868382,Choline,6
+15868382,Inositol,5
+15868382,Ginseng,1
+15868382,"Fermented drinks (Kefir, Kombucha...)",0
+15868382,Piracetam,7
+15868382,Caffeine,2
+15868382,Omega-3 Supplements,1
+15868382,Curcumin,1
+15868382,Probiotics,1
+15868382,Ketogenic diet,7
 16160405,Phenibut,0
 16160405,Omega-3 Supplements,0
 16160405,Modafinil,0
@@ -474,7 +724,6 @@ userID,itemID,rating
 16536853,Caffeine,8
 16536853,Phenibut,9
 16693382,Ashwagandha,4
-16693382,Dextroamphetamine (Speed),10
 16693382,Glycine,6
 16693382,No Fap (or otherwise avoiding masturbation),7
 16693382,Nicotine,8
@@ -571,7 +820,6 @@ userID,itemID,rating
 17476872,Adderall,9
 17476872,Omega-3 Supplements,5
 17476872,Melatonin,8
-17476872,Dextroamphetamine (Speed),9
 17476872,Lion's Mane,3
 17476872,Aniracetam,8
 17476872,CBD,8
@@ -587,6 +835,21 @@ userID,itemID,rating
 17476872,Trying to get more sleep,7
 17476872,LSD (microdose),4
 17476872,Caffeine,7
+17494639,LSD (microdose),2
+17494639,Phenibut,8
+17494639,Theanine,4
+17494639,Creatine,3
+17494639,Ashwagandha,6
+17494639,5-HTP,6
+17494639,Aniracetam,7
+17494639,Noopept,5
+17494639,CBD,2
+17494639,Magnesium,3
+17494639,Lion's Mane,10
+17494639,Ginseng,5
+17494639,Caffeine,6
+17494639,Trying to get less sleep,0
+17494639,Nicotine,0
 17770895,Caffeine,10
 17770895,Trying to get more sleep,10
 17770895,Carnivore diet,3
@@ -687,6 +950,18 @@ userID,itemID,rating
 18417575,Semax (or NA-Semax etc),6
 18417575,Adderall,8
 18417575,Magnesium,5
+18988744,Ginkgo Biloba,1
+18988744,Curcumin,1
+18988744,Ashwagandha,2
+18988744,Nicotine,5
+18988744,Omega-3 Supplements,3
+18988744,Theanine,1
+18988744,"Fermented drinks (Kefir, Kombucha...)",10
+18988744,Melatonin,7
+18988744,Kava,1
+18988744,Adderall,10
+18988744,CBD,5
+18988744,Caffeine,9
 18991237,Trying to get less sleep,2
 18991237,Bright lights in morning / Dawn simulator,1
 18991237,Caffeine,3
@@ -696,6 +971,52 @@ userID,itemID,rating
 18991237,Omega-3 Supplements,1
 18991237,Ketogenic diet,1
 18991237,Theanine,1
+19029326,Magnesium,9
+19029326,Niacin,2
+19029326,Omega-3 Supplements,7
+19029326,GABA,3
+19029326,Nicotine,3
+19029326,Ginkgo Biloba,1
+19029326,Adrafinil,7
+19029326,Curcumin,3
+19029326,Theacrine (aka Teacrine),0
+19029326,Uridine,7
+19029326,Theanine,3
+19029326,Choline,2
+19029326,Tyrosine,4
+19029326,Sulbutiamine,0
+19029326,Probiotics,3
+19029326,St John's Wort,3
+19029326,Kratom,2
+19029326,Pramiracetam,3
+19029326,Aniracetam,1
+19029326,Ginseng,7
+19029326,Bright lights in morning / Dawn simulator,5
+19029326,Phosphatidylserine,3
+19029326,Trying to get more sleep,0
+19029326,Bromantane,6
+19029326,LSD (microdose),8
+19029326,Vegetarian diet,3
+19029326,Bacopa,3
+19029326,Adderall,6
+19029326,Piracetam,6
+19029326,Phenylpiracetam,4
+19029326,NSI-189,4
+19029326,Oxiracetam,4
+19029326,Melatonin,8
+19029326,Huperzine-A,1
+19029326,Caffeine,3
+19029326,Maca,2
+19029326,Psilocybin (microdose),6
+19029326,CBD,4
+19029326,Carnitine / Acetyl-L-Carnitine,1
+19029326,Alpha-GPC,3
+19029326,Ashwagandha,1
+19029326,Saffron,5
+19029326,Creatine,9
+19029326,Phenibut,2
+19029326,Noopept,5
+19029326,Inositol,1
 19077473,Creatine,0
 19077473,Caffeine,2
 19077473,Magnesium,0
@@ -730,12 +1051,97 @@ userID,itemID,rating
 19247148,Melatonin,8
 19247148,Nicotine,7
 19247148,No Fap (or otherwise avoiding masturbation),5
+19248358,Trying to get more sleep,6
+19248358,Caffeine,5
+19248358,Vegetarian diet,5
+19248358,N-acetyl Cysteine (NAC),5
+19248358,Omega-3 Supplements,8
+19248358,Theanine,6
+19248358,Magnesium,0
+19248358,Nicotine,7
 19294743,Modafinil,4
+19344240,Tyrosine,5
+19344240,Creatine,4
+19344240,Noopept,6
+19344240,Bright lights in morning / Dawn simulator,7
+19344240,CBD,8
+19344240,Nicotine,8
+19344240,Adrafinil,8
+19344240,Melatonin,6
+19344240,Caffeine,8
+19344240,Ashwagandha,5
+19465550,Phenibut,0
+19465550,Ketogenic diet,0
+19465550,Melatonin,0
+19465550,Bright lights in morning / Dawn simulator,0
+19465550,Ginseng,0
+19465550,Caffeine,0
+19465550,Creatine,0
+1968221,Magnesium,7
+1968221,Black Seed Oil,6
+1968221,Rhodiola,7
+1968221,Ashwagandha,6
+1968221,Melatonin,4
+19771473,Creatine,4
+19771473,Trying to get less sleep,7
+19771473,CBD,5
+19771473,Melatonin,4
+19771473,Theanine,5
+19771473,No Fap (or otherwise avoiding masturbation),7
+19771473,Carnivore diet,6
+19771473,Magnesium,7
+19771473,Caffeine,4
+19771473,"Bupropion (Wellbutrin, Zyban...)",6
+19771473,Semax (or NA-Semax etc),8
+19771473,Trying to get more sleep,5
+19771473,Omega-3 Supplements,5
+19771473,Ketogenic diet,5
+19771473,Nicotine,8
+19771473,Cordyceps,6
+20537695,Creatine,7
+20537695,LSD (microdose),9
+20537695,Dextroamphetamine,9
+20537695,Magnesium,4
+20537695,Saffron,0
+20537695,Ashwagandha,6
+20537695,Maca,5
+20537695,Niacin,5
+20537695,Theanine,7
+20537695,Melatonin,6
+20537695,Vegan diet,3
+20537695,"Fermented drinks (Kefir, Kombucha...)",2
+20537695,No Fap (or otherwise avoiding masturbation),7
+20537695,Trying to get more sleep,8
+20537695,5-HTP,3
+20537695,Nicotine,7
+20537695,Caffeine,7
+20537695,Alprazolam (Xanax),10
+20537695,Ketogenic diet,8
+20537695,Armodafinil,8
+20537695,Psilocybin (microdose),9
+20537695,Omega-3 Supplements,5
+20537695,Modafinil,9
+20537695,CBD,5
+20537695,"Bupropion (Wellbutrin, Zyban...)",9
+20537695,Adderall,10
 20776242,Ginseng,2
 20776242,Theanine,6
 20776242,Creatine,6
 20776242,Caffeine,7
 20776242,Magnesium,4
+20815662,No Fap (or otherwise avoiding masturbation),8
+20815662,Ketogenic diet,0
+20815662,Caffeine,0
+20815662,Melatonin,2
+20815662,Magnesium,2
+20815662,Ashwagandha,0
+20815662,Lion's Mane,0
+20815662,Omega-3 Supplements,1
+20815662,Phenibut,3
+20815662,Theanine,5
+20815662,Kratom,2
+20815662,Ginseng,4
+20815662,Bright lights in morning / Dawn simulator,5
 20859776,Creatine,4
 20859776,Bright lights in morning / Dawn simulator,7
 20859776,Noopept,8
@@ -810,6 +1216,57 @@ userID,itemID,rating
 21229757,GABA,0
 21229757,Omega-3 Supplements,0
 21229757,Choline,1
+21277153,N-Acetyl-L-Tyrosine,0
+21277153,Theanine,0
+21277153,GABA,0
+21277153,Choline,0
+21277153,Modafinil,0
+21277153,Phosphatidylserine,0
+21277153,Piracetam,0
+21277153,Phenylpiracetam,0
+21277153,Noopept,0
+21277153,Omega-3 Supplements,0
+21277153,Rhodiola,0
+21277153,"7,8-dihydroxyflavone",0
+21277153,Ginseng,0
+21277153,Coluracetam,0
+21277153,Niacin,0
+21277153,Ashwagandha,0
+21277153,Aniracetam,0
+21277153,"Bupropion (Wellbutrin, Zyban...)",0
+21277153,Adderall,0
+21277153,Tyrosine,0
+21277153,Uridine,0
+21277153,Pramiracetam,0
+21277153,Nicotine,0
+21277153,Oxiracetam,0
+21277153,Creatine,0
+21277153,Sulbutiamine,0
+21277153,Phenibut,0
+21277153,Magnesium,0
+21277153,Probiotics,0
+21277153,ALCAR,0
+21277153,Huperzine-A,0
+21277153,Maca,0
+21277153,No Fap (or otherwise avoiding masturbation),0
+21277153,"SSRIs (Prozac, Lexapro...)",0
+21277153,Curcumin,0
+21277153,Sunifiram,0
+21277153,Melatonin,0
+21277153,Trying to get more sleep,0
+21277153,Bright lights in morning / Dawn simulator,0
+21277153,Bacopa,0
+21277153,Ginkgo Biloba,0
+21277153,Lion's Mane,0
+21277153,Alpha-GPC,0
+21277153,Caffeine,0
+21277153,Carnitine / Acetyl-L-Carnitine,0
+21277153,Pregenolone,0
+21507959,Trying to get more sleep,10
+21507959,Nicotine,8
+21507959,Adderall,8
+21507959,MAOIs (except Selegiline),0
+21507959,"Fermented drinks (Kefir, Kombucha...)",0
 21696947,Caffeine,9
 21696947,Nicotine,1
 21696947,Choline,1
@@ -826,6 +1283,45 @@ userID,itemID,rating
 21696947,Theanine,3
 21696947,Tyrosine,5
 21696947,Creatine,0
+21718137,Omega-3 Supplements,2
+21718137,Aniracetam,2
+21718137,GABA,0
+21718137,Ginseng,0
+21718137,Inositol,2
+21718137,Ketogenic diet,8
+21718137,Caffeine,5
+21718137,Trying to get more sleep,2
+21718137,Adrafinil,7
+21718137,Trying to get less sleep,6
+21718137,CBD,4
+21718137,Phenibut,5
+21718137,Phenylpiracetam,7
+21718137,Choline,2
+21718137,Tianeptine,3
+21718137,St John's Wort,1
+21718137,Sulbutiamine,4
+21718137,Melatonin,2
+21718137,Magnesium,2
+21718137,Noopept,6
+21718137,Oxiracetam,2
+21718137,Piracetam,3
+21718137,Pramiracetam,2
+21718137,Theanine,7
+21718137,Nicotine,5
+21718137,5-HTP,2
+21733294,Ketogenic diet,4
+21733294,Adderall,8
+21733294,Modafinil,7
+21733294,Theanine,6
+21733294,Probiotics,1
+21733294,Creatine,7
+21733294,Melatonin,8
+21733294,Curcumin,8
+21733294,Trying to get more sleep,7
+21733294,Caffeine,5
+21733294,Omega-3 Supplements,2
+21733294,Magnesium,5
+21733294,Lion's Mane,9
 21788152,Modafinil,9
 21788152,Ginkgo Biloba,5
 21788152,Nicotine,9
@@ -837,6 +1333,18 @@ userID,itemID,rating
 21788152,Omega-3 Supplements,5
 21788152,Probiotics,9
 21788152,Melatonin,8
+2207150,Trying to get more sleep,9
+2207150,Ashwagandha,10
+2207150,Ginkgo Biloba,8
+2207150,No Fap (or otherwise avoiding masturbation),4
+2207150,Modafinil,8
+2207150,Magnesium,8
+2207150,Piracetam,7
+2207150,Creatine,6
+2207150,Alpha-GPC,6
+2207150,Trying to get less sleep,3
+2207150,Glycine,0
+2207150,Omega-3 Supplements,8
 22474971,Glycine,7
 22474971,BPC-157,6
 22474971,Caffeine,4
@@ -874,6 +1382,45 @@ userID,itemID,rating
 22571784,Theanine,0
 22571784,Choline,6
 22571784,Ashwagandha,4
+22769811,Probiotics,1
+22769811,No Fap (or otherwise avoiding masturbation),0
+22769811,Alprazolam (Xanax),3
+22769811,Vegetarian diet,0
+22769811,Omega-3 Supplements,0
+22769811,Vegan diet,0
+22769811,"SSRIs (Prozac, Lexapro...)",10
+22769811,Carnitine / Acetyl-L-Carnitine,0
+22769811,Nicotine,7
+22769811,Trying to get more sleep,0
+22769811,"Bupropion (Wellbutrin, Zyban...)",1
+22769811,Caffeine,6
+22769811,Melatonin,0
+22769811,Creatine,3
+22769811,Ketogenic diet,0
+22873455,Omega-3 Supplements,0
+22947191,Piracetam,1
+22947191,LSD (microdose),6
+22947191,Creatine,2
+22947191,Trying to get more sleep,5
+22947191,Bright lights in morning / Dawn simulator,3
+22947191,Melatonin,7
+22947191,Noopept,1
+22947191,Caffeine,4
+22947191,Theanine,6
+22947191,Nicotine,7
+22947191,Bacopa,1
+22947191,Phenibut,2
+22947191,Modafinil,9
+22947191,PRL-8-53,1
+22977047,Adrafinil,7
+22977047,Trying to get more sleep,9
+22977047,Modafinil,6
+23031582,Omega-3 Supplements,0
+23031582,Creatine,7
+23031582,Nicotine,6
+23031582,Melatonin,6
+23031582,CBD,4
+23031582,Caffeine,6
 23034151,Adderall,0
 23034151,Magnesium,0
 23034151,Kava,0
@@ -916,11 +1463,65 @@ userID,itemID,rating
 23041710,Magnesium,1
 23041710,Piracetam,1
 23041710,Caffeine,9
+23335958,Glycine,0
+23335958,Carnivore diet,9
+23335958,5-HTP,0
+23335958,Probiotics,0
+23335958,Magnesium,0
+23335958,Melatonin,0
+23335958,Black Seed Oil,0
+23335958,Theanine,0
+23335958,Nicotine,0
+23335958,Valerian Root,0
+23335958,Ketogenic diet,5
+23335958,Ashwagandha,0
+23335958,Creatine,1
+23335958,Bright lights in morning / Dawn simulator,1
+23335958,Caffeine,0
+23335958,Alprazolam (Xanax),10
+23335958,Trying to get more sleep,7
+23335958,Omega-3 Supplements,0
+23472376,Creatine,0
+23472376,Lion's Mane,0
+23472376,Omega-3 Supplements,0
+23472376,Magnesium,0
+23472376,Maca,0
+23472376,Trying to get more sleep,0
+23472376,Cordyceps,0
+23472376,Ginseng,0
 23522684,Magnesium,7
 23522684,Vegetarian diet,7
 23522684,Caffeine,2
 23522684,Theanine,6
 23522684,Tyrosine,5
+23835821,Modafinil,2
+23835821,Carnivore diet,4
+23835821,Magnesium,4
+23835821,Bacopa,5
+23835821,Probiotics,4
+23835821,No Fap (or otherwise avoiding masturbation),6
+23835821,Ginseng,5
+23835821,Carnitine / Acetyl-L-Carnitine,4
+23835821,Melatonin,6
+23835821,Tyrosine,4
+23835821,Piracetam,0
+23835821,Caffeine,6
+23835821,Adderall,9
+23835821,Methylphenidate (Ritalin),7
+23835821,Trying to get less sleep,1
+23835821,Uridine,3
+23835821,Trying to get more sleep,5
+23835821,Doepezil,4
+23835821,Huperzine-A,6
+23835821,Bright lights in morning / Dawn simulator,9
+23835821,Creatine,5
+23835821,Nicotine,6
+23835821,Ginkgo Biloba,6
+23835821,Choline,4
+23835821,ALCAR,4
+23835821,Inositol,1
+2447720,Caffeine,5
+2447720,Trying to get more sleep,5
 24759063,Trying to get less sleep,3
 24759063,Magnesium,4
 24759063,Adderall,5
@@ -928,6 +1529,53 @@ userID,itemID,rating
 24759063,Nicotine,2
 24759063,"Bupropion (Wellbutrin, Zyban...)",3
 24759063,Bacopa,0
+25030479,Huperzine-A,3
+25030479,Kratom,8
+25030479,5-HTP,4
+25030479,Omega-3 Supplements,3
+25030479,Vegetarian diet,2
+25030479,Psilocybin (microdose),8
+25030479,Tianeptine,6
+25030479,Semax (or NA-Semax etc),2
+25030479,NSI-189,6
+25030479,Rhodiola,0
+25030479,LSD (microdose),0
+25030479,Methylphenidate (Ritalin),0
+25030479,Dihexa,2
+25030479,Trying to get more sleep,2
+25030479,Choline,2
+25030479,Vegan diet,0
+25030479,9-MBC,5
+25030479,N-acetyl Cysteine (NAC),2
+25030479,No Fap (or otherwise avoiding masturbation),0
+25030479,Carnitine / Acetyl-L-Carnitine,3
+25030479,Kava,5
+25030479,Piracetam,2
+25030479,Selegiline,6
+25030479,Magnesium,0
+25030479,L-Deprenyl,5
+25030479,Alprazolam (Xanax),3
+25030479,PRL-8-53,2
+25030479,Caffeine,6
+25030479,"Bupropion (Wellbutrin, Zyban...)",4
+25030479,Emoxypine,4
+25030479,ALCAR,4
+25030479,Bromantane,1
+25030479,Modafinil,8
+25030479,Lion's Mane,3
+25030479,St John's Wort,5
+25030479,Ketogenic diet,3
+25030479,Dextroamphetamine,8
+25030479,CBD,3
+25030479,Probiotics,4
+25030479,Noopept,4
+25030479,Creatine,3
+25030479,Nicotine,4
+25030479,Zembrin,0
+25030479,Phenylpiracetam,2
+25030479,Alpha-GPC,4
+25030479,SAM-e,0
+25030479,"SNRIs (Cymbalta, Effexor...)",0
 25358364,Piracetam,0
 25358364,Trying to get more sleep,0
 25358364,Ketogenic diet,0
@@ -936,6 +1584,37 @@ userID,itemID,rating
 25358364,Melatonin,0
 25358364,Carnivore diet,0
 25358364,Trying to get less sleep,0
+2538088,Curcumin,3
+2538088,SAM-e,10
+2538088,Niacin,8
+2538088,Choline,6
+2538088,Bacopa,8
+2538088,Ginkgo Biloba,5
+2538088,Magnesium,8
+2538088,Trying to get more sleep,6
+2538088,GABA,8
+2538088,"SSRIs (Prozac, Lexapro...)",5
+2538088,Kratom,2
+2538088,Adderall,9
+2538088,ALCAR,5
+2538088,N-acetyl Cysteine (NAC),5
+2538088,Alpha-GPC,10
+2538088,St John's Wort,2
+2538088,Melatonin,2
+2538088,N-Acetyl-L-Tyrosine,8
+2538088,Tryptophan,7
+2538088,"SNRIs (Cymbalta, Effexor...)",6
+2538088,Probiotics,10
+2538088,Omega-3 Supplements,5
+2538088,Ketogenic diet,8
+2538088,Caffeine,8
+2538088,Berberine,0
+2538088,Alprazolam (Xanax),8
+2538088,Phenibut,10
+2538088,"Fermented drinks (Kefir, Kombucha...)",10
+2538088,Tyrosine,8
+2538088,5-HTP,7
+2538088,Fasoracetam,7
 25494796,Noopept,8
 25494796,Modafinil,9
 25494796,Theanine,6
@@ -954,6 +1633,53 @@ userID,itemID,rating
 25494796,Choline,6
 25494796,Ketogenic diet,7
 25494796,Magnesium,7
+25648381,Valerian Root,5
+25648381,Carnivore diet,0
+25648381,Alpha-GPC,1
+25648381,"Fermented drinks (Kefir, Kombucha...)",3
+25648381,No Fap (or otherwise avoiding masturbation),5
+25648381,St John's Wort,3
+25648381,CBD,8
+25648381,Melatonin,10
+25648381,Probiotics,1
+25648381,Niacin,7
+25648381,Vegan diet,0
+25648381,Shilajit,5
+25648381,Curcumin,0
+25648381,Choline,1
+25648381,Lemon balm,8
+25648381,Creatine,8
+25648381,Omega-3 Supplements,1
+25648381,Vegetarian diet,4
+25648381,Ketogenic diet,3
+25648381,Trying to get less sleep,0
+25648381,Magnesium,3
+25648381,Trying to get more sleep,10
+25648381,Nicotine,2
+25648381,Caffeine,3
+25648381,Ashwagandha,5
+25648381,Theanine,5
+25676052,Ginkgo Biloba,3
+25676052,Theanine,5
+25676052,ALCAR,2
+25676052,Kanna (except Zembrin),7
+25676052,5-HTP,6
+25676052,Magnesium,8
+25676052,Psilocybin (microdose),7
+25676052,N-acetyl Cysteine (NAC),3
+25676052,Phenibut,7
+25676052,Nicotine,8
+25676052,Ginseng,6
+25676052,Kratom,5
+25676052,LSD (microdose),2
+25676052,Ashwagandha,6
+25676052,Vegetarian diet,8
+25676052,Lion's Mane,4
+25676052,Adderall,7
+25676052,Maca,6
+25676052,Trying to get less sleep,8
+25676052,Bromantane,4
+25676052,Piracetam,6
 25690498,Melatonin,0
 25690498,Tyrosine,0
 25690498,Trying to get more sleep,0
@@ -968,6 +1694,23 @@ userID,itemID,rating
 25690498,Ashwagandha,0
 25690498,Caffeine,5
 25690498,Lion's Mane,0
+25950006,Caffeine,5
+25950006,Theanine,3
+25950006,Kratom,6
+25950006,Emoxypine,2
+25950006,Magnesium,6
+25950006,Kava,6
+25950006,Pramiracetam,3
+25950006,Adderall,8
+25950006,Phenylpiracetam,5
+25950006,PRL-8-53,2
+25950006,Piracetam,5
+25950006,CBD,5
+25950006,Lion's Mane,3
+25950006,Trying to get more sleep,3
+25950006,Creatine,3
+25950006,Semax (or NA-Semax etc),4
+25950006,Phenibut,7
 26199966,Nicotine,4
 26199966,Trying to get more sleep,10
 26199966,Phenibut,2
@@ -978,6 +1721,9 @@ userID,itemID,rating
 26199966,Bright lights in morning / Dawn simulator,4
 26199966,Adderall,7
 26199966,Caffeine,7
+26271639,Caffeine,5
+26271639,Nicotine,5
+26271639,Ginseng,4
 26294647,Adderall,8
 2631487,Magnesium,1
 2631487,Phenibut,5
@@ -993,6 +1739,19 @@ userID,itemID,rating
 2631487,Rhodiola,1
 2631487,Lemon balm,3
 2631487,Alpha-GPC,5
+26319821,Caffeine,0
+26319821,LSD (microdose),5
+26319821,CBD,1
+26319821,Theanine,5
+26319821,Trying to get more sleep,9
+26319821,Bright lights in morning / Dawn simulator,3
+26319821,Creatine,0
+26319821,Melatonin,0
+26319821,Adderall,9
+26319821,Omega-3 Supplements,0
+26319821,Magnesium,9
+26319821,Nicotine,0
+26319821,Psilocybin (microdose),6
 26393533,No Fap (or otherwise avoiding masturbation),3
 26393533,Omega-3 Supplements,1
 26393533,Magnesium,3
@@ -1003,6 +1762,31 @@ userID,itemID,rating
 26393533,Adderall,10
 26393533,Melatonin,1
 26393533,Nicotine,2
+26426467,Caffeine,3
+26426467,No Fap (or otherwise avoiding masturbation),0
+26426467,Theanine,4
+26426467,Magnesium,5
+26426467,Piracetam,7
+26426467,Modafinil,6
+26426467,Choline,5
+26426467,Armodafinil,7
+26426467,Noopept,9
+26446128,Adderall,10
+26446128,Magnesium,4
+26446128,Methylphenidate (Ritalin),9
+26446128,St John's Wort,0
+26446128,Melatonin,3
+26446128,Vegetarian diet,4
+26446128,Omega-3 Supplements,0
+26446128,Ashwagandha,0
+26446128,Trying to get more sleep,4
+26446128,5-HTP,3
+26446128,Bright lights in morning / Dawn simulator,5
+26446128,Theanine,9
+26446128,Trying to get less sleep,0
+26446128,Probiotics,0
+26446128,Caffeine,8
+26446128,Nicotine,1
 26672537,Methylphenidate (Ritalin),10
 26672537,Adrafinil,4
 26672537,LSD (microdose),5
@@ -1030,6 +1814,35 @@ userID,itemID,rating
 26805462,Trying to get more sleep,0
 26805462,Adderall,5
 26805462,Nicotine,7
+26939850,Piracetam,2
+26939850,DMAE,7
+26939850,DMHA,7
+26939850,St John's Wort,8
+26939850,Bright lights in morning / Dawn simulator,5
+26939850,Phenibut,8
+26939850,Ashwagandha,8
+26939850,CBD,6
+26939850,Lion's Mane,5
+26939850,Curcumin,2
+26939850,Lemon balm,3
+26939850,5-HTP,2
+26939850,Agmatine,1
+26939850,Melatonin,0
+26939850,Choline,4
+26939850,Creatine,4
+26939850,Caffeine,8
+26939850,Theanine,8
+26939850,Kanna (except Zembrin),9
+26939850,N-Acetyl-L-Tyrosine,0
+26939850,Cordyceps,5
+26939850,Adderall,8
+26939850,ALCAR,2
+26939850,Rhodiola,5
+26939850,Bacopa,5
+26939850,Omega-3 Supplements,0
+26939850,Tryptophan,5
+26939850,Noopept,0
+26939850,Trying to get more sleep,9
 27007379,Kava,3
 27007379,LSD (microdose),2
 27007379,ALCAR,7
@@ -1075,6 +1888,38 @@ userID,itemID,rating
 27007379,Valerian Root,3
 27007379,Caffeine,5
 27007379,Curcumin,1
+27367715,Adderall,10
+27367715,CBD,4
+27367715,Tianeptine,5
+27367715,Caffeine,7
+27367715,N-acetyl Cysteine (NAC),3
+27367715,Melatonin,6
+27367715,Theanine,5
+27367715,5-HTP,0
+27367715,Omega-3 Supplements,1
+27367715,Phenibut,10
+27367715,Bacopa,4
+27367715,"Bupropion (Wellbutrin, Zyban...)",0
+27367715,Trying to get more sleep,10
+27367715,"SSRIs (Prozac, Lexapro...)",6
+27367715,Sulbutiamine,2
+27367715,Kava,7
+27367715,Adrafinil,7
+27367715,LSD (microdose),3
+27367715,Kratom,10
+27597219,Caffeine,9
+27597219,Melatonin,4
+27597219,Vegan diet,6
+27597219,Modafinil,10
+27597219,Magnesium,5
+27597219,Creatine,6
+27597219,Lion's Mane,6
+27597219,N-acetyl Cysteine (NAC),7
+27597219,Ketogenic diet,5
+27597219,Alpha-GPC,4
+27597219,Ashwagandha,6
+27597219,Omega-3 Supplements,3
+27597219,"Fermented drinks (Kefir, Kombucha...)",4
 27830878,Ginkgo Biloba,0
 27830878,Theanine,0
 27830878,Caffeine,0
@@ -1136,6 +1981,16 @@ userID,itemID,rating
 28308697,Trying to get less sleep,3
 28308697,Niacin,0
 28308697,Glycine,0
+28502768,CBD,2
+28502768,Omega-3 Supplements,10
+28502768,Adderall,10
+28502768,Magnesium,6
+28502768,Theanine,6
+28502768,Creatine,7
+28502768,Nicotine,8
+28502768,Melatonin,3
+28502768,Caffeine,10
+28502768,Maca,3
 28634623,Melatonin,0
 28634623,Rhodiola,5
 28634623,Probiotics,0
@@ -1194,6 +2049,43 @@ userID,itemID,rating
 29130153,Caffeine,9
 29130153,Ashwagandha,6
 29130153,Bacopa,5
+29249371,Alpha-GPC,1
+29249371,Bacopa,0
+29249371,Ginseng,0
+29249371,Modafinil,4
+29249371,Piracetam,0
+29249371,Ashwagandha,1
+29249371,Aniracetam,3
+29249371,Maca,0
+29249371,No Fap (or otherwise avoiding masturbation),5
+29249371,Choline,1
+29249371,Theanine,0
+29249371,Melatonin,0
+29249371,Omega-3 Supplements,0
+29249371,Noopept,1
+29249371,Rhodiola,0
+29249371,Agmatine,0
+29289903,Nicotinamide mononucleotide,0
+29289903,Berberine,6
+29289903,Red reishi mushrooms,7
+29289903,Niacin,0
+29289903,"Fermented drinks (Kefir, Kombucha...)",6
+29289903,Lion's Mane,6
+29289903,Rhodiola,7
+29289903,Inositol,0
+29289903,Magnesium,6
+29289903,Alpha-GPC,7
+29289903,ALCAR,6
+29289903,Cordyceps,0
+29289903,Choline,6
+29289903,Bright lights in morning / Dawn simulator,7
+29289903,N-acetyl Cysteine (NAC),0
+29289903,Probiotics,0
+29289903,Theanine,7
+29289903,Carnitine / Acetyl-L-Carnitine,0
+29289903,Omega-3 Supplements,0
+29289903,Curcumin,0
+29289903,Caffeine,0
 29543447,Phenibut,10
 29543447,Ginkgo Biloba,2
 29543447,Theanine,9
@@ -1249,6 +2141,35 @@ userID,itemID,rating
 29543447,Tryptophan,7
 29543447,Rhodiola,0
 29543447,5-HTP,4
+29777164,Armodafinil,7
+29942880,Curcumin,9
+29942880,Theanine,9
+29942880,Caffeine,10
+29942880,SAM-e,10
+29942880,Trying to get less sleep,1
+29942880,Tryptophan,7
+29942880,Adderall,10
+29942880,Trying to get more sleep,10
+29942880,"Fermented drinks (Kefir, Kombucha...)",6
+29942880,Saffron,10
+29942880,5-HTP,9
+29942880,Lemon balm,7
+29942880,Bright lights in morning / Dawn simulator,10
+29942880,GABA,10
+29942880,Melatonin,8
+29942880,Inositol,3
+29942880,Valerian Root,9
+29942880,Carnitine / Acetyl-L-Carnitine,10
+29942880,Cordyceps,9
+29942880,Berberine,3
+29942880,Omega-3 Supplements,9
+29942880,Vegetarian diet,2
+29942880,Magnesium,10
+29942880,N-acetyl Cysteine (NAC),10
+29942880,Ginseng,6
+29942880,Niacin,6
+29942880,Ginkgo Biloba,1
+29942880,Ashwagandha,7
 29996741,Ashwagandha,2
 29996741,Carnitine / Acetyl-L-Carnitine,3
 29996741,Theanine,5
@@ -1262,7 +2183,6 @@ userID,itemID,rating
 29996741,Lion's Mane,0
 29996741,Armodafinil,9
 29996741,Aniracetam,0
-29996741,Dextroamphetamine (Speed),6
 29996741,Alpha-GPC,5
 29996741,Nicotine,5
 29996741,Noopept,7
@@ -1332,6 +2252,25 @@ userID,itemID,rating
 30582445,Phenibut,7
 30582445,Modafinil,6
 30582445,Adderall,10
+30612791,Caffeine,0
+30612791,Modafinil,7
+30612791,Magnesium,0
+30612791,Trying to get more sleep,9
+30612791,Nicotine,0
+30612791,CBD,0
+30612791,Creatine,1
+30612791,LSD (microdose),0
+30612791,Curcumin,1
+30612791,Ginseng,1
+30612791,Omega-3 Supplements,0
+30612791,Ginkgo Biloba,0
+30612791,Lion's Mane,0
+30734990,Caffeine,1
+30734990,Piracetam,0
+30734990,Melatonin,3
+30734990,Vegan diet,1
+30734990,Omega-3 Supplements,0
+30734990,Magnesium,0
 30913619,Ketogenic diet,5
 30913619,Trying to get more sleep,2
 30913619,GABA,9
@@ -1377,6 +2316,9 @@ userID,itemID,rating
 31246392,Caffeine,7
 31246392,Nicotine,6
 31246392,Ginseng,8
+31305637,Melatonin,5
+31305637,Caffeine,0
+31305637,CBD,6
 3133122,"SNRIs (Cymbalta, Effexor...)",3
 3133122,Caffeine,7
 3133122,Methylphenidate (Ritalin),9
@@ -1406,6 +2348,32 @@ userID,itemID,rating
 3133122,No Fap (or otherwise avoiding masturbation),2
 3133122,Theanine,3
 3133122,ALCAR,0
+31578067,Berberine,2
+31578067,Theanine,2
+31578067,Alpha-GPC,1
+31578067,Ashwagandha,7
+31578067,Methylphenidate (Ritalin),8
+31578067,Magnesium,6
+31578067,Bright lights in morning / Dawn simulator,9
+31578067,Emoxypine,5
+31578067,Noopept,7
+31578067,Melatonin,4
+31578067,Alprazolam (Xanax),9
+31578067,Omega-3 Supplements,1
+31578067,Caffeine,0
+31578067,"SSRIs (Prozac, Lexapro...)",6
+31578067,Tianeptine,4
+31578067,Probiotics,1
+31578067,ALCAR,2
+31578067,Vegan diet,0
+31578067,CBD,9
+31578067,Vegetarian diet,1
+31578067,"Fermented drinks (Kefir, Kombucha...)",1
+31578067,Curcumin,1
+31578067,Choline,0
+31578067,Adderall,0
+31578067,Ketogenic diet,1
+31578067,"Bupropion (Wellbutrin, Zyban...)",0
 31657912,Magnesium,0
 31657912,Vegetarian diet,3
 31657912,Alpha-GPC,1
@@ -1418,7 +2386,6 @@ userID,itemID,rating
 31657912,No Fap (or otherwise avoiding masturbation),3
 31657912,Choline,7
 31657912,"SSRIs (Prozac, Lexapro...)",0
-31657912,Dextroamphetamine (Speed),9
 31657912,CBD,5
 31657912,Ginseng,2
 31657912,"Bupropion (Wellbutrin, Zyban...)",2
@@ -1435,6 +2402,7 @@ userID,itemID,rating
 31657912,Adderall,9
 31657912,St John's Wort,0
 31657912,Nicotine,5
+3181122,Modafinil,7
 31864418,Carnitine / Acetyl-L-Carnitine,0
 31864418,Nicotine,7
 31864418,5-HTP,0
@@ -1447,7 +2415,6 @@ userID,itemID,rating
 31864418,Omega-3 Supplements,4
 31864418,Phenibut,7
 31864418,Theanine,0
-31864418,Dextroamphetamine (Speed),4
 31864418,No Fap (or otherwise avoiding masturbation),5
 31864418,N-Acetyl-L-Tyrosine,0
 31864418,N-acetyl Cysteine (NAC),2
@@ -1457,6 +2424,67 @@ userID,itemID,rating
 31864418,Choline,2
 31864418,Tryptophan,0
 31864418,St John's Wort,0
+31916946,Modafinil,8
+31916946,Omega-3 Supplements,1
+31916946,"SSRIs (Prozac, Lexapro...)",6
+31916946,Trying to get more sleep,1
+31916946,Caffeine,3
+31916946,Adderall,7
+31916946,LSD (microdose),7
+31916946,5-HTP,4
+32326359,Adderall,4
+32326359,Valerian Root,5
+32326359,St John's Wort,1
+32326359,CBD,7
+32326359,Alprazolam (Xanax),1
+32326359,Ginseng,3
+32326359,Phenylpiracetam,10
+32326359,N-Acetyl-L-Tyrosine,4
+32326359,Kava,4
+32326359,Choline,1
+32326359,Aniracetam,7
+32326359,Ashwagandha,3
+32326359,IDRA-21,3
+32326359,Agmatine,7
+32326359,Caffeine,7
+32326359,Piracetam,10
+32326359,NSI-189,4
+32326359,Carnivore diet,6
+32326359,Saffron,3
+32326359,Huperzine-A,5
+32326359,Kratom,4
+32326359,5-HTP,2
+32326359,L-Deprenyl,5
+32326359,Semax (or NA-Semax etc),2
+32326359,Noopept,1
+32326359,Trying to get more sleep,5
+32326359,Nicotine,5
+32326359,Creatine,7
+32326359,Cordyceps,8
+32326359,Omega-3 Supplements,6
+32326359,Niacin,6
+32326359,Kanna (except Zembrin),1
+32326359,Theanine,10
+32326359,BPC-157,6
+32326359,Psilocybin (microdose),8
+32326359,Trying to get less sleep,2
+32326359,ALCAR,7
+32326359,Adrafinil,3
+32326359,Sulbutiamine,1
+32326359,Probiotics,5
+32326359,Phenibut,5
+32326359,Alpha-GPC,1
+32326359,Tryptophan,3
+32326359,LSD (microdose),7
+32326359,Oxiracetam,7
+32326359,Magnesium,7
+32326359,Bright lights in morning / Dawn simulator,9
+32326359,Lion's Mane,7
+32326359,Maca,5
+32326359,"SSRIs (Prozac, Lexapro...)",1
+32326359,Melatonin,3
+32326359,Ketogenic diet,6
+32326359,Inositol,4
 32366650,Phenylpiracetam,7
 32366650,CBD,6
 32366650,Creatine,7
@@ -1530,6 +2558,15 @@ userID,itemID,rating
 32693918,Trying to get more sleep,7
 32693918,Theanine,7
 32693918,Omega-3 Supplements,6
+3270855,"Fermented drinks (Kefir, Kombucha...)",1
+3270855,Kratom,2
+3270855,Adderall,9
+3270855,CBD,3
+3270855,Caffeine,4
+3270855,Phenibut,7
+3270855,Theanine,3
+3270855,Nicotine,5
+3270855,Melatonin,5
 32733745,Ashwagandha,6
 32733745,5-HTP,0
 32733745,Theanine,10
@@ -1537,6 +2574,10 @@ userID,itemID,rating
 32733745,Lion's Mane,6
 32733745,Omega-3 Supplements,9
 32733745,Caffeine,8
+32777441,Caffeine,7
+32777441,Nicotine,5
+32777441,No Fap (or otherwise avoiding masturbation),0
+32777441,Alprazolam (Xanax),8
 33006147,Etifoxine,0
 33006147,Adrafinil,0
 33006147,Ginkgo Biloba,0
@@ -1589,7 +2630,6 @@ userID,itemID,rating
 33212958,Curcumin,2
 33212958,Lion's Mane,1
 33212958,Kratom,2
-33212958,Dextroamphetamine (Speed),9
 33212958,Polygala tenuifolia,4
 33212958,Fasoracetam,3
 33212958,LSD (microdose),9
@@ -1659,6 +2699,8 @@ userID,itemID,rating
 33524962,5-HTP,4
 33524962,Psilocybin (microdose),7
 33524962,Kratom,8
+33628463,Creatine,0
+33628463,Magnesium,0
 33643379,Magnesium,0
 33643379,Shilajit,0
 33643379,Ashwagandha,0
@@ -1699,6 +2741,16 @@ userID,itemID,rating
 33788999,Ginkgo Biloba,0
 33788999,Piracetam,7
 33788999,Nicotine,4
+33977961,Psilocybin (microdose),6
+33977961,Rhodiola,0
+33977961,Theanine,6
+33977961,Magnesium,0
+33977961,Lion's Mane,0
+33977961,CBD,3
+33977961,Omega-3 Supplements,0
+33977961,Caffeine,5
+33977961,Ginseng,1
+33977961,Ginkgo Biloba,5
 34444008,Trying to get more sleep,4
 34444008,Boswellia,2
 34444008,Carnitine / Acetyl-L-Carnitine,0
@@ -1741,13 +2793,23 @@ userID,itemID,rating
 34482244,Magnesium,3
 34482244,Melatonin,6
 34482244,LSD (microdose),7
-34482244,Dextroamphetamine (Speed),9
 34749156,Nicotine,4
 34749156,Piracetam,3
 34749156,"Fermented drinks (Kefir, Kombucha...)",0
 34749156,Caffeine,7
 34749156,Modafinil,9
 34749156,Trying to get more sleep,6
+35024270,Melatonin,3
+35024270,Noopept,0
+35024270,Trying to get less sleep,2
+35024270,Aniracetam,2
+35024270,Alpha-GPC,3
+35024270,Choline,2
+35024270,Caffeine,7
+35024270,Bright lights in morning / Dawn simulator,4
+35024270,Ashwagandha,3
+35024270,CBD,4
+35024270,Trying to get more sleep,6
 35321707,Melatonin,0
 35473179,Magnesium,7
 35473179,Theanine,3
@@ -1813,6 +2875,8 @@ userID,itemID,rating
 36628070,Adderall,10
 36628070,Nicotine,5
 36628070,LSD (microdose),5
+36684047,Theanine,3
+36684047,No Fap (or otherwise avoiding masturbation),1
 36904546,Niacin,3
 36904546,Omega-3 Supplements,1
 36904546,Ketogenic diet,8
@@ -1864,7 +2928,6 @@ userID,itemID,rating
 37574574,Magnesium,4
 37574574,Curcumin,5
 37574574,Maca,8
-37574574,Dextroamphetamine (Speed),8
 37574574,Adderall,9
 37574574,No Fap (or otherwise avoiding masturbation),4
 37574574,Vegan diet,5
@@ -1878,7 +2941,6 @@ userID,itemID,rating
 37574574,Kratom,7
 37606660,CBD,7
 37606660,Carnivore diet,6
-37606660,Dextroamphetamine (Speed),10
 37606660,N-acetyl Cysteine (NAC),7
 37606660,Omega-3 Supplements,7
 37606660,Curcumin,3
@@ -1893,6 +2955,23 @@ userID,itemID,rating
 37606660,ALCAR,4
 37606660,Caffeine,8
 37606660,Trying to get more sleep,10
+37695548,Nicotine,1
+37695548,Alprazolam (Xanax),8
+37695548,Creatine,7
+37695548,Dextroamphetamine,7
+37695548,Kratom,5
+37695548,Maca,2
+37695548,"Fermented drinks (Kefir, Kombucha...)",2
+37695548,LSD (microdose),0
+37695548,Theanine,7
+37695548,Valerian Root,5
+37695548,Adderall,6
+37695548,Caffeine,6
+37695548,Guanfacine,0
+37695548,Psilocybin (microdose),7
+37695548,GABA,8
+37695548,Magnesium,7
+37695548,Ashwagandha,8
 37723753,Nicotinamide mononucleotide,3
 37723753,Choline,7
 37723753,Vegan diet,7
@@ -1943,7 +3022,6 @@ userID,itemID,rating
 37723753,Bright lights in morning / Dawn simulator,9
 37723753,Piracetam,5
 37723753,Inositol,0
-37723753,Dextroamphetamine (Speed),9
 37723753,Ketogenic diet,4
 37723753,Rhodiola,5
 37723753,Emoxypine,4
@@ -2013,6 +3091,63 @@ userID,itemID,rating
 3779774,"Fermented drinks (Kefir, Kombucha...)",0
 3779774,Glycine,10
 3779774,GABA,0
+37877788,Kanna (except Zembrin),1
+37877788,Nicotine,1
+37877788,CBD,3
+37877788,Caffeine,3
+37877788,DMAE,1
+37877788,Methylphenidate (Ritalin),7
+37877788,Ginkgo Biloba,2
+37877788,Vegetarian diet,0
+37877788,Huperzine-A,0
+37877788,St John's Wort,0
+37877788,Trying to get more sleep,3
+37877788,Vegan diet,0
+37877788,Kratom,0
+37877788,No Fap (or otherwise avoiding masturbation),3
+37877788,5-HTP,3
+37877788,Ginseng,2
+384701,Magnesium,5
+384701,St John's Wort,5
+384701,Ginseng,4
+384701,5-HTP,3
+384701,Caffeine,8
+384701,Aniracetam,6
+384701,Curcumin,2
+384701,ALCAR,2
+384701,Selegiline,10
+384701,Noopept,8
+384701,Omega-3 Supplements,3
+384701,Piracetam,8
+38609794,Omega-3 Supplements,7
+38609794,Adrafinil,6
+38609794,Curcumin,2
+38609794,Methylphenidate (Ritalin),8
+38609794,Guanfacine,6
+38609794,Black Seed Oil,2
+38609794,Alprazolam (Xanax),4
+38609794,Melatonin,2
+38609794,Palmitoylethanolamide,2
+38609794,Glycine,2
+38609794,Saffron,2
+38609794,Valerian Root,2
+38609794,Magnesium,4
+38609794,Probiotics,2
+38609794,Caffeine,7
+38609794,Adderall,4
+38609794,Inositol,2
+38609794,Phosphatidylserine,1
+38609794,Bright lights in morning / Dawn simulator,2
+38609794,Lion's Mane,2
+38609794,Ketogenic diet,2
+38609794,"Fermented drinks (Kefir, Kombucha...)",2
+38609794,Berberine,2
+38609794,"SNRIs (Cymbalta, Effexor...)",2
+38609794,"SSRIs (Prozac, Lexapro...)",5
+38609794,Trying to get more sleep,2
+38609794,Modafinil,2
+38609794,Bacopa,2
+38609794,CBD,2
 38681028,Trying to get more sleep,7
 38681028,Caffeine,6
 38681028,Theanine,4
@@ -2065,6 +3200,17 @@ userID,itemID,rating
 38767357,Ginkgo Biloba,3
 38767357,CBD,8
 38767357,Magnesium,10
+38933411,Caffeine,5
+38933411,Magnesium,0
+38933411,Ginkgo Biloba,0
+38933411,Omega-3 Supplements,0
+38933411,Black Seed Oil,8
+38933411,Alpha-GPC,0
+38933411,Carnitine / Acetyl-L-Carnitine,0
+38933411,Ketogenic diet,4
+38933411,Creatine,0
+38933411,Ashwagandha,0
+38933411,Theanine,0
 38999324,Ketogenic diet,4
 38999324,Melatonin,8
 38999324,Modafinil,9
@@ -2115,9 +3261,26 @@ userID,itemID,rating
 39356611,Melatonin,0
 39356611,Nicotine,2
 39356611,Trying to get less sleep,0
+39411209,Ginseng,0
+39411209,Ashwagandha,0
+39411209,Lion's Mane,2
+39411209,Curcumin,3
+39411209,Choline,5
+39411209,Omega-3 Supplements,6
+39411209,Trying to get more sleep,7
+39411209,ALCAR,6
+39411209,Melatonin,4
+39411209,Trying to get less sleep,4
+39411209,Ketogenic diet,2
+39411209,Creatine,5
+39411209,Theanine,5
+39411209,Magnesium,5
+39411209,Black Seed Oil,2
+39411209,No Fap (or otherwise avoiding masturbation),1
+39411209,Bright lights in morning / Dawn simulator,5
+39411209,Sulbutiamine,3
 39421489,Modafinil,0
 39421489,Adderall,0
-39421489,Dextroamphetamine (Speed),0
 39421489,"SSRIs (Prozac, Lexapro...)",3
 39421489,CBD,3
 39421489,Kava,3
@@ -2127,6 +3290,8 @@ userID,itemID,rating
 39421489,Caffeine,8
 39421489,"Bupropion (Wellbutrin, Zyban...)",0
 39421489,Theanine,0
+39584431,Caffeine,5
+39584431,CBD,3
 39768447,St John's Wort,1
 39768447,Curcumin,1
 39768447,Trying to get more sleep,7
@@ -2154,6 +3319,54 @@ userID,itemID,rating
 39933839,"SNRIs (Cymbalta, Effexor...)",9
 39933839,St John's Wort,2
 39933839,CBD,2
+40017657,CBD,4
+40017657,BPC-157,2
+40017657,Vegetarian diet,0
+40017657,Ginkgo Biloba,0
+40017657,Alpha-GPC,0
+40017657,Rhodiola,2
+40017657,Theanine,3
+40017657,5-HTP,2
+40017657,Phenylpiracetam,7
+40017657,Ketogenic diet,9
+40017657,Adrafinil,2
+40017657,ALCAR,0
+40017657,St John's Wort,0
+40017657,Sulbutiamine,3
+40017657,Magnesium,6
+40017657,Bacopa,1
+40017657,Modafinil,6
+40017657,Selegiline,3
+40017657,Tianeptine,2
+40017657,NSI-189,0
+40017657,Ginseng,0
+40017657,LSD (microdose),4
+40017657,"Bupropion (Wellbutrin, Zyban...)",0
+40017657,Creatine,2
+40017657,Bright lights in morning / Dawn simulator,8
+40017657,Ashwagandha,0
+40017657,Melatonin,9
+40017657,Glycine,8
+40017657,Caffeine,1
+40017657,Dextroamphetamine,7
+40017657,Noopept,1
+40017657,Choline,0
+40017657,Nicotine,2
+40017657,Black Seed Oil,1
+40017657,Piracetam,6
+40017657,Psilocybin (microdose),3
+40017657,Pramiracetam,1
+40017657,Trying to get more sleep,2
+40017657,Oxiracetam,2
+40017657,Omega-3 Supplements,4
+40017657,Phenibut,3
+40017657,Carnivore diet,8
+40017657,Agmatine,0
+40017657,Lion's Mane,0
+40017657,No Fap (or otherwise avoiding masturbation),5
+40017657,Niacin,0
+40017657,Methylene blue,1
+40017657,Aniracetam,2
 40226834,"Bupropion (Wellbutrin, Zyban...)",10
 40226834,Nicotine,5
 40226834,Bright lights in morning / Dawn simulator,9
@@ -2164,6 +3377,103 @@ userID,itemID,rating
 40226834,Ginseng,4
 40226834,Alprazolam (Xanax),2
 40226834,Caffeine,10
+40232674,CBD,5
+40232674,Ashwagandha,5
+40232674,Magnesium,6
+40232674,Modafinil,8
+40232674,Omega-3 Supplements,8
+40232674,Phenibut,5
+40232674,Creatine,3
+40232674,Caffeine,8
+40232674,Choline,5
+40232674,Alpha-GPC,8
+40232674,Alprazolam (Xanax),8
+40232674,Melatonin,3
+40232674,Phenylpiracetam,8
+40232674,Noopept,7
+40232674,LSD (microdose),6
+40232674,Adderall,6
+40232674,Trying to get more sleep,8
+40232674,Methylphenidate (Ritalin),6
+40232674,Armodafinil,5
+40232674,Nicotine,8
+40293454,LSD (microdose),3
+40293454,Inositol,2
+40293454,Methylphenidate (Ritalin),1
+40293454,"Fermented drinks (Kefir, Kombucha...)",6
+40293454,Glycine,6
+40293454,Trying to get less sleep,1
+40293454,Oxiracetam,3
+40293454,N-Acetyl-L-Tyrosine,1
+40293454,Adrafinil,6
+40293454,Magnesium,7
+40293454,DMHA,7
+40293454,Alpha-GPC,5
+40293454,Cerebrolysin,10
+40293454,Kanna (except Zembrin),3
+40293454,BPC-157,3
+40293454,Ashwagandha,2
+40293454,Valerian Root,1
+40293454,CBD,4
+40293454,Melatonin,7
+40293454,Psilocybin (microdose),4
+40293454,Black Seed Oil,4
+40293454,Adderall,8
+40293454,GABA,3
+40293454,Sarcosine,4
+40293454,Ginkgo Biloba,10
+40293454,Tyrosine,2
+40293454,Noopept,5
+40293454,5-HTP,3
+40293454,Tryptophan,3
+40293454,Theacrine (aka Teacrine),3
+40293454,Dextroamphetamine,10
+40293454,Kratom,3
+40293454,N-acetyl Cysteine (NAC),7
+40293454,Huperzine-A,6
+40293454,Caffeine,8
+40293454,Trying to get more sleep,10
+40293454,Lion's Mane,6
+40293454,Ketogenic diet,7
+40293454,Kava,2
+40293454,Agmatine,2
+40293454,Maca,0
+40293454,Bright lights in morning / Dawn simulator,7
+40293454,Probiotics,6
+40293454,Choline,5
+40293454,Alprazolam (Xanax),1
+40293454,Phenibut,2
+40293454,Uridine,3
+40293454,Creatine,6
+40293454,Nicotine,7
+40293454,Theanine,4
+40293454,Omega-3 Supplements,5
+40323631,Theanine,2
+40323631,Dextroamphetamine,8
+40323631,Kratom,5
+40323631,Melatonin,1
+40323631,Glycine,2
+40323631,Noopept,2
+40323631,Phenylpiracetam,2
+40323631,CBD,8
+40323631,Phenibut,9
+40323631,Caffeine,6
+40323631,Trying to get less sleep,4
+40323631,LSD (microdose),10
+40323631,Tianeptine,5
+40323631,Creatine,3
+40323631,"SSRIs (Prozac, Lexapro...)",1
+40323631,Agmatine,2
+40323631,Nicotine,5
+40323631,Adderall,8
+40323631,Trying to get more sleep,9
+40323631,Alpha-GPC,2
+40323631,Magnesium,3
+40323631,Alprazolam (Xanax),9
+40323631,Ashwagandha,2
+40323631,N-acetyl Cysteine (NAC),3
+40323631,Aniracetam,2
+40323631,Omega-3 Supplements,3
 40365723,Tyrosine,7
 40365723,Ashwagandha,5
 40365723,St John's Wort,7
@@ -2236,6 +3546,53 @@ userID,itemID,rating
 40585321,Magnesium,3
 40585321,Melatonin,8
 40585321,Phosphatidylserine,6
+40636421,Nicotinamide mononucleotide,0
+40636421,Glycine,1
+40636421,GABA,0
+40636421,Ashwagandha,0
+40636421,Melatonin,0
+40636421,Valerian Root,0
+40636421,Inositol,1
+40636421,Probiotics,0
+40636421,Piracetam,3
+40636421,Ginseng,0
+40636421,"Bupropion (Wellbutrin, Zyban...)",0
+40636421,N-acetyl Cysteine (NAC),0
+40636421,"Fermented drinks (Kefir, Kombucha...)",2
+40636421,Theacrine (aka Teacrine),0
+40636421,Rhodiola,0
+40636421,Magnesium,1
+40636421,Black Seed Oil,1
+40636421,Modafinil,7
+40636421,Creatine,2
+40636421,Uridine,0
+40636421,Carnivore diet,2
+40636421,Nicotinamide riboside,9
+40636421,No Fap (or otherwise avoiding masturbation),0
+40636421,Trying to get less sleep,0
+40636421,ALCAR,1
+40636421,5-HTP,1
+40636421,Carnitine / Acetyl-L-Carnitine,0
+40636421,SAM-e,0
+40636421,Niacin,1
+40636421,St John's Wort,0
+40636421,Caffeine,6
+40636421,Armodafinil,5
+40636421,Omega-3 Supplements,0
+40636421,"SNRIs (Cymbalta, Effexor...)",3
+40636421,Ketogenic diet,0
+40636421,"SSRIs (Prozac, Lexapro...)",1
+40636421,Doepezil,0
+40636421,Ginkgo Biloba,9
+40636421,Maca,2
+40636421,Tyrosine,2
+40636421,Curcumin,1
+40636421,DMAE,0
+40636421,Nicotine,4
+40636421,Lemon balm,2
+40636421,Trying to get more sleep,0
+40636421,Tryptophan,0
+40636421,Choline,0
 40879001,Trying to get more sleep,4
 40879001,Methylphenidate (Ritalin),7
 40879001,Magnesium,7
@@ -2259,6 +3616,26 @@ userID,itemID,rating
 40888425,Melatonin,3
 40888425,Ginkgo Biloba,7
 40888425,"SSRIs (Prozac, Lexapro...)",8
+41009098,Creatine,8
+41009098,Alprazolam (Xanax),6
+41009098,Caffeine,7
+41009098,No Fap (or otherwise avoiding masturbation),6
+41009098,Magnesium,5
+41009098,Ketogenic diet,8
+41219613,Glycine,6
+41219613,Nicotine,5
+41219613,Ashwagandha,1
+41219613,Magnesium,1
+41219613,Modafinil,10
+41219613,Trying to get more sleep,4
+41219613,CBD,2
+41219613,"SSRIs (Prozac, Lexapro...)",7
+41219613,Creatine,3
+41219613,Adderall,3
+41219613,No Fap (or otherwise avoiding masturbation),0
+41219613,5-HTP,2
+41219613,Omega-3 Supplements,1
+41219613,Caffeine,10
 41367497,Magnesium,0
 41367497,Melatonin,0
 41367497,Phenibut,0
@@ -2266,6 +3643,12 @@ userID,itemID,rating
 41367497,Caffeine,0
 41367497,Nicotine,0
 41367497,Creatine,3
+41524154,Omega-3 Supplements,5
+41524154,5-HTP,3
+41524154,Nicotine,6
+41524154,Caffeine,9
+41524154,"Bupropion (Wellbutrin, Zyban...)",10
+41524154,Ketogenic diet,7
 41559180,5-HTP,0
 41559180,N-acetyl Cysteine (NAC),0
 41559180,Sarcosine,0
@@ -2282,8 +3665,52 @@ userID,itemID,rating
 41610860,5-HTP,6
 41610860,Theanine,8
 41610860,Maca,2
+416334,Caffeine,5
+416334,Ashwagandha,5
+416334,Valerian Root,6
+416334,Piracetam,10
+416334,Modafinil,6
+416334,5-HTP,5
+416334,Rhodiola,3
+416334,Nicotine,4
+416334,Choline,8
+416334,Kratom,6
+416334,CBD,9
+416334,MAOIs (except Selegiline),6
+416334,Theanine,6
+416334,St John's Wort,7
+416334,Lemon balm,6
+416334,LSD (microdose),7
+416334,Cordyceps,6
+416334,Huperzine-A,8
+416334,Omega-3 Supplements,8
+416334,Ginseng,3
+416334,Phosphatidylserine,8
+416334,NSI-189,8
+416334,Magnesium,4
+416334,Bacopa,8
+416334,Alprazolam (Xanax),9
+416334,N-acetyl Cysteine (NAC),8
+416334,Creatine,7
 41847309,"SSRIs (Prozac, Lexapro...)",5
 41847309,N-acetyl Cysteine (NAC),10
+41903414,Psilocybin (microdose),5
+41903414,Theanine,8
+41903414,Vegetarian diet,8
+41903414,Creatine,8
+41903414,Ketogenic diet,6
+41903414,N-acetyl Cysteine (NAC),10
+41903414,5-HTP,4
+41903414,Magnesium,8
+41903414,Modafinil,6
+41903414,Armodafinil,6
+41903414,Trying to get more sleep,10
+41903414,"Fermented drinks (Kefir, Kombucha...)",4
+41903414,No Fap (or otherwise avoiding masturbation),8
+41903414,Caffeine,3
+41903414,Cordyceps,3
+41903414,Vegan diet,8
+41903414,Omega-3 Supplements,10
 42144427,"SSRIs (Prozac, Lexapro...)",2
 42144427,Theanine,0
 42144427,Piracetam,7
@@ -2311,6 +3738,106 @@ userID,itemID,rating
 42144427,Kanna (except Zembrin),1
 42144427,Omega-3 Supplements,2
 42144427,Vegetarian diet,1
+42162503,5-HTP,3
+42162503,Carnitine / Acetyl-L-Carnitine,8
+42162503,Glycine,6
+42162503,Selank (or NA-Selank etc),8
+42162503,Pramiracetam,5
+42162503,Phenibut,2
+42162503,ALCAR,9
+42162503,Kratom,9
+42162503,Aniracetam,4
+42162503,Methylphenidate (Ritalin),5
+42162503,Fasoracetam,5
+42162503,Magnesium,8
+42162503,Curcumin,2
+42162503,Modafinil,7
+42162503,Probiotics,5
+42162503,SAM-e,5
+42162503,Bacopa,5
+42162503,Ginseng,5
+42162503,Agmatine,8
+42162503,Choline,4
+42162503,Lemon balm,6
+42162503,Creatine,7
+42162503,Noopept,7
+42162503,Piracetam,8
+42162503,Semax (or NA-Semax etc),10
+42162503,Psilocybin (microdose),5
+42162503,Coluracetam,6
+42162503,Polygala tenuifolia,6
+42162503,Berberine,6
+42162503,Theacrine (aka Teacrine),6
+42162503,Trying to get more sleep,5
+42162503,N-acetyl Cysteine (NAC),6
+42162503,Uridine,4
+42162503,Bromantane,5
+42162503,Omega-3 Supplements,8
+42162503,Phosphatidylserine,5
+42162503,Phenylpiracetam,8
+42162503,Melatonin,6
+42162503,Rhodiola,7
+42162503,GABA,0
+42162503,Alpha-GPC,6
+42162503,CBD,4
+42162503,Kava,4
+42162503,Niacin,7
+42162503,Nicotinamide riboside,5
+42162503,N-Acetyl-L-Tyrosine,6
+42162503,Valerian Root,4
+42162503,Ashwagandha,6
+42162503,"Bupropion (Wellbutrin, Zyban...)",4
+42162503,Lion's Mane,5
+42162503,Sulbutiamine,8
+42162503,Palmitoylethanolamide,6
+42162503,Adderall,7
+42162503,Theanine,6
+42162503,"Fermented drinks (Kefir, Kombucha...)",2
+42162503,Caffeine,7
+42162503,"SSRIs (Prozac, Lexapro...)",0
+42162503,Oxiracetam,6
+42162503,Tyrosine,6
+42162503,St John's Wort,2
+42162503,Ginkgo Biloba,4
+42172131,Choline,5
+42172131,Semax (or NA-Semax etc),0
+42172131,Nicotine,10
+42172131,N-acetyl Cysteine (NAC),7
+42172131,Adderall,8
+42172131,Rhodiola,4
+42172131,Vegan diet,0
+42172131,Melatonin,9
+42172131,Omega-3 Supplements,3
+42172131,Noopept,0
+42172131,Kratom,8
+42172131,CBD,2
+42172131,Magnesium,8
+42172131,Alprazolam (Xanax),6
+42172131,Alpha-GPC,5
+42172131,Theanine,4
+42172131,Trying to get more sleep,7
+42172131,Valerian Root,7
+42172131,Coluracetam,3
+42172131,Creatine,8
+42172131,Tianeptine,7
+42172131,Phenibut,10
+42172131,Ashwagandha,8
+42172131,Modafinil,7
+42172131,5-HTP,5
+42172131,Bacopa,8
+42172131,Caffeine,10
+42172131,N-Acetyl-L-Tyrosine,7
+42237542,Rhodiola,4
+42237542,Magnesium,4
+42237542,Ashwagandha,7
+42237542,Creatine,6
+42237542,Caffeine,6
+42237542,Melatonin,10
+42237542,Trying to get more sleep,7
+42237542,No Fap (or otherwise avoiding masturbation),5
+42237542,Vegetarian diet,3
+42237542,LSD (microdose),6
+42237542,Omega-3 Supplements,5
 42451324,Theanine,0
 42451324,Vegan diet,0
 42451324,Ashwagandha,0
@@ -2334,7 +3861,6 @@ userID,itemID,rating
 42549985,Phenibut,0
 42549985,Noopept,0
 42549985,Adderall,7
-42549985,Dextroamphetamine (Speed),10
 42549985,Trying to get more sleep,7
 42549985,Magnesium,1
 42549985,Rhodiola,0
@@ -2475,8 +4001,19 @@ userID,itemID,rating
 43732045,BPC-157,10
 43732045,Choline,4
 43732045,N-Acetyl-L-Tyrosine,1
-43732045,Dextroamphetamine (Speed),8
 43732045,Adderall,10
+43794932,"Fermented drinks (Kefir, Kombucha...)",0
+43794932,Nicotine,6
+43794932,Vegetarian diet,0
+43794932,Caffeine,6
+43794932,Trying to get more sleep,0
+43794932,CBD,3
+43794932,No Fap (or otherwise avoiding masturbation),0
+43794932,Melatonin,0
+43794932,Carnivore diet,5
+43794932,Vegan diet,3
+43794932,Trying to get less sleep,5
+43794932,Magnesium,5
 4386197,Carnivore diet,10
 43894589,Trying to get more sleep,8
 43894589,Caffeine,7
@@ -2505,7 +4042,6 @@ userID,itemID,rating
 44010856,CBD,0
 44010856,"Bupropion (Wellbutrin, Zyban...)",4
 44010856,Melatonin,5
-44010856,Dextroamphetamine (Speed),6
 44010856,Magnesium,2
 44010856,Caffeine,7
 44010856,Omega-3 Supplements,2
@@ -2564,6 +4100,27 @@ userID,itemID,rating
 44163820,Tryptophan,4
 44163820,Agmatine,7
 44163820,Caffeine,8
+44224276,CBD,5
+44224276,Choline,6
+44224276,Sulbutiamine,1
+44224276,Sarcosine,1
+44224276,Trying to get more sleep,7
+44224276,Ashwagandha,5
+44224276,Tyrosine,1
+44224276,Kava,6
+44224276,Inositol,2
+44224276,Ginkgo Biloba,2
+44224276,Nicotine,1
+44224276,Valerian Root,4
+44224276,Melatonin,6
+44224276,Magnesium,2
+44224276,Saffron,1
+44224276,Ginseng,3
+44224276,Caffeine,7
+44224276,St John's Wort,5
+44224276,Omega-3 Supplements,1
+44224276,Lemon balm,4
+44224276,"Fermented drinks (Kefir, Kombucha...)",8
 44318518,Melatonin,7
 44318518,Caffeine,8
 44318518,Trying to get more sleep,0
@@ -2599,6 +4156,19 @@ userID,itemID,rating
 44350082,CBD,10
 44350082,Ashwagandha,4
 44350082,Theanine,8
+44387700,Magnesium,0
+44387700,LSD (microdose),0
+44387700,Theanine,0
+44387700,GABA,0
+44387700,Bright lights in morning / Dawn simulator,0
+44387700,Omega-3 Supplements,0
+44387700,Trying to get more sleep,0
+44387700,Melatonin,0
+44387700,Creatine,0
+44387700,CBD,0
+44387700,Ketogenic diet,0
+44387700,Dextroamphetamine,0
+44387700,Caffeine,0
 44459693,Sulbutiamine,5
 44459693,"SSRIs (Prozac, Lexapro...)",4
 44459693,Cordyceps,4
@@ -2609,7 +4179,78 @@ userID,itemID,rating
 44459693,Lion's Mane,3
 44459693,Adrafinil,0
 44469767,Modafinil,9
+44539428,No Fap (or otherwise avoiding masturbation),6
+44539428,Caffeine,4
+44539428,CBD,1
+44539428,Trying to get less sleep,3
+44539428,N-acetyl Cysteine (NAC),8
+44539428,Nicotine,5
+44539428,Trying to get more sleep,2
+44539428,Melatonin,2
+44539428,Adderall,6
 44614964,Modafinil,5
+44772705,"Fermented drinks (Kefir, Kombucha...)",4
+44772705,Kratom,6
+44772705,Magnesium,7
+44772705,Alprazolam (Xanax),5
+44772705,Caffeine,7
+44772705,ALCAR,8
+44772705,Omega-3 Supplements,8
+44772705,Modafinil,0
+44772705,Dextroamphetamine,8
+44772705,Lion's Mane,9
+44772705,Theanine,8
+44772705,Trying to get more sleep,7
+44772705,Cordyceps,9
+44772705,CBD,10
+44772705,N-acetyl Cysteine (NAC),10
+44772705,Adderall,9
+44772705,Nicotine,7
+44772705,Methylphenidate (Ritalin),8
+44772705,Creatine,9
+44772705,Ginseng,8
+44772705,Armodafinil,7
+44842206,Bromantane,8
+44842206,Nicotinamide mononucleotide,5
+44842206,Probiotics,10
+44842206,Sulbutiamine,1
+44842206,Kanna (except Zembrin),9
+44842206,ALCAR,8
+44842206,Alpha-GPC,10
+44842206,Omega-3 Supplements,4
+44842206,Polygala tenuifolia,7
+44842206,Agmatine,3
+44842206,N-acetyl Cysteine (NAC),10
+44842206,BPC-157,10
+44842206,Phenylpiracetam,10
+44842206,Trying to get more sleep,7
+44842206,Tyrosine,6
+44842206,Alprazolam (Xanax),5
+44842206,Kava,8
+44842206,Vegetarian diet,6
+44842206,Cordyceps,8
+44842206,Methylphenidate (Ritalin),5
+44842206,Melatonin,5
+44842206,Fasoracetam,6
+44842206,CBD,10
+44842206,Maca,7
+44842206,"Fermented drinks (Kefir, Kombucha...)",8
+44842206,GABA,3
+44842206,"7,8-dihydroxyflavone",10
+44842206,Adderall,4
+44842206,Emoxypine,6
+44842206,Uridine,7
+44842206,Lemon balm,5
+44842206,Ginseng,7
+44842206,Kratom,9
+44842206,5-HTP,2
+44842206,Modafinil,7
+44842206,Shilajit,8
+44842206,Noopept,9
+44842206,Caffeine,9
+44842206,Ashwagandha,7
+44842206,Phenibut,10
+44842206,No Fap (or otherwise avoiding masturbation),10
 45199992,Carnivore diet,6
 45199992,No Fap (or otherwise avoiding masturbation),0
 45199992,Melatonin,0
@@ -2665,6 +4306,14 @@ userID,itemID,rating
 45830341,Ashwagandha,8
 45830341,N-Acetyl-L-Tyrosine,3
 45830341,Pramiracetam,3
+45969295,Magnesium,4
+45969295,Caffeine,10
+45969295,Ashwagandha,6
+45969295,Creatine,3
+45969295,CBD,3
+45969295,Theanine,6
+45969295,Melatonin,7
+45969295,No Fap (or otherwise avoiding masturbation),10
 46068819,Theanine,7
 46068819,Vegetarian diet,5
 46068819,Caffeine,5
@@ -2696,6 +4345,13 @@ userID,itemID,rating
 46308744,LSD (microdose),5
 46308744,Caffeine,7
 46308744,Phenibut,7
+46432000,Magnesium,2
+46432000,Probiotics,3
+46432000,Caffeine,1
+46432000,Omega-3 Supplements,3
+46432000,Ashwagandha,0
+46432000,Theanine,0
+46432000,"SSRIs (Prozac, Lexapro...)",0
 46539982,ALCAR,2
 46539982,Adderall,10
 46539982,Fasoracetam,9
@@ -2707,7 +4363,6 @@ userID,itemID,rating
 46539982,Sulbutiamine,5
 46539982,Ginseng,5
 46539982,Rhodiola,0
-46539982,Dextroamphetamine (Speed),10
 46539982,Polygala tenuifolia,9
 46539982,Choline,3
 46539982,Coluracetam,7
@@ -2754,7 +4409,6 @@ userID,itemID,rating
 47069926,"SNRIs (Cymbalta, Effexor...)",2
 47069926,Probiotics,2
 47069926,Trying to get more sleep,5
-47069926,Dextroamphetamine (Speed),5
 47069926,"SSRIs (Prozac, Lexapro...)",1
 47069926,GABA,1
 47069926,Psilocybin (microdose),7
@@ -2770,6 +4424,9 @@ userID,itemID,rating
 47069926,CBD,4
 47069926,Ginseng,1
 47069926,Omega-3 Supplements,1
+47187558,Omega-3 Supplements,0
+47187558,Creatine,0
+47187558,Caffeine,0
 47311453,Adderall,10
 47311453,Caffeine,3
 47311453,Vegetarian diet,10
@@ -2871,6 +4528,74 @@ userID,itemID,rating
 4786568,Nicotine,8
 4786568,Magnesium,5
 4786568,DMAE,4
+48108009,Theanine,10
+48108009,DMAE,0
+48108009,Ashwagandha,6
+48108009,Red reishi mushrooms,0
+48108009,Modafinil,6
+48108009,Lion's Mane,8
+48108009,Cordyceps,1
+48108009,Omega-3 Supplements,10
+48108009,Aniracetam,8
+48108009,GABA,9
+48108009,Adrafinil,0
+48108009,Theacrine (aka Teacrine),0
+48108009,CBD,3
+48108009,Adderall,0
+48108009,Ginkgo Biloba,8
+48108009,Creatine,7
+48108009,"Fermented drinks (Kefir, Kombucha...)",0
+48108009,Niacin,0
+48108009,Melatonin,0
+48108009,Tryptophan,0
+48108009,Curcumin,0
+48108009,Kava,3
+48108009,Bright lights in morning / Dawn simulator,8
+48108009,SAM-e,0
+48108009,Ketogenic diet,7
+48108009,St John's Wort,0
+48108009,Probiotics,8
+48108009,Trying to get more sleep,10
+48108009,Phenibut,0
+48108009,Uridine,0
+48108009,Magnesium,8
+48108009,Inositol,5
+48108009,5-HTP,1
+48108009,Choline,6
+48108009,Caffeine,5
+48108009,Bacopa,0
+48108009,Ginseng,0
+48108009,Rhodiola,8
+48108009,Alpha-GPC,8
+48108009,Valerian Root,0
+48108009,Maca,0
+48108009,Carnitine / Acetyl-L-Carnitine,7
+48108009,"7,8-dihydroxyflavone",0
+48108009,Lemon balm,5
+48108009,Armodafinil,3
+48108009,Noopept,0
+48213136,Trying to get more sleep,10
+48213136,Noopept,1
+48213136,Phenibut,0
+48213136,Theanine,6
+48213136,Carnitine / Acetyl-L-Carnitine,0
+48213136,Creatine,3
+48213136,Agmatine,5
+48213136,ALCAR,2
+48213136,Emoxypine,5
+48213136,Magnesium,0
+48213136,Tyrosine,1
+48213136,LSD (microdose),0
+48213136,Alpha-GPC,0
+48213136,Caffeine,10
+48213136,Phenylpiracetam,0
+48213136,Trying to get less sleep,0
+48213136,Adderall,10
+48213136,Omega-3 Supplements,0
+48213136,N-acetyl Cysteine (NAC),3
+48213136,Fasoracetam,0
+48213136,Modafinil,3
+48213136,Uridine,0
 48305622,Caffeine,3
 48305622,Nicotine,4
 48305622,Vegetarian diet,1
@@ -2893,6 +4618,10 @@ userID,itemID,rating
 48319607,5-HTP,8
 48319607,Glycine,0
 48319607,No Fap (or otherwise avoiding masturbation),6
+48398860,Bacopa,8
+48398860,Magnesium,7
+48398860,Omega-3 Supplements,6
+48398860,Piracetam,8
 48563786,Melatonin,8
 48563786,Theanine,7
 48563786,"Bupropion (Wellbutrin, Zyban...)",4
@@ -2987,6 +4716,61 @@ userID,itemID,rating
 49363450,No Fap (or otherwise avoiding masturbation),5
 49363450,Omega-3 Supplements,8
 49363450,Trying to get less sleep,1
+49423480,Noopept,0
+49423480,No Fap (or otherwise avoiding masturbation),1
+49423480,Melatonin,0
+49423480,Modafinil,8
+49423480,Magnesium,2
+49423480,Ketogenic diet,0
+49423480,"SSRIs (Prozac, Lexapro...)",0
+49423480,"Fermented drinks (Kefir, Kombucha...)",3
+49423480,Caffeine,6
+49423480,Nicotine,6
+49423480,Omega-3 Supplements,0
+49423480,Theanine,0
+49423480,Trying to get more sleep,2
+49423480,Choline,0
+49423480,"SNRIs (Cymbalta, Effexor...)",5
+49550868,Ginkgo Biloba,0
+49550868,Kratom,0
+49550868,Melatonin,0
+49550868,Nicotine,0
+49550868,Phenibut,0
+49550868,Noopept,0
+49550868,ALCAR,0
+49550868,Alpha-GPC,0
+49550868,Carnitine / Acetyl-L-Carnitine,0
+49550868,9-MBC,0
+49550868,PRL-8-53,0
+49550868,Magnesium,0
+49550868,Modafinil,0
+49550868,Cordyceps,0
+49550868,Choline,0
+49550868,Phenylpiracetam,0
+49550868,Bromantane,0
+49550868,Dextroamphetamine,0
+49550868,Fasoracetam,0
+49550868,Rhodiola,0
+49550868,Armodafinil,0
+49550868,N-Acetyl-L-Tyrosine,0
+49550868,GABA,0
+49550868,LSD (microdose),0
+49550868,Coluracetam,0
+49550868,Creatine,0
+49550868,BPC-157,0
+49550868,Maca,0
+49550868,Lion's Mane,0
+49550868,Emoxypine,0
+49550868,Theanine,0
+49550868,Ginseng,0
+49550868,Agmatine,0
+49550868,Curcumin,0
+49550868,Piracetam,0
+49550868,Caffeine,0
+49550868,CBD,0
+49550868,Lemon balm,0
+49550868,Ashwagandha,0
+49550868,Omega-3 Supplements,0
 49964898,Ketogenic diet,8
 49964898,LSD (microdose),9
 49964898,Phosphatidylserine,7
@@ -3017,6 +4801,21 @@ userID,itemID,rating
 49964898,Theacrine (aka Teacrine),8
 49964898,Piracetam,2
 49964898,Adderall,9
+49996273,Dextroamphetamine,8
+49996273,Maca,2
+49996273,Niacin,1
+49996273,Caffeine,0
+49996273,Vegetarian diet,0
+49996273,Nicotine,1
+49996273,No Fap (or otherwise avoiding masturbation),6
+49996273,Modafinil,8
+49996273,Melatonin,8
+49996273,Lion's Mane,1
+49996273,Adderall,8
+49996273,Vegan diet,0
+49996273,N-acetyl Cysteine (NAC),2
+49996273,CBD,2
+49996273,"Bupropion (Wellbutrin, Zyban...)",8
 50270202,Modafinil,8
 50270202,Piracetam,8
 50270202,Lion's Mane,5
@@ -3032,6 +4831,24 @@ userID,itemID,rating
 50364387,Theanine,3
 50364387,Vegan diet,0
 50364387,Trying to get more sleep,7
+50370954,Tyrosine,7
+50370954,Nicotine,6
+50370954,Magnesium,6
+50370954,Noopept,8
+50370954,Probiotics,5
+50370954,Ashwagandha,4
+50370954,"SSRIs (Prozac, Lexapro...)",5
+50370954,No Fap (or otherwise avoiding masturbation),6
+50370954,Methylphenidate (Ritalin),6
+50370954,Ketogenic diet,4
+50370954,Trying to get more sleep,6
+50370954,Caffeine,6
+50370954,CBD,2
+50370954,N-acetyl Cysteine (NAC),5
+50370954,Selegiline,6
+50370954,Bright lights in morning / Dawn simulator,4
+50370954,Pregenolone,6
+50370954,Modafinil,7
 50548060,N-acetyl Cysteine (NAC),5
 50548060,Black Seed Oil,1
 50548060,Melatonin,7
@@ -3051,6 +4868,28 @@ userID,itemID,rating
 50548060,CBD,3
 50548060,Piracetam,1
 50548060,Probiotics,2
+50579346,Berberine,5
+50579346,Rhodiola,7
+50579346,Bright lights in morning / Dawn simulator,6
+50579346,Creatine,5
+50579346,Boswellia,4
+50579346,Vegan diet,6
+50579346,Saffron,7
+50579346,Theanine,5
+50579346,Melatonin,6
+50579346,Ashwagandha,6
+50579346,St John's Wort,5
+50579346,Curcumin,3
+50579346,Trying to get more sleep,10
+50579346,Caffeine,5
+50579346,Bacopa,7
+50579346,Omega-3 Supplements,6
+50579346,Glycine,5
+50579346,Huperzine-A,8
+50579346,Nicotine,5
+50579346,Lion's Mane,7
+50579346,Ginseng,6
+50579346,Phosphatidylserine,7
 50645021,Caffeine,5
 50645021,Nicotine,9
 50645021,Ashwagandha,6
@@ -3071,10 +4910,19 @@ userID,itemID,rating
 506511,Caffeine,1
 506511,Omega-3 Supplements,4
 506511,"SNRIs (Cymbalta, Effexor...)",8
-506511,Dextroamphetamine (Speed),10
 506511,Adderall,9
 50890838,Melatonin,1
 50890838,Omega-3 Supplements,1
+51468978,Ketogenic diet,3
+51468978,Caffeine,2
+51468978,CBD,5
+51468978,LSD (microdose),7
+51468978,Trying to get less sleep,1
+51468978,Omega-3 Supplements,1
+51468978,Theanine,8
+51468978,Methylphenidate (Ritalin),9
+51468978,Trying to get more sleep,3
+51468978,Melatonin,2
 51558819,Kava,1
 51558819,Glycine,8
 51558819,"SSRIs (Prozac, Lexapro...)",8
@@ -3110,6 +4958,77 @@ userID,itemID,rating
 51740835,Caffeine,8
 51740835,Cordyceps,5
 51740835,CBD,0
+51760124,Probiotics,3
+51760124,Magnesium,1
+51760124,Melatonin,7
+51760124,Rhodiola,1
+51760124,Ginseng,4
+51760124,Kava,1
+51760124,Ginkgo Biloba,2
+51760124,Nicotine,7
+51760124,Curcumin,2
+51760124,Adderall,6
+51760124,Omega-3 Supplements,2
+51760124,Niacin,2
+51760124,Caffeine,7
+51760124,Kratom,8
+51760124,Maca,1
+51760124,CBD,4
+51760124,Choline,2
+51798168,Dextroamphetamine,6
+51798168,Caffeine,6
+51798168,"Bupropion (Wellbutrin, Zyban...)",5
+51798168,Huperzine-A,4
+51798168,Alprazolam (Xanax),8
+51798168,Tianeptine,7
+51798168,Black Seed Oil,4
+51798168,Noopept,4
+51798168,"SSRIs (Prozac, Lexapro...)",6
+51798168,"SNRIs (Cymbalta, Effexor...)",7
+51798168,Probiotics,1
+51798168,Creatine,2
+51798168,Choline,0
+51798168,Methylphenidate (Ritalin),7
+51798168,LSD (microdose),1
+51798168,Trying to get more sleep,1
+51798168,Phenibut,5
+51798168,Adderall,6
+51798168,Ginkgo Biloba,2
+51798168,Nicotine,9
+51798168,Bacopa,5
+51822903,Bacopa,4
+51822903,Creatine,2
+51822903,Ketogenic diet,4
+51822903,Noopept,1
+51822903,Maca,0
+51822903,Glycine,6
+51822903,Ginseng,5
+51822903,N-acetyl Cysteine (NAC),4
+51822903,Oxiracetam,2
+51822903,Semax (or NA-Semax etc),8
+51822903,Valerian Root,2
+51822903,CBD,1
+51822903,Choline,3
+51822903,Melatonin,5
+51822903,Omega-3 Supplements,6
+51822903,Vegan diet,1
+51822903,Trying to get more sleep,7
+51822903,Selank (or NA-Selank etc),8
+51822903,Shilajit,10
+51822903,Tyrosine,2
+51822903,Nicotine,1
+51822903,Aniracetam,5
+51822903,Trying to get less sleep,0
+51822903,Vegetarian diet,2
+51822903,Lemon balm,0
+51822903,Theanine,1
+51822903,Ginkgo Biloba,1
+51822903,Rhodiola,1
+51822903,Caffeine,0
+51822903,Magnesium,10
+51822903,No Fap (or otherwise avoiding masturbation),5
+51822903,Lion's Mane,4
+51822903,"Fermented drinks (Kefir, Kombucha...)",4
 51833472,Omega-3 Supplements,0
 51833472,Methylphenidate (Ritalin),3
 51959239,Tianeptine,1
@@ -3208,6 +5127,45 @@ userID,itemID,rating
 52501248,Alpha-GPC,1
 52501248,Ketogenic diet,7
 52501248,N-acetyl Cysteine (NAC),3
+52508553,Creatine,8
+52508553,Nicotine,8
+52508553,Adderall,8
+52508553,No Fap (or otherwise avoiding masturbation),0
+52508553,LSD (microdose),10
+52508553,Tianeptine,10
+52508553,CBD,4
+52508553,Trying to get more sleep,0
+52508553,Methylphenidate (Ritalin),6
+52508553,SAM-e,0
+52508553,Melatonin,0
+52508553,Modafinil,6
+52508553,"SSRIs (Prozac, Lexapro...)",0
+52508553,Selegiline,0
+52508553,Omega-3 Supplements,0
+52508553,Caffeine,8
+52508553,Magnesium,4
+52508553,Bright lights in morning / Dawn simulator,0
+52508553,N-acetyl Cysteine (NAC),8
+52508553,Vegetarian diet,0
+52508553,Curcumin,8
+52559310,Probiotics,10
+52559310,St John's Wort,2
+52559310,Theacrine (aka Teacrine),10
+52559310,Caffeine,10
+52559310,No Fap (or otherwise avoiding masturbation),8
+52559310,5-HTP,8
+52559310,Magnesium,10
+52559310,Creatine,10
+52559310,DMHA,10
+52559310,"Fermented drinks (Kefir, Kombucha...)",2
+52559310,Ginkgo Biloba,2
+52559310,Theanine,8
+52559310,Omega-3 Supplements,10
+52559310,Choline,9
+52559310,Lion's Mane,2
+52559310,Carnitine / Acetyl-L-Carnitine,1
+52559310,Melatonin,8
+52559310,Trying to get more sleep,10
 52725002,Rhodiola,0
 52725002,Caffeine,7
 52725002,No Fap (or otherwise avoiding masturbation),6
@@ -3224,7 +5182,6 @@ userID,itemID,rating
 52725002,Melatonin,4
 52725002,N-acetyl Cysteine (NAC),7
 52725002,Trying to get more sleep,1
-52725002,Dextroamphetamine (Speed),0
 52725002,Phenibut,7
 52725002,Bromantane,0
 52725002,Bright lights in morning / Dawn simulator,3
@@ -3232,6 +5189,28 @@ userID,itemID,rating
 52725002,Omega-3 Supplements,0
 52725002,5-HTP,2
 52725002,CBD,4
+52885842,Piracetam,2
+52885842,Trying to get more sleep,10
+52885842,Pramiracetam,0
+52885842,Oxiracetam,0
+52885842,Aniracetam,0
+52885842,Coluracetam,2
+52885842,Caffeine,9
+52885842,Ashwagandha,0
+52885842,Bright lights in morning / Dawn simulator,5
+52885842,Phenylpiracetam,8
+52885842,Magnesium,4
+52885842,Sulbutiamine,5
+52885842,Agmatine,5
+52885842,Melatonin,0
+52885842,Theanine,2
+52885842,Phenibut,10
+52885842,Omega-3 Supplements,0
+52885842,CBD,7
+52885842,Nicotine,8
+52885842,Fasoracetam,5
+52885842,N-acetyl Cysteine (NAC),9
+52885842,Tianeptine,7
 5315201,Probiotics,4
 5315201,Vegetarian diet,7
 5315201,Trying to get more sleep,10
@@ -3308,7 +5287,6 @@ userID,itemID,rating
 53351213,CBD,9
 53351213,Bright lights in morning / Dawn simulator,7
 53351213,Bacopa,0
-53351213,Dextroamphetamine (Speed),9
 53351213,Adderall,9
 53351213,Ginseng,8
 53351213,Huperzine-A,8
@@ -3332,6 +5310,25 @@ userID,itemID,rating
 53351213,"SSRIs (Prozac, Lexapro...)",5
 53351213,Adrafinil,7
 53351213,Inositol,8
+53540964,Red reishi mushrooms,0
+53540964,Ashwagandha,0
+53540964,No Fap (or otherwise avoiding masturbation),0
+53540964,Kratom,4
+53540964,Theanine,0
+53540964,Trying to get more sleep,0
+53540964,Lion's Mane,0
+53540964,Ginseng,5
+53540964,Noopept,0
+53540964,CBD,3
+53540964,Valerian Root,0
+53540964,Ketogenic diet,0
+53540964,Magnesium,0
+53540964,Alpha-GPC,2
+53540964,Caffeine,0
+53540964,Curcumin,3
+53540964,Omega-3 Supplements,0
+53540964,Ginkgo Biloba,0
+53540964,St John's Wort,0
 53703412,CBD,7
 53703412,Omega-3 Supplements,5
 53703412,Theanine,4
@@ -3341,6 +5338,21 @@ userID,itemID,rating
 53703412,No Fap (or otherwise avoiding masturbation),5
 53703412,Creatine,4
 53703412,Magnesium,2
+53706216,Modafinil,10
+53706216,Ginkgo Biloba,7
+53706216,Magnesium,1
+53706216,Trying to get more sleep,5
+53706216,Caffeine,2
+53706216,Armodafinil,10
+53706216,Noopept,1
+53706216,Melatonin,1
+53706216,Nicotine,1
+53706216,Piracetam,5
+5382324,"SSRIs (Prozac, Lexapro...)",3
+5382324,Melatonin,6
+5382324,Caffeine,0
+5382324,Modafinil,5
+5382324,"Bupropion (Wellbutrin, Zyban...)",8
 53861795,Polygala tenuifolia,0
 53861795,Piracetam,0
 53861795,Noopept,0
@@ -3395,6 +5407,22 @@ userID,itemID,rating
 53961008,Theanine,8
 53961008,Tyrosine,5
 53961008,Nicotine,0
+54478125,Carnitine / Acetyl-L-Carnitine,0
+54478125,Theanine,6
+54478125,GABA,5
+54478125,Omega-3 Supplements,8
+54478125,Magnesium,3
+54478125,Alpha-GPC,6
+54478125,Ashwagandha,3
+54478125,5-HTP,4
+54478125,Melatonin,5
+54478125,Caffeine,8
+54478125,Bright lights in morning / Dawn simulator,4
+54478125,CBD,1
+54478125,Glycine,6
+54478125,Nicotine,0
+54478125,Creatine,3
+54478125,Lion's Mane,0
 54571140,Ketogenic diet,7
 54571140,LSD (microdose),0
 54571140,Niacin,0
@@ -3402,8 +5430,21 @@ userID,itemID,rating
 54571140,Piracetam,5
 54571140,Kratom,8
 54571140,Ginkgo Biloba,0
+54627789,Omega-3 Supplements,2
+54627789,Theanine,6
+54627789,"Fermented drinks (Kefir, Kombucha...)",2
+54627789,CBD,4
 55259133,Caffeine,6
 55259133,Creatine,6
+55487873,Curcumin,2
+55487873,Ketogenic diet,2
+55487873,Caffeine,4
+55487873,Glycine,2
+55487873,Adderall,7
+55487873,Omega-3 Supplements,2
+55487873,Ashwagandha,2
+55487873,"SNRIs (Cymbalta, Effexor...)",5
+55487873,Magnesium,4
 55734916,Phenibut,10
 55734916,Probiotics,5
 55734916,Kava,0
@@ -3420,7 +5461,6 @@ userID,itemID,rating
 55734916,MAOIs (except Selegiline),4
 55734916,GABA,0
 55734916,Modafinil,6
-55734916,Dextroamphetamine (Speed),8
 55734916,"SSRIs (Prozac, Lexapro...)",5
 55734916,"Fermented drinks (Kefir, Kombucha...)",2
 55734916,Adderall,8
@@ -3429,6 +5469,16 @@ userID,itemID,rating
 55734916,CBD,0
 55734916,Caffeine,2
 55734916,Theanine,5
+55781596,Nicotine,0
+55781596,Vegetarian diet,5
+55781596,5-HTP,2
+55781596,Vegan diet,5
+55781596,Modafinil,8
+55781596,Caffeine,7
+55781596,Creatine,7
+55781596,Magnesium,2
+55781596,Melatonin,2
+55781596,Kava,2
 55890835,Glycine,2
 55890835,GABA,1
 55890835,Cordyceps,3
@@ -3460,10 +5510,60 @@ userID,itemID,rating
 55890835,Phosphatidylserine,7
 55890835,ALCAR,0
 55890835,Agmatine,1
+55891224,Noopept,0
+55891224,Magnesium,1
+55891224,Modafinil,6
+55891224,Selegiline,5
+55891224,Bromantane,5
+55891224,MAOIs (except Selegiline),5
+55891224,"7,8-dihydroxyflavone",3
+55891224,N-acetyl Cysteine (NAC),3
+55891224,Melatonin,6
+55891224,"SSRIs (Prozac, Lexapro...)",6
+55891224,Niacin,0
+55891224,Curcumin,1
+55891224,Choline,2
+55891224,Ashwagandha,1
+55891224,Lion's Mane,1
+55891224,St John's Wort,5
+55891224,Trying to get more sleep,2
+55891224,Omega-3 Supplements,0
+55891224,Carnitine / Acetyl-L-Carnitine,2
+55891224,Tryptophan,5
+55891224,LSD (microdose),7
+55891224,"Bupropion (Wellbutrin, Zyban...)",6
+55891224,Nicotine,7
+55891224,Vegan diet,8
+55891224,Piracetam,5
+55891224,Alpha-GPC,2
+55891224,Caffeine,5
+55891224,Glycine,2
+55891224,Creatine,4
+55891224,Dextroamphetamine,8
+55891224,Huperzine-A,5
+55891224,Rhodiola,3
+55891224,Methylphenidate (Ritalin),7
+55891224,Ginkgo Biloba,3
 55932541,Theanine,6
 55932541,Probiotics,3
 55932541,Caffeine,5
 55932541,CBD,4
+56133194,Trying to get more sleep,0
+56133194,Bright lights in morning / Dawn simulator,0
+56133194,Trying to get less sleep,0
+56133194,No Fap (or otherwise avoiding masturbation),0
+56305737,Theanine,6
+56305737,Vegetarian diet,5
+56305737,Ginseng,7
+56305737,Caffeine,8
+56305737,Omega-3 Supplements,5
+56305737,Ashwagandha,5
+56305737,Rhodiola,7
+56305737,Lion's Mane,6
+56305737,Bright lights in morning / Dawn simulator,4
+56305737,Bacopa,6
+56305737,CBD,4
+56305737,Adderall,9
 56630459,Black Seed Oil,10
 56630459,Kratom,4
 56630459,Rhodiola,4
@@ -3528,7 +5628,6 @@ userID,itemID,rating
 56635469,Theanine,8
 56635469,Nicotine,5
 56635469,No Fap (or otherwise avoiding masturbation),1
-56635469,Dextroamphetamine (Speed),10
 56635469,Kratom,7
 56635469,Phenibut,10
 56635469,Choline,6
@@ -3572,6 +5671,48 @@ userID,itemID,rating
 56689293,Theanine,0
 56689293,Bright lights in morning / Dawn simulator,0
 56689293,CBD,0
+56716098,Probiotics,3
+56716098,"SNRIs (Cymbalta, Effexor...)",8
+56716098,"Bupropion (Wellbutrin, Zyban...)",7
+56716098,Trying to get more sleep,5
+56716098,Adderall,9
+56716098,Melatonin,3
+56716098,Omega-3 Supplements,4
+56716098,Alprazolam (Xanax),6
+56716098,Nicotine,5
+56716098,CBD,3
+56716098,"SSRIs (Prozac, Lexapro...)",3
+56716098,"Fermented drinks (Kefir, Kombucha...)",8
+56716098,Caffeine,2
+56716098,Kratom,2
+56758349,Vegan diet,1
+56758349,Caffeine,5
+56758349,Trying to get more sleep,8
+56758349,Modafinil,7
+56758349,Kratom,10
+56758349,Trying to get less sleep,1
+56758349,Ketogenic diet,1
+56758349,Vegetarian diet,1
+56758349,No Fap (or otherwise avoiding masturbation),5
+56925554,Tyrosine,5
+56925554,Lion's Mane,4
+56925554,ALCAR,6
+56925554,Caffeine,8
+56925554,Omega-3 Supplements,5
+56925554,Bacopa,6
+56925554,Melatonin,5
+56925554,No Fap (or otherwise avoiding masturbation),6
+56925554,Phenylpiracetam,6
+56925554,Adderall,9
+56925554,Magnesium,6
+56925554,Dextroamphetamine,9
+56925554,Rhodiola,5
+56925554,Choline,7
+56925554,Theacrine (aka Teacrine),6
+56925554,Uridine,6
+56925554,Ashwagandha,6
+56925554,Theanine,4
+56925554,Creatine,7
 57232385,Caffeine,0
 57232385,Melatonin,0
 57232385,Ashwagandha,0
@@ -3587,10 +5728,15 @@ userID,itemID,rating
 57525623,Theanine,8
 57525623,Ginseng,8
 57525623,Lemon balm,7
+57622522,Nicotine,5
+57622522,Omega-3 Supplements,0
+57622522,Caffeine,7
+57622522,Trying to get more sleep,0
+57622522,Trying to get less sleep,1
+57622522,CBD,3
 57671295,Tryptophan,6
 57671295,Adderall,10
 57671295,"SSRIs (Prozac, Lexapro...)",7
-57671295,Dextroamphetamine (Speed),10
 57671295,Creatine,1
 57671295,Piracetam,5
 57671295,Noopept,6
@@ -3630,6 +5776,19 @@ userID,itemID,rating
 57680609,Nicotine,8
 57680609,Melatonin,9
 57680609,Choline,10
+57714211,Caffeine,7
+57714211,Alprazolam (Xanax),6
+57714211,Inositol,0
+57714211,CBD,0
+57714211,Ketogenic diet,6
+57714211,Trying to get more sleep,4
+57714211,"SSRIs (Prozac, Lexapro...)",5
+57714211,"SNRIs (Cymbalta, Effexor...)",7
+57714211,Modafinil,6
+57714211,Melatonin,0
+57714211,Adderall,6
+57714211,Nicotine,5
+57714211,Vegan diet,6
 57730418,Kratom,4
 57730418,Valerian Root,1
 57730418,Maca,6
@@ -3690,7 +5849,6 @@ userID,itemID,rating
 58193708,Psilocybin (microdose),5
 58193708,CBD,7
 58193708,Theanine,4
-58193708,Dextroamphetamine (Speed),10
 58193708,Noopept,8
 58193708,Melatonin,7
 58193708,Trying to get more sleep,8
@@ -3735,6 +5893,28 @@ userID,itemID,rating
 58357719,Huperzine-A,3
 58357719,ALCAR,5
 58357719,Methylphenidate (Ritalin),8
+58386162,Omega-3 Supplements,4
+58386162,Theanine,4
+58386162,Bacopa,4
+58386162,Choline,3
+58386162,Tyrosine,5
+58386162,Caffeine,7
+58386162,Creatine,6
+58386162,No Fap (or otherwise avoiding masturbation),0
+58386162,Ginseng,6
+58671660,N-acetyl Cysteine (NAC),7
+58671660,Probiotics,2
+58671660,Trying to get more sleep,8
+58671660,LSD (microdose),8
+58671660,Magnesium,2
+58671660,Ketogenic diet,7
+58671660,CBD,6
+58671660,Kratom,5
+58671660,Nicotinamide riboside,5
+58671660,Psilocybin (microdose),8
+58671660,Caffeine,2
+58671660,Carnivore diet,7
+58671660,Lion's Mane,7
 5868393,Trying to get less sleep,0
 5868393,N-acetyl Cysteine (NAC),4
 5868393,Melatonin,2
@@ -3753,6 +5933,12 @@ userID,itemID,rating
 5868393,Kratom,3
 5868393,Theanine,0
 5868393,Lion's Mane,1
+58768089,Magnesium,2
+58768089,Caffeine,4
+58768089,Theanine,4
+58768089,Omega-3 Supplements,2
+58768089,CBD,4
+58768089,Modafinil,3
 59012166,Aniracetam,8
 59012166,Modafinil,8
 59012166,Alpha-GPC,5
@@ -3793,6 +5979,31 @@ userID,itemID,rating
 59473373,N-acetyl Cysteine (NAC),3
 59473373,Ketogenic diet,7
 59473373,Probiotics,0
+59555208,Ginseng,4
+59555208,No Fap (or otherwise avoiding masturbation),7
+59555208,Bromantane,6
+59555208,Caffeine,7
+59555208,Ashwagandha,2
+59555208,St John's Wort,3
+59555208,Rhodiola,7
+59555208,Noopept,8
+59555208,N-acetyl Cysteine (NAC),6
+59555208,Maca,5
+59555208,LSD (microdose),9
+59555208,Theanine,8
+59555208,Magnesium,8
+59555208,Alpha-GPC,3
+59555208,CBD,7
+59555208,Creatine,8
+59555208,Lion's Mane,6
+59555208,Nicotine,6
+59555208,Armodafinil,5
+59555208,Omega-3 Supplements,6
+59555208,Cordyceps,6
+59555208,Probiotics,6
+59555208,Psilocybin (microdose),7
+59555208,Trying to get more sleep,7
+59555208,Shilajit,5
 596952,Trying to get more sleep,6
 596952,Theanine,5
 596952,No Fap (or otherwise avoiding masturbation),5
@@ -3857,6 +6068,82 @@ userID,itemID,rating
 59766473,Phosphatidylserine,4
 59766473,N-acetyl Cysteine (NAC),10
 59766473,Methylphenidate (Ritalin),0
+59913407,Ashwagandha,3
+59913407,Ginkgo Biloba,3
+59913407,LSD (microdose),10
+59913407,Oxiracetam,9
+59913407,No Fap (or otherwise avoiding masturbation),4
+59913407,Lion's Mane,7
+59913407,Nicotine,5
+59913407,CBD,6
+59913407,Magnesium,4
+59913407,Adderall,9
+59913407,Armodafinil,10
+59913407,Psilocybin (microdose),8
+59913407,Piracetam,5
+59913407,Noopept,7
+59913407,Creatine,2
+59913407,Caffeine,7
+59913407,Kratom,2
+59913407,Aniracetam,6
+60157665,CBD,6
+60157665,Ashwagandha,3
+60157665,Ginkgo Biloba,3
+60157665,Magnesium,8
+60157665,Probiotics,5
+60157665,Valerian Root,2
+60157665,Psilocybin (microdose),8
+60157665,Bright lights in morning / Dawn simulator,10
+60157665,Adderall,3
+60157665,5-HTP,1
+60157665,Vegan diet,5
+60157665,Caffeine,10
+60157665,Sulbutiamine,6
+60157665,Trying to get more sleep,10
+60157665,Ginseng,8
+60157665,Creatine,4
+60157665,"Fermented drinks (Kefir, Kombucha...)",5
+60157665,Choline,6
+60157665,Tryptophan,4
+60157665,LSD (microdose),10
+60157665,Niacin,3
+60157665,GABA,6
+60157665,Modafinil,3
+60157665,Ketogenic diet,5
+60157665,Trying to get less sleep,1
+60157665,Nicotine,7
+60157665,Tyrosine,5
+60157665,Carnivore diet,6
+60157665,No Fap (or otherwise avoiding masturbation),5
+60157665,Melatonin,5
+60157665,Saffron,1
+60157665,Omega-3 Supplements,6
+60157665,N-acetyl Cysteine (NAC),5
+60157665,Theanine,5
+60157665,N-Acetyl-L-Tyrosine,5
+60157665,Vegetarian diet,10
+60194811,Phenibut,9
+60194811,Bacopa,3
+60194811,No Fap (or otherwise avoiding masturbation),5
+60194811,Caffeine,7
+60194811,Ashwagandha,3
+60194811,Omega-3 Supplements,3
+60194811,Creatine,2
+60194811,Kava,7
+60194811,Melatonin,5
+60194811,Vegan diet,4
+60194811,Theanine,4
+60194811,Noopept,5
+60194811,CBD,2
+60371016,Valerian Root,6
+60371016,No Fap (or otherwise avoiding masturbation),10
+60371016,Omega-3 Supplements,4
+60371016,Maca,2
+60371016,Caffeine,10
+60371016,Kava,4
+60371016,Probiotics,8
+60371016,"SSRIs (Prozac, Lexapro...)",10
+60371016,Trying to get more sleep,8
 60677360,Magnesium,2
 60677360,Alprazolam (Xanax),9
 60677360,CBD,3
@@ -3864,6 +6151,22 @@ userID,itemID,rating
 60677360,Melatonin,6
 60677360,Phenibut,6
 60677360,Adderall,8
+60847323,Bacopa,4
+60847323,Creatine,10
+60847323,No Fap (or otherwise avoiding masturbation),10
+60847323,Caffeine,9
+60847323,Melatonin,8
+60847323,Vegan diet,10
+60847323,Magnesium,6
+60847323,CBD,3
+60847323,Trying to get more sleep,1
+60847323,Theanine,8
+60847323,Ashwagandha,4
+60847323,Vegetarian diet,10
+60847323,Modafinil,8
+60847323,Nicotine,0
+60847323,Trying to get less sleep,0
+60847323,Bright lights in morning / Dawn simulator,9
 61089668,Modafinil,7
 61089668,Alpha-GPC,2
 61089668,N-acetyl Cysteine (NAC),9
@@ -3904,6 +6207,45 @@ userID,itemID,rating
 61245364,Ketogenic diet,10
 61396007,Cordyceps,5
 61396007,Red reishi mushrooms,4
+61909752,CBD,7
+61909752,Bright lights in morning / Dawn simulator,6
+61909752,DMHA,8
+61909752,Ginseng,2
+61909752,Melatonin,9
+61909752,Inositol,2
+61909752,DMAE,4
+61909752,Trying to get less sleep,7
+61909752,Ginkgo Biloba,5
+61909752,Ketogenic diet,9
+61909752,Magnesium,5
+61909752,Omega-3 Supplements,8
+61909752,Noopept,2
+61909752,Ashwagandha,9
+61909752,Creatine,8
+61909752,Berberine,10
+61909752,Uridine,4
+61909752,Vegan diet,6
+61909752,Nicotine,1
+61909752,Alpha-GPC,10
+61909752,5-HTP,4
+61909752,Niacin,5
+61909752,Carnitine / Acetyl-L-Carnitine,6
+61909752,Rhodiola,4
+61909752,Huperzine-A,7
+61909752,N-acetyl Cysteine (NAC),4
+61909752,Bacopa,8
+61909752,Lion's Mane,8
+61909752,ALCAR,8
+61909752,BPC-157,10
+61909752,Nefiracetam,10
+61909752,Maca,1
+61909752,Caffeine,8
+61909752,Choline,4
+61909752,Kratom,6
+61909752,Trying to get more sleep,6
+61909752,LSD (microdose),8
+61909752,No Fap (or otherwise avoiding masturbation),5
+61909752,Phenylpiracetam,8
 62287285,Methylphenidate (Ritalin),7
 62287285,Ashwagandha,2
 62287285,Melatonin,4
@@ -3988,6 +6330,23 @@ userID,itemID,rating
 62781604,Niacin,8
 62781604,Probiotics,6
 62781604,"Fermented drinks (Kefir, Kombucha...)",0
+62967822,Caffeine,7
+62967822,Alpha-GPC,4
+62967822,Ashwagandha,5
+62967822,"SSRIs (Prozac, Lexapro...)",7
+62967822,Bacopa,5
+62967822,Modafinil,9
+62967822,Ketogenic diet,2
+62967822,CBD,6
+62967822,Theanine,4
+62967822,N-acetyl Cysteine (NAC),6
+62967822,Psilocybin (microdose),8
+62967822,Omega-3 Supplements,5
+62967822,BPC-157,4
+62967822,Nicotinamide riboside,4
+62967822,Trying to get more sleep,0
+62967822,Magnesium,4
+62967822,Rhodiola,5
 63134268,Tryptophan,1
 63134268,5-HTP,4
 63134268,Melatonin,8
@@ -4016,6 +6375,12 @@ userID,itemID,rating
 63134268,"Bupropion (Wellbutrin, Zyban...)",0
 63134268,Tianeptine,3
 63134268,Creatine,9
+63201710,Probiotics,3
+63201710,Creatine,6
+63201710,Theanine,0
+63201710,Ginseng,0
+63201710,Magnesium,3
+63201710,Caffeine,6
 63208659,Phenylpiracetam,9
 63208659,Sulbutiamine,4
 63208659,Alpha-GPC,4
@@ -4092,12 +6457,43 @@ userID,itemID,rating
 63693089,Adrafinil,6
 63693089,Magnesium,6
 63693089,Vegan diet,6
+63806260,Maca,0
+63806260,Fasoracetam,0
+63806260,Creatine,0
+63806260,DMHA,0
+63806260,Piracetam,0
+63806260,Bacopa,8
+63806260,Tyrosine,0
+63806260,Noopept,0
+63806260,Aniracetam,10
+63806260,Phenibut,0
+63806260,"Fermented drinks (Kefir, Kombucha...)",0
+63806260,Theanine,0
+63806260,GABA,0
+63806260,Caffeine,7
+63806260,Melatonin,0
+63806260,Tryptophan,0
+63806260,Phenylpiracetam,0
+63806260,Huperzine-A,0
+63806260,Lion's Mane,0
+63806260,Pramiracetam,0
+63806260,Alpha-GPC,9
+63806260,Ashwagandha,8
+63806260,Coluracetam,7
+63806260,Inositol,0
+63806260,Trying to get more sleep,0
+63806260,Ginkgo Biloba,0
+63806260,No Fap (or otherwise avoiding masturbation),0
+63806260,Choline,9
+63806260,Kratom,0
+63806260,DMAE,0
+63806260,Magnesium,0
+63806260,Black Seed Oil,2
 63909883,Vegan diet,2
 63909883,Caffeine,3
 63909883,Rhodiola,2
 63909883,Bromantane,5
 63909883,Choline,2
-63909883,Dextroamphetamine (Speed),5
 63909883,Ginkgo Biloba,2
 63909883,Vegetarian diet,2
 63909883,Magnesium,2
@@ -4111,6 +6507,30 @@ userID,itemID,rating
 63909883,LSD (microdose),2
 63909883,Trying to get more sleep,4
 63909883,5-HTP,5
+63930519,Methylphenidate (Ritalin),8
+63930519,Lion's Mane,2
+63930519,Alprazolam (Xanax),8
+63930519,Ginkgo Biloba,4
+63930519,GABA,9
+63930519,Carnitine / Acetyl-L-Carnitine,5
+63930519,Guanfacine,0
+63930519,Modafinil,5
+63930519,9-MBC,2
+63930519,Melatonin,0
+63930519,"SSRIs (Prozac, Lexapro...)",8
+63930519,Phenibut,10
+63930519,Trying to get more sleep,5
+63930519,Choline,2
+63930519,Black Seed Oil,3
+63930519,Aniracetam,0
+63930519,Theanine,5
+63930519,"Bupropion (Wellbutrin, Zyban...)",5
+63930519,Magnesium,0
+63930519,Omega-3 Supplements,5
+63930519,Curcumin,3
+63930519,Caffeine,7
+63930519,Ashwagandha,0
+63930519,No Fap (or otherwise avoiding masturbation),7
 63944675,Ginseng,5
 63944675,Magnesium,8
 63944675,"Fermented drinks (Kefir, Kombucha...)",4
@@ -4141,7 +6561,6 @@ userID,itemID,rating
 63944675,Red reishi mushrooms,4
 63944675,Curcumin,6
 63944675,Theanine,4
-63944675,Dextroamphetamine (Speed),6
 63944675,"SSRIs (Prozac, Lexapro...)",4
 63944675,Tyrosine,5
 63944675,"Bupropion (Wellbutrin, Zyban...)",7
@@ -4149,6 +6568,44 @@ userID,itemID,rating
 63944675,Caffeine,5
 63944675,Carnitine / Acetyl-L-Carnitine,5
 63944675,Creatine,3
+63963260,Adderall,10
+63963260,Omega-3 Supplements,5
+63963260,"Bupropion (Wellbutrin, Zyban...)",3
+63963260,CBD,7
+63963260,Psilocybin (microdose),10
+63963260,Trying to get more sleep,0
+63963260,Nicotine,0
+63963260,Maca,7
+63963260,No Fap (or otherwise avoiding masturbation),0
+63963260,Bright lights in morning / Dawn simulator,3
+63963260,Caffeine,8
+63963260,Vegan diet,10
+63963260,Vegetarian diet,0
+63963260,Kratom,0
+63963260,Trying to get less sleep,0
+63963260,Theanine,4
+63963260,Melatonin,0
+63963260,Probiotics,0
+63963260,Methylphenidate (Ritalin),10
+63963260,Dextroamphetamine,10
+63963260,"Fermented drinks (Kefir, Kombucha...)",10
+63963260,Ashwagandha,5
+63963260,Ginkgo Biloba,0
+63963260,LSD (microdose),10
+63985244,Modafinil,6
+63985244,Theanine,3
+63985244,Trying to get more sleep,10
+63985244,Creatine,3
+63985244,Armodafinil,9
+63985244,Vegetarian diet,1
+63985244,Curcumin,2
+63985244,Maca,5
+63985244,Cordyceps,4
+63985244,N-acetyl Cysteine (NAC),7
+63985244,Tyrosine,1
+64053638,Caffeine,8
+64053638,Adderall,9
+64053638,No Fap (or otherwise avoiding masturbation),10
 64261288,GABA,6
 64261288,ALCAR,6
 64261288,Kratom,3
@@ -4187,11 +6644,37 @@ userID,itemID,rating
 64319475,Trying to get more sleep,2
 64319475,Adderall,4
 64319475,Caffeine,2
+64398053,"Fermented drinks (Kefir, Kombucha...)",0
+64398053,Oxiracetam,0
+64398053,Maca,0
+64398053,LSD (microdose),0
+64398053,Choline,0
+64398053,Kratom,0
+64398053,Rhodiola,0
+64398053,5-HTP,0
+64398053,Lion's Mane,0
+64398053,Creatine,0
+64398053,Theanine,0
+64398053,Magnesium,0
+64398053,Alpha-GPC,0
+64398053,Bacopa,0
+64398053,Aniracetam,0
+64398053,Melatonin,0
+64398053,Ashwagandha,0
+64398053,Piracetam,0
+64398053,Noopept,0
+64398053,Lemon balm,0
+64398053,Caffeine,0
+64398053,Omega-3 Supplements,0
+64398053,Nicotine,0
 64423272,Trying to get more sleep,5
 64423272,Vegetarian diet,3
 64423272,Caffeine,3
 64423272,Omega-3 Supplements,4
 64423272,"SSRIs (Prozac, Lexapro...)",4
+64511059,Adderall,10
+64511059,Piracetam,1
+64511059,Modafinil,7
 64556379,Nicotine,8
 64556379,Magnesium,5
 64556379,Trying to get more sleep,4
@@ -4201,6 +6684,25 @@ userID,itemID,rating
 64556379,Caffeine,8
 64556379,Omega-3 Supplements,2
 64556379,Bright lights in morning / Dawn simulator,4
+64862327,Ketogenic diet,7
+64862327,Kava,1
+64862327,Caffeine,6
+64862327,Melatonin,1
+64862327,"SSRIs (Prozac, Lexapro...)",1
+64862327,CBD,4
+64862327,Trying to get more sleep,7
+64862327,Magnesium,8
+64862327,Psilocybin (microdose),3
+64862327,SAM-e,3
+64862327,GABA,3
+64862327,Adderall,8
+64862327,Vegan diet,2
+64862327,Lemon balm,5
+64862327,Curcumin,4
+64862327,"SNRIs (Cymbalta, Effexor...)",6
+64862327,Valerian Root,4
+64862327,5-HTP,2
+64862327,Phenibut,6
 64962414,Kava,5
 64962414,Magnesium,4
 64962414,Curcumin,4
@@ -4299,6 +6801,13 @@ userID,itemID,rating
 66103853,Theanine,8
 66103853,Phenylpiracetam,8
 66103853,Caffeine,8
+66401271,Adderall,5
+66401271,Maca,0
+66401271,"SSRIs (Prozac, Lexapro...)",4
+66401271,Caffeine,4
+66401271,Ketogenic diet,2
+66401271,Creatine,0
+66401271,CBD,0
 66505085,Nicotine,5
 66505085,Valerian Root,8
 66505085,Kanna (except Zembrin),6
@@ -4321,6 +6830,27 @@ userID,itemID,rating
 66505085,Omega-3 Supplements,7
 66505085,Phenylpiracetam,8
 66505085,Kava,8
+66551224,Bacopa,2
+66551224,Sarcosine,7
+66551224,CBD,6
+66551224,Modafinil,2
+66551224,Semax (or NA-Semax etc),5
+66551224,NSI-189,6
+66551224,"SSRIs (Prozac, Lexapro...)",1
+66551224,Bromantane,6
+66551224,Ketogenic diet,4
+66551224,Theanine,6
+66551224,Melatonin,7
+66551224,Nicotine,5
+66551224,Dihexa,6
+66551224,Lion's Mane,2
+66551224,Ashwagandha,4
+66551224,Choline,4
+66551224,"Bupropion (Wellbutrin, Zyban...)",3
+66551224,Aniracetam,2
+66551224,Cordyceps,2
+66551224,Caffeine,4
+66551224,Piracetam,6
 66561835,Ashwagandha,6
 66561835,Caffeine,7
 66561835,Magnesium,3
@@ -4360,6 +6890,27 @@ userID,itemID,rating
 666753,Trying to get more sleep,0
 666753,CBD,8
 666753,N-acetyl Cysteine (NAC),9
+66821227,Probiotics,4
+66821227,Adderall,8
+66821227,Methylphenidate (Ritalin),10
+66821227,Carnitine / Acetyl-L-Carnitine,4
+66821227,Omega-3 Supplements,0
+66821227,"Fermented drinks (Kefir, Kombucha...)",2
+66821227,Inositol,2
+66821227,Melatonin,8
+66821227,Magnesium,1
+66821227,Curcumin,3
+66821227,No Fap (or otherwise avoiding masturbation),2
+66821227,Vegetarian diet,4
+66821227,Trying to get less sleep,6
+66821227,Ginseng,2
+66821227,Caffeine,0
+66821227,"SSRIs (Prozac, Lexapro...)",0
+66821227,Trying to get more sleep,4
+66821227,Creatine,2
+66821227,Tryptophan,1
+66821227,Carnivore diet,4
+66821227,Alpha-GPC,3
 66946825,Piracetam,7
 66946825,Modafinil,8
 66946825,Ketogenic diet,5
@@ -4373,6 +6924,65 @@ userID,itemID,rating
 67145897,Nicotine,0
 67145897,CBD,5
 67145897,Caffeine,9
+67280890,Caffeine,8
+67280890,Piracetam,7
+67280890,Ketogenic diet,7
+67280890,Theanine,10
+67280890,DMAE,7
+67280890,Ginseng,4
+67280890,Sunifiram,4
+67280890,Kanna (except Zembrin),5
+67280890,Phenylpiracetam,8
+67280890,Lion's Mane,6
+67280890,Melatonin,7
+67280890,Coluracetam,7
+67280890,Trying to get less sleep,8
+67280890,Niacin,6
+67280890,Tyrosine,8
+67280890,Theacrine (aka Teacrine),6
+67280890,Noopept,10
+67280890,ALCAR,3
+67280890,Oxiracetam,9
+67280890,MAOIs (except Selegiline),8
+67280890,Curcumin,2
+67280890,Phenibut,10
+67280890,PRL-8-53,8
+67280890,Inositol,2
+67280890,Omega-3 Supplements,4
+67280890,Methylene blue,9
+67280890,Rhodiola,5
+67280890,N-acetyl Cysteine (NAC),4
+67280890,Nicotinamide riboside,4
+67280890,Huperzine-A,10
+67280890,Cordyceps,3
+67280890,Magnesium,10
+67280890,"Fermented drinks (Kefir, Kombucha...)",6
+67280890,Adrafinil,8
+67280890,Creatine,3
+67280890,Tryptophan,10
+67280890,Carnitine / Acetyl-L-Carnitine,3
+67280890,Phosphatidylserine,6
+67280890,Ashwagandha,10
+67280890,5-HTP,6
+67280890,Nicotine,7
+67280890,Sulbutiamine,8
+67280890,NSI-189,5
+67280890,Kava,4
+67280890,GABA,6
+67280890,Trying to get more sleep,8
+67280890,Carnivore diet,6
+67280890,Pregenolone,8
+67280890,CBD,8
+67280890,N-Acetyl-L-Tyrosine,6
+67280890,Agmatine,2
+67280890,Picamilon,7
+67280890,Valerian Root,7
+67280890,Alpha-GPC,7
+67280890,Uridine,6
+67280890,Bacopa,7
+67280890,Fasoracetam,8
+67280890,Aniracetam,10
+67280890,Probiotics,6
 68062744,Omega-3 Supplements,5
 68062744,Choline,7
 68062744,Noopept,8
@@ -4400,7 +7010,6 @@ userID,itemID,rating
 68062744,Curcumin,7
 68062744,Adderall,8
 68062744,Huperzine-A,7
-68062744,Dextroamphetamine (Speed),9
 68062744,N-acetyl Cysteine (NAC),8
 68062744,Nicotine,9
 68062744,Bright lights in morning / Dawn simulator,8
@@ -4430,6 +7039,12 @@ userID,itemID,rating
 68853437,Ashwagandha,6
 68853437,Caffeine,0
 68853437,CBD,3
+68949881,Creatine,5
+68949881,Caffeine,9
+68949881,Modafinil,9
+68949881,Choline,7
+68949881,Omega-3 Supplements,5
+68949881,Vegetarian diet,6
 69018563,Carnivore diet,1
 69018563,Ketogenic diet,0
 69018563,Melatonin,0
@@ -4438,6 +7053,41 @@ userID,itemID,rating
 69018563,Theanine,0
 69018563,CBD,1
 69018563,Caffeine,0
+69097664,5-HTP,0
+69097664,Pramiracetam,0
+69097664,Dextroamphetamine,0
+69097664,Picamilon,0
+69097664,Modafinil,0
+69097664,Melatonin,0
+69097664,Alprazolam (Xanax),0
+69097664,Aniracetam,0
+69097664,Adderall,0
+69097664,Creatine,0
+69097664,Oxiracetam,0
+69097664,Caffeine,0
+69097664,Sulbutiamine,0
+69097664,Nefiracetam,0
+69097664,Nicotine,0
+69097664,Trying to get more sleep,0
+69097664,Theanine,0
+69097664,Piracetam,0
+69097664,Noopept,0
+69097664,SAM-e,0
+69097664,No Fap (or otherwise avoiding masturbation),0
+69097664,Phenibut,0
+69097664,Ashwagandha,0
+69097664,Magnesium,0
+69097664,Choline,0
+69097664,Alpha-GPC,0
+69097664,Agmatine,0
+69097664,Trying to get less sleep,0
+69097664,Ginkgo Biloba,0
+69097664,Uridine,0
+69097664,Ginseng,0
+69097664,Tyrosine,0
+69097664,Omega-3 Supplements,0
+69097664,Curcumin,0
+69097664,Ketogenic diet,0
 69266816,Choline,8
 69266816,Tryptophan,1
 69266816,Piracetam,5
@@ -4449,7 +7099,6 @@ userID,itemID,rating
 69266816,Ginseng,5
 69266816,Theanine,8
 69266816,Maca,8
-69266816,Dextroamphetamine (Speed),9
 69266816,Lion's Mane,4
 69266816,Noopept,5
 69266816,"Fermented drinks (Kefir, Kombucha...)",5
@@ -4470,6 +7119,13 @@ userID,itemID,rating
 69266816,LSD (microdose),5
 69266816,Niacin,4
 69266816,Melatonin,5
+69351075,Ketogenic diet,7
+69351075,Caffeine,3
+69351075,Probiotics,5
+69351075,No Fap (or otherwise avoiding masturbation),6
+69351075,Magnesium,5
+69351075,Ashwagandha,0
+69351075,Creatine,1
 69364865,Carnitine / Acetyl-L-Carnitine,3
 69364865,Omega-3 Supplements,3
 69364865,Ashwagandha,0
@@ -4483,6 +7139,71 @@ userID,itemID,rating
 69364865,Adderall,8
 69364865,Vegan diet,7
 69364865,Alpha-GPC,7
+69455736,Creatine,4
+69455736,Ginseng,2
+69455736,Modafinil,7
+69455736,Ashwagandha,3
+69455736,Melatonin,3
+69455736,Ketogenic diet,2
+69455736,Lion's Mane,6
+69455736,Caffeine,5
+69455736,Omega-3 Supplements,5
+69455736,Psilocybin (microdose),9
+69455736,No Fap (or otherwise avoiding masturbation),5
+69455736,Niacin,3
+69455736,Magnesium,5
+69455736,LSD (microdose),8
+69455736,Noopept,7
+69455736,CBD,6
+6961269,Choline,2
+6961269,Ginseng,5
+6961269,Vegetarian diet,5
+6961269,Nicotine,0
+6961269,Black Seed Oil,2
+6961269,Omega-3 Supplements,0
+6961269,Bacopa,8
+6961269,CBD,7
+6961269,Piracetam,10
+6961269,Ashwagandha,3
+6961269,Bright lights in morning / Dawn simulator,6
+6961269,Magnesium,7
+6961269,Caffeine,8
+6961269,St John's Wort,10
+6961269,Phenibut,1
+6961269,Ginkgo Biloba,7
+6961269,N-acetyl Cysteine (NAC),7
+6961269,Trying to get more sleep,6
+69960897,Tryptophan,5
+69960897,5-HTP,3
+69960897,Theanine,3
+69960897,CBD,2
+69960897,GABA,3
+69960897,Melatonin,5
+69960897,Niacin,1
+69960897,Maca,2
+69960897,Adrafinil,0
+69960897,Ginseng,0
+69960897,Tyrosine,8
+69960897,Choline,4
+69960897,Magnesium,2
+69960897,Huperzine-A,2
+69960897,Ginkgo Biloba,2
+69960897,Glycine,4
+69960897,Cordyceps,3
+69960897,Nicotinamide riboside,2
+69960897,Valerian Root,3
+69960897,Creatine,3
+69960897,Boswellia,2
+69960897,Rhodiola,2
+69960897,Modafinil,4
+69960897,N-acetyl Cysteine (NAC),4
+69960897,DMAE,10
+69960897,Piracetam,2
+69960897,SAM-e,10
+69960897,Nicotine,3
+69960897,Omega-3 Supplements,2
+69960897,Inositol,5
+69960897,Caffeine,5
 70848194,Phenylpiracetam,9
 70848194,CBD,8
 70848194,Kava,8
@@ -4546,6 +7267,23 @@ userID,itemID,rating
 71465892,Creatine,2
 71465892,Ginseng,6
 71465892,Kava,4
+71600368,Phenibut,10
+71600368,Choline,4
+71600368,Theanine,5
+71600368,Adderall,7
+71600368,Caffeine,8
+71600368,No Fap (or otherwise avoiding masturbation),5
+71600368,Ashwagandha,0
+71600368,Magnesium,4
+71600368,5-HTP,2
+71600368,CBD,3
+71600368,Nicotine,7
+71600368,Omega-3 Supplements,3
+71600368,Creatine,3
+71600368,Ketogenic diet,0
+71600368,Trying to get more sleep,9
+71600368,Modafinil,9
+71600368,Bright lights in morning / Dawn simulator,5
 71728945,Choline,2
 71728945,Ashwagandha,1
 71728945,Rhodiola,2
@@ -4586,11 +7324,36 @@ userID,itemID,rating
 71728945,Lemon balm,5
 71728945,Omega-3 Supplements,6
 71728945,Inositol,2
+7177217,Maca,6
+7177217,CBD,8
+7177217,Adderall,9
+7177217,Ketogenic diet,8
+7177217,Bacopa,6
+7177217,Nicotine,4
+7177217,Carnivore diet,7
+7177217,LSD (microdose),10
+7177217,Theanine,7
+7177217,Caffeine,6
+7177217,5-HTP,7
+7177217,Melatonin,7
+7177217,ALCAR,4
+7177217,Ashwagandha,5
+7177217,Black Seed Oil,5
+7177217,Omega-3 Supplements,10
+7177217,Probiotics,3
+7177217,Magnesium,5
+7177217,Creatine,0
 71849904,Magnesium,0
 71849904,Omega-3 Supplements,0
 71849904,Ketogenic diet,8
 71849904,Probiotics,0
 71849904,Maca,7
+71889007,Omega-3 Supplements,0
+71889007,Adderall,0
+71889007,Melatonin,0
+71889007,LSD (microdose),0
+71889007,Trying to get more sleep,0
+71889007,Bright lights in morning / Dawn simulator,0
 72219437,Caffeine,6
 72219437,Nicotine,8
 72219437,Melatonin,8
@@ -4653,6 +7416,41 @@ userID,itemID,rating
 7231461,St John's Wort,2
 7231461,Vegan diet,10
 7231461,Curcumin,8
+72390677,Melatonin,7
+72390677,Trying to get more sleep,6
+72390677,Theanine,8
+72390677,Bright lights in morning / Dawn simulator,8
+72390677,"Fermented drinks (Kefir, Kombucha...)",6
+72390677,Caffeine,10
+72390677,CBD,6
+72503399,Lion's Mane,5
+72503399,Psilocybin (microdose),8
+72503399,CBD,7
+72503399,Kratom,6
+72503399,Kanna (except Zembrin),2
+72503399,Valerian Root,8
+72503399,Phenibut,8
+72503399,Omega-3 Supplements,6
+72503399,Emoxypine,3
+72503399,9-MBC,7
+72503399,Bromantane,2
+72503399,Kava,2
+72503399,Caffeine,8
+72503399,Magnesium,3
+72503399,GABA,1
+72566416,Magnesium,7
+72566416,Caffeine,6
+72566416,Ashwagandha,4
+72566416,Trying to get more sleep,9
+72566416,Creatine,8
+72566416,No Fap (or otherwise avoiding masturbation),8
+72566416,Melatonin,7
+72873123,Magnesium,8
+72873123,Caffeine,9
+72873123,Nicotine,10
+72873123,Trying to get more sleep,10
+72873123,Creatine,5
+72873123,Omega-3 Supplements,5
 72998745,Omega-3 Supplements,0
 72998745,Carnitine / Acetyl-L-Carnitine,0
 72998745,Trying to get less sleep,0
@@ -4662,7 +7460,6 @@ userID,itemID,rating
 72998745,Caffeine,10
 72998745,LSD (microdose),3
 72998745,SAM-e,0
-72998745,Dextroamphetamine (Speed),10
 72998745,Curcumin,0
 72998745,Noopept,0
 72998745,Glycine,0
@@ -4707,6 +7504,25 @@ userID,itemID,rating
 72998745,Creatine,4
 72998745,Probiotics,0
 72998745,Magnesium,4
+73015464,Creatine,9
+73015464,Magnesium,6
+73015464,Ginseng,6
+73015464,Adderall,6
+73015464,Alpha-GPC,1
+73015464,Lion's Mane,6
+73015464,Tyrosine,6
+73015464,N-Acetyl-L-Tyrosine,2
+73015464,Ashwagandha,7
+73015464,Psilocybin (microdose),8
+73015464,Rhodiola,9
+73015464,Caffeine,7
+73015464,ALCAR,3
+73015464,Theanine,5
+73015464,Melatonin,8
+73015464,Polygala tenuifolia,6
+73015464,Lemon balm,6
+73015464,Curcumin,4
+73015464,Cordyceps,1
 73094240,Ketogenic diet,6
 73094240,Trying to get more sleep,9
 73094240,No Fap (or otherwise avoiding masturbation),4
@@ -4766,6 +7582,7 @@ userID,itemID,rating
 7313565,Creatine,3
 7313565,Bacopa,4
 7313565,Caffeine,3
+7325182,Omega-3 Supplements,4
 73358073,Adderall,5
 73629066,Ginseng,2
 73629066,Methylphenidate (Ritalin),10
@@ -4789,6 +7606,23 @@ userID,itemID,rating
 74176310,Adderall,10
 74176310,CBD,0
 74176310,Trying to get more sleep,8
+74336115,Noopept,6
+74336115,BPC-157,10
+74336115,Creatine,10
+74336115,Trying to get more sleep,10
+74336115,Caffeine,6
+74336115,Ketogenic diet,8
+74336115,Alpha-GPC,10
+74336115,Theanine,7
+74336115,Bright lights in morning / Dawn simulator,10
+74336115,CBD,9
+74336115,Choline,10
+74356218,Ginseng,4
+74356218,Armodafinil,8
+74356218,Modafinil,6
+74356218,Ginkgo Biloba,10
+74356218,Omega-3 Supplements,4
+74356218,Caffeine,6
 74562638,Ginkgo Biloba,5
 74562638,GABA,7
 74562638,Theanine,6
@@ -4839,6 +7673,15 @@ userID,itemID,rating
 74562638,Noopept,9
 74562638,Caffeine,6
 74562638,Kanna (except Zembrin),5
+74635280,Piracetam,10
+74635280,No Fap (or otherwise avoiding masturbation),2
+74635280,Caffeine,6
+74635280,Theanine,4
+74635280,Alpha-GPC,8
+74635280,Melatonin,0
+74635280,Adderall,10
+74635280,Nicotine,9
+74635280,Omega-3 Supplements,0
 74759191,Omega-3 Supplements,0
 74759191,Magnesium,0
 74759191,Vegetarian diet,0
@@ -4868,8 +7711,111 @@ userID,itemID,rating
 75732681,CBD,0
 75732681,Caffeine,0
 75732681,Magnesium,0
+75780678,Bacopa,7
+75900122,Choline,0
+75900122,Ginseng,0
+75900122,Omega-3 Supplements,1
+75900122,Magnesium,2
+75900122,Caffeine,6
+75900122,Trying to get less sleep,0
+75900122,"SNRIs (Cymbalta, Effexor...)",4
+75900122,Kava,0
+75900122,Nicotine,5
+75900122,Dextroamphetamine,0
+75900122,Trying to get more sleep,4
+75900122,Ginkgo Biloba,0
+75900122,Ashwagandha,0
+75900122,Probiotics,0
+75900122,Piracetam,2
+75900122,CBD,0
+760024,Ginseng,3
+760024,ALCAR,5
+760024,Piracetam,5
+760024,Rhodiola,4
+760024,LSD (microdose),8
+760024,Carnitine / Acetyl-L-Carnitine,4
+760024,Huperzine-A,5
+760024,BPC-157,7
+760024,Alprazolam (Xanax),8
+760024,Nicotinamide mononucleotide,3
+760024,Alpha-GPC,5
+760024,Aniracetam,5
+760024,GABA,2
+760024,Caffeine,5
+760024,CBD,3
+760024,Theanine,4
+760024,Trying to get more sleep,4
+760024,Phenylpiracetam,6
+760024,5-HTP,3
+760024,Omega-3 Supplements,2
+760024,Nicotine,4
+760024,White jelly mushrooms,1
+760024,Cordyceps,5
+760024,Bacopa,5
+760024,Emoxypine,6
+760024,Creatine,5
+760024,Magnesium,4
+760024,Ketogenic diet,5
+760024,Maca,1
+760024,Agmatine,5
+760024,Melatonin,2
+760024,Berberine,3
+760024,Probiotics,2
+760024,Lion's Mane,5
+760024,N-acetyl Cysteine (NAC),3
+760024,"Fermented drinks (Kefir, Kombucha...)",2
+760024,Tryptophan,1
+760024,Oxiracetam,5
+760024,Polygala tenuifolia,6
+760024,Noopept,5
+760024,Psilocybin (microdose),8
+760024,Ashwagandha,3
+760024,Tyrosine,3
+760024,Shilajit,3
+76349783,Trying to get more sleep,6
+76349783,Melatonin,5
+76349783,Oxiracetam,6
+76349783,Choline,5
+76349783,Lion's Mane,10
+76349783,Ashwagandha,7
+76349783,Adderall,10
+76349783,Nicotine,3
+76423851,Ashwagandha,1
+76423851,Inositol,0
+76423851,CBD,0
+76423851,N-Acetyl-L-Tyrosine,0
+76423851,Omega-3 Supplements,9
+76423851,Agmatine,0
+76423851,Cordyceps,1
+76423851,Melatonin,0
+76423851,Carnitine / Acetyl-L-Carnitine,0
+76423851,White jelly mushrooms,3
+76423851,Rhodiola,0
+76423851,Choline,0
+76423851,"Fermented drinks (Kefir, Kombucha...)",5
+76423851,ALCAR,2
+76423851,Probiotics,5
+76423851,Tryptophan,0
+76423851,Lion's Mane,1
+76423851,Caffeine,2
+76423851,Theanine,0
+76423851,GABA,0
+76423851,Trying to get more sleep,7
+76423851,Magnesium,1
+76423851,Ketogenic diet,7
+76423851,N-acetyl Cysteine (NAC),7
 76426554,Adrafinil,0
 76426554,Choline,0
+76444723,Theanine,5
+76444723,Omega-3 Supplements,1
+76444723,"Fermented drinks (Kefir, Kombucha...)",4
+76444723,Carnitine / Acetyl-L-Carnitine,7
+76444723,Magnesium,1
+76444723,Kava,2
+76444723,N-acetyl Cysteine (NAC),9
+76444723,Ashwagandha,7
+76444723,Adderall,0
+76444723,Rhodiola,6
 7649126,Magnesium,4
 7649126,Theanine,5
 7649126,Ashwagandha,0
@@ -4888,6 +7834,21 @@ userID,itemID,rating
 76708859,Curcumin,0
 76708859,Niacin,6
 76708859,Probiotics,8
+76769659,Ginseng,2
+76769659,Modafinil,7
+76769659,Caffeine,2
+76769659,No Fap (or otherwise avoiding masturbation),2
+76769659,Nicotine,2
+77046432,No Fap (or otherwise avoiding masturbation),3
+77046432,Creatine,0
+77046432,Modafinil,8
+77046432,CBD,2
+77046432,Caffeine,8
+77046432,Melatonin,7
+77046432,Theanine,4
+77046432,Nicotine,3
+77046432,Trying to get more sleep,9
+77046432,Trying to get less sleep,7
 77548174,ALCAR,0
 77548174,Lion's Mane,0
 77548174,Kratom,3
@@ -4961,6 +7922,26 @@ userID,itemID,rating
 77683735,Omega-3 Supplements,0
 77683735,Probiotics,0
 77683735,Emoxypine,0
+7780175,Melatonin,5
+7780175,No Fap (or otherwise avoiding masturbation),3
+7780175,Valerian Root,3
+7780175,Maca,3
+7780175,Omega-3 Supplements,3
+7780175,5-HTP,2
+7780175,Ginkgo Biloba,3
+7780175,Magnesium,4
+7780175,Ashwagandha,3
+7780175,N-Acetyl-L-Tyrosine,2
+7780175,Tryptophan,2
+7780175,Theanine,6
+7780175,Creatine,0
+7780175,Alpha-GPC,6
+7780175,Trying to get more sleep,8
+7780175,Caffeine,8
+7780175,Lion's Mane,2
+7780175,Tyrosine,2
+7780175,Curcumin,4
+7780175,Nicotine,7
 77861949,Caffeine,6
 77861949,Curcumin,1
 77861949,Trying to get more sleep,5
@@ -4980,6 +7961,23 @@ userID,itemID,rating
 77861949,Magnesium,2
 77861949,Bright lights in morning / Dawn simulator,1
 77861949,Theanine,1
+78159640,Creatine,6
+78159640,Alpha-GPC,4
+78159640,No Fap (or otherwise avoiding masturbation),3
+78159640,Caffeine,10
+78159640,Valerian Root,5
+78159640,Ashwagandha,8
+78159640,Theanine,9
+78159640,Inositol,5
+78159640,N-Acetyl-L-Tyrosine,2
+78159640,Choline,1
+78159640,Lemon balm,7
+78159640,Niacin,3
+78159640,Rhodiola,6
+78159640,Magnesium,6
+78159640,Melatonin,9
+78159640,Omega-3 Supplements,5
+78159640,Trying to get more sleep,5
 78251112,Magnesium,4
 78251112,5-HTP,6
 78251112,Rhodiola,2
@@ -4996,6 +7994,50 @@ userID,itemID,rating
 78618305,N-acetyl Cysteine (NAC),0
 78618305,Creatine,0
 78618305,Choline,0
+78657420,Trying to get less sleep,0
+78657420,Caffeine,2
+78665184,Curcumin,3
+78665184,Ketogenic diet,0
+78665184,CBD,0
+78665184,Palmitoylethanolamide,1
+78665184,Theanine,2
+78665184,Trying to get more sleep,8
+78665184,N-acetyl Cysteine (NAC),5
+78665184,Rhodiola,5
+78665184,Trying to get less sleep,0
+78665184,St John's Wort,2
+78665184,Probiotics,1
+78665184,"Bupropion (Wellbutrin, Zyban...)",7
+78665184,Omega-3 Supplements,1
+78665184,Ashwagandha,4
+78665184,"Fermented drinks (Kefir, Kombucha...)",0
+78665184,Melatonin,7
+78665184,Creatine,7
+78665184,Maca,5
+78665184,Phosphatidylserine,0
+78665184,Caffeine,8
+78665184,Cerebrolysin,10
+78665184,Semax (or NA-Semax etc),6
+78665184,Kava,2
+78665184,"SNRIs (Cymbalta, Effexor...)",0
+78665184,SAM-e,1
+78665184,"SSRIs (Prozac, Lexapro...)",0
+78665184,Magnesium,4
+78786791,Magnesium,8
+78786791,Creatine,0
+78786791,Trying to get more sleep,0
+78786791,Adderall,9
+78786791,Melatonin,4
+78786791,Lion's Mane,6
+78786791,Theanine,2
+78786791,Omega-3 Supplements,0
+78786791,Maca,0
+78786791,Caffeine,2
+78786791,No Fap (or otherwise avoiding masturbation),0
+78786791,Ashwagandha,4
+78786791,Red reishi mushrooms,8
+78786791,Nicotine,3
+78786791,Dextroamphetamine,6
 78878419,Maca,4
 78878419,Bromantane,7
 78878419,Lemon balm,5
@@ -5017,7 +8059,6 @@ userID,itemID,rating
 78878419,Shilajit,7
 78878419,Palmitoylethanolamide,3
 78878419,Fasoracetam,4
-78878419,Dextroamphetamine (Speed),8
 78878419,Methylphenidate (Ritalin),6
 78878419,Psilocybin (microdose),7
 78878419,Carnitine / Acetyl-L-Carnitine,3
@@ -5075,6 +8116,23 @@ userID,itemID,rating
 78885300,Armodafinil,8
 78885300,Nicotine,3
 78885300,Trying to get more sleep,4
+79118139,LSD (microdose),4
+79118139,Caffeine,1
+79118139,CBD,1
+79118139,Noopept,1
+79118139,Nicotine,0
+79118139,Armodafinil,2
+79118139,Trying to get more sleep,1
+79327208,Vegan diet,0
+79327208,Caffeine,5
+79327208,Lion's Mane,3
+79327208,Trying to get more sleep,0
+79327208,N-acetyl Cysteine (NAC),0
+79327208,Theanine,7
+79327208,Magnesium,6
+79327208,Vegetarian diet,0
+79327208,Omega-3 Supplements,4
+79327208,Melatonin,8
 79361358,Carnitine / Acetyl-L-Carnitine,8
 79361358,Curcumin,5
 79361358,Choline,4
@@ -5103,6 +8161,35 @@ userID,itemID,rating
 79361358,No Fap (or otherwise avoiding masturbation),2
 79426505,Melatonin,8
 79426505,Ginseng,0
+79580404,Polygala tenuifolia,9
+79580404,Uridine,4
+79580404,Agmatine,5
+79580404,Theanine,8
+79580404,Lion's Mane,6
+79580404,Magnesium,10
+79580404,Phenibut,7
+79580404,Omega-3 Supplements,5
+79580404,"SNRIs (Cymbalta, Effexor...)",5
+79580404,Noopept,9
+79580404,ALCAR,8
+79580404,5-HTP,5
+79580404,Rhodiola,9
+79580404,Phenylpiracetam,7
+79580404,Caffeine,9
+79580404,Nicotine,6
+79580404,"SSRIs (Prozac, Lexapro...)",8
+79580404,"Fermented drinks (Kefir, Kombucha...)",3
+79580404,Melatonin,7
+79580404,Sulbutiamine,4
+79580404,Aniracetam,4
+79580404,Alprazolam (Xanax),9
+79580404,LSD (microdose),7
+79580404,Huperzine-A,6
+79580404,Piracetam,3
+79580404,Cordyceps,8
+79580404,Alpha-GPC,6
+79580404,Methylphenidate (Ritalin),5
+79580404,Ashwagandha,1
 79603289,Valerian Root,1
 79603289,Psilocybin (microdose),7
 79603289,Agmatine,5
@@ -5172,6 +8259,17 @@ userID,itemID,rating
 7972306,Niacin,3
 7972306,Shilajit,7
 7972306,Semax (or NA-Semax etc),4
+8001096,Trying to get more sleep,10
+8001096,Ketogenic diet,7
+8001096,Magnesium,4
+8001096,Creatine,8
+8001096,Caffeine,10
+8001096,Curcumin,8
+8001096,Valerian Root,6
+8001096,Carnivore diet,7
+8001096,Piracetam,4
+8001096,No Fap (or otherwise avoiding masturbation),7
+8001096,Melatonin,10
 80057388,CBD,1
 80057388,Adrafinil,6
 80057388,Ashwagandha,4
@@ -5212,6 +8310,38 @@ userID,itemID,rating
 8024245,Modafinil,10
 8024245,Ketogenic diet,10
 8024245,Nicotine,5
+80317762,ALCAR,4
+80317762,Caffeine,9
+80317762,Trying to get more sleep,0
+80317762,Lion's Mane,10
+80317762,Alpha-GPC,8
+80317762,Choline,10
+80317762,Niacin,2
+80317762,Bacopa,1
+80317762,N-Acetyl-L-Tyrosine,6
+80317762,No Fap (or otherwise avoiding masturbation),10
+80317762,Omega-3 Supplements,3
+80317762,Rhodiola,9
+80317762,Aniracetam,7
+80317762,Noopept,10
+80317762,Trying to get less sleep,0
+80362234,Creatine,6
+80362234,Ashwagandha,4
+80362234,Lion's Mane,2
+80362234,Nicotine,2
+80362234,Phenibut,6
+80362234,Modafinil,10
+80362234,Noopept,4
+80362234,Rhodiola,5
+80362234,Caffeine,6
+80362234,5-HTP,2
+80362234,Choline,4
+80362234,Valerian Root,5
+80362234,Armodafinil,9
+80362234,Ginseng,5
+80362234,Melatonin,5
+80362234,Alpha-GPC,5
+80362234,Bacopa,5
 80401484,Choline,4
 80401484,5-HTP,0
 80401484,Melatonin,8
@@ -5261,6 +8391,47 @@ userID,itemID,rating
 80480697,Piracetam,1
 80480697,Noopept,4
 80480697,Phenylpiracetam,6
+80481758,Ginseng,0
+80481758,"SSRIs (Prozac, Lexapro...)",0
+80481758,Trying to get less sleep,0
+80481758,Ashwagandha,0
+80481758,Black Seed Oil,0
+80481758,Phenylpiracetam,0
+80481758,Adderall,0
+80481758,Alprazolam (Xanax),0
+80481758,Sulbutiamine,0
+80481758,CBD,0
+80481758,Trying to get more sleep,0
+80481758,Melatonin,0
+80481758,Bacopa,0
+80481758,Inositol,0
+80481758,Choline,0
+80481758,Caffeine,0
+80481758,Curcumin,0
+80481758,Probiotics,0
+80481758,Aniracetam,0
+80481758,Lion's Mane,0
+80481758,SAM-e,0
+80481758,Uridine,0
+80481758,Carnitine / Acetyl-L-Carnitine,0
+80481758,Dextroamphetamine,0
+80481758,ALCAR,0
+80481758,Piracetam,0
+80481758,"SNRIs (Cymbalta, Effexor...)",0
+80481758,GABA,0
+80481758,Sarcosine,0
+80481758,Magnesium,0
+80481758,5-HTP,0
+80481758,Nicotine,0
+80481758,Omega-3 Supplements,0
+80481758,N-acetyl Cysteine (NAC),0
+80481758,"Fermented drinks (Kefir, Kombucha...)",0
+80481758,Theanine,0
+80481758,Niacin,0
+80481758,"Bupropion (Wellbutrin, Zyban...)",0
+80481758,Tyrosine,0
+80481758,Phenibut,0
+80481758,N-Acetyl-L-Tyrosine,0
 80512484,Nicotine,5
 80512484,No Fap (or otherwise avoiding masturbation),5
 80512484,Ketogenic diet,5
@@ -5331,6 +8502,56 @@ userID,itemID,rating
 80846748,Tyrosine,6
 80846748,Ginkgo Biloba,0
 80846748,Melatonin,3
+80967374,Choline,1
+80967374,Ginseng,5
+80967374,Melatonin,10
+80967374,Phenibut,10
+80967374,Carnivore diet,8
+80967374,Kratom,7
+80967374,Magnesium,1
+80967374,ALCAR,1
+80967374,Aniracetam,10
+80967374,DMAE,4
+80967374,Bromantane,0
+80967374,Creatine,1
+80967374,Glycine,2
+80967374,Semax (or NA-Semax etc),9
+80967374,Carnitine / Acetyl-L-Carnitine,2
+80967374,Ginkgo Biloba,4
+80967374,Caffeine,5
+80967374,"Fermented drinks (Kefir, Kombucha...)",0
+80967374,Curcumin,2
+80967374,Theanine,8
+80967374,Psilocybin (microdose),9
+80967374,Omega-3 Supplements,5
+80967374,Piracetam,6
+80967374,Lion's Mane,4
+80967374,Trying to get more sleep,10
+80967374,Ketogenic diet,7
+80967374,Nicotine,5
+80967374,Selank (or NA-Selank etc),8
+80967374,Noopept,7
+80967374,LSD (microdose),8
+80967374,Niacin,1
+80967374,Probiotics,0
+81269968,Trying to get more sleep,2
+81269968,Pramiracetam,6
+81269968,Bright lights in morning / Dawn simulator,2
+81269968,Caffeine,7
+81269968,Theanine,5
+81269968,Phenylpiracetam,7
+81269968,Tyrosine,8
+81269968,Adderall,9
+81269968,Armodafinil,7
+81269968,Choline,4
+81269968,5-HTP,3
+81269968,Methylliberine (aka Dynamine),6
+81269968,Methylphenidate (Ritalin),6
+81269968,Noopept,6
+81269968,N-Acetyl-L-Tyrosine,2
+81269968,N-acetyl Cysteine (NAC),5
+81269968,"Bupropion (Wellbutrin, Zyban...)",7
+81269968,Nicotine,8
 81501773,Shilajit,4
 81501773,"Fermented drinks (Kefir, Kombucha...)",2
 81501773,Trying to get more sleep,7
@@ -5352,6 +8573,33 @@ userID,itemID,rating
 81501773,Ashwagandha,8
 81501773,No Fap (or otherwise avoiding masturbation),5
 81501773,N-Acetyl-L-Tyrosine,5
+81574938,Niacin,0
+81574938,N-acetyl Cysteine (NAC),1
+81574938,DMAE,1
+81574938,Omega-3 Supplements,7
+81574938,Nicotine,0
+81574938,CBD,3
+81574938,Agmatine,0
+81574938,Glycine,4
+81574938,Alprazolam (Xanax),8
+81574938,Trying to get more sleep,0
+81574938,SAM-e,0
+81574938,Choline,0
+81574938,Emoxypine,8
+81574938,Magnesium,4
+81574938,5-HTP,0
+81574938,LSD (microdose),1
+81574938,St John's Wort,0
+81574938,Phenibut,1
+81574938,Ginseng,0
+81574938,Picamilon,2
+81574938,GABA,0
+81574938,Kava,3
+81574938,Ashwagandha,0
+81574938,Noopept,0
+81574938,Theanine,0
+81574938,Kratom,0
+81574938,ALCAR,5
 81614692,"SSRIs (Prozac, Lexapro...)",8
 81614692,Choline,0
 81614692,Bright lights in morning / Dawn simulator,0
@@ -5370,10 +8618,14 @@ userID,itemID,rating
 81701435,Creatine,4
 81701435,Caffeine,5
 81701435,Nicotine,0
+81707738,Adderall,10
 81913703,Vegetarian diet,1
 81913703,No Fap (or otherwise avoiding masturbation),6
 81913703,Alpha-GPC,2
 81913703,Vegan diet,2
+82004921,Theanine,10
+82004921,No Fap (or otherwise avoiding masturbation),10
+82004921,Caffeine,10
 82070290,Probiotics,1
 82070290,N-acetyl Cysteine (NAC),6
 82070290,Red reishi mushrooms,5
@@ -5437,6 +8689,10 @@ userID,itemID,rating
 82809865,Bromantane,7
 82809865,ALCAR,6
 82809865,CBD,0
+8290488,Melatonin,6
+8290488,Omega-3 Supplements,4
+8290488,Caffeine,5
+8290488,Ashwagandha,5
 83039367,Palmitoylethanolamide,2
 83039367,Uridine,1
 83039367,Lemon balm,4
@@ -5470,7 +8726,6 @@ userID,itemID,rating
 83131271,Black Seed Oil,3
 83131271,Melatonin,8
 83131271,Phenibut,10
-83131271,Dextroamphetamine (Speed),10
 83131271,ALCAR,7
 83131271,Fasoracetam,7
 83131271,N-Acetyl-L-Tyrosine,5
@@ -5524,6 +8779,67 @@ userID,itemID,rating
 83390200,Caffeine,3
 83390200,Vegan diet,3
 83390200,No Fap (or otherwise avoiding masturbation),0
+83668640,Armodafinil,2
+83668640,Trying to get more sleep,0
+83668640,Ginseng,6
+83668640,Modafinil,2
+83668640,Saffron,4
+83668640,Alpha-GPC,4
+83668640,Ginkgo Biloba,4
+83668640,BPC-157,3
+83668640,St John's Wort,5
+83668640,Theacrine (aka Teacrine),5
+83668640,Noopept,6
+83668640,Trying to get less sleep,0
+83668640,Cerebrolysin,5
+83668640,N-acetyl Cysteine (NAC),3
+83668640,LSD (microdose),9
+83668640,Fasoracetam,7
+83668640,Uridine,7
+83668640,SAM-e,8
+83668640,Creatine,5
+83668640,Piracetam,7
+83668640,Probiotics,6
+83668640,Caffeine,4
+83668640,Choline,3
+83668640,Phenibut,6
+83668640,Theanine,4
+83668640,Boswellia,6
+83668640,Phenylpiracetam,5
+83668640,DMHA,10
+83668640,Magnesium,4
+83668640,Lemon balm,5
+83668640,Cordyceps,3
+83668640,Omega-3 Supplements,5
+83668640,Niacin,4
+83668640,"Fermented drinks (Kefir, Kombucha...)",1
+83668640,Curcumin,3
+83668640,Glycine,6
+83668640,Valerian Root,6
+83668640,Black Seed Oil,4
+83668640,Emoxypine,5
+83668640,Melatonin,6
+83668640,Nicotinamide mononucleotide,3
+83668640,No Fap (or otherwise avoiding masturbation),5
+83809846,Theanine,7
+83809846,CBD,1
+83809846,Red reishi mushrooms,1
+83809846,N-Acetyl-L-Tyrosine,4
+83809846,Magnesium,5
+83809846,Inositol,1
+83809846,Trying to get more sleep,4
+83809846,Sulbutiamine,5
+83809846,Niacin,5
+83809846,No Fap (or otherwise avoiding masturbation),5
+83809846,Tryptophan,3
+83809846,Caffeine,4
+83809846,Kratom,2
+83809846,Ketogenic diet,5
+83809846,N-acetyl Cysteine (NAC),4
+83809846,Berberine,1
+83809846,Omega-3 Supplements,1
+83809846,Melatonin,4
+83809846,Tyrosine,3
 83921877,Caffeine,7
 83921877,White jelly mushrooms,0
 83921877,Methylphenidate (Ritalin),8
@@ -5564,6 +8880,24 @@ userID,itemID,rating
 8427761,Probiotics,2
 8427761,Vegan diet,5
 8427761,Bacopa,8
+84347228,Aniracetam,2
+84347228,Nicotine,4
+84347228,Noopept,2
+84347228,Choline,0
+84347228,No Fap (or otherwise avoiding masturbation),0
+84347228,Caffeine,5
+84347228,Modafinil,10
+84347228,Lion's Mane,0
+84347228,Phenylpiracetam,3
+84347228,Ashwagandha,0
+84347228,Bright lights in morning / Dawn simulator,0
+84347228,Ketogenic diet,0
+84347228,Creatine,0
+84347228,Carnivore diet,0
+84347228,Adrafinil,3
+84347228,Phenibut,4
+84347228,Adderall,8
+84347228,Piracetam,3
 84463559,Omega-3 Supplements,1
 84463559,ALCAR,1
 84463559,Black Seed Oil,4
@@ -5701,7 +9035,6 @@ userID,itemID,rating
 85604305,Melatonin,0
 85776834,Lion's Mane,10
 85776834,CBD,8
-85776834,Dextroamphetamine (Speed),9
 85776834,Theanine,7
 85776834,"SNRIs (Cymbalta, Effexor...)",7
 85776834,Adrafinil,5
@@ -5796,7 +9129,6 @@ userID,itemID,rating
 86100449,5-HTP,5
 86100449,"SSRIs (Prozac, Lexapro...)",4
 86100449,Kratom,6
-86100449,Dextroamphetamine (Speed),7
 86100449,Tryptophan,5
 86100449,Psilocybin (microdose),3
 86100449,Melatonin,7
@@ -5813,6 +9145,18 @@ userID,itemID,rating
 86140701,Magnesium,3
 86140701,Caffeine,6
 86140701,Trying to get more sleep,6
+86145731,Melatonin,2
+86145731,Omega-3 Supplements,5
+86145731,Alpha-GPC,8
+86233489,Nicotine,2
+86233489,Ashwagandha,0
+86233489,Bright lights in morning / Dawn simulator,5
+86233489,Caffeine,3
+86233489,Trying to get more sleep,7
+86233489,No Fap (or otherwise avoiding masturbation),4
+86233489,Valerian Root,4
+86233489,Creatine,5
+86233489,Theanine,5
 86472945,"SSRIs (Prozac, Lexapro...)",0
 86472945,Trying to get more sleep,0
 86472945,Theanine,0
@@ -5827,6 +9171,52 @@ userID,itemID,rating
 86472945,Melatonin,0
 86472945,"Bupropion (Wellbutrin, Zyban...)",0
 86472945,Ketogenic diet,0
+86949997,Inositol,3
+86949997,Phenylpiracetam,1
+86949997,Tyrosine,8
+86949997,N-acetyl Cysteine (NAC),7
+86949997,Theanine,5
+86949997,Adrafinil,10
+86949997,Magnesium,10
+86949997,Ginseng,7
+86949997,Caffeine,10
+86949997,Noopept,10
+86949997,Glycine,10
+86949997,Nicotine,10
+86949997,Melatonin,1
+86949997,CBD,5
+86949997,Methylphenidate (Ritalin),8
+86949997,Adderall,10
+86992186,Maca,3
+86992186,Nicotinamide mononucleotide,2
+86992186,Piracetam,5
+86992186,Psilocybin (microdose),7
+86992186,Bright lights in morning / Dawn simulator,7
+86992186,White jelly mushrooms,1
+86992186,Lemon balm,4
+86992186,Valerian Root,2
+86992186,Phenibut,9
+86992186,Trying to get more sleep,7
+86992186,Black Seed Oil,6
+86992186,Curcumin,4
+86992186,Ketogenic diet,7
+86992186,Magnesium,5
+86992186,Modafinil,6
+86992186,Noopept,7
+86992186,Omega-3 Supplements,1
+86992186,Nicotine,3
+86992186,Probiotics,2
+86992186,CBD,6
+86992186,Ashwagandha,7
+86992186,"Fermented drinks (Kefir, Kombucha...)",2
+86992186,Rhodiola,3
+86992186,Theanine,4
+86992186,Cordyceps,5
+86992186,Caffeine,9
+86992186,Bacopa,6
+86992186,GABA,2
+86992186,Ginseng,3
+86992186,Shilajit,5
 87052269,Magnesium,6
 87052269,Bright lights in morning / Dawn simulator,5
 87052269,Psilocybin (microdose),6
@@ -5839,7 +9229,6 @@ userID,itemID,rating
 87052269,Kava,5
 87052269,Nicotine,3
 87052269,Maca,3
-87052269,Dextroamphetamine (Speed),4
 87052269,CBD,7
 87052269,"SSRIs (Prozac, Lexapro...)",2
 87052269,Caffeine,6
@@ -5851,6 +9240,24 @@ userID,itemID,rating
 87052269,LSD (microdose),5
 87052269,Noopept,3
 87052269,No Fap (or otherwise avoiding masturbation),7
+87224702,Phenylpiracetam,3
+87224702,Ashwagandha,3
+87224702,Alpha-GPC,3
+87224702,Phenibut,2
+87224702,Trying to get more sleep,0
+87224702,LSD (microdose),5
+87224702,Bacopa,3
+87224702,Aniracetam,3
+87224702,Rhodiola,3
+87224702,No Fap (or otherwise avoiding masturbation),0
+87224702,Noopept,1
+87224702,Magnesium,3
+87224702,Choline,3
+87224702,"Bupropion (Wellbutrin, Zyban...)",0
+87224702,Piracetam,1
+87224702,Caffeine,0
+87224702,Theanine,3
+87224702,Kratom,0
 87353595,Vegetarian diet,0
 87353595,Noopept,0
 87353595,Theanine,0
@@ -5869,6 +9276,34 @@ userID,itemID,rating
 87353595,CBD,0
 87353595,Caffeine,0
 87353595,Alpha-GPC,0
+87490432,Valerian Root,2
+87490432,Caffeine,5
+87490432,Theanine,5
+87490432,Creatine,2
+87490432,CBD,1
+87490432,Piracetam,5
+87490432,Melatonin,2
+87490432,Rhodiola,3
+87490432,Aniracetam,4
+87490432,Bright lights in morning / Dawn simulator,5
+87490432,Bromantane,5
+87490432,Phenylpiracetam,6
+87490432,ALCAR,1
+87490432,Omega-3 Supplements,2
+87490432,Agmatine,5
+87490432,N-acetyl Cysteine (NAC),4
+87490432,Nicotinamide riboside,1
+87490432,Dextroamphetamine,10
+87490432,Glycine,0
+87490432,"SSRIs (Prozac, Lexapro...)",0
+87490432,Phenibut,7
+87490432,5-HTP,0
+87490432,Magnesium,2
+87490432,Uridine,1
+87490432,Noopept,1
+87490432,Ashwagandha,0
+87490432,Adderall,10
+87490432,Trying to get more sleep,6
 88153409,N-acetyl Cysteine (NAC),6
 88153409,Curcumin,4
 88153409,Noopept,4
@@ -5901,7 +9336,6 @@ userID,itemID,rating
 88349246,Magnesium,3
 88349246,LSD (microdose),3
 88349246,N-acetyl Cysteine (NAC),8
-88349246,Dextroamphetamine (Speed),7
 88349246,St John's Wort,0
 88349246,Choline,4
 88349246,Caffeine,2
@@ -5921,6 +9355,54 @@ userID,itemID,rating
 88349246,Trying to get more sleep,3
 88349246,GABA,2
 88349246,Omega-3 Supplements,3
+88376026,Trying to get more sleep,6
+88376026,5-HTP,2
+88376026,Nicotine,1
+88376026,Ginkgo Biloba,3
+88376026,Ginseng,2
+88376026,Magnesium,6
+88376026,Omega-3 Supplements,2
+88376026,Caffeine,5
+88376026,Phenylpiracetam,1
+88376026,GABA,2
+88376026,Tryptophan,1
+88376026,Melatonin,2
+88376026,Tyrosine,2
+88376026,CBD,2
+88376026,Theanine,2
+88755543,Kratom,10
+88755543,Kava,7
+88755543,St John's Wort,4
+88755543,Agmatine,9
+88755543,Trying to get more sleep,9
+88755543,Adderall,10
+88755543,5-HTP,6
+88755543,Adrafinil,4
+88755543,"Fermented drinks (Kefir, Kombucha...)",3
+88755543,Ashwagandha,6
+88755543,Dextroamphetamine,8
+88755543,Theanine,7
+88755543,Magnesium,6
+88755543,Ketogenic diet,4
+88755543,N-acetyl Cysteine (NAC),10
+88755543,Probiotics,6
+88755543,Piracetam,5
+88755543,Bacopa,4
+88755543,Creatine,9
+88755543,Valerian Root,5
+88755543,CBD,4
+88755543,Shilajit,4
+88755543,Caffeine,5
+88755543,Choline,4
+88755543,Nicotine,6
+88755543,Vegetarian diet,6
+88755543,LSD (microdose),10
+88755543,Melatonin,7
+88755543,ALCAR,5
+88755543,Omega-3 Supplements,4
+88755543,Phenylpiracetam,9
+88755543,Lion's Mane,9
+88755543,Psilocybin (microdose),10
 88904043,Adderall,0
 88904043,Bright lights in morning / Dawn simulator,0
 88904043,Choline,0
@@ -5951,6 +9433,9 @@ userID,itemID,rating
 89156123,Adderall,10
 89156123,5-HTP,3
 89156123,"SSRIs (Prozac, Lexapro...)",0
+89571898,Nicotine,7
+89571898,Caffeine,7
+89571898,Melatonin,1
 89634656,Rhodiola,8
 89634656,Kava,3
 89634656,Zembrin,0
@@ -6021,6 +9506,7 @@ userID,itemID,rating
 89772483,Trying to get more sleep,4
 89772483,Psilocybin (microdose),7
 89772483,Adderall,4
+8984005,Modafinil,9
 89961353,Oxiracetam,4
 89961353,Theanine,5
 89961353,Bacopa,8
@@ -6133,6 +9619,30 @@ userID,itemID,rating
 90462537,DMHA,8
 90462537,5-HTP,6
 90462537,Nicotine,2
+90806212,Bright lights in morning / Dawn simulator,5
+90806212,Caffeine,6
+90806212,Nicotine,6
+90806212,Ketogenic diet,5
+90806212,Omega-3 Supplements,3
+90806212,CBD,3
+90806212,Lion's Mane,3
+90806212,Magnesium,2
+90806212,Ginseng,4
+90806212,LSD (microdose),7
+90806212,Adderall,8
+90806212,Trying to get more sleep,10
+90806212,Creatine,3
+90806212,Melatonin,2
+91106657,Trying to get more sleep,0
+91106657,Modafinil,5
+91106657,"SNRIs (Cymbalta, Effexor...)",6
+91106657,Melatonin,3
+91106657,Tyrosine,6
+91106657,Nicotine,2
+91106657,Piracetam,1
+91106657,Creatine,1
+91106657,Caffeine,2
+91106657,"SSRIs (Prozac, Lexapro...)",0
 91115606,"SSRIs (Prozac, Lexapro...)",6
 91115606,Trying to get more sleep,4
 91115606,Ginseng,1
@@ -6232,6 +9742,23 @@ userID,itemID,rating
 91881401,9-MBC,8
 91881401,No Fap (or otherwise avoiding masturbation),5
 91881401,Theanine,7
+91909930,Maca,3
+91909930,Niacin,5
+91909930,Theanine,8
+91909930,Glycine,5
+91909930,Red reishi mushrooms,5
+91909930,Kava,3
+91909930,Choline,5
+91909930,Curcumin,9
+91909930,Nicotine,8
+91909930,No Fap (or otherwise avoiding masturbation),5
+91909930,Ketogenic diet,9
+91909930,Bacopa,6
+91909930,ALCAR,3
+91909930,Caffeine,7
+91909930,Ashwagandha,7
+91909930,Omega-3 Supplements,6
+91909930,Magnesium,6
 91948942,GABA,2
 91948942,Adderall,8
 91948942,Alpha-GPC,4
@@ -6250,7 +9777,6 @@ userID,itemID,rating
 91948942,5-HTP,2
 91948942,CBD,4
 91948942,Lion's Mane,2
-91948942,Dextroamphetamine (Speed),9
 91948942,Probiotics,5
 91948942,Phenibut,3
 91948942,"Bupropion (Wellbutrin, Zyban...)",1
@@ -6275,6 +9801,15 @@ userID,itemID,rating
 92137736,Caffeine,6
 92137736,Theanine,6
 92137736,Ashwagandha,3
+92191209,Alpha-GPC,7
+92191209,Omega-3 Supplements,6
+92191209,Caffeine,9
+92191209,Nicotine,6
+92191209,Vegetarian diet,5
+92191209,Creatine,5
+92191209,Melatonin,6
+92191209,Theanine,7
+92191209,Trying to get more sleep,7
 92252953,L-Deprenyl,10
 92252953,Omega-3 Supplements,4
 92252953,Modafinil,10
@@ -6299,7 +9834,6 @@ userID,itemID,rating
 92252953,Phenibut,5
 92252953,Magnesium,4
 92252953,Caffeine,6
-92252953,Dextroamphetamine (Speed),4
 92252953,Kava,5
 92252953,Alpha-GPC,1
 92252953,Creatine,4
@@ -6311,6 +9845,13 @@ userID,itemID,rating
 92252953,5-HTP,3
 92252953,Alprazolam (Xanax),7
 92252953,Vegetarian diet,8
+92465483,LSD (microdose),0
+92465483,"SSRIs (Prozac, Lexapro...)",3
+92465483,Caffeine,7
+92465483,Theanine,6
+92465483,CBD,7
+92465483,Melatonin,9
+92465483,Trying to get more sleep,10
 92651016,Creatine,5
 92651016,Niacin,0
 92651016,Ketogenic diet,10
@@ -6364,6 +9905,28 @@ userID,itemID,rating
 9290846,No Fap (or otherwise avoiding masturbation),0
 9290846,Red reishi mushrooms,5
 9290846,Adderall,5
+93082732,Caffeine,5
+93082732,Adderall,8
+93082732,Ketogenic diet,4
+93082732,Melatonin,4
+93099576,Valerian Root,2
+93099576,Noopept,7
+93099576,Maca,0
+93099576,Caffeine,7
+93099576,Phenibut,9
+93099576,"SSRIs (Prozac, Lexapro...)",6
+93099576,Methylphenidate (Ritalin),0
+93099576,Creatine,0
+93099576,Theanine,6
+93099576,GABA,0
+93099576,Choline,0
+93099576,Kratom,6
+93099576,N-acetyl Cysteine (NAC),0
+93099576,Omega-3 Supplements,1
+93099576,Magnesium,0
+93099576,DMAE,1
+93099576,Melatonin,5
+93099576,Ashwagandha,0
 9324019,Adderall,10
 9324019,Aniracetam,1
 9324019,Kava,7
@@ -6385,7 +9948,6 @@ userID,itemID,rating
 9332492,Caffeine,7
 9332492,Curcumin,0
 9332492,MAOIs (except Selegiline),0
-9332492,Dextroamphetamine (Speed),7
 9332492,5-HTP,0
 9332492,Choline,3
 9332492,"SSRIs (Prozac, Lexapro...)",5
@@ -6406,10 +9968,18 @@ userID,itemID,rating
 9332492,Probiotics,0
 9332492,Piracetam,5
 9332492,"Bupropion (Wellbutrin, Zyban...)",7
+93377579,LSD (microdose),10
+93377579,Caffeine,5
+93377579,Psilocybin (microdose),0
 93488001,Creatine,4
 93488001,Lion's Mane,10
 93488001,Caffeine,5
 93488001,Ashwagandha,10
+93535111,Nicotine,4
+93535111,Melatonin,0
+93535111,Trying to get more sleep,3
+93535111,CBD,0
+93535111,Caffeine,2
 93575348,Lemon balm,10
 93575348,Psilocybin (microdose),10
 93575348,Kava,10
@@ -6482,6 +10052,21 @@ userID,itemID,rating
 94195524,Psilocybin (microdose),10
 94195524,CBD,5
 94195524,LSD (microdose),10
+94241345,Nicotine,5
+94241345,Trying to get less sleep,3
+94241345,"SSRIs (Prozac, Lexapro...)",4
+94241345,Phenibut,8
+94241345,Vegan diet,3
+94241345,Trying to get more sleep,5
+94241345,"SNRIs (Cymbalta, Effexor...)",6
+94241345,Caffeine,4
+94241345,Vegetarian diet,3
+94241345,No Fap (or otherwise avoiding masturbation),0
+94241345,Bright lights in morning / Dawn simulator,2
+94279117,Nicotine,2
+94279117,Caffeine,10
+94279117,Trying to get more sleep,6
+94279117,CBD,0
 94657191,Theanine,5
 94657191,Noopept,10
 94657191,Trying to get less sleep,0
@@ -6561,6 +10146,69 @@ userID,itemID,rating
 94874648,Probiotics,0
 94874648,SAM-e,3
 94874648,Curcumin,0
+94936086,Tyrosine,0
+94936086,Bacopa,0
+94936086,Magnesium,0
+94936086,Oxiracetam,0
+94936086,Carnivore diet,0
+94936086,CBD,0
+94936086,Caffeine,0
+94936086,Ginseng,0
+94936086,Tryptophan,0
+94936086,N-Acetyl-L-Tyrosine,0
+94936086,Curcumin,0
+94936086,Coluracetam,0
+94936086,Sarcosine,0
+94936086,Valerian Root,0
+94936086,DMAE,0
+94936086,Sulbutiamine,0
+94936086,Inositol,0
+94936086,Creatine,0
+94936086,Huperzine-A,0
+94936086,Niacin,0
+94936086,SAM-e,0
+94936086,Nicotinamide riboside,0
+94936086,Nicotine,0
+94936086,Alpha-GPC,0
+94936086,Maca,0
+94936086,Lion's Mane,0
+94936086,Ashwagandha,0
+94936086,Melatonin,0
+94936086,Red reishi mushrooms,0
+94936086,Probiotics,0
+94936086,Tianeptine,0
+94936086,Shilajit,0
+94936086,Cordyceps,0
+94936086,Lemon balm,0
+94936086,GABA,0
+94936086,Choline,0
+94936086,No Fap (or otherwise avoiding masturbation),0
+94936086,Omega-3 Supplements,0
+94936086,Piracetam,0
+94936086,Nicotinamide mononucleotide,0
+94936086,Trying to get less sleep,0
+94936086,ALCAR,0
+94936086,Rhodiola,0
+94936086,Agmatine,0
+94936086,Trying to get more sleep,0
+94936086,Palmitoylethanolamide,0
+94936086,Phenibut,0
+94936086,Glycine,0
+94936086,Theanine,0
+94936086,Ginkgo Biloba,0
+94936086,N-acetyl Cysteine (NAC),0
+94936086,Aniracetam,0
+94936086,Carnitine / Acetyl-L-Carnitine,0
+94936086,"7,8-dihydroxyflavone",0
+94936086,Berberine,0
+94936086,Phenylpiracetam,0
+94936086,5-HTP,0
+94936086,Black Seed Oil,0
+94936086,"Fermented drinks (Kefir, Kombucha...)",0
+94936086,Phosphatidylserine,0
+94936086,Boswellia,0
+94936086,Noopept,0
+94936086,Saffron,0
 95141452,No Fap (or otherwise avoiding masturbation),2
 95141452,Piracetam,5
 95141452,"Fermented drinks (Kefir, Kombucha...)",0
@@ -6576,8 +10224,72 @@ userID,itemID,rating
 95141452,Vegetarian diet,0
 95141452,LSD (microdose),7
 95141452,Trying to get more sleep,7
-95141452,Dextroamphetamine (Speed),8
 95141452,Psilocybin (microdose),5
+95261602,Cordyceps,6
+95261602,5-HTP,10
+95261602,No Fap (or otherwise avoiding masturbation),0
+95261602,Nicotinamide mononucleotide,0
+95261602,Nicotine,2
+95261602,Adderall,5
+95261602,Ginkgo Biloba,3
+95261602,Ashwagandha,10
+95261602,Lemon balm,0
+95261602,Theanine,10
+95261602,Melatonin,3
+95261602,Creatine,0
+95261602,Maca,7
+95261602,CBD,0
+9528567,Phenibut,5
+9528567,Kanna (except Zembrin),0
+9528567,Methylphenidate (Ritalin),8
+9528567,No Fap (or otherwise avoiding masturbation),4
+9528567,Trying to get more sleep,8
+9528567,Vegetarian diet,10
+9528567,Probiotics,0
+9528567,Theanine,6
+9528567,Caffeine,3
+9528567,Vegan diet,10
+9528567,Magnesium,3
+9528567,St John's Wort,1
+9528567,Ashwagandha,4
+9528567,Agmatine,8
+9528567,Lion's Mane,5
+9528567,Kratom,10
+9528567,CBD,8
+9528567,Bright lights in morning / Dawn simulator,3
+9528567,Cordyceps,7
+9528567,Dextroamphetamine,3
+9528567,Valerian Root,6
+9528567,Nicotine,0
+9528567,Psilocybin (microdose),6
+9528567,LSD (microdose),6
+9528567,Adderall,5
+9528567,Kava,4
+9528567,Melatonin,7
+9528567,5-HTP,2
+9528567,Creatine,6
+95553956,"SNRIs (Cymbalta, Effexor...)",8
+95553956,Valerian Root,5
+95553956,Adderall,9
+95553956,Probiotics,0
+95553956,Bright lights in morning / Dawn simulator,8
+95553956,Modafinil,8
+95553956,Theanine,7
+95553956,Caffeine,9
+95553956,Magnesium,8
+95553956,Tyrosine,5
+95553956,"SSRIs (Prozac, Lexapro...)",8
+95553956,Theacrine (aka Teacrine),6
+95553956,"Bupropion (Wellbutrin, Zyban...)",7
+95553956,Omega-3 Supplements,0
+95553956,Alprazolam (Xanax),9
+95553956,Vegan diet,0
+95583603,Cordyceps,7
+95583603,Lion's Mane,6
+95583603,Red reishi mushrooms,1
+95583603,Psilocybin (microdose),10
+95583603,Vegetarian diet,0
+95583603,Caffeine,10
 95603457,Magnesium,0
 95603457,Ashwagandha,0
 95603457,Caffeine,4
@@ -6607,6 +10319,51 @@ userID,itemID,rating
 95959688,Bromantane,2
 95959688,Tyrosine,3
 95959688,Ketogenic diet,3
+96034873,LSD (microdose),10
+96034873,Trying to get more sleep,10
+96034873,Theanine,6
+96034873,Phenylpiracetam,7
+96034873,Vegetarian diet,5
+96034873,Tyrosine,5
+96034873,Ashwagandha,8
+96034873,Psilocybin (microdose),10
+96034873,Omega-3 Supplements,5
+96034873,Polygala tenuifolia,6
+96034873,Choline,5
+96034873,SAM-e,5
+96034873,Ginseng,5
+96034873,Rhodiola,4
+96034873,Nicotinamide riboside,5
+96034873,Aniracetam,6
+96034873,BPC-157,5
+96034873,Maca,7
+96034873,ALCAR,7
+96034873,Alpha-GPC,5
+96034873,Fasoracetam,5
+96034873,Inositol,5
+96034873,Caffeine,8
+96034873,Melatonin,10
+96034873,Armodafinil,8
+96034873,"SNRIs (Cymbalta, Effexor...)",5
+96034873,5-HTP,5
+96034873,N-acetyl Cysteine (NAC),5
+96034873,Valerian Root,0
+96034873,Agmatine,4
+96034873,NSI-189,10
+96034873,Phenibut,2
+96034873,Coluracetam,8
+96034873,N-Acetyl-L-Tyrosine,5
+96034873,Curcumin,5
+96034873,Piracetam,7
+96034873,Pramiracetam,5
+96034873,Oxiracetam,6
+96034873,Carnitine / Acetyl-L-Carnitine,8
+96034873,Glycine,6
+96034873,Creatine,9
+96034873,Tryptophan,5
+96034873,Noopept,5
+96034873,Modafinil,9
+96034873,Magnesium,7
 96040885,Creatine,10
 96040885,Melatonin,7
 96040885,Piracetam,10
@@ -6625,6 +10382,45 @@ userID,itemID,rating
 96080349,Methylphenidate (Ritalin),7
 96080349,Creatine,2
 96080349,Trying to get less sleep,0
+96120782,Melatonin,5
+96120782,"Fermented drinks (Kefir, Kombucha...)",0
+96120782,Carnitine / Acetyl-L-Carnitine,7
+96120782,Curcumin,4
+96120782,ALCAR,7
+96120782,Ketogenic diet,5
+96120782,No Fap (or otherwise avoiding masturbation),0
+96120782,Adrafinil,5
+96120782,Choline,5
+96120782,Theacrine (aka Teacrine),4
+96120782,Lion's Mane,6
+96120782,Ashwagandha,6
+96120782,Omega-3 Supplements,5
+96120782,Ginkgo Biloba,2
+96120782,CBD,7
+96120782,Armodafinil,9
+96120782,Ginseng,2
+96120782,N-acetyl Cysteine (NAC),5
+96120782,5-HTP,1
+96120782,Theanine,6
+96120782,Rhodiola,3
+96120782,Creatine,7
+96120782,Trying to get more sleep,8
+96120782,Magnesium,5
+96120782,Psilocybin (microdose),8
+96120782,Modafinil,6
+96120782,Trying to get less sleep,0
+96120782,Kratom,5
+96120782,Noopept,7
+96120782,Alpha-GPC,7
+96120782,Caffeine,8
+96120782,Maca,5
+96120782,Uridine,6
+96120782,Nicotine,10
+96120782,Cordyceps,6
+96120782,Tyrosine,5
+961795,Theanine,10
+961795,ALCAR,5
+961795,No Fap (or otherwise avoiding masturbation),8
 96571474,Piracetam,5
 96571474,Adderall,9
 96571474,Nicotine,7
@@ -6644,6 +10440,16 @@ userID,itemID,rating
 96642686,5-HTP,0
 96642686,N-Acetyl-L-Tyrosine,0
 96642686,Lion's Mane,0
+96866890,Theanine,0
+96866890,Creatine,0
+96866890,Magnesium,0
+96866890,Ginkgo Biloba,0
+96866890,Bacopa,0
+96866890,Modafinil,0
+96866890,Omega-3 Supplements,0
+96866890,Caffeine,0
+96866890,Trying to get less sleep,0
+96866890,Ginseng,0
 97314932,Melatonin,8
 97314932,Magnesium,3
 97314932,"Bupropion (Wellbutrin, Zyban...)",7
@@ -6660,6 +10466,13 @@ userID,itemID,rating
 97314932,Theanine,0
 97314932,Semax (or NA-Semax etc),7
 97314932,Phenylpiracetam,9
+97585331,Nicotine,6
+97585331,Caffeine,5
+97585331,Kratom,1
+97585331,Ketogenic diet,6
+97585331,CBD,9
+97585331,Melatonin,5
+97585331,Modafinil,2
 97705086,Melatonin,0
 97705086,Vegetarian diet,1
 97705086,Trying to get more sleep,4
@@ -6693,6 +10506,36 @@ userID,itemID,rating
 97784298,Rhodiola,6
 97784298,Curcumin,5
 97784298,Choline,7
+97825568,Kava,5
+97825568,Creatine,10
+97825568,Melatonin,5
+97825568,"Fermented drinks (Kefir, Kombucha...)",10
+97825568,Ashwagandha,5
+97825568,Caffeine,10
+97825568,Magnesium,6
+97825568,Ketogenic diet,3
+97825568,Probiotics,10
+97825568,5-HTP,8
+97825568,LSD (microdose),10
+97825568,Carnitine / Acetyl-L-Carnitine,8
+97825568,No Fap (or otherwise avoiding masturbation),7
+97825568,Theanine,5
+97825568,Ginkgo Biloba,5
+97825568,Trying to get more sleep,10
+97825568,Ginseng,5
+97825568,Omega-3 Supplements,10
+97940449,Psilocybin (microdose),8
+97940449,Valerian Root,7
+97940449,Vegetarian diet,0
+97940449,Melatonin,6
+97940449,No Fap (or otherwise avoiding masturbation),0
+97940449,CBD,7
+97940449,Caffeine,7
+97940449,Creatine,10
+97940449,Trying to get more sleep,9
+97940449,Nicotine,7
+97940449,Ashwagandha,9
+97940449,Vegan diet,5
 979720,CBD,10
 979720,GABA,8
 979720,Theanine,8
@@ -6723,6 +10566,12 @@ userID,itemID,rating
 97998152,Trying to get more sleep,9
 97998152,Trying to get less sleep,7
 97998152,Nicotine,6
+98099456,5-HTP,5
+98099456,Ashwagandha,0
+98099456,Choline,8
+98099456,Creatine,5
+98099456,Omega-3 Supplements,5
+98099456,GABA,4
 98428700,Cordyceps,0
 98428700,Trying to get more sleep,5
 98428700,Nicotine,5
@@ -6774,6 +10623,9 @@ userID,itemID,rating
 98555547,Magnesium,2
 98555547,LSD (microdose),9
 98623705,Caffeine,7
+98716294,Ashwagandha,8
+98716294,Adderall,5
+98716294,Nicotine,7
 98728694,Ashwagandha,2
 98728694,Magnesium,0
 98728694,Nicotine,0
@@ -6784,6 +10636,22 @@ userID,itemID,rating
 98728694,Lion's Mane,0
 98728694,Trying to get more sleep,9
 98728694,CBD,3
+98737120,Melatonin,2
+98737120,Lion's Mane,1
+98737120,Phenylpiracetam,9
+98737120,Bacopa,4
+98737120,Trying to get more sleep,9
+98737120,Theanine,0
+98737120,Magnesium,6
+98737120,Caffeine,8
+98737120,Noopept,6
+98737120,Alpha-GPC,7
+98737120,DMAE,9
+98737120,Sarcosine,6
+98737120,PRL-8-53,9
+98737120,Ginseng,1
+98737120,Creatine,5
+98737120,Inositol,6
 98785997,Ketogenic diet,0
 98785997,Piracetam,4
 99017646,Magnesium,10

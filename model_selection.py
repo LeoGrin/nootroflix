@@ -2,7 +2,7 @@ import pandas as pd
 from surprise import NormalPredictor, SVD, NMF, SlopeOne, CoClustering, KNNBasic, KNNWithZScore, KNNWithMeans, KNNBaseline, SVDpp, BaselineOnly
 from surprise import Dataset
 from surprise import Reader
-from surprise.model_selection import cross_validate, RandomizedSearchCV
+from surprise.model_selection import cross_validate, RandomizedSearchCV, GridSearchCV
 from surprise import Reader, Dataset, KNNBaseline, SVD, accuracy
 from new_names import all_nootropics
 import numpy as np
@@ -26,86 +26,91 @@ data = Dataset.load_from_df(df_clean, reader)
 
 
 # We can now use this dataset as we please, e.g. calling cross_validate
-algorithms = ["SlopeOne",
-              "CoClustering",
-              "SVD",
-              "SVDpp",
-              "KNN_means_users",
-              "KNN_zscore_users",
-              "KNN_baselines_users",
-              "KNN_means_items",
-              "KNN_zscore_items",
-              "KNN_baselines_items",
-              "BaselineOnly"]
-rmse = []
-mae = []
-fcp = []
-print("SlopeOne")
-res = cross_validate(SlopeOne(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-print(res)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("CoClustering")
-res = cross_validate(CoClustering(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("SVD")
-res = cross_validate(SVD(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("SVDpp")
-res = cross_validate(SVDpp(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("KNN... (user based)")
-print("with means")
-res = cross_validate(KNNWithMeans(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("with z-score")
-res = cross_validate(KNNWithZScore(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("with baselines")
-res = cross_validate(KNNBaseline(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("KNN... (item based)")
-print("with means")
-res = cross_validate(KNNWithMeans(sim_options = {'user_based': False}), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("with z-scores")
-res = cross_validate(KNNWithZScore(sim_options = {'user_based': False}), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("with baselines")
-res = cross_validate(KNNBaseline(sim_options = {'user_based': False}), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
-print("BaselineOnly")
-res = cross_validate(BaselineOnly(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
-rmse.append(np.mean(res["test_rmse"]))
-mae.append(np.mean(res["test_mae"]))
-fcp.append(np.mean(res["test_fcp"]))
+ALL_ALGO = False
+RANDOM_SEARCH = False
 
-# %%
 
-res_df = pd.DataFrame({"algo" :algorithms, "rmse" :rmse, "mae" :mae, "fcp" :fcp})
-print(res_df)
+if ALL_ALGO:
+    algorithms = ["SlopeOne",
+                  "CoClustering",
+                  "SVD",
+                  "SVDpp",
+                  "KNN_means_users",
+                  "KNN_zscore_users",
+                  "KNN_baselines_users",
+                  "KNN_means_items",
+                  "KNN_zscore_items",
+                  "KNN_baselines_items",
+                  "BaselineOnly"]
+    rmse = []
+    mae = []
+    fcp = []
+    print("SlopeOne")
+    res = cross_validate(SlopeOne(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    print(res)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("CoClustering")
+    res = cross_validate(CoClustering(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("SVD")
+    res = cross_validate(SVD(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("SVDpp")
+    res = cross_validate(SVDpp(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("KNN... (user based)")
+    print("with means")
+    res = cross_validate(KNNWithMeans(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("with z-score")
+    res = cross_validate(KNNWithZScore(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("with baselines")
+    res = cross_validate(KNNBaseline(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("KNN... (item based)")
+    print("with means")
+    res = cross_validate(KNNWithMeans(sim_options = {'user_based': False}), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("with z-scores")
+    res = cross_validate(KNNWithZScore(sim_options = {'user_based': False}), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("with baselines")
+    res = cross_validate(KNNBaseline(sim_options = {'user_based': False}), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
+    print("BaselineOnly")
+    res = cross_validate(BaselineOnly(), data, cv=5, measures = ["rmse", "mae", "fcp"], verbose=True)
+    rmse.append(np.mean(res["test_rmse"]))
+    mae.append(np.mean(res["test_mae"]))
+    fcp.append(np.mean(res["test_fcp"]))
 
-if OVERWRITE:
-    res_df.to_csv("model_selection/res.csv")
+    # %%
+
+    res_df = pd.DataFrame({"algo" :algorithms, "rmse" :rmse, "mae" :mae, "fcp" :fcp})
+    print(res_df)
+
+    if OVERWRITE:
+        res_df.to_csv("model_selection/res.csv")
 
 # %% md
 
@@ -115,30 +120,44 @@ if OVERWRITE:
 ## Hyperparameters tuning
 
 # %%
+if RANDOM_SEARCH:
+    svd_params_dic = {"verbose":[False],
+                      "n_factors" :[10, 50, 100, 300], "n_epochs" :[20, 40, 100], "lr_all" :[0.005, 0.1], "reg_all" :[0.02, 0.1, 0.002]}
 
-svd_params_dic = {"n_factors" :[10, 50, 100, 300], "n_epochs" :[20, 40, 100], "lr_all" :[0.005, 0.1], "reg_all" :[0.02, 0.1, 0.002]}
+    param_search = GridSearchCV(SVD, svd_params_dic, cv=5, n_jobs=-1)
+    param_search.fit(data)
 
-param_search = RandomizedSearchCV(SVD, svd_params_dic, cv=5, n_iter=100, n_jobs=-1)
-param_search.fit(data)
+    # %%
 
-# %%
+    print(param_search.best_params)
+    print(param_search.best_score)
 
-print(param_search.best_params)
-print(param_search.best_score)
+    # %%
 
-# %%
+    knn_params_dic = {"verbose":[False],
+                      "k" :[10, 20, 40, 60, 100],
+                      "min_k" :[1, 2, 5, 10],
+                      "sim_options" :{'name': ['pearson_baseline', 'msd', 'cosine'], "user_based" :[True, False]}}
 
-knn_params_dic = {"k" :[10, 20, 40, 60, 100],
-                  "min_k" :[1, 2, 5, 10],
-                  "sim_options" :{'name': ['pearson_baseline', 'msd', 'cosine'], "user_based" :[True, False]}}
+    knn_param_search = GridSearchCV(KNNBaseline, knn_params_dic, cv=5, n_jobs=-1)
+    knn_param_search.fit(data)
 
-knn_param_search = RandomizedSearchCV(KNNBaseline, knn_params_dic, cv=5, n_iter=120, n_jobs=-1)
-knn_param_search.fit(data)
 
-# %%
+    print(knn_param_search.best_params)
+    print(knn_param_search.best_score)
 
-print(knn_param_search.best_params)
-print(knn_param_search.best_score)
+cross_validate(KNNBaseline(**{'verbose': False, 'k': 100, 'min_k': 5, 'sim_options': {'name': 'msd', 'user_based': False}}),
+               data,
+               measures = ["rmse", "mae", "fcp"],
+               verbose=True)
+cross_validate(KNNBaseline(k=60,
+                           min_k=2,
+                           verbose=False,
+                           sim_options={'name': 'pearson_baseline', 'user_based': True}),
+                           data,
+                           measures=["rmse", "mae", "fcp"],
+                           verbose=True
+                           )
 
 if OVERWRITE:
     with open("model_selection/scores.txt", "w") as f:
@@ -153,8 +172,9 @@ if OVERWRITE:
 #Test models on original data
 
 def evaluate(df_train, df_test, suffix=""):
-    suprise_model_1 = KNNBaseline(k=60, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
-    suprise_model_2 = SVD(**{'n_factors': 50, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
+    suprise_model_1 = KNNBaseline(k=60, min_k=2, verbose=False, sim_options={'name': 'pearson_baseline', 'user_based': True})
+    suprise_model_2 = KNNBaseline(**{'verbose': False, 'k': 100, 'min_k': 5, 'sim_options': {'name': 'msd', 'user_based': False}})
+    #suprise_model_2 = SVD(**{'n_factors': 50, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
 
     reader = Reader(rating_scale=(0, 10))
     # The columns must correspond to user id, item id and ratings (in that order).
@@ -178,7 +198,30 @@ def evaluate(df_train, df_test, suffix=""):
 
     return pd.DataFrame(dic)
 
+#Test on nootropics with enough ratings
+print("Test on nootropics with enough ratings")
+nootropics_with_enough_ratings = []
+for noot in all_nootropics:
+    if df_clean[df_clean["itemID"] == noot].shape[0] > 30:
+        nootropics_with_enough_ratings.append(noot)
 
+df = pd.DataFrame()
+
+for i in range(30):
+    train_indices = np.random.choice(list(range(len(df_clean))), int(len(df_clean) * 0.6), replace=False)
+    test_indices = np.array([i for i in range(len(df_clean)) if i not in train_indices])
+
+    df_train, df_test = df_clean.iloc[train_indices], df_clean.iloc[test_indices]
+
+    df_test = df_test[df_test["itemID"].isin(nootropics_with_enough_ratings)]
+
+    df = df.append(evaluate(df_train, df_test))
+
+print(df.groupby("model").agg([np.mean, np.std]))
+
+
+# test on original data
+print("TESTING ON ORIGINAL DATA")
 df_ssc = pd.read_csv("data/dataset_clean_right_names.csv")
 df_new = pd.read_csv("data/new_df.csv")
 

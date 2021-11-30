@@ -208,7 +208,7 @@ if st.session_state["mode"] == "questions":
         st.write("")
         st.write("")
         retrieve_widget_value("favorite_noot")
-        favorite_noot = st.text_input("What is your favorite nootropics not mentioned here?", key="favorite_noot")
+        favorite_noot = st.text_input("What are your favorite nootropics not mentioned here?", key="favorite_noot")
         st.text("")
         retrieve_widget_value("not_true_ratings")
         st.checkbox("Check this box if you're not entering your true ratings / infos (prevents training on your data)", key="not_true_ratings")
