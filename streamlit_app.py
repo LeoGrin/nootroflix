@@ -282,7 +282,7 @@ if st.session_state["mode"] == "results":
     st.button("Start again", on_click=go_to_mode("selection"))
     st.write("")
     st.write("")
-    st.subheader("More infos")
+    st.subheader("🧠 More infos")
     st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
     st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
     st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
