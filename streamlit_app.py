@@ -250,10 +250,11 @@ if st.session_state["mode"] == "results":
         return props
 
     st.button("Back", on_click=go_to_mode("questions"))
-    new_result_df = predict(slider_dic)
     st.header("🧠 Your results")
     st.write("Our model predicted these ratings for you:")
     st.caption("Some nootropics don't have enough data right now to be included.")
+    with st.spinner('Loading...'):
+        new_result_df = predict(slider_dic)
     st.table(new_result_df.set_index("nootropic").style.format("{:.1f}").applymap(left_align))
     st.caption("Some of these substances may be dangerous: be careful and do your research!")
     if deployed:
@@ -271,7 +272,8 @@ if st.session_state["mode"] == "results":
     if len(slider_dic) < 2:
         st.warning("Please rate more nootropics")
     else:
-        accuracy_df = evaluate(slider_dic)
+        with st.spinner('Loading...'):
+            accuracy_df = evaluate(slider_dic)
         if not accuracy_df is None:
             st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
             st.caption("Some nootropics don't have enough data right now to be included.")
