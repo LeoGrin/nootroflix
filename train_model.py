@@ -36,10 +36,9 @@ import streamlit as st
 #     return pd.DataFrame({"nootropic": avalaible_nootropics, "item_baselines":item_baselines})
 
 def predict(rating_dic):
-    df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
+    df_clean = pd.read_csv("data/total_df.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
-    print(avalaible_nootropics)
-
+    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 30]
     #######################
     # Fit surprise model
     #######################
@@ -48,7 +47,7 @@ def predict(rating_dic):
     #final_model = SVD(**{'n_factors': 10, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
 
     new_user_id = max(df_clean["userID"]) + 1 #TODO if merge
-    items = np.array([item for item in list(rating_dic.keys()) if item in avalaible_nootropics])
+    items = np.array([item for item in list(rating_dic.keys())])
     ratings = np.array([rating_dic[item] for item in items])
     rated_mask = ratings != None
     ratings = ratings[rated_mask]
@@ -93,8 +92,10 @@ def predict(rating_dic):
     return result_df.sort_values("Prediction", ascending=False, ignore_index=True)
 
 def evaluate(rating_dic):
-    df_clean = pd.read_csv("data/dataset_clean_right_names.csv")
+    df_clean = pd.read_csv("data/total_df.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
+    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 30]
+
     loo_ratings = []
     rating_dic_copy = deepcopy(rating_dic)
     rated_avalaible_nootropics = [nootropic for nootropic in rating_dic.keys() if nootropic in avalaible_nootropics]

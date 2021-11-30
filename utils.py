@@ -51,7 +51,7 @@ def generate_user_id(dataset_path, session_id):
         user_id = np.random.randint(1000, 1e8)
     return user_id
 
-#@st.cache(ttl=600, hash_funcs={"_thread.RLock": lambda _:None, "builtins.weakref":lambda _:None, "google.cloud.firestore_v1.client.Client": lambda _:None})
+@st.cache(ttl=600, hash_funcs={"_thread.RLock": lambda _:None, "builtins.weakref":lambda _:None, "google.cloud.firestore_v1.client.Client": lambda _:None})
 def load_collection():
     keys = ["project_id", "type", "private_key_id", "private_key",
             "client_email", "client_id", "auth_uri", "token_uri",
