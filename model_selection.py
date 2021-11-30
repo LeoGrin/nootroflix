@@ -118,7 +118,7 @@ if OVERWRITE:
 
 svd_params_dic = {"n_factors" :[10, 50, 100, 300], "n_epochs" :[20, 40, 100], "lr_all" :[0.005, 0.1], "reg_all" :[0.02, 0.1, 0.002]}
 
-param_search = RandomizedSearchCV(SVD, svd_params_dic, cv=5, n_iter=5, n_jobs=-1)
+param_search = RandomizedSearchCV(SVD, svd_params_dic, cv=5, n_iter=100, n_jobs=-1)
 param_search.fit(data)
 
 # %%
@@ -130,9 +130,9 @@ print(param_search.best_score)
 
 knn_params_dic = {"k" :[10, 20, 40, 60, 100],
                   "min_k" :[1, 2, 5, 10],
-                  "sim_options" :{'name': ['pearson_baseline', 'msd', 'cosine'], "user_based" :[True]}}
+                  "sim_options" :{'name': ['pearson_baseline', 'msd', 'cosine'], "user_based" :[True, False]}}
 
-knn_param_search = RandomizedSearchCV(KNNBaseline, knn_params_dic, cv=5, n_iter=5, n_jobs=-1)
+knn_param_search = RandomizedSearchCV(KNNBaseline, knn_params_dic, cv=5, n_iter=120, n_jobs=-1)
 knn_param_search.fit(data)
 
 # %%
@@ -195,7 +195,7 @@ n_ratings_ssc = len(df_ssc)
 df1 = pd.DataFrame()
 df2 = pd.DataFrame()
 
-for i in range(10):
+for i in range(30):
     train_indices = np.random.choice(list(range(n_ratings_ssc)), int(n_ratings_ssc * 0.6), replace=False)
     test_indices = np.array([i for i in range(n_ratings_ssc) if i not in train_indices])
 

@@ -38,7 +38,7 @@ import streamlit as st
 def predict(rating_dic):
     df_clean = pd.read_csv("data/total_df.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
-    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 30]
+    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
     #######################
     # Fit surprise model
     #######################
@@ -94,7 +94,7 @@ def predict(rating_dic):
 def evaluate(rating_dic):
     df_clean = pd.read_csv("data/total_df.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
-    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 30]
+    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
 
     loo_ratings = []
     rating_dic_copy = deepcopy(rating_dic)
