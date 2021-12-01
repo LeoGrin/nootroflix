@@ -88,7 +88,8 @@ def reset_selection():
 if st.session_state["mode"] == "selection":
     st.header("How do I use it?")
     st.markdown(""" **First tell us which nootropics you have tried, then rate your subjective experience on a scale of 0 to 10.**""")
-
+    st.markdown("""It should take less than 5 minutes and you won't need to create an account!""")
+    st.write("")
     select_form = st.form("select-form")
     with select_form:
         st.form_submit_button("Reset 🗑", on_click=reset_selection)
