@@ -74,6 +74,14 @@ if "mode" not in st.session_state.keys():
 
 
 def go_to_mode_rating():
+    #Delete previous rating from session state if a nootropic is not selected
+    for key in st.session_state.keys():
+        if key.startswith("checkbox") and not st.session_state[key]:
+            nootropic_name = key.replace("checkbox_", "")
+            if "permanent_slider_{}".format(nootropic_name) in st.session_state.keys():
+                del st.session_state["permanent_slider_{}".format(nootropic_name)]
+                del st.session_state["permanent_radio_{}".format(nootropic_name)]
+    #Check that at least one nootropic is selected
     for key in st.session_state.keys():
         if key.startswith("checkbox"):
             if st.session_state[key]:
@@ -84,6 +92,7 @@ def go_to_mode_rating():
 def go_to_mode(mode):
     def callback_mode():
         st.session_state["mode"] = mode
+        #Save inputs in session state
         for key in st.session_state.keys():
             if not key.startswith("permanent"):
                 st.session_state["permanent_" + key] = st.session_state[key]
@@ -100,6 +109,8 @@ def reset_selection():
     for key in st.session_state.keys():
         if key.startswith("checkbox") or key.startswith("permanent_checkbox"):
             st.session_state[key] = False
+        elif key.startswith("permanent_"):
+            del st.session_state[key]
 
 if st.session_state["mode"] == "selection":
     st.header("How do I use it?")
@@ -292,9 +303,12 @@ if st.session_state["mode"] == "results":
         styled_name = row["nootropic_short"]
         if not pd.isnull(row["risk"]):
             if type(row["risk"]) == str:
-                styled_name += """<a href="{}"target="_blank" style='text-decoration:none'>{}</a>""".format(row["risk"], " ⚠️ <br>")
-            else:
-                styled_name += " ⚠️️ <br>"
+                try:
+                    float(row["risk"])
+                    styled_name += " ⚠️️ <br>"
+                except:
+                    styled_name += """<a href="{}"target="_blank" style='text-decoration:none'>{}</a>""".format(row["risk"], " ⚠️ <br>")
+
         else:
             styled_name += "<br>"
 
@@ -304,32 +318,13 @@ if st.session_state["mode"] == "results":
                 styled_name += " <a href='{}'target='_blank'>{}</a> ".format(row["{}_link".format(site)], logos[i])
 
         return styled_name
-    #st.write("""<img src="https://blog.lastpass.com/wp-content/uploads/sites/20/2020/04/reddit-logo-2.jpg">""", unsafe_allow_html=True)
 
-    #st.write("<a href='test'>{}</a>".format(reddit_logo), unsafe_allow_html=True)
-    #st.write(examine_logo, unsafe_allow_html=True)
-    #st.write(wiki_logo, unsafe_allow_html=True)
-
-    #st.image("arrow.png", width=100)
     styled_names = []
     for i, row in new_result_df.iterrows():
         styled_names.append(make_name(row))
     new_result_df["Nootropic"] = styled_names
-
-    # print(new_result_df.to_html())
-    # cds = ColumnDataSource(new_result_df)
-    # columns = [
-    #     TableColumn(field="styled_name", title="Nootropic",
-    #                 formatter=HTMLTemplateFormatter(template='<%= value %>')),
-    #     TableColumn(field="Prediction", title="Prediction")]
-    # p = DataTable(source=cds, columns=columns, css_classes=["my_table"])
-    # st.bokeh_chart(p)
-    # print(new_result_df)
     st.write(new_result_df[["Nootropic", "Prediction", "Mean rating"]].to_html(escape=False, index=False), unsafe_allow_html=True)#.style.format("{:.1f}").applymap(left_align))
 
-    #st.table(new_result_df.set_index("nootropic"))
-
-    #st.caption("Some of these substances may be dangerous: be careful and do your research!")
     if deployed:
         save_new_ratings(rating_dic=slider_dic,
                      issues_dic = radio_dic,
