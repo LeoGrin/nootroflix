@@ -24,7 +24,7 @@ def get_metadata(path):
 classic_nootropics, lifestyle_nootropics, other_nootropics, all_nootropics = get_metadata('data/nootropics_metadata.csv')
 
 
-deployed = True
+deployed = False
 
 if deployed:
     collection_ratings, collection_users = load_collection()
@@ -78,6 +78,8 @@ def go_to_mode_rating():
             if "permanent_slider_{}".format(nootropic_name) in st.session_state.keys():
                 del st.session_state["permanent_slider_{}".format(nootropic_name)]
                 del st.session_state["permanent_radio_{}".format(nootropic_name)]
+            if "permanent_checkbox_{}".format(nootropic_name) in st.session_state.keys():
+                del st.session_state["permanent_checkbox_{}".format(nootropic_name)]
     #Check that at least one nootropic is selected
     for key in st.session_state.keys():
         if key.startswith("checkbox"):
@@ -141,6 +143,7 @@ if st.session_state["mode"] == "selection":
         st.write("")
         retrieve_widget_value("select_box_selection")
         st.selectbox("Search for a nootropic you might have missed", [""] + list(all_nootropics), key="select_box_selection")
+        st.write("")
         st.form_submit_button("Next", on_click=go_to_mode_rating)
 
 if st.session_state["mode"] == "rating":
@@ -319,6 +322,7 @@ if st.session_state["mode"] == "results":
                      time = time.time(),
                      collection_ratings=collection_ratings,
                      collection_users=collection_users)
+    st.write("")
     st.header("🧠 How accurate is our model?")
     if len(slider_dic) < 2:
         st.warning("Please rate more nootropics")
