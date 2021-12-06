@@ -139,6 +139,8 @@ if st.session_state["mode"] == "selection":
                 retrieve_widget_value("checkbox_{}".format(nootropic))
                 st.checkbox("I've tried {}".format(nootropic), key="checkbox_{}".format(nootropic))
         st.write("")
+        retrieve_widget_value("select_box_selection")
+        st.selectbox("Search for a nootropic you might have missed", [""] + list(all_nootropics), key="select_box_selection")
         st.form_submit_button("Next", on_click=go_to_mode_rating)
 
 if st.session_state["mode"] == "rating":
@@ -171,7 +173,7 @@ if st.session_state["mode"] == "rating":
         cols = st.columns(2)
         i = 0
         for nootropic in all_nootropics:
-                if st.session_state["permanent_checkbox_{}".format(nootropic)]:
+                if st.session_state["permanent_checkbox_{}".format(nootropic)] or st.session_state["permanent_select_box_selection"] == nootropic:
                     with cols[i%2]:
                         i += 1
                         retrieve_widget_value("slider_{}".format(nootropic))
