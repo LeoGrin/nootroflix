@@ -1,13 +1,11 @@
 import pandas as pd
 from google.cloud import firestore
-from google.cloud import firestore
 from google.oauth2 import service_account
 import os
-from new_names import all_nootropics
-import numpy as np
+from experiments.new_names import all_nootropics
 
-#key_dict = json.loads(st.secrets["textkey"])
-#for heroku
+# key_dict = json.loads(st.secrets["textkey"])
+# for heroku
 keys = ["project_id", "type", "private_key_id", "private_key",
         "client_email", "client_id", "auth_uri", "token_uri",
         "auth_provider_x509_cert_url", "client_x509_cert_url"]
@@ -27,26 +25,18 @@ df = pd.DataFrame(users_dict)
 start_time = 1638206167
 df = df[df["time"] > start_time]
 
-
 print(len(df))
 print(len(set(df["userID"].values)))
 
-df = df[df["is_true_ratings"] == True] #remove false ratings
+df = df[df["is_true_ratings"] == True]  # remove false ratings
 
 to_join = df.groupby(['userID']).min("time")
 
-to_join = to_join.rename({"time":"min_time"}, axis=1)[["min_time"]]
+to_join = to_join.rename({"time": "min_time"}, axis=1)[["min_time"]]
 
 df = df.set_index("userID").join(to_join)
 
-
-
-
-
 df = df[df["time"] == df["min_time"]]
-
-
-
 
 df = df[["itemID", "rating"]].reset_index()
 
@@ -70,6 +60,4 @@ total_df.to_csv("data/total_df.csv", index=False)
 
 df = df[df["itemID"].isin(all_nootropics)]
 
-df.to_csv("data/new_df.csv", index=False) #only new ratings
-
-
+df.to_csv("data/new_df.csv", index=False)  # only new ratings

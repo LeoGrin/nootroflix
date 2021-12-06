@@ -3,7 +3,6 @@ import numpy as np
 from surprise import KNNBaseline
 from surprise import Dataset
 from surprise import Reader
-from new_names import short_dic
 from copy import deepcopy
 import streamlit as st
 
@@ -80,7 +79,7 @@ def predict(rating_dic):
 
     mean_rating = [np.mean(df_clean[df_clean["itemID"] == noot]["rating"]) for noot in avalaible_nootropics]
     result_df = pd.DataFrame(
-        {"nootropic": [short_dic[noot] for noot in avalaible_nootropics],
+        {"nootropic": [noot for noot in avalaible_nootropics],
          "Prediction": predicted_ratings,
          "Mean rating": mean_rating})
     # "baseline_rating_user": item_baselines_user}) #TODO ?
@@ -107,7 +106,7 @@ def evaluate(rating_dic):
         for nootropic in rated_avalaible_nootropics:
                 rating_dic_copy.pop(nootropic)
                 new_result_df = predict(rating_dic_copy)
-                loo_ratings.append(new_result_df[new_result_df["nootropic"] == short_dic[nootropic]]["Prediction"].values[0])
+                loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Prediction"].values[0])
                 rating_dic_copy = deepcopy(rating_dic)
 
     #item_baselines_df = get_item_baseline()
@@ -115,7 +114,7 @@ def evaluate(rating_dic):
     mean_rating = [np.mean(df_clean[df_clean["itemID"] == noot]["rating"]) for noot in rated_avalaible_nootropics]
 
 
-    return pd.DataFrame({"nootropic": [short_dic[noot] for noot in rated_avalaible_nootropics],
+    return pd.DataFrame({"nootropic": [noot for noot in rated_avalaible_nootropics],
                          "Your rating": [rating_dic[nootropic] for nootropic in rated_avalaible_nootropics],
                          "Predicted rating": loo_ratings,
                          "Mean rating": mean_rating})

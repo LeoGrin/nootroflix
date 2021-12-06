@@ -1,4 +1,4 @@
-#import pandas as pd
+import pandas as pd
 import numpy as np
 
 # df_ssc = pd.read_csv("../data/dataset_clean.csv")
@@ -95,14 +95,14 @@ short_names = ['5-HTP', 'ALCAR', 'Adderall', 'Adrafinil', 'Agmatine', 'Alpha-GPC
 #indices = list(map(len, short_names))
 #print(np.array(short_names)[np.argsort(indices)])
 
-other_nootropics = ["Kanna (except Zembrin)", "Zembrin", "Shilajit", "Cordyceps", "Lemon balm",
+other_nootropics = ["Taurine", "Kanna (except Zembrin)", "Zembrin", "Shilajit", "Cordyceps", "Lemon balm",
                     "Nicotinamide riboside", "Nicotinamide mononucleotide", "Polygala tenuifolia",
                     "Maca", "Bromantane", "Niacin", "Saffron", "Glycine", "Berberine",
                     "White jelly mushrooms", "Theacrine (aka Teacrine)", "Methylliberine (aka Dynamine)",
                     "Red reishi mushrooms", "7,8-dihydroxyflavone", "9-MBC", "SSRIs (Prozac, Lexapro...)", "Bupropion (Wellbutrin, Zyban...)",
                     "Alprazolam (Xanax)", "SNRIs (Cymbalta, Effexor...)", "SAM-e", "Fermented drinks (Kefir, Kombucha...)", "Probiotics"]
 
-short_other_nootropics = ["Kanna", "Zembrin", "Shilajit", "Cordyceps", "Lemon balm",
+short_other_nootropics = ["Taurine", "Kanna", "Zembrin", "Shilajit", "Cordyceps", "Lemon balm",
                     "Nicotinamide riboside", "Nicotinamide mononucleotide", "Polygala tenuifolia",
                     "Maca", "Bromantane", "Niacin", "Saffron", "Glycine", "Berberine",
                     "White jelly mushrooms", "Theacrine", "Methylliberine",
@@ -110,10 +110,10 @@ short_other_nootropics = ["Kanna", "Zembrin", "Shilajit", "Cordyceps", "Lemon ba
 
 lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "Vegetarian diet", "Vegan diet", "No Fap (or otherwise avoiding masturbation)",
                         "Bright lights in morning / Dawn simulator", "Trying to get more sleep",
-                        "Trying to get less sleep", "Weightlifting", "Low intensity cardio (hiking, light jogging...)", "High intensity cardio (HIIT, soccer...)"]
+                        "Trying to get less sleep", "Weightlifting", "Low intensity cardio (hiking, light jogging...)", "High intensity cardio (HIIT, soccer...)", "Meditation"]
 
 short_lifestyle_nootropics = ["Ketogenic diet", "Carnivore diet", "Vegetarian diet", "Vegan diet", "No Fap", "Morning lights", "More sleep", "Less sleep",
-                              "Weightlifting", "Low intensity cardio", "High intensity cardio"]
+                              "Weightlifting", "Low intensity cardio", "High intensity cardio", "Meditation"]
 
 classic_nootropics = ["Rhodiola", "Aniracetam", "Phenibut", "Ashwagandha", "Bacopa", "Piracetam", "Choline",
                       "Noopept", "Adderall", "Nicotine", "Creatine", "Theanine", "Modafinil", "Melatonin", "Caffeine",
@@ -139,6 +139,76 @@ weird_nootropics = [noot for noot in weird_nootropics if noot not in to_drop]
 all_nootropics = np.sort(np.concatenate([classic_nootropics, lifestyle_nootropics, weird_nootropics]))
 
 
+#def noot_type(noot):
+ #   if noot in classic_nootropics:
+ #       return "classic"
+ #   if noot in lifestyle_nootropics:
+ #       return "lifestyle"
+ #   if noot in weird_nootropics:
+#        return "other"
+#new_df = pd.DataFrame({"nootropic":all_nootropics,
+ #                      "nootropic_short":list(map(lambda x:short_dic[x], all_nootropics)),
+ #                      "type":list(map(noot_type, all_nootropics))})
+
+#df_links = pd.read_csv("../nootropics_metadata.csv", sep=";")
+#print(df_links)
+
+#new_df = new_df.merge(df_links, on = ["nootropic", "nootropic_short"], how="left")
+
+#new_df.to_csv("../test.csv")
+# import requests
+# import urllib
+# df = pd.read_csv("../test.csv", sep=";")
+#
+# wiki_links = []
+# for i, row in df.iterrows():
+#     if type(row["wiki_link"]) == float: #check for Nans
+#         try:
+#             urllib.request.urlopen("https://en.wikipedia.org/wiki/{}".format(row["nootropic"])).getcode()
+#             wiki_links.append("https://en.wikipedia.org/wiki/" + row["nootropic"])
+#             print("success wiki")
+#
+#         except:
+#             try:
+#                 urllib.request.urlopen("https://en.wikipedia.org/wiki/{}".format(row["nootropic_short"])).getcode()
+#                 wiki_links.append("https://en.wikipedia.org/wiki/" + row["nootropic_short"])
+#                 print("success wiki 2")
+#             except:
+#                 print("fail")
+#                 wiki_links.append(np.nan)
+#     else:
+#         wiki_links.append(row["wiki_link"])
+#
+# examine_link = []
+# examine_default = "https://examine.com/supplements/{}/"
+#
+# def check_examine_link(name):
+#     redirect = ''
+#     responses = requests.get(examine_default.format(name))
+#     for response in responses.history:
+#         redirect += response.url
+#     print(examine_default.format(name))
+#     print(redirect)
+#     return len(redirect) == 0
+#
+# for i, row in df.iterrows():
+#     if type(row["examine_link"]) == float: #check for Nans
+#         if check_examine_link(row["nootropic"].lower()):
+#             examine_link.append(examine_default.format(row["nootropic"].lower()))
+#             print("yes")
+#         else:
+#             if check_examine_link(row["nootropic_short"].lower()):
+#                 examine_link.append(examine_default.format(row["nootropic_short"].lower()))
+#                 print("yes2")
+#             else:
+#                 print("no")
+#                 examine_link.append(np.nan)
+#     else:
+#         examine_link.append(row["examine_link"])
+#
+# df["wiki_link"] = wiki_links
+# df["examine_link"] = examine_link
+# df.to_csv("../test2.csv")
 
 # print(len(classic_nootropics))
 # print(len(list(set(classic_nootropics).intersection(set(new_names)))))
