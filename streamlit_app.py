@@ -24,7 +24,7 @@ def get_metadata(path):
 classic_nootropics, lifestyle_nootropics, other_nootropics, all_nootropics = get_metadata('data/nootropics_metadata.csv')
 
 
-deployed = False
+deployed = True
 
 if deployed:
     collection_ratings, collection_users = load_collection()
