@@ -7,9 +7,6 @@ from utils import save_new_ratings, generate_user_id, load_collection
 from streamlit.report_thread import get_report_ctx
 import streamlit.components.v1 as components
 import pandas as pd
-from bokeh.plotting import figure
-from bokeh.models import ColumnDataSource, CustomJS
-from bokeh.models import DataTable, TableColumn, HTMLTemplateFormatter
 
 
 
