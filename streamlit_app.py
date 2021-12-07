@@ -272,7 +272,6 @@ if st.session_state["mode"] == "results":
     st.header("🧠 Your results")
     st.write("Our model predicted these ratings for you:")
     st.caption("Some nootropics don't have enough data right now to be included.")
-    st.subheader(":brain: Top ratings")
     with st.spinner('Loading...'):
         new_result_df = predict(slider_dic)
 
