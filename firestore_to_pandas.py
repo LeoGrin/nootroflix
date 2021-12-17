@@ -2,7 +2,6 @@ import pandas as pd
 from google.cloud import firestore
 from google.oauth2 import service_account
 import os
-from experiments.new_names import all_nootropics
 
 # key_dict = json.loads(st.secrets["textkey"])
 # for heroku
@@ -25,10 +24,15 @@ df = pd.DataFrame(users_dict)
 start_time = 1638206167
 df = df[df["time"] > start_time]
 
+print('Without SSC')
 print(len(df))
 print(len(set(df["userID"].values)))
 
 df = df[df["is_true_ratings"] == True]  # remove false ratings
+
+print("Without ssc, true ratings")
+print(len(df))
+print(len(set(df["userID"].values)))
 
 to_join = df.groupby(['userID']).min("time")
 
@@ -44,7 +48,20 @@ df_ssc = pd.read_csv("data/dataset_clean_right_names.csv")
 
 total_df = df.append(df_ssc)
 
-total_df = total_df[total_df["itemID"].isin(all_nootropics)]
+print("With SSC, true ratings")
+print(len(total_df))
+print(len(set(total_df["userID"].values)))
+
+
+#convert old names to new names
+translation_dic = {}
+for i, row in pd.read_csv("data/nootropics_metadata.csv", sep=";").iterrows():
+    for old_name in row["old_names"].split(";"):
+        translation_dic[old_name] = row["nootropic"]
+
+total_df["itemID"] = list(map(lambda x: translation_dic[x], total_df["itemID"]))
+
+#total_df = total_df[total_df["itemID"].isin(all_nootropics)]
 
 # nootropics_with_enough_ratings = []
 # for noot in all_nootropics:
@@ -58,6 +75,6 @@ total_df = total_df[total_df["itemID"].isin(all_nootropics)]
 
 total_df.to_csv("data/total_df.csv", index=False)
 
-df = df[df["itemID"].isin(all_nootropics)]
+df["itemID"] = list(map(lambda x: translation_dic[x], df["itemID"]))
 
 df.to_csv("data/new_df.csv", index=False)  # only new ratings
