@@ -3,7 +3,7 @@ import extra_streamlit_components as stx
 import datetime
 import time
 from train_model import predict, evaluate
-from utils import save_new_ratings, generate_user_id, load_collection
+from utils import save_new_ratings, generate_user_id, load_collection, save_position
 from streamlit.report_thread import get_report_ctx
 import streamlit.components.v1 as components
 import pandas as pd
@@ -23,19 +23,17 @@ def get_metadata(path):
 
 classic_nootropics, lifestyle_nootropics, other_nootropics, all_nootropics = get_metadata('data/nootropics_metadata.csv')
 
-
 deployed = True
 
 if deployed:
-    collection_ratings, collection_users = load_collection()
+    collection_ratings, collection_users, collection_position = load_collection()
 
 session_id = get_report_ctx().session_id
 cookie_manager = stx.CookieManager()
 
-
-
 if "counter" not in st.session_state:
     st.session_state.counter = 1 #weird hack to allow scrolling to the top on refresh
+
 
 if "already_run" not in st.session_state.keys():
     st.session_state.already_run = True
@@ -45,11 +43,17 @@ else:
     print(user_id)
     if not user_id:
         #print("No username found, generating one...")
-        user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id)
+        #TODO simpler with session state?
+        user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id) #cached, refreshed if new session_id
         #print("UserID: {}".format(user_id))
         cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
         #print("cookie set")
+    if "save_start" not in st.session_state.keys(): #now that we have a user_id, we can save the start time
+        st.session_state.save_start = True
 
+if deployed and "save_start" in st.session_state.keys() and st.session_state.save_start: #check that we can save (we have a user_id) and we haven't already saved start
+    save_position("start", user_id, session_id, time.time(), collection_position)
+    st.session_state.save_start = False
 
 st.title(':brain: Nootroflix')
 original_title = '<p style="color:Pink; font-size: 20px;">Rate the nootropics you\'ve tried, and we\'ll tell you which one should work for you!</p>'
@@ -96,6 +100,9 @@ def go_to_mode(mode):
             if not key.startswith("permanent"):
                 st.session_state["permanent_" + key] = st.session_state[key]
         st.session_state.counter += 1
+        if deployed:
+            save_position(mode, user_id, session_id, time.time(), collection_position)
+
     return callback_mode
 
 def retrieve_widget_value(key):
