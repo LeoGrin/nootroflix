@@ -52,7 +52,7 @@ else:
         st.session_state.save_start = True
 
 if deployed and "save_start" in st.session_state.keys() and st.session_state.save_start: #check that we can save (we have a user_id) and we haven't already saved start
-    save_position("selection", user_id, session_id, time.time(), collection_position)
+    save_position("start", user_id, session_id, time.time(), collection_position)
     st.session_state.save_start = False
 
 st.title(':brain: Nootroflix')
