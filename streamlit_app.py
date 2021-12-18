@@ -34,6 +34,7 @@ cookie_manager = stx.CookieManager()
 if "counter" not in st.session_state:
     st.session_state.counter = 1 #weird hack to allow scrolling to the top on refresh
 
+
 if "already_run" not in st.session_state.keys():
     st.session_state.already_run = True
     cookie_manager.get("userID")
@@ -42,11 +43,17 @@ else:
     print(user_id)
     if not user_id:
         #print("No username found, generating one...")
+        #TODO simpler with session state?
         user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id) #cached, refreshed if new session_id
         #print("UserID: {}".format(user_id))
         cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
         #print("cookie set")
+    if "save_start" not in st.session_state.keys(): #now that we have a user_id, we can save the start time
+        st.session_state.save_start = True
 
+if deployed and "save_start" in st.session_state.keys() and st.session_state.save_start: #check that we can save (we have a user_id) and we haven't already saved start
+    save_position("selection", user_id, session_id, time.time(), collection_position)
+    st.session_state.save_start = False
 
 st.title(':brain: Nootroflix')
 original_title = '<p style="color:Pink; font-size: 20px;">Rate the nootropics you\'ve tried, and we\'ll tell you which one should work for you!</p>'
@@ -112,8 +119,6 @@ def reset_selection():
             del st.session_state[key]
 
 if st.session_state["mode"] == "selection":
-    if st.session_state == 1:
-        save_position("selection", user_id, session_id, time.time(), collection_position)
     st.header("How do I use it?")
     st.markdown(""" **First tell us which nootropics you have tried, then rate your subjective experience on a scale of 0 to 10.**""")
     st.markdown("""It should take less than 5 minutes and you won't need to create an account!""")
