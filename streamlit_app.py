@@ -3,7 +3,7 @@ import extra_streamlit_components as stx
 import datetime
 import time
 from train_model import predict, evaluate
-from utils import save_new_ratings, generate_user_id, load_collection
+from utils import save_new_ratings, generate_user_id, load_collection, save_position
 from streamlit.report_thread import get_report_ctx
 import streamlit.components.v1 as components
 import pandas as pd
@@ -23,11 +23,10 @@ def get_metadata(path):
 
 classic_nootropics, lifestyle_nootropics, other_nootropics, all_nootropics = get_metadata('data/nootropics_metadata.csv')
 
-
 deployed = True
 
 if deployed:
-    collection_ratings, collection_users = load_collection()
+    collection_ratings, collection_users, collection_position = load_collection()
 
 session_id = get_report_ctx().session_id
 cookie_manager = stx.CookieManager()
@@ -96,6 +95,8 @@ def go_to_mode(mode):
             if not key.startswith("permanent"):
                 st.session_state["permanent_" + key] = st.session_state[key]
         st.session_state.counter += 1
+    if deployed:
+        save_position(mode, user_id, session_id, time.time(), collection_position)
     return callback_mode
 
 def retrieve_widget_value(key):
