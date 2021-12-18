@@ -31,8 +31,6 @@ if deployed:
 session_id = get_report_ctx().session_id
 cookie_manager = stx.CookieManager()
 
-
-
 if "counter" not in st.session_state:
     st.session_state.counter = 1 #weird hack to allow scrolling to the top on refresh
 
@@ -44,7 +42,7 @@ else:
     print(user_id)
     if not user_id:
         #print("No username found, generating one...")
-        user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id)
+        user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id) #cached, refreshed if new session_id
         #print("UserID: {}".format(user_id))
         cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
         #print("cookie set")
@@ -113,6 +111,8 @@ def reset_selection():
             del st.session_state[key]
 
 if st.session_state["mode"] == "selection":
+    if st.session_state == 1:
+        save_position("selection", user_id, session_id, time.time(), collection_position)
     st.header("How do I use it?")
     st.markdown(""" **First tell us which nootropics you have tried, then rate your subjective experience on a scale of 0 to 10.**""")
     st.markdown("""It should take less than 5 minutes and you won't need to create an account!""")
