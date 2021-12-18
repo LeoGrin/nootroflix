@@ -93,8 +93,9 @@ def go_to_mode(mode):
             if not key.startswith("permanent"):
                 st.session_state["permanent_" + key] = st.session_state[key]
         st.session_state.counter += 1
-    if deployed:
-        save_position(mode, user_id, session_id, time.time(), collection_position)
+        if deployed:
+            save_position(mode, user_id, session_id, time.time(), collection_position)
+
     return callback_mode
 
 def retrieve_widget_value(key):
