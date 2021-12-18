@@ -37,6 +37,15 @@ def save_new_ratings(rating_dic, issues_dic, question_dic, is_true_ratings, accu
     user_dic.update(question_dic)
     doc_ref_user.set(user_dic)
 
+def save_position(position, user_id, session_id, time, collection_position):
+    doc_ref = collection_position.document()
+    doc_ref.set({"userID":user_id,
+                 "session_id": session_id,
+                 "position": position,
+                 "time": time,
+                 "time_server": SERVER_TIMESTAMP})
+
+
 
 
 
@@ -68,7 +77,8 @@ def load_collection():
     # Once the user has submitted, upload it to the database
     collection_ratings = db.collection("ratings")
     collection_users = db.collection("users")
-    return collection_ratings, collection_users
+    collection_position = db.collection("position")
+    return collection_ratings, collection_users, collection_position
 
 
 if __name__ == "__main__":
