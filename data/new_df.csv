@@ -103,7 +103,7 @@ userID,itemID,rating
 10374536,Ashwagandha,4
 10374536,Bacopa,7
 10374536,Magnesium,8
-10374536,ALCAR,7
+10374536,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 10374536,GABA,5
 10374536,Agmatine,6
 10419759,Piracetam,5
@@ -171,7 +171,7 @@ userID,itemID,rating
 11026440,St John's Wort,0
 11026440,Alpha-GPC,0
 11026440,Ginkgo Biloba,0
-11026440,Carnitine / Acetyl-L-Carnitine,0
+11026440,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 11026440,"Fermented drinks (Kefir, Kombucha...)",0
 11026440,Alprazolam (Xanax),0
 11026440,Bright lights in morning / Dawn simulator,0
@@ -193,7 +193,7 @@ userID,itemID,rating
 11026440,Phenylpiracetam,0
 11026440,Tyrosine,0
 11026440,Semax (or NA-Semax etc),0
-11026440,ALCAR,0
+11026440,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 11026440,Ginseng,0
 11026440,Phenibut,0
 11026440,Creatine,0
@@ -321,7 +321,7 @@ userID,itemID,rating
 11731695,Trying to get less sleep,7
 11731695,CBD,6
 11731695,Melatonin,3
-11731695,Carnitine / Acetyl-L-Carnitine,8
+11731695,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 11731695,Magnesium,8
 11731695,Rhodiola,5
 11731695,Ginkgo Biloba,6
@@ -367,7 +367,7 @@ userID,itemID,rating
 11975772,Maca,0
 11975772,Ketogenic diet,0
 11975772,Huperzine-A,0
-11975772,ALCAR,0
+11975772,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 11975772,N-acetyl Cysteine (NAC),0
 11975772,Magnesium,0
 11975772,GABA,0
@@ -434,7 +434,7 @@ userID,itemID,rating
 121698,Lion's Mane,6
 121698,Phenylpiracetam,6
 121698,Magnesium,4
-121698,ALCAR,1
+121698,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 121698,Caffeine,8
 121698,Omega-3 Supplements,3
 121698,Nicotine,7
@@ -483,6 +483,15 @@ userID,itemID,rating
 12450449,IDRA-21,4
 12450449,9-MBC,7
 12450449,Semax (or NA-Semax etc),5
+1253827,Nicotine,8
+1253827,Weightlifting,8
+1253827,Trying to get less sleep,9
+1253827,Intermittent fasting,6
+1253827,Theanine,6
+1253827,Caffeine,8
+1253827,Vegetarian diet,3
+1253827,Melatonin,7
+1253827,Meditation,9
 12565687,Trying to get less sleep,8
 12565687,Rhodiola,8
 12565687,"SSRIs (Prozac, Lexapro...)",0
@@ -546,7 +555,7 @@ userID,itemID,rating
 12711742,Caffeine,10
 12711742,Trying to get more sleep,1
 12711742,Probiotics,10
-12711742,ALCAR,0
+12711742,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 12711742,"Fermented drinks (Kefir, Kombucha...)",6
 12711742,"High intensity cardio (HIIT, soccer...)",1
 12711742,Inositol,1
@@ -562,7 +571,7 @@ userID,itemID,rating
 12711742,Ashwagandha,1
 12711742,DMAE,1
 12711742,Lemon balm,9
-12711742,Carnitine / Acetyl-L-Carnitine,1
+12711742,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 12711742,Magnesium,2
 12711742,Omega-3 Supplements,0
 12711742,Bright lights in morning / Dawn simulator,0
@@ -591,7 +600,7 @@ userID,itemID,rating
 12857099,Nicotine,5
 12857099,Magnesium,4
 12857099,Melatonin,5
-12857099,Carnitine / Acetyl-L-Carnitine,7
+12857099,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 12857099,Maca,0
 12857099,Probiotics,5
 12857099,Vegan diet,0
@@ -696,12 +705,12 @@ userID,itemID,rating
 14480555,SAM-e,3
 14480555,"High intensity cardio (HIIT, soccer...)",10
 14480555,Carnivore diet,6
-14480555,ALCAR,8
+14480555,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 14480555,Trying to get more sleep,10
 14480555,Weightlifting,10
 14480555,Probiotics,5
 14480555,Melatonin,8
-14480555,Carnitine / Acetyl-L-Carnitine,8
+14480555,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 14480555,Berberine,3
 14480555,Ketogenic diet,8
 14480555,"Low intensity cardio (hiking, light jogging...)",10
@@ -744,7 +753,7 @@ userID,itemID,rating
 1453692,N-acetyl Cysteine (NAC),8
 1453692,Melatonin,6
 1453692,Coluracetam,5
-1453692,Carnitine / Acetyl-L-Carnitine,3
+1453692,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 1453692,Armodafinil,1
 1453692,Aniracetam,5
 1453692,Sulbutiamine,5
@@ -752,7 +761,7 @@ userID,itemID,rating
 1453692,Nicotine,10
 1453692,Niacin,3
 1453692,Tryptophan,1
-1453692,ALCAR,5
+1453692,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 1453692,LSD (microdose),5
 1453692,CBD,3
 1453692,Adderall,8
@@ -772,13 +781,13 @@ userID,itemID,rating
 14639524,SAM-e,6
 14639524,Dextroamphetamine (Dexedrine),8
 14639524,Adrafinil,5
-14639524,ALCAR,5
+14639524,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 14639524,Phenylpiracetam,5
 14639524,Alprazolam (Xanax),4
 14639524,Magnesium,6
 14639524,"7,8-dihydroxyflavone",8
 14639524,Caffeine,6
-14639524,Carnitine / Acetyl-L-Carnitine,5
+14639524,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 14639524,Alpha-GPC,4
 14639524,Coluracetam,5
 14639524,Bromantane,5
@@ -827,7 +836,7 @@ userID,itemID,rating
 14899825,Kratom,6
 14899825,Ginkgo Biloba,1
 14899825,Alprazolam (Xanax),8
-14899825,ALCAR,2
+14899825,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 14899825,Semax (or NA-Semax etc),6
 14899825,Trying to get more sleep,7
 14899825,Kava,5
@@ -866,6 +875,10 @@ userID,itemID,rating
 14992077,Phenylpiracetam,5
 14992077,Modafinil,3
 14992077,Bright lights in morning / Dawn simulator,0
+15200101,Carnivore diet,8
+15200101,5-HTP,8
+15200101,Psilocybin (microdose),6
+15200101,Caffeine,10
 15279682,Omega-3 Supplements,2
 15279682,Caffeine,4
 15279682,Creatine,2
@@ -1012,7 +1025,7 @@ userID,itemID,rating
 16693382,Adderall,10
 16693382,Tyrosine,7
 16693382,Carnivore diet,8
-16693382,Carnitine / Acetyl-L-Carnitine,2
+16693382,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 16693382,CBD,0
 16693382,Alpha-GPC,7
 16693382,Creatine,8
@@ -1140,7 +1153,7 @@ userID,itemID,rating
 17506116,Bright lights in morning / Dawn simulator,5
 17506116,Nicotine,7
 17506116,Methylphenidate (Ritalin),7
-17506116,ALCAR,4
+17506116,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 17506116,"High intensity cardio (HIIT, soccer...)",6
 17506116,"Low intensity cardio (hiking, light jogging...)",3
 17506116,Noopept,3
@@ -1198,11 +1211,11 @@ userID,itemID,rating
 17824902,Melatonin,10
 17824902,Ginseng,5
 17824902,Theanine,5
-17824902,ALCAR,0
+17824902,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 17824902,Rhodiola,3
 17824902,Nicotine,10
 17824902,Magnesium,0
-17824902,Carnitine / Acetyl-L-Carnitine,0
+17824902,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 17824902,N-Acetyl-L-Tyrosine,2
 17824902,Creatine,3
 17824902,Ketogenic diet,0
@@ -1242,7 +1255,7 @@ userID,itemID,rating
 17976522,Rhodiola,2
 17976522,Huperzine-A,5
 17976522,Omega-3 Supplements,4
-17976522,ALCAR,2
+17976522,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 17976522,Choline,5
 17976522,Boswellia,4
 17976522,Bacopa,7
@@ -1252,7 +1265,7 @@ userID,itemID,rating
 17976522,Ketogenic diet,8
 17976522,"SSRIs (Prozac, Lexapro...)",0
 17976522,Probiotics,4
-17976522,Carnitine / Acetyl-L-Carnitine,2
+17976522,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 17976522,SAM-e,2
 17976522,Curcumin,5
 17976522,Melatonin,8
@@ -1362,7 +1375,7 @@ userID,itemID,rating
 18856188,No Fap (or otherwise avoiding masturbation),0
 18856188,Tyrosine,0
 18856188,Psilocybin (microdose),0
-18856188,Carnitine / Acetyl-L-Carnitine,0
+18856188,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 18856188,Niacin,0
 18856188,Glycine,0
 18856188,Maca,0
@@ -1439,7 +1452,7 @@ userID,itemID,rating
 19029326,Maca,2
 19029326,Psilocybin (microdose),6
 19029326,CBD,4
-19029326,Carnitine / Acetyl-L-Carnitine,1
+19029326,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 19029326,Alpha-GPC,3
 19029326,Ashwagandha,1
 19029326,Saffron,5
@@ -1488,7 +1501,7 @@ userID,itemID,rating
 19169749,Kratom,7
 19169749,Curcumin,7
 19169749,"Low intensity cardio (hiking, light jogging...)",8
-19169749,Carnitine / Acetyl-L-Carnitine,5
+19169749,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 19169749,Agmatine,7
 19169749,Black Seed Oil (Nigella sativa),4
 19169749,N-acetyl Cysteine (NAC),9
@@ -1496,8 +1509,14 @@ userID,itemID,rating
 19169749,Ginseng,6
 19169749,Nicotinamide mononucleotide,6
 19169749,Alpha-GPC,2
-19169749,ALCAR,5
+19169749,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 19169749,Melatonin,7
+19186382,Melatonin,5
+19186382,Caffeine,7
+19186382,Creatine,6
+19186382,Theanine,5
+19186382,N-Acetyl-L-Tyrosine,4
+19186382,Weightlifting,7
 19247148,Magnesium,5
 19247148,Caffeine,9
 19247148,Methylphenidate (Ritalin),0
@@ -1536,7 +1555,7 @@ userID,itemID,rating
 19277543,Magnesium,5
 19277543,Caffeine,8
 19277543,Weightlifting,7
-19277543,ALCAR,5
+19277543,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 19277543,Theanine,5
 19277543,Cordyceps,6
 19277543,Lion's Mane,6
@@ -1655,7 +1674,7 @@ userID,itemID,rating
 20654496,Sulbutiamine,7
 20654496,N-Acetyl-L-Tyrosine,5
 20654496,"Bupropion (Wellbutrin, Zyban...)",6
-20654496,ALCAR,3
+20654496,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 20654496,Modafinil,5
 20654496,N-acetyl Cysteine (NAC),3
 20654496,Fasoracetam,4
@@ -1743,7 +1762,7 @@ userID,itemID,rating
 21133950,Magnesium,9
 21133950,Ashwagandha,2
 21133950,Theanine,4
-21133950,ALCAR,5
+21133950,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 21133950,Ketogenic diet,10
 21229757,No Fap (or otherwise avoiding masturbation),1
 21229757,Ginkgo Biloba,2
@@ -1757,7 +1776,7 @@ userID,itemID,rating
 21229757,Piracetam,9
 21229757,Ketogenic diet,3
 21229757,Carnivore diet,6
-21229757,ALCAR,0
+21229757,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 21229757,Nicotine,0
 21229757,Tryptophan,1
 21229757,Theanine,0
@@ -1810,7 +1829,7 @@ userID,itemID,rating
 21277153,Phenibut,0
 21277153,Magnesium,0
 21277153,Probiotics,0
-21277153,ALCAR,0
+21277153,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 21277153,Huperzine-A,0
 21277153,Maca,0
 21277153,No Fap (or otherwise avoiding masturbation),0
@@ -1825,7 +1844,7 @@ userID,itemID,rating
 21277153,Lion's Mane,0
 21277153,Alpha-GPC,0
 21277153,Caffeine,0
-21277153,Carnitine / Acetyl-L-Carnitine,0
+21277153,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 21277153,Pregenolone,0
 21299341,5-HTP,2
 21299341,N-acetyl Cysteine (NAC),9
@@ -2003,7 +2022,7 @@ userID,itemID,rating
 22089885,Agmatine,1
 22089885,Phenylpiracetam,2
 22089885,Ginseng,0
-22089885,Carnitine / Acetyl-L-Carnitine,0
+22089885,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 22089885,Oxiracetam,0
 22089885,Rhodiola,0
 22089885,Nicotine,0
@@ -2042,7 +2061,7 @@ userID,itemID,rating
 22309432,Vegetarian diet,7
 22309432,Trying to get less sleep,5
 22309432,Melatonin,6
-22309432,Carnitine / Acetyl-L-Carnitine,9
+22309432,Carnitine / Acetyl-L-Carnitine (ALCAR),9
 22309432,Cold shower / Ice bath,6
 22309432,"Low intensity cardio (hiking, light jogging...)",5
 22309432,Psilocybin (microdose),9
@@ -2101,6 +2120,42 @@ userID,itemID,rating
 22474971,Black Seed Oil (Nigella sativa),5
 22474971,"Fermented drinks (Kefir, Kombucha...)",6
 22474971,Curcumin,4
+22499033,Agmatine,5
+22499033,"Bupropion (Wellbutrin, Zyban...)",5
+22499033,Modafinil,0
+22499033,Caffeine,10
+22499033,Choline,2
+22499033,Carnitine / Acetyl-L-Carnitine (ALCAR),3
+22499033,Ginseng,0
+22499033,Kratom,0
+22499033,St John's Wort,5
+22499033,CBD,0
+22499033,Magnesium,0
+22499033,5-HTP,2
+22499033,Alprazolam (Xanax),0
+22499033,Dextroamphetamine (Dexedrine),10
+22499033,Theanine,3
+22499033,Theacrine (aka Teacrine),0
+22499033,Saffron,2
+22499033,Rhodiola,0
+22499033,Carnitine / Acetyl-L-Carnitine (ALCAR),2
+22499033,Aniracetam,5
+22499033,Niacin,2
+22499033,Ashwagandha,3
+22499033,Omega-3 Supplements,1
+22499033,Kanna (except Zembrin),0
+22499033,Adderall,10
+22499033,Methylphenidate (Ritalin),3
+22499033,Nicotine,7
+22499033,Lion's Mane,1
+22499033,Piracetam,3
+22499033,Phenibut,10
+22499033,Ginkgo Biloba,0
+22499033,Creatine,5
+22499033,Alpha-GPC,4
+22499033,Melatonin,4
+22499033,Noopept,0
+22499033,Bacopa,1
 22571784,Theanine,0
 22571784,Choline,6
 22571784,Ashwagandha,4
@@ -2137,7 +2192,7 @@ userID,itemID,rating
 22769811,Omega-3 Supplements,0
 22769811,Vegan diet,0
 22769811,"SSRIs (Prozac, Lexapro...)",10
-22769811,Carnitine / Acetyl-L-Carnitine,0
+22769811,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 22769811,Nicotine,7
 22769811,Trying to get more sleep,0
 22769811,"Bupropion (Wellbutrin, Zyban...)",1
@@ -2154,7 +2209,7 @@ userID,itemID,rating
 22837567,Melatonin,5
 22837567,Ketogenic diet,1
 22837567,Bacopa,1
-22837567,ALCAR,1
+22837567,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 22837567,Theanine,1
 22837567,"High intensity cardio (HIIT, soccer...)",2
 22837567,Valerian Root,0
@@ -2197,7 +2252,7 @@ userID,itemID,rating
 23034151,Maca,0
 23034151,Nicotine,0
 23034151,Modafinil,0
-23034151,ALCAR,0
+23034151,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 23034151,Caffeine,0
 23034151,Trying to get more sleep,5
 23034151,Creatine,0
@@ -2341,7 +2396,7 @@ userID,itemID,rating
 23835821,Probiotics,4
 23835821,No Fap (or otherwise avoiding masturbation),6
 23835821,Ginseng,5
-23835821,Carnitine / Acetyl-L-Carnitine,4
+23835821,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 23835821,Melatonin,6
 23835821,Tyrosine,4
 23835821,Piracetam,0
@@ -2351,14 +2406,14 @@ userID,itemID,rating
 23835821,Trying to get less sleep,1
 23835821,Uridine,3
 23835821,Trying to get more sleep,5
-23835821,Doepezil,4
+23835821,Donepezil,4
 23835821,Huperzine-A,6
 23835821,Bright lights in morning / Dawn simulator,9
 23835821,Creatine,5
 23835821,Nicotine,6
 23835821,Ginkgo Biloba,6
 23835821,Choline,4
-23835821,ALCAR,4
+23835821,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 23835821,Inositol,1
 24290467,"High intensity cardio (HIIT, soccer...)",5
 24290467,Caffeine,8
@@ -2387,10 +2442,10 @@ userID,itemID,rating
 24313466,Trying to get more sleep,6
 24313466,Vegan diet,7
 24313466,N-acetyl Cysteine (NAC),5
-24313466,Carnitine / Acetyl-L-Carnitine,5
+24313466,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 24313466,Weightlifting,9
 24313466,DMAE,4
-24313466,ALCAR,0
+24313466,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 24313466,Choline,3
 24313466,N-Acetyl-L-Tyrosine,5
 24313466,Inositol,5
@@ -2473,7 +2528,7 @@ userID,itemID,rating
 25030479,9-MBC,5
 25030479,N-acetyl Cysteine (NAC),2
 25030479,No Fap (or otherwise avoiding masturbation),0
-25030479,Carnitine / Acetyl-L-Carnitine,3
+25030479,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 25030479,Kava,5
 25030479,Piracetam,2
 25030479,Selegiline (L-deprenyl),6
@@ -2484,7 +2539,7 @@ userID,itemID,rating
 25030479,Caffeine,6
 25030479,"Bupropion (Wellbutrin, Zyban...)",4
 25030479,Emoxypine,4
-25030479,ALCAR,4
+25030479,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 25030479,Bromantane,1
 25030479,Modafinil,8
 25030479,Lion's Mane,3
@@ -2561,7 +2616,7 @@ userID,itemID,rating
 2538088,"SSRIs (Prozac, Lexapro...)",5
 2538088,Kratom,2
 2538088,Adderall,9
-2538088,ALCAR,5
+2538088,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 2538088,N-acetyl Cysteine (NAC),5
 2538088,Alpha-GPC,10
 2538088,St John's Wort,2
@@ -2626,7 +2681,7 @@ userID,itemID,rating
 25648381,Theanine,5
 25676052,Ginkgo Biloba,3
 25676052,Theanine,5
-25676052,ALCAR,2
+25676052,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 25676052,Kanna (except Zembrin),7
 25676052,5-HTP,6
 25676052,Magnesium,8
@@ -2744,6 +2799,19 @@ userID,itemID,rating
 26393533,Adderall,10
 26393533,Melatonin,1
 26393533,Nicotine,2
+26412580,Creatine,0
+26412580,Magnesium,1
+26412580,Meditation,0
+26412580,Adrafinil,8
+26412580,Piracetam,6
+26412580,Noopept,6
+26412580,Melatonin,2
+26412580,Ashwagandha,6
+26412580,5-HTP,1
+26412580,Choline,1
+26412580,Adderall,10
+26412580,Caffeine,5
+26412580,Theanine,5
 26426467,Caffeine,3
 26426467,No Fap (or otherwise avoiding masturbation),0
 26426467,Theanine,4
@@ -2777,6 +2845,14 @@ userID,itemID,rating
 26672537,Adderall,0
 26672537,Melatonin,7
 26672537,Caffeine,6
+26791549,Caffeine,5
+26791549,Intermittent fasting,5
+26791549,Phenibut,8
+26791549,Trying to get more sleep,8
+26791549,Ashwagandha,5
+26791549,Melatonin,10
+26791549,Meditation,8
+26791549,Ketogenic diet,6
 26805462,Melatonin,8
 26805462,Bright lights in morning / Dawn simulator,2
 26805462,Ashwagandha,7
@@ -2836,7 +2912,7 @@ userID,itemID,rating
 26939850,N-Acetyl-L-Tyrosine,0
 26939850,Cordyceps,5
 26939850,Adderall,8
-26939850,ALCAR,2
+26939850,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 26939850,Rhodiola,5
 26939850,Bacopa,5
 26939850,Omega-3 Supplements,0
@@ -2845,7 +2921,7 @@ userID,itemID,rating
 26939850,Trying to get more sleep,9
 27007379,Kava,3
 27007379,LSD (microdose),2
-27007379,ALCAR,7
+27007379,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 27007379,Maca,5
 27007379,Adderall,1
 27007379,Rhodiola,8
@@ -2857,7 +2933,7 @@ userID,itemID,rating
 27007379,Ginkgo Biloba,8
 27007379,"Fermented drinks (Kefir, Kombucha...)",1
 27007379,Phenibut,1
-27007379,Carnitine / Acetyl-L-Carnitine,1
+27007379,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 27007379,5-HTP,2
 27007379,"SSRIs (Prozac, Lexapro...)",0
 27007379,Niacin,1
@@ -2888,6 +2964,13 @@ userID,itemID,rating
 27007379,Valerian Root,3
 27007379,Caffeine,5
 27007379,Curcumin,1
+27019839,Caffeine,5
+27019839,Melatonin,0
+27019839,"Bupropion (Wellbutrin, Zyban...)",2
+27019839,"SSRIs (Prozac, Lexapro...)",3
+27019839,Trying to get less sleep,3
+27019839,Intermittent fasting,7
+27019839,Magnesium,1
 27203872,Melatonin,0
 27203872,No Fap (or otherwise avoiding masturbation),0
 27203872,Ketogenic diet,0
@@ -2896,7 +2979,7 @@ userID,itemID,rating
 27203872,Trying to get more sleep,9
 27203872,Omega-3 Supplements,0
 27203872,Trying to get less sleep,0
-27203872,Carnitine / Acetyl-L-Carnitine,0
+27203872,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 27203872,Maca,0
 27203872,"Fermented drinks (Kefir, Kombucha...)",0
 27203872,"Low intensity cardio (hiking, light jogging...)",4
@@ -2905,11 +2988,21 @@ userID,itemID,rating
 27203872,Caffeine,7
 27203872,Creatine,0
 27203872,Carnivore diet,4
+27229403,Meditation,8
+27229403,Trying to get more sleep,10
+27229403,Cold shower / Ice bath,9
+27229403,No Fap (or otherwise avoiding masturbation),10
+27229403,Caffeine,5
+27229403,"High intensity cardio (HIIT, soccer...)",10
+27229403,Weightlifting,9
+27229403,"Low intensity cardio (hiking, light jogging...)",6
+27229403,Intermittent fasting,4
+27229403,Magnesium,0
 27332719,Adderall,9
 27332719,Omega-3 Supplements,1
-27332719,Carnitine / Acetyl-L-Carnitine,3
+27332719,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 27332719,Theanine,5
-27332719,ALCAR,3
+27332719,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 27332719,Magnesium,2
 27332719,Modafinil,6
 27332719,Caffeine,5
@@ -2980,7 +3073,7 @@ userID,itemID,rating
 27830878,N-acetyl Cysteine (NAC),0
 27830878,LSD (microdose),10
 27830878,Sulbutiamine,0
-27830878,ALCAR,0
+27830878,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 27830878,Niacin,0
 27830878,Psilocybin (microdose),10
 27830878,St John's Wort,0
@@ -3047,7 +3140,7 @@ userID,itemID,rating
 28308697,No Fap (or otherwise avoiding masturbation),0
 28308697,Creatine,0
 28308697,Modafinil,1
-28308697,ALCAR,0
+28308697,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 28308697,Agmatine,0
 28308697,Inositol,0
 28308697,Magnesium,0
@@ -3075,7 +3168,7 @@ userID,itemID,rating
 28634623,Trying to get more sleep,0
 28634623,Omega-3 Supplements,0
 28634623,St John's Wort,0
-28634623,ALCAR,0
+28634623,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 28634623,Magnesium,0
 28634623,Creatine,0
 28634623,CBD,8
@@ -3113,11 +3206,11 @@ userID,itemID,rating
 28806758,Glycine,8
 28806758,Rhodiola,9
 28806758,Lion's Mane,9
-28806758,Carnitine / Acetyl-L-Carnitine,9
+28806758,Carnitine / Acetyl-L-Carnitine (ALCAR),9
 28806758,Berberine,10
 28806758,Ketogenic diet,10
 28806758,Cold shower / Ice bath,10
-28806758,ALCAR,9
+28806758,Carnitine / Acetyl-L-Carnitine (ALCAR),9
 28806758,No Fap (or otherwise avoiding masturbation),10
 28806758,Ashwagandha,8
 28806758,Curcumin,8
@@ -3133,7 +3226,7 @@ userID,itemID,rating
 28863446,Theanine,9
 28863446,Lion's Mane,7
 28863446,Omega-3 Supplements,7
-28863446,ALCAR,7
+28863446,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 28863446,Ashwagandha,7
 29002810,Noopept,2
 29002810,Adrafinil,2
@@ -3143,7 +3236,7 @@ userID,itemID,rating
 29002810,Adderall,10
 29002810,Phenibut,7
 29002810,Ashwagandha,4
-29002810,ALCAR,5
+29002810,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 29002810,Kratom,7
 29072695,Ashwagandha,6
 29072695,Melatonin,8
@@ -3215,14 +3308,14 @@ userID,itemID,rating
 29289903,Inositol,0
 29289903,Magnesium,6
 29289903,Alpha-GPC,7
-29289903,ALCAR,6
+29289903,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 29289903,Cordyceps,0
 29289903,Choline,6
 29289903,Bright lights in morning / Dawn simulator,7
 29289903,N-acetyl Cysteine (NAC),0
 29289903,Probiotics,0
 29289903,Theanine,7
-29289903,Carnitine / Acetyl-L-Carnitine,0
+29289903,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 29289903,Omega-3 Supplements,0
 29289903,Curcumin,0
 29289903,Caffeine,0
@@ -3230,7 +3323,7 @@ userID,itemID,rating
 29510105,No Fap (or otherwise avoiding masturbation),7
 29510105,Glycine,7
 29510105,Trying to get less sleep,1
-29510105,ALCAR,6
+29510105,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 29510105,Selegiline (L-deprenyl),7
 29510105,Uridine,5
 29510105,Tryptophan,4
@@ -3253,7 +3346,7 @@ userID,itemID,rating
 29510105,Shilajit,2
 29510105,Ashwagandha,7
 29510105,Vegetarian diet,1
-29510105,Carnitine / Acetyl-L-Carnitine,8
+29510105,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 29510105,Trying to get more sleep,6
 29510105,Theanine,1
 29510105,Ketogenic diet,7
@@ -3301,7 +3394,7 @@ userID,itemID,rating
 29543447,DMAE,4
 29543447,Trying to get more sleep,7
 29543447,Adderall,10
-29543447,ALCAR,6
+29543447,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 29543447,Armodafinil,0
 29543447,Magnesium,7
 29543447,Creatine,7
@@ -3315,7 +3408,7 @@ userID,itemID,rating
 29543447,Bacopa,0
 29543447,No Fap (or otherwise avoiding masturbation),0
 29543447,N-Acetyl-L-Tyrosine,3
-29543447,Carnitine / Acetyl-L-Carnitine,4
+29543447,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 29543447,Tryptophan,7
 29543447,Rhodiola,0
 29543447,5-HTP,4
@@ -3355,7 +3448,7 @@ userID,itemID,rating
 29942880,Melatonin,8
 29942880,Inositol,3
 29942880,Valerian Root,9
-29942880,Carnitine / Acetyl-L-Carnitine,10
+29942880,Carnitine / Acetyl-L-Carnitine (ALCAR),10
 29942880,Cordyceps,9
 29942880,Berberine,3
 29942880,Omega-3 Supplements,9
@@ -3367,7 +3460,7 @@ userID,itemID,rating
 29942880,Ginkgo Biloba,1
 29942880,Ashwagandha,7
 29996741,Ashwagandha,2
-29996741,Carnitine / Acetyl-L-Carnitine,3
+29996741,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 29996741,Theanine,5
 29996741,Modafinil,8
 29996741,Caffeine,7
@@ -3421,7 +3514,7 @@ userID,itemID,rating
 30461508,Berberine,6
 30461508,Lion's Mane,4
 30461508,St John's Wort,5
-30461508,ALCAR,8
+30461508,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 30461508,Ginkgo Biloba,2
 30461508,Bright lights in morning / Dawn simulator,1
 30461508,Nicotinamide mononucleotide,8
@@ -3442,7 +3535,7 @@ userID,itemID,rating
 30461508,Phenibut,5
 30461508,Nicotinamide riboside,8
 30461508,Huperzine-A,3
-30461508,Carnitine / Acetyl-L-Carnitine,8
+30461508,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 30461508,Valerian Root,3
 30461508,Phenylpiracetam,7
 30461508,Ketogenic diet,5
@@ -3473,7 +3566,7 @@ userID,itemID,rating
 30913619,GABA,9
 30913619,Nicotine,3
 30913619,Bright lights in morning / Dawn simulator,8
-30913619,Carnitine / Acetyl-L-Carnitine,2
+30913619,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 30913619,Theanine,8
 30913619,Magnesium,9
 30913619,Adderall,7
@@ -3546,7 +3639,7 @@ userID,itemID,rating
 31293330,Caffeine,6
 31293330,"Fermented drinks (Kefir, Kombucha...)",0
 31293330,Huperzine-A,0
-31293330,ALCAR,0
+31293330,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 31293330,SAM-e,0
 31293330,Aniracetam,0
 31293330,Magnesium,0
@@ -3627,7 +3720,7 @@ userID,itemID,rating
 3133122,Ketogenic diet,3
 3133122,No Fap (or otherwise avoiding masturbation),2
 3133122,Theanine,3
-3133122,ALCAR,0
+3133122,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 31578067,Berberine,2
 31578067,Theanine,2
 31578067,Alpha-GPC,1
@@ -3644,7 +3737,7 @@ userID,itemID,rating
 31578067,"SSRIs (Prozac, Lexapro...)",6
 31578067,Tianeptine,4
 31578067,Probiotics,1
-31578067,ALCAR,2
+31578067,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 31578067,Vegan diet,0
 31578067,CBD,9
 31578067,Vegetarian diet,1
@@ -3714,7 +3807,7 @@ userID,itemID,rating
 31657912,St John's Wort,0
 31657912,Nicotine,5
 3181122,Modafinil,7
-31864418,Carnitine / Acetyl-L-Carnitine,0
+31864418,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 31864418,Nicotine,7
 31864418,5-HTP,0
 31864418,Kava,4
@@ -3780,7 +3873,7 @@ userID,itemID,rating
 32326359,BPC-157,6
 32326359,Psilocybin (microdose),8
 32326359,Trying to get less sleep,2
-32326359,ALCAR,7
+32326359,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 32326359,Adrafinil,3
 32326359,Sulbutiamine,1
 32326359,Probiotics,5
@@ -3831,7 +3924,7 @@ userID,itemID,rating
 3241682,Noopept,2
 3241682,Oxiracetam,4
 32668471,Rhodiola,3
-32668471,Carnitine / Acetyl-L-Carnitine,0
+32668471,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 32668471,Melatonin,5
 32668471,Creatine,3
 32668471,Ginseng,1
@@ -3861,7 +3954,7 @@ userID,itemID,rating
 32668471,Trying to get more sleep,5
 32668471,Maca,1
 32668471,Niacin,1
-32668471,ALCAR,1
+32668471,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 32668471,Bacopa,3
 32693918,Bacopa,10
 32693918,Magnesium,5
@@ -3930,7 +4023,7 @@ userID,itemID,rating
 33190315,Tianeptine,5
 33190315,Inositol,2
 33190315,Omega-3 Supplements,3
-33190315,ALCAR,2
+33190315,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 33190315,N-acetyl Cysteine (NAC),3
 33190315,Magnesium,2
 33190315,Trying to get more sleep,7
@@ -3976,7 +4069,7 @@ userID,itemID,rating
 33212958,Fasoracetam,3
 33212958,LSD (microdose),9
 33212958,Modafinil,9
-33212958,ALCAR,3
+33212958,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 33212958,Adrafinil,6
 33212958,Adderall,9
 33212958,No Fap (or otherwise avoiding masturbation),8
@@ -3985,7 +4078,7 @@ userID,itemID,rating
 33212958,Niacin,2
 33212958,NSI-189,4
 33212958,MAOIs (except Selegiline),7
-33212958,Carnitine / Acetyl-L-Carnitine,5
+33212958,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 33212958,Phenibut,9
 33212958,Agmatine,7
 33212958,Tryptophan,7
@@ -4051,7 +4144,7 @@ userID,itemID,rating
 33643379,Cordyceps,0
 33643379,Uridine,0
 33643379,Creatine,0
-33643379,ALCAR,0
+33643379,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 33643379,Probiotics,0
 33643379,Rhodiola,0
 33643379,St John's Wort,0
@@ -4059,7 +4152,7 @@ userID,itemID,rating
 33643379,Polygala tenuifolia,0
 33643379,Trying to get less sleep,0
 33643379,N-acetyl Cysteine (NAC),0
-33643379,Carnitine / Acetyl-L-Carnitine,0
+33643379,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 33643379,White jelly mushrooms,0
 33643379,Agmatine,0
 33643379,Ginseng,0
@@ -4127,7 +4220,7 @@ userID,itemID,rating
 34301414,Theanine,6
 34444008,Trying to get more sleep,4
 34444008,Boswellia,2
-34444008,Carnitine / Acetyl-L-Carnitine,0
+34444008,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 34444008,Rhodiola,5
 34444008,Ashwagandha,3
 34444008,CBD,2
@@ -4171,7 +4264,7 @@ userID,itemID,rating
 34490358,"Low intensity cardio (hiking, light jogging...)",8
 34490358,Trying to get more sleep,6
 34490358,Probiotics,5
-34490358,ALCAR,6
+34490358,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 34490358,"High intensity cardio (HIIT, soccer...)",7
 34490358,No Fap (or otherwise avoiding masturbation),5
 34490358,Maca,1
@@ -4238,7 +4331,7 @@ userID,itemID,rating
 35102569,Vegetarian diet,8
 35102569,Adderall,4
 35102569,CBD,1
-35102569,Carnitine / Acetyl-L-Carnitine,4
+35102569,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 35102569,Melatonin,10
 35102569,St John's Wort,8
 35102569,Piracetam,6
@@ -4246,7 +4339,7 @@ userID,itemID,rating
 35102569,Bright lights in morning / Dawn simulator,6
 35102569,Trying to get less sleep,7
 35102569,N-Acetyl-L-Tyrosine,5
-35102569,ALCAR,6
+35102569,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 35102569,Kratom,1
 35102569,Theanine,5
 35321707,Melatonin,0
@@ -4288,7 +4381,7 @@ userID,itemID,rating
 35595771,Rhodiola,4
 35595771,Noopept,3
 3565535,Melatonin,0
-3565535,ALCAR,0
+3565535,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 3565535,Theanine,0
 3565535,Magnesium,10
 3565535,Ashwagandha,6
@@ -4364,7 +4457,7 @@ userID,itemID,rating
 36830533,Selegiline (L-deprenyl),0
 36830533,Coluracetam,5
 36830533,PRL-8-53,2
-36830533,Carnitine / Acetyl-L-Carnitine,3
+36830533,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 36830533,Piracetam,0
 36830533,Methylphenidate (Ritalin),10
 36830533,Melatonin,6
@@ -4374,7 +4467,7 @@ userID,itemID,rating
 36904546,Ketogenic diet,8
 36904546,Boswellia,4
 36904546,Melatonin,6
-36904546,ALCAR,3
+36904546,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 36904546,Nicotine,7
 36904546,N-acetyl Cysteine (NAC),6
 36904546,Ashwagandha,2
@@ -4407,6 +4500,29 @@ userID,itemID,rating
 36930610,Dextroamphetamine (Dexedrine),10
 36930610,Bright lights in morning / Dawn simulator,0
 36930610,Vegetarian diet,0
+36948794,Alprazolam (Xanax),10
+36948794,GABA,0
+36948794,Nicotine,5
+36948794,Psilocybin (microdose),10
+36948794,Kava,0
+36948794,Probiotics,4
+36948794,Valerian Root,5
+36948794,5-HTP,1
+36948794,Caffeine,6
+36948794,Adderall,10
+36948794,"Fermented drinks (Kefir, Kombucha...)",5
+36948794,"Bupropion (Wellbutrin, Zyban...)",8
+36948794,CBD,1
+36948794,Kratom,8
+36948794,Cordyceps,0
+36948794,Magnesium,4
+36948794,Dextroamphetamine (Dexedrine),0
+36948794,Weightlifting,10
+36948794,Phenibut,7
+36948794,Ashwagandha,8
+36948794,Theanine,3
+36948794,Creatine,6
+36948794,Melatonin,7
 36962742,St John's Wort,0
 36962742,Cold shower / Ice bath,0
 36962742,"Low intensity cardio (hiking, light jogging...)",0
@@ -4438,6 +4554,13 @@ userID,itemID,rating
 37079623,Caffeine,10
 37079623,Trying to get more sleep,10
 37079623,No Fap (or otherwise avoiding masturbation),0
+37222656,Intermittent fasting,10
+37222656,Meditation,8
+37222656,Cold shower / Ice bath,6
+37222656,Caffeine,6
+37222656,Ashwagandha,4
+37222656,Bright lights in morning / Dawn simulator,7
+37222656,Trying to get more sleep,10
 37538967,Curcumin,8
 37538967,Ashwagandha,7
 37538967,Black Seed Oil (Nigella sativa),8
@@ -4482,7 +4605,7 @@ userID,itemID,rating
 37574574,GABA,4
 37574574,Ginseng,6
 37574574,CBD,7
-37574574,Carnitine / Acetyl-L-Carnitine,2
+37574574,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 37574574,Armodafinil,10
 37574574,Lion's Mane,5
 37574574,Kratom,7
@@ -4500,7 +4623,7 @@ userID,itemID,rating
 37606660,Creatine,9
 37606660,Nicotine,7
 37606660,No Fap (or otherwise avoiding masturbation),9
-37606660,ALCAR,4
+37606660,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 37606660,Caffeine,8
 37606660,Trying to get more sleep,10
 37695548,Nicotine,1
@@ -4557,7 +4680,7 @@ userID,itemID,rating
 37723753,Phosphatidylserine,1
 37723753,Coluracetam,0
 37723753,"Bupropion (Wellbutrin, Zyban...)",5
-37723753,Carnitine / Acetyl-L-Carnitine,2
+37723753,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 37723753,Shilajit,3
 37723753,"SNRIs (Cymbalta, Effexor...)",7
 37723753,Agmatine,3
@@ -4570,7 +4693,7 @@ userID,itemID,rating
 37723753,Noopept,0
 37723753,"7,8-dihydroxyflavone",3
 37723753,Palmitoylethanolamide,2
-37723753,ALCAR,1
+37723753,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 37723753,Creatine,3
 37723753,N-Acetyl-L-Tyrosine,0
 37723753,Sarcosine,5
@@ -4670,7 +4793,7 @@ userID,itemID,rating
 384701,Caffeine,8
 384701,Aniracetam,6
 384701,Curcumin,2
-384701,ALCAR,2
+384701,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 384701,Selegiline (L-deprenyl),10
 384701,Noopept,8
 384701,Omega-3 Supplements,3
@@ -4731,7 +4854,7 @@ userID,itemID,rating
 38683770,Caffeine,10
 38683770,Ginkgo Biloba,0
 38683770,"SSRIs (Prozac, Lexapro...)",0
-38683770,Carnitine / Acetyl-L-Carnitine,0
+38683770,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 38683770,Creatine,3
 38683770,Ketogenic diet,5
 38683770,"Bupropion (Wellbutrin, Zyban...)",0
@@ -4759,7 +4882,7 @@ userID,itemID,rating
 38767357,Theanine,9
 38767357,Nicotine,5
 38767357,Trying to get more sleep,8
-38767357,Carnitine / Acetyl-L-Carnitine,9
+38767357,Carnitine / Acetyl-L-Carnitine (ALCAR),9
 38767357,Ginseng,2
 38767357,N-acetyl Cysteine (NAC),9
 38767357,Melatonin,7
@@ -4792,7 +4915,7 @@ userID,itemID,rating
 38933411,Omega-3 Supplements,0
 38933411,Black Seed Oil (Nigella sativa),8
 38933411,Alpha-GPC,0
-38933411,Carnitine / Acetyl-L-Carnitine,0
+38933411,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 38933411,Ketogenic diet,4
 38933411,Creatine,0
 38933411,Ashwagandha,0
@@ -4865,7 +4988,7 @@ userID,itemID,rating
 39318916,Sarcosine,0
 39318916,Ashwagandha,0
 39318916,Curcumin,4
-39318916,Carnitine / Acetyl-L-Carnitine,7
+39318916,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 39318916,GABA,0
 39318916,Probiotics,0
 39318916,Trying to get more sleep,7
@@ -4891,7 +5014,7 @@ userID,itemID,rating
 39318916,N-acetyl Cysteine (NAC),7
 39318916,Omega-3 Supplements,4
 39318916,Magnesium,3
-39318916,ALCAR,7
+39318916,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 39356611,Omega-3 Supplements,0
 39356611,Modafinil,1
 39356611,"Bupropion (Wellbutrin, Zyban...)",2
@@ -4912,7 +5035,7 @@ userID,itemID,rating
 39411209,Choline,5
 39411209,Omega-3 Supplements,6
 39411209,Trying to get more sleep,7
-39411209,ALCAR,6
+39411209,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 39411209,Melatonin,4
 39411209,Trying to get less sleep,4
 39411209,Ketogenic diet,2
@@ -4984,7 +5107,7 @@ userID,itemID,rating
 39961790,Magnesium,5
 39961790,Theanine,6
 39961790,"Fermented drinks (Kefir, Kombucha...)",0
-39961790,ALCAR,0
+39961790,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 39961790,Melatonin,7
 39961790,Noopept,2
 39961790,Phenibut,9
@@ -5013,7 +5136,7 @@ userID,itemID,rating
 40017657,Phenylpiracetam,7
 40017657,Ketogenic diet,9
 40017657,Adrafinil,2
-40017657,ALCAR,0
+40017657,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 40017657,St John's Wort,0
 40017657,Sulbutiamine,3
 40017657,Magnesium,6
@@ -5173,7 +5296,7 @@ userID,itemID,rating
 40365723,Bacopa,5
 40365723,Choline,6
 40365723,Omega-3 Supplements,6
-40365723,ALCAR,6
+40365723,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 40365723,Melatonin,6
 40365723,Tianeptine,6
 40365723,Phosphatidylserine,5
@@ -5220,7 +5343,7 @@ userID,itemID,rating
 40585321,Coluracetam,7
 40585321,Theanine,5
 40585321,Creatine,6
-40585321,Carnitine / Acetyl-L-Carnitine,5
+40585321,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 40585321,Bright lights in morning / Dawn simulator,5
 40585321,Ginkgo Biloba,6
 40585321,Bacopa,8
@@ -5253,9 +5376,9 @@ userID,itemID,rating
 40636421,Nicotinamide riboside,9
 40636421,No Fap (or otherwise avoiding masturbation),0
 40636421,Trying to get less sleep,0
-40636421,ALCAR,1
+40636421,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 40636421,5-HTP,1
-40636421,Carnitine / Acetyl-L-Carnitine,0
+40636421,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 40636421,SAM-e,0
 40636421,Niacin,1
 40636421,St John's Wort,0
@@ -5265,7 +5388,7 @@ userID,itemID,rating
 40636421,"SNRIs (Cymbalta, Effexor...)",3
 40636421,Ketogenic diet,0
 40636421,"SSRIs (Prozac, Lexapro...)",1
-40636421,Doepezil,0
+40636421,Donepezil,0
 40636421,Ginkgo Biloba,9
 40636421,Maca,2
 40636421,Tyrosine,2
@@ -5430,6 +5553,11 @@ userID,itemID,rating
 41903414,Cordyceps,3
 41903414,Vegan diet,8
 41903414,Omega-3 Supplements,10
+41933409,Caffeine,5
+41933409,Creatine,5
+41933409,Intermittent fasting,6
+41933409,Adderall,10
+41933409,Weightlifting,7
 42144427,"SSRIs (Prozac, Lexapro...)",2
 42144427,Theanine,0
 42144427,Piracetam,7
@@ -5458,12 +5586,12 @@ userID,itemID,rating
 42144427,Omega-3 Supplements,2
 42144427,Vegetarian diet,1
 42162503,5-HTP,3
-42162503,Carnitine / Acetyl-L-Carnitine,8
+42162503,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 42162503,Glycine,6
 42162503,Selank (or NA-Selank etc),8
 42162503,Pramiracetam,5
 42162503,Phenibut,2
-42162503,ALCAR,9
+42162503,Carnitine / Acetyl-L-Carnitine (ALCAR),9
 42162503,Kratom,9
 42162503,Aniracetam,4
 42162503,Methylphenidate (Ritalin),5
@@ -5776,7 +5904,7 @@ userID,itemID,rating
 43732045,Maca,8
 43732045,Noopept,6
 43732045,Creatine,5
-43732045,ALCAR,2
+43732045,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 43732045,Adrafinil,2
 43732045,Omega-3 Supplements,4
 43732045,Rhodiola,2
@@ -5800,7 +5928,7 @@ userID,itemID,rating
 43752624,Lion's Mane,7
 43752624,Phenibut,8
 43752624,PRL-8-53,0
-43752624,ALCAR,8
+43752624,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 43752624,Kava,6
 43752624,Coluracetam,1
 43752624,Caffeine,4
@@ -5817,7 +5945,7 @@ userID,itemID,rating
 43752624,Meditation,10
 43752624,Nicotinamide mononucleotide,6
 43752624,SAM-e,0
-43752624,Carnitine / Acetyl-L-Carnitine,8
+43752624,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 43752624,Probiotics,8
 43752624,Nicotine,0
 43752624,Magnesium,10
@@ -5887,6 +6015,50 @@ userID,itemID,rating
 43954755,No Fap (or otherwise avoiding masturbation),9
 43954755,Trying to get more sleep,9
 43954755,Magnesium,6
+43998722,Bacopa,2
+43998722,Meditation,3
+43998722,5-HTP,4
+43998722,Weightlifting,7
+43998722,Piracetam,0
+43998722,Rhodiola,1
+43998722,Maca,4
+43998722,GABA,3
+43998722,Choline,4
+43998722,Nicotine,0
+43998722,Trying to get more sleep,6
+43998722,Ginkgo Biloba,2
+43998722,Cold shower / Ice bath,5
+43998722,Caffeine,8
+43998722,Alprazolam (Xanax),7
+43998722,Glycine,1
+43998722,Tyrosine,9
+43998722,Theanine,6
+43998722,Red reishi mushrooms,4
+43998722,Melatonin,1
+43998722,Vegan diet,0
+43998722,Omega-3 Supplements,0
+43998722,Valerian Root,0
+43998722,St John's Wort,0
+43998722,CBD,1
+43998722,Magnesium,4
+43998722,SAM-e,2
+43998722,Ketogenic diet,3
+43998722,Ashwagandha,3
+43998722,Niacin,0
+43998722,"High intensity cardio (HIIT, soccer...)",7
+43998722,"Low intensity cardio (hiking, light jogging...)",3
+43998722,Trying to get less sleep,2
+43998722,Tryptophan,7
+43998722,Vegetarian diet,0
+43998722,Ginseng,1
+43998722,Saffron,2
+43998722,Intermittent fasting,1
+43998722,Lion's Mane,5
+43998722,Adderall,6
+43998722,Alpha-GPC,1
+43998722,Probiotics,6
+43998722,DMAE,0
+43998722,"SSRIs (Prozac, Lexapro...)",5
 44010856,Agmatine,1
 44010856,"SSRIs (Prozac, Lexapro...)",8
 44010856,5-HTP,2
@@ -5911,7 +6083,7 @@ userID,itemID,rating
 44013022,Magnesium,5
 44013022,Lion's Mane,2
 44013022,Ashwagandha,9
-44013022,ALCAR,9
+44013022,Carnitine / Acetyl-L-Carnitine (ALCAR),9
 44013022,Valerian Root,0
 44013022,Melatonin,8
 44013022,Ginkgo Biloba,3
@@ -5927,7 +6099,7 @@ userID,itemID,rating
 44013022,Caffeine,10
 44013022,Theanine,0
 44013022,Piracetam,0
-44013022,Carnitine / Acetyl-L-Carnitine,4
+44013022,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 44013022,Cordyceps,5
 44013022,Glycine,2
 44013022,Bacopa,3
@@ -5954,7 +6126,7 @@ userID,itemID,rating
 44033245,Zembrin,0
 44033245,Magnesium,0
 44033245,"SNRIs (Cymbalta, Effexor...)",0
-44033245,ALCAR,0
+44033245,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 44033245,Modafinil,10
 44033245,"SSRIs (Prozac, Lexapro...)",0
 44033245,Trying to get more sleep,0
@@ -5984,7 +6156,7 @@ userID,itemID,rating
 44033245,Ginkgo Biloba,0
 44033245,Inositol,0
 44033245,DMAE,0
-44033245,Carnitine / Acetyl-L-Carnitine,0
+44033245,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 44033245,Kratom,0
 44033245,Phenibut,10
 4410310,Caffeine,8
@@ -6103,12 +6275,12 @@ userID,itemID,rating
 44350082,Tyrosine,4
 44350082,"SSRIs (Prozac, Lexapro...)",6
 44350082,"Fermented drinks (Kefir, Kombucha...)",2
-44350082,Carnitine / Acetyl-L-Carnitine,7
+44350082,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 44350082,Caffeine,9
 44350082,Probiotics,2
 44350082,Melatonin,9
 44350082,No Fap (or otherwise avoiding masturbation),0
-44350082,ALCAR,6
+44350082,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 44350082,Black Seed Oil (Nigella sativa),3
 44350082,Omega-3 Supplements,6
 44350082,Bright lights in morning / Dawn simulator,2
@@ -6154,7 +6326,7 @@ userID,itemID,rating
 44772705,Magnesium,7
 44772705,Alprazolam (Xanax),5
 44772705,Caffeine,7
-44772705,ALCAR,8
+44772705,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 44772705,Omega-3 Supplements,8
 44772705,Modafinil,0
 44772705,Dextroamphetamine (Dexedrine),8
@@ -6175,7 +6347,7 @@ userID,itemID,rating
 44842206,Probiotics,10
 44842206,Sulbutiamine,1
 44842206,Kanna (except Zembrin),9
-44842206,ALCAR,8
+44842206,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 44842206,Alpha-GPC,10
 44842206,Omega-3 Supplements,4
 44842206,Polygala tenuifolia,7
@@ -6276,7 +6448,7 @@ userID,itemID,rating
 45268564,Kava,5
 45503799,CBD,0
 4567417,Bacopa,0
-4567417,ALCAR,0
+4567417,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 4567417,Creatine,0
 4567417,Trying to get more sleep,0
 4567417,Ginseng,0
@@ -6411,7 +6583,7 @@ userID,itemID,rating
 46432000,Ashwagandha,0
 46432000,Theanine,0
 46432000,"SSRIs (Prozac, Lexapro...)",0
-46539982,ALCAR,2
+46539982,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 46539982,Adderall,10
 46539982,Fasoracetam,9
 46539982,Nicotine,7
@@ -6508,7 +6680,7 @@ userID,itemID,rating
 47391948,Kratom,0
 47391948,Glycine,0
 47391948,Bright lights in morning / Dawn simulator,0
-47391948,Carnitine / Acetyl-L-Carnitine,0
+47391948,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 47391948,Theanine,0
 47391948,Adderall,0
 47391948,"Low intensity cardio (hiking, light jogging...)",0
@@ -6563,7 +6735,7 @@ userID,itemID,rating
 47539597,Tyrosine,0
 47539597,N-acetyl Cysteine (NAC),0
 47539597,Carnivore diet,8
-47539597,Carnitine / Acetyl-L-Carnitine,10
+47539597,Carnitine / Acetyl-L-Carnitine (ALCAR),10
 47539597,Rhodiola,0
 47539597,Theanine,10
 47539597,Omega-3 Supplements,0
@@ -6675,7 +6847,7 @@ userID,itemID,rating
 48108009,Alpha-GPC,8
 48108009,Valerian Root,0
 48108009,Maca,0
-48108009,Carnitine / Acetyl-L-Carnitine,7
+48108009,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 48108009,"7,8-dihydroxyflavone",0
 48108009,Lemon balm,5
 48108009,Armodafinil,3
@@ -6684,10 +6856,10 @@ userID,itemID,rating
 48213136,Noopept,1
 48213136,Phenibut,0
 48213136,Theanine,6
-48213136,Carnitine / Acetyl-L-Carnitine,0
+48213136,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 48213136,Creatine,3
 48213136,Agmatine,5
-48213136,ALCAR,2
+48213136,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 48213136,Emoxypine,5
 48213136,Magnesium,0
 48213136,Tyrosine,1
@@ -6720,7 +6892,7 @@ userID,itemID,rating
 48319607,Modafinil,8
 48319607,Omega-3 Supplements,0
 48319607,Lion's Mane,0
-48319607,ALCAR,0
+48319607,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 48319607,5-HTP,8
 48319607,Glycine,0
 48319607,No Fap (or otherwise avoiding masturbation),6
@@ -6844,7 +7016,7 @@ userID,itemID,rating
 4901431,Magnesium,3
 4901431,NSI-189,5
 4901431,Trying to get more sleep,6
-4901431,Carnitine / Acetyl-L-Carnitine,2
+4901431,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 4901431,Ginkgo Biloba,2
 4901431,Vegan diet,3
 4901431,Aniracetam,4
@@ -6853,7 +7025,7 @@ userID,itemID,rating
 4901431,N-Acetyl-L-Tyrosine,2
 4901431,Kava,5
 4901431,Glycine,4
-4901431,ALCAR,2
+4901431,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 4901431,Creatine,4
 4901431,Vegetarian diet,6
 4901431,Caffeine,6
@@ -6895,7 +7067,7 @@ userID,itemID,rating
 49297163,Trying to get less sleep,0
 49297163,No Fap (or otherwise avoiding masturbation),6
 49297163,Adderall,10
-49297163,Carnitine / Acetyl-L-Carnitine,5
+49297163,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 49297163,"Low intensity cardio (hiking, light jogging...)",9
 49297163,Tianeptine,10
 49297163,Coluracetam,6
@@ -6907,7 +7079,7 @@ userID,itemID,rating
 49297163,Oxiracetam,8
 49297163,Noopept,4
 49297163,Valerian Root,0
-49297163,ALCAR,4
+49297163,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 49297163,Bacopa,4
 49297163,Niacin,0
 49297163,Rhodiola,3
@@ -6980,9 +7152,9 @@ userID,itemID,rating
 49550868,Nicotine,0
 49550868,Phenibut,0
 49550868,Noopept,0
-49550868,ALCAR,0
+49550868,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 49550868,Alpha-GPC,0
-49550868,Carnitine / Acetyl-L-Carnitine,0
+49550868,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 49550868,9-MBC,0
 49550868,PRL-8-53,0
 49550868,Magnesium,0
@@ -7185,6 +7357,55 @@ userID,itemID,rating
 506511,Adderall,9
 50890838,Melatonin,1
 50890838,Omega-3 Supplements,1
+50981936,Caffeine,7
+50981936,Creatine,2
+50981936,Phenibut,3
+50981936,No Fap (or otherwise avoiding masturbation),5
+50981936,Alpha-GPC,2
+50981936,Adrafinil,5
+50981936,Omega-3 Supplements,0
+50981936,DMAE,0
+50981936,Modafinil,8
+50981936,Theanine,5
+50981936,Methylphenidate (Ritalin),10
+50981936,Ginseng,0
+50981936,Maca,5
+50981936,Bacopa,3
+50981936,CBD,0
+50981936,Meditation,4
+50981936,Trying to get more sleep,9
+50981936,Ginkgo Biloba,0
+50981936,Kanna (except Zembrin),5
+50981936,Cold shower / Ice bath,7
+50981936,Ashwagandha,0
+50981936,Rhodiola,0
+50981936,N-acetyl Cysteine (NAC),2
+50981936,Carnitine / Acetyl-L-Carnitine (ALCAR),2
+50981936,Phenylpiracetam,6
+50981936,Ketogenic diet,7
+50981936,Bright lights in morning / Dawn simulator,5
+50981936,Choline,4
+50981936,Melatonin,0
+50981936,Magnesium,1
+50981936,Taurine,0
+50981936,Weightlifting,8
+50981936,Nicotine,9
+50981936,Intermittent fasting,8
+51181630,Kratom,7
+51181630,Creatine,4
+51181630,Nicotine,5
+51181630,Ashwagandha,4
+51181630,"Low intensity cardio (hiking, light jogging...)",7
+51181630,Adderall,8
+51181630,Melatonin,6
+51181630,Cold shower / Ice bath,5
+51181630,Meditation,2
+51181630,Phenibut,8
+51181630,"High intensity cardio (HIIT, soccer...)",7
+51181630,Theanine,5
+51181630,Weightlifting,8
+51181630,Dextroamphetamine (Dexedrine),8
+51181630,Caffeine,6
 51242735,Niacin,5
 51242735,Caffeine,6
 51242735,Tyrosine,4
@@ -7201,7 +7422,7 @@ userID,itemID,rating
 51242735,Rhodiola,5
 51242735,"High intensity cardio (HIIT, soccer...)",10
 51242735,GABA,6
-51242735,ALCAR,2
+51242735,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 51242735,Vegetarian diet,2
 51242735,"Fermented drinks (Kefir, Kombucha...)",2
 51242735,Valerian Root,2
@@ -7253,13 +7474,13 @@ userID,itemID,rating
 51558819,Ashwagandha,8
 51558819,5-HTP,7
 51558819,Nicotine,5
-51558819,ALCAR,7
+51558819,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 51558819,Phenibut,10
 51558819,CBD,8
 51558819,Agmatine,10
 51558819,Creatine,5
 51558819,Choline,5
-51558819,Carnitine / Acetyl-L-Carnitine,5
+51558819,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 51558819,Caffeine,8
 51558819,Methylphenidate (Ritalin),6
 51558819,Melatonin,7
@@ -7366,7 +7587,7 @@ userID,itemID,rating
 51959239,Vegetarian diet,1
 51959239,Selegiline (L-deprenyl),4
 51959239,Phenibut,6
-51986397,Carnitine / Acetyl-L-Carnitine,8
+51986397,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 51986397,Aniracetam,8
 51986397,Caffeine,4
 51986397,Alpha-GPC,8
@@ -7455,11 +7676,11 @@ userID,itemID,rating
 52420810,Melatonin,3
 52420810,"SNRIs (Cymbalta, Effexor...)",3
 52420810,Black Seed Oil (Nigella sativa),1
-52420810,ALCAR,3
+52420810,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 52436325,Meditation,6
 52436325,Tyrosine,5
 52436325,Rhodiola,8
-52436325,Carnitine / Acetyl-L-Carnitine,2
+52436325,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 52436325,Oxiracetam,4
 52436325,Magnesium,5
 52436325,Methylphenidate (Ritalin),10
@@ -7478,7 +7699,7 @@ userID,itemID,rating
 52436325,Lion's Mane,3
 52436325,GABA,4
 52436325,Taurine,10
-52436325,ALCAR,0
+52436325,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 52501248,Valerian Root,2
 52501248,Methylphenidate (Ritalin),9
 52501248,Theanine,4
@@ -7535,7 +7756,7 @@ userID,itemID,rating
 52559310,Omega-3 Supplements,10
 52559310,Choline,9
 52559310,Lion's Mane,2
-52559310,Carnitine / Acetyl-L-Carnitine,1
+52559310,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 52559310,Melatonin,8
 52559310,Trying to get more sleep,10
 52725002,Rhodiola,0
@@ -7594,7 +7815,7 @@ userID,itemID,rating
 53287858,Methylene blue,0
 53287858,Polygala tenuifolia,0
 53287858,IDRA-21,0
-53287858,Carnitine / Acetyl-L-Carnitine,0
+53287858,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 53287858,Lion's Mane,0
 53287858,Nicotine,0
 53287858,Ashwagandha,0
@@ -7619,7 +7840,7 @@ userID,itemID,rating
 53287858,Uridine,0
 53287858,Berberine,0
 53287858,Huperzine-A,0
-53287858,ALCAR,0
+53287858,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 53287858,Valerian Root,0
 53287858,Agmatine,0
 53287858,Kanna (except Zembrin),0
@@ -7772,7 +7993,7 @@ userID,itemID,rating
 53713609,Tryptophan,0
 53713609,Pramiracetam,0
 53713609,Theacrine (aka Teacrine),0
-53713609,ALCAR,0
+53713609,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 53713609,SAM-e,0
 53713609,Alpha-GPC,0
 53713609,Piracetam,0
@@ -7887,7 +8108,7 @@ userID,itemID,rating
 54326358,Ketogenic diet,10
 54326358,Melatonin,2
 54326358,Caffeine,9
-54478125,Carnitine / Acetyl-L-Carnitine,0
+54478125,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 54478125,Theanine,6
 54478125,GABA,5
 54478125,Omega-3 Supplements,8
@@ -8038,7 +8259,7 @@ userID,itemID,rating
 55890835,Trying to get more sleep,10
 55890835,Alpha-GPC,1
 55890835,Phosphatidylserine,7
-55890835,ALCAR,0
+55890835,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 55890835,Agmatine,1
 55891224,Noopept,0
 55891224,Magnesium,1
@@ -8058,7 +8279,7 @@ userID,itemID,rating
 55891224,St John's Wort,5
 55891224,Trying to get more sleep,2
 55891224,Omega-3 Supplements,0
-55891224,Carnitine / Acetyl-L-Carnitine,2
+55891224,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 55891224,Tryptophan,5
 55891224,LSD (microdose),7
 55891224,"Bupropion (Wellbutrin, Zyban...)",6
@@ -8084,6 +8305,19 @@ userID,itemID,rating
 56133194,Bright lights in morning / Dawn simulator,0
 56133194,Trying to get less sleep,0
 56133194,No Fap (or otherwise avoiding masturbation),0
+56304106,Intermittent fasting,0
+56304106,Caffeine,7
+56304106,Cold shower / Ice bath,4
+56304106,Ketogenic diet,0
+56304106,Bright lights in morning / Dawn simulator,3
+56304106,Noopept,1
+56304106,Weightlifting,1
+56304106,Trying to get more sleep,6
+56304106,No Fap (or otherwise avoiding masturbation),5
+56304106,Nicotine,7
+56304106,Meditation,1
+56304106,Choline,8
+56304106,Adderall,9
 56305737,Theanine,6
 56305737,Vegetarian diet,5
 56305737,Ginseng,7
@@ -8096,6 +8330,9 @@ userID,itemID,rating
 56305737,Bacopa,6
 56305737,CBD,4
 56305737,Adderall,9
+56473057,Caffeine,0
+56473057,Theanine,0
+56473057,Methylphenidate (Ritalin),0
 56630459,Black Seed Oil (Nigella sativa),10
 56630459,Kratom,4
 56630459,Rhodiola,4
@@ -8131,7 +8368,7 @@ userID,itemID,rating
 56630459,Bacopa,2
 56630459,"SSRIs (Prozac, Lexapro...)",6
 56630459,Trying to get more sleep,3
-56635469,ALCAR,6
+56635469,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 56635469,N-methyl-cyclazodone,9
 56635469,Alpha-GPC,6
 56635469,Omega-3 Supplements,1
@@ -8259,7 +8496,7 @@ userID,itemID,rating
 56924880,Bright lights in morning / Dawn simulator,8
 56925554,Tyrosine,5
 56925554,Lion's Mane,4
-56925554,ALCAR,6
+56925554,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 56925554,Caffeine,8
 56925554,Omega-3 Supplements,5
 56925554,Bacopa,6
@@ -8281,7 +8518,7 @@ userID,itemID,rating
 5703605,Magnesium,5
 5703605,Melatonin,0
 5703605,Uridine,0
-5703605,ALCAR,0
+5703605,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 5703605,Ashwagandha,0
 5703605,Caffeine,9
 5703605,Bromantane,9
@@ -8453,7 +8690,7 @@ userID,itemID,rating
 57730418,Bright lights in morning / Dawn simulator,3
 57730418,Black Seed Oil (Nigella sativa),0
 57730418,Tianeptine,6
-57730418,Carnitine / Acetyl-L-Carnitine,1
+57730418,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 57730418,Bacopa,0
 57730418,St John's Wort,0
 57730418,LSD (microdose),7
@@ -8483,7 +8720,7 @@ userID,itemID,rating
 57730418,Nicotinamide mononucleotide,0
 57730418,Phenibut,1
 57730418,Cordyceps,1
-57730418,ALCAR,0
+57730418,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 57730418,Piracetam,2
 57730418,N-acetyl Cysteine (NAC),8
 57730418,Theacrine (aka Teacrine),3
@@ -8590,7 +8827,7 @@ userID,itemID,rating
 58357719,Lemon balm,9
 58357719,N-Acetyl-L-Tyrosine,1
 58357719,Huperzine-A,3
-58357719,ALCAR,5
+58357719,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 58357719,Methylphenidate (Ritalin),8
 58386162,Omega-3 Supplements,4
 58386162,Theanine,4
@@ -8668,7 +8905,7 @@ userID,itemID,rating
 58935294,Bacopa,4
 58935294,Meditation,8
 58935294,LSD (microdose),6
-58935294,Carnitine / Acetyl-L-Carnitine,4
+58935294,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 58935294,Magnesium,4
 58935294,Creatine,5
 58935294,Ginkgo Biloba,3
@@ -8753,7 +8990,7 @@ userID,itemID,rating
 59536239,N-acetyl Cysteine (NAC),5
 59536239,Oxiracetam,7
 59536239,Adrafinil,8
-59536239,ALCAR,9
+59536239,Carnitine / Acetyl-L-Carnitine (ALCAR),9
 59536239,Aniracetam,3
 59536239,Cordyceps,7
 59536239,Polygala tenuifolia,6
@@ -8781,7 +9018,7 @@ userID,itemID,rating
 59536239,Vegetarian diet,0
 59536239,Selegiline (L-deprenyl),9
 59536239,Dextroamphetamine (Dexedrine),4
-59536239,Carnitine / Acetyl-L-Carnitine,9
+59536239,Carnitine / Acetyl-L-Carnitine (ALCAR),9
 59536239,Bright lights in morning / Dawn simulator,10
 59536239,Methylliberine (aka Dynamine),7
 59536239,Coluracetam,7
@@ -8854,7 +9091,7 @@ userID,itemID,rating
 596952,Theanine,5
 596952,No Fap (or otherwise avoiding masturbation),5
 596952,Trying to get less sleep,2
-596952,ALCAR,3
+596952,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 596952,Noopept,6
 596952,Caffeine,7
 596952,Magnesium,5
@@ -8868,11 +9105,11 @@ userID,itemID,rating
 59714489,Modafinil,0
 59714489,"Fermented drinks (Kefir, Kombucha...)",5
 59714489,Inositol,3
-59714489,ALCAR,3
+59714489,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 59714489,Valerian Root,2
 59714489,Kava,1
 59714489,LSD (microdose),7
-59714489,Carnitine / Acetyl-L-Carnitine,3
+59714489,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 59714489,Phenibut,4
 59714489,Adderall,3
 59714489,Shilajit,2
@@ -8910,7 +9147,7 @@ userID,itemID,rating
 59714489,Ashwagandha,7
 59714489,Theanine,3
 59714489,"Low intensity cardio (hiking, light jogging...)",7
-59732617,ALCAR,5
+59732617,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 59732617,Lion's Mane,4
 59732617,Choline,5
 59732617,Nicotine,8
@@ -8918,7 +9155,7 @@ userID,itemID,rating
 59732617,Caffeine,6
 59732617,SAM-e,0
 59732617,Psilocybin (microdose),7
-59732617,Carnitine / Acetyl-L-Carnitine,5
+59732617,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 59732617,Piracetam,0
 59732617,5-HTP,0
 59732617,Modafinil,7
@@ -9140,14 +9377,14 @@ userID,itemID,rating
 61089668,N-acetyl Cysteine (NAC),9
 61089668,Magnesium,6
 61089668,Bright lights in morning / Dawn simulator,7
-61089668,Carnitine / Acetyl-L-Carnitine,8
+61089668,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 61089668,Theanine,2
 61089668,Kratom,0
 61089668,Caffeine,9
 61089668,Creatine,0
 61089668,Oxiracetam,0
 61089668,Noopept,7
-61089668,ALCAR,8
+61089668,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 61245364,Caffeine,10
 61245364,Trying to get more sleep,5
 61245364,Lemon balm,6
@@ -9212,13 +9449,13 @@ userID,itemID,rating
 61909752,Alpha-GPC,10
 61909752,5-HTP,4
 61909752,Niacin,5
-61909752,Carnitine / Acetyl-L-Carnitine,6
+61909752,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 61909752,Rhodiola,4
 61909752,Huperzine-A,7
 61909752,N-acetyl Cysteine (NAC),4
 61909752,Bacopa,8
 61909752,Lion's Mane,8
-61909752,ALCAR,8
+61909752,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 61909752,BPC-157,10
 61909752,Nefiracetam,10
 61909752,Maca,1
@@ -9229,6 +9466,19 @@ userID,itemID,rating
 61909752,LSD (microdose),8
 61909752,No Fap (or otherwise avoiding masturbation),5
 61909752,Phenylpiracetam,8
+62059974,Creatine,5
+62059974,Cold shower / Ice bath,1
+62059974,Nicotine,10
+62059974,Intermittent fasting,3
+62059974,"Low intensity cardio (hiking, light jogging...)",1
+62059974,Weightlifting,9
+62059974,Trying to get less sleep,0
+62059974,Melatonin,0
+62059974,No Fap (or otherwise avoiding masturbation),7
+62059974,Magnesium,0
+62059974,Trying to get more sleep,9
+62059974,Caffeine,7
+62059974,"High intensity cardio (HIIT, soccer...)",1
 62287285,Methylphenidate (Ritalin),7
 62287285,Ashwagandha,2
 62287285,Melatonin,4
@@ -9283,7 +9533,7 @@ userID,itemID,rating
 6256308,"SSRIs (Prozac, Lexapro...)",0
 6256308,Niacin,0
 6256308,Ginseng,6
-6256308,Doepezil,6
+6256308,Donepezil,6
 6256308,No Fap (or otherwise avoiding masturbation),3
 6256308,Modafinil,0
 6256308,"Fermented drinks (Kefir, Kombucha...)",4
@@ -9303,7 +9553,7 @@ userID,itemID,rating
 6256308,Piracetam,6
 6256308,Armodafinil,0
 6256308,Theanine,4
-6256308,Carnitine / Acetyl-L-Carnitine,4
+6256308,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 6256308,Black Seed Oil (Nigella sativa),6
 6256308,Choline,4
 62702803,Ginseng,5
@@ -9501,7 +9751,7 @@ userID,itemID,rating
 63560240,Kratom,4
 63560240,Bright lights in morning / Dawn simulator,7
 63560240,Melatonin,1
-63560240,Carnitine / Acetyl-L-Carnitine,6
+63560240,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 63560240,Omega-3 Supplements,5
 63560240,Adderall,2
 63560240,Magnesium,9
@@ -9586,7 +9836,7 @@ userID,itemID,rating
 63930519,Alprazolam (Xanax),8
 63930519,Ginkgo Biloba,4
 63930519,GABA,9
-63930519,Carnitine / Acetyl-L-Carnitine,5
+63930519,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 63930519,Guanfacine,0
 63930519,Modafinil,5
 63930519,9-MBC,2
@@ -9641,7 +9891,7 @@ userID,itemID,rating
 63944675,"Bupropion (Wellbutrin, Zyban...)",7
 63944675,Bright lights in morning / Dawn simulator,6
 63944675,Caffeine,5
-63944675,Carnitine / Acetyl-L-Carnitine,5
+63944675,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 63944675,Creatine,3
 63963260,Adderall,10
 63963260,Omega-3 Supplements,5
@@ -9682,7 +9932,7 @@ userID,itemID,rating
 64053638,Adderall,9
 64053638,No Fap (or otherwise avoiding masturbation),10
 64261288,GABA,6
-64261288,ALCAR,6
+64261288,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 64261288,Kratom,3
 64261288,Curcumin,8
 64261288,Ginkgo Biloba,5
@@ -9770,6 +10020,26 @@ userID,itemID,rating
 64564142,Rhodiola,7
 64581934,Caffeine,5
 64581934,Modafinil,9
+64604013,Phenylpiracetam,5
+64604013,Ginkgo Biloba,0
+64604013,Nicotine,0
+64604013,Ginseng,0
+64604013,Melatonin,0
+64604013,Creatine,0
+64604013,Tryptophan,0
+64604013,Ashwagandha,5
+64604013,Modafinil,7
+64604013,Bacopa,5
+64604013,Lion's Mane,0
+64604013,Armodafinil,9
+64604013,Omega-3 Supplements,0
+64604013,Intermittent fasting,7
+64604013,Alprazolam (Xanax),0
+64604013,Weightlifting,0
+64604013,Tyrosine,0
+64604013,Theanine,7
+64604013,Caffeine,9
+64604013,"Low intensity cardio (hiking, light jogging...)",0
 64757811,Nicotine,4
 64757811,Armodafinil,7
 64757811,Piracetam,7
@@ -9806,7 +10076,7 @@ userID,itemID,rating
 6522802,Psilocybin (microdose),10
 6522802,5-HTP,4
 6522802,N-acetyl Cysteine (NAC),9
-6522802,Carnitine / Acetyl-L-Carnitine,5
+6522802,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 6522802,Ginseng,1
 6522802,Rhodiola,0
 6522802,GABA,4
@@ -9822,7 +10092,7 @@ userID,itemID,rating
 6522802,Adrafinil,8
 6522802,Alpha-GPC,4
 6522802,Oxiracetam,7
-6522802,ALCAR,4
+6522802,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 6522802,Caffeine,8
 6522802,Phenibut,5
 6522802,Melatonin,2
@@ -9899,17 +10169,17 @@ userID,itemID,rating
 65657470,Melatonin,0
 65657470,Trying to get more sleep,0
 65657470,Omega-3 Supplements,0
-65657470,ALCAR,0
+65657470,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 65657470,CBD,0
 65657470,N-Acetyl-L-Tyrosine,0
 65657470,Adderall,8
-65961315,ALCAR,7
+65961315,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 65961315,Omega-3 Supplements,7
 65961315,Ashwagandha,9
 65961315,Magnesium,6
 65961315,N-Acetyl-L-Tyrosine,8
 65961315,Melatonin,4
-65961315,Carnitine / Acetyl-L-Carnitine,8
+65961315,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 65961315,Rhodiola,9
 65961315,No Fap (or otherwise avoiding masturbation),10
 65961315,Caffeine,7
@@ -9923,6 +10193,7 @@ userID,itemID,rating
 65964955,No Fap (or otherwise avoiding masturbation),7
 65964955,Caffeine,7
 65964955,Trying to get more sleep,8
+66086596,Theanine,0
 66103853,Sulbutiamine,5
 66103853,Phenibut,10
 66103853,Theanine,8
@@ -10051,7 +10322,7 @@ userID,itemID,rating
 666753,Trying to get less sleep,0
 666753,Omega-3 Supplements,0
 666753,Theanine,0
-666753,ALCAR,1
+666753,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 666753,Melatonin,3
 666753,Nicotine,2
 666753,Rhodiola,0
@@ -10072,7 +10343,7 @@ userID,itemID,rating
 66821227,Probiotics,4
 66821227,Adderall,8
 66821227,Methylphenidate (Ritalin),10
-66821227,Carnitine / Acetyl-L-Carnitine,4
+66821227,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 66821227,Omega-3 Supplements,0
 66821227,"Fermented drinks (Kefir, Kombucha...)",2
 66821227,Inositol,2
@@ -10100,6 +10371,34 @@ userID,itemID,rating
 66946825,Guanfacine,2
 66946825,Adrafinil,8
 66946825,Aniracetam,8
+67036200,CBD,0
+67036200,"High intensity cardio (HIIT, soccer...)",8
+67036200,Maca,6
+67036200,5-HTP,0
+67036200,Intermittent fasting,9
+67036200,Magnesium,5
+67036200,Ashwagandha,6
+67036200,Tyrosine,0
+67036200,Ginseng,0
+67036200,Nicotine,10
+67036200,Creatine,8
+67036200,Paleo diet,8
+67036200,Caffeine,8
+67036200,Boswellia,0
+67036200,Curcumin,0
+67036200,Alpha-GPC,4
+67036200,Bacopa,0
+67036200,Rhodiola,0
+67036200,Cordyceps,0
+67036200,Weightlifting,9
+67036200,Shilajit,0
+67036200,Bright lights in morning / Dawn simulator,4
+67036200,Ketogenic diet,9
+67036200,Ginkgo Biloba,0
+67036200,Meditation,8
+67036200,Taurine,7
+67036200,GABA,8
+67036200,Carnivore diet,8
 67055283,Trying to get more sleep,7
 67055283,No Fap (or otherwise avoiding masturbation),9
 67055283,Trying to get less sleep,0
@@ -10123,7 +10422,7 @@ userID,itemID,rating
 67280890,Tyrosine,8
 67280890,Theacrine (aka Teacrine),6
 67280890,Noopept,10
-67280890,ALCAR,3
+67280890,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 67280890,Oxiracetam,9
 67280890,MAOIs (except Selegiline),8
 67280890,Curcumin,2
@@ -10142,7 +10441,7 @@ userID,itemID,rating
 67280890,Adrafinil,8
 67280890,Creatine,3
 67280890,Tryptophan,10
-67280890,Carnitine / Acetyl-L-Carnitine,3
+67280890,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 67280890,Phosphatidylserine,6
 67280890,Ashwagandha,10
 67280890,5-HTP,6
@@ -10186,6 +10485,20 @@ userID,itemID,rating
 67500650,Weightlifting,6
 67500650,Trying to get more sleep,6
 67500650,"Fermented drinks (Kefir, Kombucha...)",1
+6756321,Ketogenic diet,10
+6756321,Nicotine,8
+6756321,Omega-3 Supplements,2
+6756321,"Low intensity cardio (hiking, light jogging...)",7
+6756321,Intermittent fasting,7
+6756321,Trying to get more sleep,7
+6756321,Adderall,8
+6756321,No Fap (or otherwise avoiding masturbation),2
+6756321,Meditation,10
+6756321,5-HTP,5
+6756321,"High intensity cardio (HIIT, soccer...)",9
+6756321,Creatine,2
+6756321,CBD,6
+6756321,Caffeine,8
 68062744,Omega-3 Supplements,5
 68062744,Choline,7
 68062744,Noopept,8
@@ -10209,7 +10522,7 @@ userID,itemID,rating
 68062744,Phenibut,6
 68062744,CBD,1
 68062744,Bacopa,6
-68062744,Carnitine / Acetyl-L-Carnitine,5
+68062744,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 68062744,Curcumin,7
 68062744,Adderall,8
 68062744,Huperzine-A,7
@@ -10222,7 +10535,7 @@ userID,itemID,rating
 68062744,Adrafinil,7
 68062744,Caffeine,7
 68062744,Ketogenic diet,8
-68062744,ALCAR,5
+68062744,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 68194180,Modafinil,9
 68194180,Methylphenidate (Ritalin),8
 68194180,Maca,2
@@ -10358,7 +10671,7 @@ userID,itemID,rating
 69351075,Magnesium,5
 69351075,Ashwagandha,0
 69351075,Creatine,1
-69364865,Carnitine / Acetyl-L-Carnitine,3
+69364865,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 69364865,Omega-3 Supplements,3
 69364865,Ashwagandha,0
 69364865,Tyrosine,0
@@ -10425,7 +10738,7 @@ userID,itemID,rating
 69860684,"Fermented drinks (Kefir, Kombucha...)",0
 69860684,Weightlifting,8
 69860684,Oxiracetam,0
-69860684,Carnitine / Acetyl-L-Carnitine,0
+69860684,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 69860684,Aniracetam,0
 69860684,Curcumin,0
 69860684,Probiotics,0
@@ -10435,7 +10748,7 @@ userID,itemID,rating
 69860684,Nicotine,0
 69860684,Theanine,0
 69860684,Creatine,0
-69860684,ALCAR,0
+69860684,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 69860684,Caffeine,0
 69960897,Tryptophan,5
 69960897,5-HTP,3
@@ -10540,7 +10853,7 @@ userID,itemID,rating
 70983079,Vegetarian diet,0
 70983079,Nicotinamide mononucleotide,0
 70983079,Oxiracetam,0
-70983079,Carnitine / Acetyl-L-Carnitine,0
+70983079,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 70983079,Tyrosine,0
 70983079,Saffron,0
 70983079,Choline,0
@@ -10590,7 +10903,7 @@ userID,itemID,rating
 71154481,Theanine,2
 71154481,Emoxypine,2
 71154481,Adderall,7
-71154481,ALCAR,6
+71154481,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 71154481,Noopept,2
 71221485,Trying to get less sleep,2
 71221485,Modafinil,7
@@ -10627,7 +10940,7 @@ userID,itemID,rating
 71465892,Rhodiola,9
 71465892,Choline,1
 71465892,Cordyceps,7
-71465892,Carnitine / Acetyl-L-Carnitine,0
+71465892,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 71465892,Nicotine,4
 71465892,Ketogenic diet,4
 71465892,Creatine,2
@@ -10669,7 +10982,7 @@ userID,itemID,rating
 71728945,Lion's Mane,0
 71728945,SAM-e,8
 71728945,Nicotinamide riboside,5
-71728945,Carnitine / Acetyl-L-Carnitine,0
+71728945,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 71728945,Melatonin,4
 71728945,Huperzine-A,1
 71728945,Nicotinamide mononucleotide,4
@@ -10681,7 +10994,7 @@ userID,itemID,rating
 71728945,"Fermented drinks (Kefir, Kombucha...)",0
 71728945,Bacopa,0
 71728945,Zembrin,2
-71728945,ALCAR,3
+71728945,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 71728945,DMAE,2
 71728945,Phosphatidylserine,1
 71728945,5-HTP,0
@@ -10702,7 +11015,7 @@ userID,itemID,rating
 7177217,Caffeine,6
 7177217,5-HTP,7
 7177217,Melatonin,7
-7177217,ALCAR,4
+7177217,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 7177217,Ashwagandha,5
 7177217,Black Seed Oil (Nigella sativa),5
 7177217,Omega-3 Supplements,10
@@ -10818,7 +11131,7 @@ userID,itemID,rating
 72248525,Kava,0
 72248525,Omega-3 Supplements,0
 72248525,SAM-e,0
-72249895,ALCAR,6
+72249895,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 72249895,Magnesium,7
 72249895,Lion's Mane,2
 72249895,Uridine,4
@@ -10841,6 +11154,22 @@ userID,itemID,rating
 72249895,Ginseng,0
 72249895,Bacopa,4
 72249895,Omega-3 Supplements,6
+72299003,Carnivore diet,9
+72299003,Rhodiola,0
+72299003,Lion's Mane,1
+72299003,N-acetyl Cysteine (NAC),5
+72299003,Tyrosine,1
+72299003,Omega-3 Supplements,0
+72299003,Magnesium,1
+72299003,Caffeine,2
+72299003,Intermittent fasting,5
+72299003,No Fap (or otherwise avoiding masturbation),5
+72299003,Theanine,2
+72299003,Choline,0
+72299003,Kratom,0
+72299003,Noopept,0
+72299003,Ketogenic diet,2
+72299003,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 7231461,Trying to get more sleep,10
 7231461,Berberine,5
 7231461,Nicotine,2
@@ -10895,6 +11224,21 @@ userID,itemID,rating
 72566416,Creatine,8
 72566416,No Fap (or otherwise avoiding masturbation),8
 72566416,Melatonin,7
+72633309,Nicotine,6
+72633309,Creatine,2
+72633309,Caffeine,9
+72633309,Niacin,2
+72633309,Omega-3 Supplements,3
+72633309,N-acetyl Cysteine (NAC),1
+72633309,Adrafinil,3
+72633309,Phenibut,0
+72633309,Choline,3
+72633309,Methylphenidate (Ritalin),10
+72633309,Piracetam,3
+72633309,Noopept,5
+72633309,Alpha-GPC,2
+72633309,Modafinil,7
+72633309,Phenylpiracetam,10
 72873123,Magnesium,8
 72873123,Caffeine,9
 72873123,Nicotine,10
@@ -10902,7 +11246,7 @@ userID,itemID,rating
 72873123,Creatine,5
 72873123,Omega-3 Supplements,5
 72998745,Omega-3 Supplements,0
-72998745,Carnitine / Acetyl-L-Carnitine,0
+72998745,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 72998745,Trying to get less sleep,0
 72998745,GABA,0
 72998745,Agmatine,1
@@ -10921,7 +11265,7 @@ userID,itemID,rating
 72998745,Phenibut,5
 72998745,Maca,0
 72998745,Valerian Root,0
-72998745,ALCAR,0
+72998745,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 72998745,NSI-189,4
 72998745,Theanine,0
 72998745,Bacopa,0
@@ -10967,7 +11311,7 @@ userID,itemID,rating
 73015464,Psilocybin (microdose),8
 73015464,Rhodiola,9
 73015464,Caffeine,7
-73015464,ALCAR,3
+73015464,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 73015464,Theanine,5
 73015464,Melatonin,8
 73015464,Polygala tenuifolia,6
@@ -11154,7 +11498,7 @@ userID,itemID,rating
 74460830,Theanine,6
 74460830,Caffeine,0
 74460830,Trying to get more sleep,8
-74460830,ALCAR,2
+74460830,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 74562638,Ginkgo Biloba,5
 74562638,GABA,7
 74562638,Theanine,6
@@ -11173,7 +11517,7 @@ userID,itemID,rating
 74562638,Bacopa,8
 74562638,Kava,7
 74562638,Cordyceps,6
-74562638,Carnitine / Acetyl-L-Carnitine,8
+74562638,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 74562638,Black Seed Oil (Nigella sativa),5
 74562638,Bromantane,5
 74562638,Curcumin,7
@@ -11237,11 +11581,11 @@ userID,itemID,rating
 75136897,Creatine,7
 75136897,Trying to get less sleep,5
 75136897,Vegetarian diet,7
-75136897,Carnitine / Acetyl-L-Carnitine,5
+75136897,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 75136897,Magnesium,7
 75136897,Fasoracetam,7
 75136897,Sulbutiamine,7
-75136897,ALCAR,8
+75136897,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 75136897,Bacopa,6
 75136897,Phenylpiracetam,9
 75136897,Lemon balm,5
@@ -11270,7 +11614,7 @@ userID,itemID,rating
 75185455,CBD,5
 75185455,Adderall,8
 75185455,Bright lights in morning / Dawn simulator,4
-75185455,Carnitine / Acetyl-L-Carnitine,2
+75185455,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 75185455,No Fap (or otherwise avoiding masturbation),5
 75185455,Trying to get more sleep,8
 75185455,Ashwagandha,1
@@ -11279,7 +11623,7 @@ userID,itemID,rating
 75255715,Pregenolone,5
 75255715,"Low intensity cardio (hiking, light jogging...)",6
 75255715,Modafinil,7
-75255715,ALCAR,4
+75255715,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 75255715,Theanine,4
 75255715,Creatine,1
 75255715,Lemon balm,2
@@ -11316,7 +11660,7 @@ userID,itemID,rating
 75255715,St John's Wort,2
 75255715,Emoxypine,2
 75255715,Omega-3 Supplements,3
-75255715,Carnitine / Acetyl-L-Carnitine,4
+75255715,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 75255715,GABA,1
 75255715,Phenibut,4
 75255715,Ashwagandha,4
@@ -11383,11 +11727,11 @@ userID,itemID,rating
 75900122,Piracetam,2
 75900122,CBD,0
 760024,Ginseng,3
-760024,ALCAR,5
+760024,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 760024,Piracetam,5
 760024,Rhodiola,4
 760024,LSD (microdose),8
-760024,Carnitine / Acetyl-L-Carnitine,4
+760024,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 760024,Huperzine-A,5
 760024,BPC-157,7
 760024,Alprazolam (Xanax),8
@@ -11456,7 +11800,7 @@ userID,itemID,rating
 76127631,Bacopa,3
 76127631,Weightlifting,10
 76127631,Coluracetam,1
-76127631,ALCAR,2
+76127631,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 76127631,Theanine,9
 76127631,Nicotinamide mononucleotide,4
 76127631,Cordyceps,5
@@ -11472,7 +11816,7 @@ userID,itemID,rating
 76127631,"High intensity cardio (HIIT, soccer...)",7
 76127631,Polygala tenuifolia,5
 76127631,Oxiracetam,7
-76127631,Carnitine / Acetyl-L-Carnitine,2
+76127631,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 76127631,Probiotics,1
 76127631,Ashwagandha,4
 76127631,Fasoracetam,7
@@ -11509,12 +11853,12 @@ userID,itemID,rating
 76423851,Agmatine,0
 76423851,Cordyceps,1
 76423851,Melatonin,0
-76423851,Carnitine / Acetyl-L-Carnitine,0
+76423851,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 76423851,White jelly mushrooms,3
 76423851,Rhodiola,0
 76423851,Choline,0
 76423851,"Fermented drinks (Kefir, Kombucha...)",5
-76423851,ALCAR,2
+76423851,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 76423851,Probiotics,5
 76423851,Tryptophan,0
 76423851,Lion's Mane,1
@@ -11530,7 +11874,7 @@ userID,itemID,rating
 76444723,Theanine,5
 76444723,Omega-3 Supplements,1
 76444723,"Fermented drinks (Kefir, Kombucha...)",4
-76444723,Carnitine / Acetyl-L-Carnitine,7
+76444723,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 76444723,Magnesium,1
 76444723,Kava,2
 76444723,N-acetyl Cysteine (NAC),9
@@ -11548,7 +11892,7 @@ userID,itemID,rating
 7649126,CBD,0
 7649126,Phenibut,6
 76514065,Trying to get more sleep,6
-76514065,Doepezil,4
+76514065,Donepezil,4
 76514065,Caffeine,5
 76514065,Carnivore diet,6
 76514065,Creatine,3
@@ -11639,10 +11983,10 @@ userID,itemID,rating
 77478151,Caffeine,5
 77478151,Adderall,6
 77478151,"Fermented drinks (Kefir, Kombucha...)",0
-77548174,ALCAR,0
+77548174,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 77548174,Lion's Mane,0
 77548174,Kratom,3
-77548174,Carnitine / Acetyl-L-Carnitine,0
+77548174,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 77548174,Psilocybin (microdose),6
 77548174,Maca,5
 77548174,Magnesium,6
@@ -11697,7 +12041,7 @@ userID,itemID,rating
 77683735,Alpha-GPC,0
 77683735,Lion's Mane,0
 77683735,Creatine,0
-77683735,ALCAR,0
+77683735,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 77683735,Nicotinamide riboside,0
 77683735,N-acetyl Cysteine (NAC),0
 77683735,Sarcosine,0
@@ -11714,7 +12058,7 @@ userID,itemID,rating
 77683735,Choline,0
 77683735,GABA,0
 77683735,Lemon balm,0
-77683735,Carnitine / Acetyl-L-Carnitine,0
+77683735,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 77683735,Melatonin,0
 77683735,Tyrosine,0
 77683735,Shilajit,0
@@ -11773,8 +12117,8 @@ userID,itemID,rating
 77861949,Curcumin,1
 77861949,Trying to get more sleep,5
 77861949,Maca,1
-77861949,ALCAR,1
-77861949,Carnitine / Acetyl-L-Carnitine,1
+77861949,Carnitine / Acetyl-L-Carnitine (ALCAR),1
+77861949,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 77861949,Adrafinil,1
 77861949,Ginkgo Biloba,1
 77861949,Creatine,1
@@ -11897,6 +12241,27 @@ userID,itemID,rating
 78665184,SAM-e,1
 78665184,"SSRIs (Prozac, Lexapro...)",0
 78665184,Magnesium,4
+78704179,Weightlifting,6
+78704179,"SSRIs (Prozac, Lexapro...)",4
+78704179,Ashwagandha,3
+78704179,Creatine,3
+78704179,Trying to get more sleep,3
+78704179,Intermittent fasting,3
+78704179,Black Seed Oil (Nigella sativa),3
+78704179,Lion's Mane,1
+78704179,Cold shower / Ice bath,5
+78704179,Phenibut,4
+78704179,Omega-3 Supplements,1
+78704179,No Fap (or otherwise avoiding masturbation),5
+78704179,Melatonin,2
+78704179,Valerian Root,1
+78704179,Meditation,4
+78704179,Trying to get less sleep,4
+78704179,Caffeine,1
+78704179,Psilocybin (microdose),8
+78704179,LSD (microdose),9
+78704179,Magnesium,4
+78704179,"Low intensity cardio (hiking, light jogging...)",5
 78786791,Magnesium,8
 78786791,Creatine,0
 78786791,Trying to get more sleep,0
@@ -11962,7 +12327,7 @@ userID,itemID,rating
 78878419,Dextroamphetamine (Dexedrine),8
 78878419,Methylphenidate (Ritalin),6
 78878419,Psilocybin (microdose),7
-78878419,Carnitine / Acetyl-L-Carnitine,3
+78878419,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 78878419,Bright lights in morning / Dawn simulator,3
 78878419,Noopept,4
 78878419,Agmatine,9
@@ -11977,7 +12342,7 @@ userID,itemID,rating
 78878419,Adderall,9
 78878419,Magnesium,6
 78878419,White jelly mushrooms,5
-78878419,ALCAR,3
+78878419,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 78878419,Berberine,3
 78878419,"Fermented drinks (Kefir, Kombucha...)",3
 78878419,Glycine,3
@@ -12052,7 +12417,7 @@ userID,itemID,rating
 79327208,Vegetarian diet,0
 79327208,Omega-3 Supplements,4
 79327208,Melatonin,8
-79361358,Carnitine / Acetyl-L-Carnitine,8
+79361358,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 79361358,Curcumin,5
 79361358,Choline,4
 79361358,Caffeine,8
@@ -12066,7 +12431,7 @@ userID,itemID,rating
 79361358,Trying to get less sleep,1
 79361358,Berberine,6
 79361358,"SSRIs (Prozac, Lexapro...)",7
-79361358,ALCAR,8
+79361358,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 79361358,Rhodiola,7
 79361358,Omega-3 Supplements,6
 79361358,Maca,4
@@ -12124,7 +12489,7 @@ userID,itemID,rating
 79580404,Omega-3 Supplements,5
 79580404,"SNRIs (Cymbalta, Effexor...)",5
 79580404,Noopept,9
-79580404,ALCAR,8
+79580404,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 79580404,5-HTP,5
 79580404,Rhodiola,9
 79580404,Phenylpiracetam,7
@@ -12230,7 +12595,7 @@ userID,itemID,rating
 7972306,Sulbutiamine,8
 7972306,Caffeine,9
 7972306,Huperzine-A,8
-7972306,ALCAR,1
+7972306,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 7972306,Methylphenidate (Ritalin),8
 7972306,"Bupropion (Wellbutrin, Zyban...)",0
 7972306,Niacin,3
@@ -12304,7 +12669,7 @@ userID,itemID,rating
 8024245,Modafinil,10
 8024245,Ketogenic diet,10
 8024245,Nicotine,5
-80317762,ALCAR,4
+80317762,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 80317762,Caffeine,9
 80317762,Trying to get more sleep,0
 80317762,Lion's Mane,10
@@ -12349,7 +12714,7 @@ userID,itemID,rating
 80401484,Ginseng,0
 80401484,Caffeine,6
 80401484,Pregenolone,5
-80401484,ALCAR,4
+80401484,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 80401484,Rhodiola,0
 80401484,Ginkgo Biloba,0
 80401484,Tryptophan,6
@@ -12392,7 +12757,7 @@ userID,itemID,rating
 80480697,Theanine,2
 80480697,Bacopa,0
 80480697,Melatonin,0
-80480697,ALCAR,2
+80480697,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 80480697,Trying to get more sleep,2
 80480697,N-acetyl Cysteine (NAC),3
 80480697,Magnesium,0
@@ -12431,9 +12796,9 @@ userID,itemID,rating
 80481758,Lion's Mane,0
 80481758,SAM-e,0
 80481758,Uridine,0
-80481758,Carnitine / Acetyl-L-Carnitine,0
+80481758,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 80481758,Dextroamphetamine (Dexedrine),0
-80481758,ALCAR,0
+80481758,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 80481758,Piracetam,0
 80481758,"SNRIs (Cymbalta, Effexor...)",0
 80481758,GABA,0
@@ -12560,14 +12925,14 @@ userID,itemID,rating
 80967374,Carnivore diet,8
 80967374,Kratom,7
 80967374,Magnesium,1
-80967374,ALCAR,1
+80967374,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 80967374,Aniracetam,10
 80967374,DMAE,4
 80967374,Bromantane,0
 80967374,Creatine,1
 80967374,Glycine,2
 80967374,Semax (or NA-Semax etc),9
-80967374,Carnitine / Acetyl-L-Carnitine,2
+80967374,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 80967374,Ginkgo Biloba,4
 80967374,Caffeine,5
 80967374,"Fermented drinks (Kefir, Kombucha...)",0
@@ -12629,6 +12994,11 @@ userID,itemID,rating
 8133206,CBD,3
 8133206,"SNRIs (Cymbalta, Effexor...)",9
 8133206,Caffeine,5
+81418412,Intermittent fasting,6
+81418412,Weightlifting,7
+81418412,Caffeine,5
+81418412,Creatine,6
+81418412,Adderall,10
 81501773,Shilajit,4
 81501773,"Fermented drinks (Kefir, Kombucha...)",2
 81501773,Trying to get more sleep,7
@@ -12676,7 +13046,7 @@ userID,itemID,rating
 81574938,Noopept,0
 81574938,Theanine,0
 81574938,Kratom,0
-81574938,ALCAR,5
+81574938,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 81614692,"SSRIs (Prozac, Lexapro...)",8
 81614692,Choline,0
 81614692,Bright lights in morning / Dawn simulator,0
@@ -12705,6 +13075,21 @@ userID,itemID,rating
 82004921,Theanine,10
 82004921,No Fap (or otherwise avoiding masturbation),10
 82004921,Caffeine,10
+82047179,Weightlifting,9
+82047179,Cold shower / Ice bath,1
+82047179,Theanine,0
+82047179,Nicotine,9
+82047179,Trying to get more sleep,10
+82047179,Sulbutiamine,0
+82047179,Adrafinil,0
+82047179,No Fap (or otherwise avoiding masturbation),0
+82047179,Creatine,0
+82047179,Bright lights in morning / Dawn simulator,5
+82047179,Phenibut,7
+82047179,Alpha-GPC,1
+82047179,Caffeine,8
+82047179,Magnesium,0
+82047179,Melatonin,9
 82070290,Probiotics,1
 82070290,N-acetyl Cysteine (NAC),6
 82070290,Red reishi mushrooms,5
@@ -12729,7 +13114,7 @@ userID,itemID,rating
 82070290,Creatine,7
 82070290,"Fermented drinks (Kefir, Kombucha...)",1
 82070290,Piracetam,7
-82070290,ALCAR,4
+82070290,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 82070290,Caffeine,4
 82070290,Cordyceps,8
 82070290,Omega-3 Supplements,2
@@ -12772,11 +13157,11 @@ userID,itemID,rating
 82495097,Bacopa,4
 82495097,Palmitoylethanolamide,0
 82495097,Selank (or NA-Selank etc),0
-82495097,Carnitine / Acetyl-L-Carnitine,0
+82495097,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 82495097,Theacrine (aka Teacrine),0
 82495097,Picamilon,0
 82495097,Polygala tenuifolia,5
-82495097,ALCAR,0
+82495097,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 82495097,Nefiracetam,0
 82495097,LSD (microdose),2
 82495097,Choline,0
@@ -12823,7 +13208,7 @@ userID,itemID,rating
 8266220,CBD,2
 8266220,Caffeine,6
 82809865,Theanine,6
-82809865,Carnitine / Acetyl-L-Carnitine,6
+82809865,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 82809865,Theacrine (aka Teacrine),6
 82809865,Phenylpiracetam,6
 82809865,Zembrin,7
@@ -12837,7 +13222,7 @@ userID,itemID,rating
 82809865,Piracetam,7
 82809865,Niacin,2
 82809865,Bromantane,7
-82809865,ALCAR,6
+82809865,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 82809865,CBD,0
 82809865,Palmitoylethanolamide,7
 8290488,Melatonin,6
@@ -12878,7 +13263,7 @@ userID,itemID,rating
 83131271,Melatonin,8
 83131271,Phenibut,10
 83131271,Dextroamphetamine (Dexedrine),10
-83131271,ALCAR,7
+83131271,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 83131271,Fasoracetam,7
 83131271,N-Acetyl-L-Tyrosine,5
 83131271,"Fermented drinks (Kefir, Kombucha...)",1
@@ -12900,7 +13285,7 @@ userID,itemID,rating
 83131271,Agmatine,7
 83131271,Kratom,10
 83131271,Oxiracetam,2
-83131271,Carnitine / Acetyl-L-Carnitine,7
+83131271,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 83131271,Creatine,6
 83131271,Armodafinil,9
 83131271,Glycine,4
@@ -12993,7 +13378,7 @@ userID,itemID,rating
 83716276,GABA,0
 83716276,Alpha-GPC,7
 83716276,Choline,0
-83716276,ALCAR,8
+83716276,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 83716276,Pramiracetam,0
 83716276,Weightlifting,10
 83716276,Omega-3 Supplements,7
@@ -13131,13 +13516,13 @@ userID,itemID,rating
 84347228,Adderall,8
 84347228,Piracetam,3
 84463559,Omega-3 Supplements,1
-84463559,ALCAR,1
+84463559,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 84463559,Black Seed Oil (Nigella sativa),4
 84463559,St John's Wort,2
 84463559,Ketogenic diet,5
 84463559,5-HTP,4
 84463559,Trying to get less sleep,0
-84463559,Carnitine / Acetyl-L-Carnitine,0
+84463559,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 84463559,Trying to get more sleep,5
 84463559,"SSRIs (Prozac, Lexapro...)",7
 84463559,Adrafinil,0
@@ -13166,7 +13551,7 @@ userID,itemID,rating
 84471340,Weightlifting,8
 84471340,Vegetarian diet,5
 84471340,Bright lights in morning / Dawn simulator,6
-84545651,Carnitine / Acetyl-L-Carnitine,2
+84545651,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 84545651,Creatine,6
 84545651,Curcumin,6
 84545651,Ginkgo Biloba,10
@@ -13202,6 +13587,27 @@ userID,itemID,rating
 84553705,Melatonin,0
 84553705,Nicotine,0
 84553705,Magnesium,3
+84583238,"Low intensity cardio (hiking, light jogging...)",6
+84583238,Theanine,8
+84583238,Carnivore diet,0
+84583238,No Fap (or otherwise avoiding masturbation),10
+84583238,Tyrosine,9
+84583238,Bacopa,0
+84583238,Magnesium,7
+84583238,Trying to get more sleep,7
+84583238,Valerian Root,9
+84583238,Caffeine,8
+84583238,Cold shower / Ice bath,4
+84583238,Weightlifting,10
+84583238,Melatonin,10
+84583238,Lion's Mane,0
+84583238,GABA,8
+84583238,Trying to get less sleep,2
+84583238,Ashwagandha,7
+84583238,Probiotics,5
+84583238,Omega-3 Supplements,5
+84583238,5-HTP,5
+84583238,Intermittent fasting,3
 84655179,CBD,4
 84655179,Rhodiola,6
 84655179,Ashwagandha,4
@@ -13223,8 +13629,8 @@ userID,itemID,rating
 84655179,Boswellia,2
 84655179,Choline,7
 84655179,Theanine,8
-84655179,Carnitine / Acetyl-L-Carnitine,5
-84655179,ALCAR,5
+84655179,Carnitine / Acetyl-L-Carnitine (ALCAR),5
+84655179,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 84677695,Rhodiola,0
 84677695,Melatonin,0
 84677695,Choline,0
@@ -13271,7 +13677,7 @@ userID,itemID,rating
 8537260,Ginseng,1
 8537260,5-HTP,2
 8537260,Sulbutiamine,6
-8537260,ALCAR,7
+8537260,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 8537260,Bright lights in morning / Dawn simulator,8
 8537260,Theanine,6
 8537260,Alpha-GPC,8
@@ -13672,7 +14078,7 @@ userID,itemID,rating
 87490432,Bright lights in morning / Dawn simulator,5
 87490432,Bromantane,5
 87490432,Phenylpiracetam,6
-87490432,ALCAR,1
+87490432,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 87490432,Omega-3 Supplements,2
 87490432,Agmatine,5
 87490432,N-acetyl Cysteine (NAC),4
@@ -13775,7 +14181,7 @@ userID,itemID,rating
 88349246,Inositol,0
 88349246,Bright lights in morning / Dawn simulator,0
 88349246,Alpha-GPC,1
-88349246,ALCAR,5
+88349246,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 88349246,Phenibut,4
 88349246,Modafinil,3
 88349246,Trying to get more sleep,3
@@ -13828,7 +14234,7 @@ userID,itemID,rating
 88391525,Black Seed Oil (Nigella sativa),0
 88391525,Alpha-GPC,7
 88391525,Ashwagandha,6
-88391525,Carnitine / Acetyl-L-Carnitine,0
+88391525,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 88391525,Inositol,7
 88391525,Tryptophan,8
 88391525,N-acetyl Cysteine (NAC),0
@@ -13838,6 +14244,53 @@ userID,itemID,rating
 88498839,Theanine,0
 88498839,Piracetam,0
 88498839,Caffeine,0
+8859132,Adrafinil,7
+8859132,Rhodiola,2
+8859132,Omega-3 Supplements,2
+8859132,Uridine,8
+8859132,Alpha-GPC,0
+8859132,Carnitine / Acetyl-L-Carnitine (ALCAR),7
+8859132,"High intensity cardio (HIIT, soccer...)",8
+8859132,Noopept,5
+8859132,Alprazolam (Xanax),0
+8859132,Caffeine,6
+8859132,Valerian Root,7
+8859132,Polygala tenuifolia,2
+8859132,Modafinil,6
+8859132,5-HTP,0
+8859132,Lemon balm,6
+8859132,Kava,8
+8859132,Magnesium,8
+8859132,Phenibut,10
+8859132,"SSRIs (Prozac, Lexapro...)",8
+8859132,Aniracetam,5
+8859132,Phenylpiracetam,9
+8859132,Shilajit,7
+8859132,Ashwagandha,1
+8859132,Adderall,0
+8859132,Huperzine-A,7
+8859132,Theanine,6
+8859132,Sulbutiamine,6
+8859132,No Fap (or otherwise avoiding masturbation),6
+8859132,Melatonin,3
+8859132,Bromantane,0
+8859132,"7,8-dihydroxyflavone",2
+8859132,N-acetyl Cysteine (NAC),9
+8859132,Black Seed Oil (Nigella sativa),0
+8859132,N-Acetyl-L-Tyrosine,1
+8859132,Cordyceps,8
+8859132,Nicotine,0
+8859132,Meditation,9
+8859132,Bacopa,1
+8859132,SAM-e,0
+8859132,Lion's Mane,6
+8859132,St John's Wort,2
+8859132,Zembrin,8
+8859132,Choline,2
+8859132,Kanna (except Zembrin),9
+8859132,Kratom,0
+8859132,Fasoracetam,7
+8859132,Maca,7
 886457,Kava,7
 886457,Creatine,8
 886457,Glycine,8
@@ -13849,7 +14302,7 @@ userID,itemID,rating
 886457,N-Acetyl-L-Tyrosine,7
 886457,Alpha-GPC,7
 886457,5-HTP,5
-886457,ALCAR,2
+886457,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 886457,No Fap (or otherwise avoiding masturbation),0
 886457,Vegan diet,5
 886457,Rhodiola,5
@@ -13882,7 +14335,7 @@ userID,itemID,rating
 88755543,Vegetarian diet,6
 88755543,LSD (microdose),10
 88755543,Melatonin,7
-88755543,ALCAR,5
+88755543,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 88755543,Omega-3 Supplements,4
 88755543,Phenylpiracetam,9
 88755543,Lion's Mane,9
@@ -13934,6 +14387,38 @@ userID,itemID,rating
 88996036,Ashwagandha,4
 88996036,Phenibut,0
 88996036,N-acetyl Cysteine (NAC),0
+89108629,PRL-8-53,4
+89108629,Coluracetam,3
+89108629,Semax (or NA-Semax etc),7
+89108629,Modafinil,10
+89108629,Phenibut,9
+89108629,LSD (microdose),7
+89108629,Ashwagandha,5
+89108629,Psilocybin (microdose),7
+89108629,Kava,5
+89108629,Choline,2
+89108629,Lion's Mane,4
+89108629,Ketogenic diet,5
+89108629,Meditation,8
+89108629,No Fap (or otherwise avoiding masturbation),7
+89108629,Rhodiola,4
+89108629,Valerian Root,4
+89108629,Alpha-GPC,3
+89108629,Melatonin,8
+89108629,N-Acetyl-L-Tyrosine,2
+89108629,Nicotine,5
+89108629,Phenylpiracetam,6
+89108629,Adderall,8
+89108629,CBD,4
+89108629,Creatine,2
+89108629,Noopept,6
+89108629,Caffeine,6
+89108629,"Bupropion (Wellbutrin, Zyban...)",5
+89108629,Huperzine-A,2
+89108629,Ginkgo Biloba,2
+89108629,5-HTP,2
+89108629,Adrafinil,2
+89108629,Carnitine / Acetyl-L-Carnitine (ALCAR),9
 89156123,"Fermented drinks (Kefir, Kombucha...)",1
 89156123,LSD (microdose),0
 89156123,Kratom,1
@@ -13987,7 +14472,7 @@ userID,itemID,rating
 89568938,"Bupropion (Wellbutrin, Zyban...)",6
 89568938,Rhodiola,5
 89568938,Bromantane,6
-89568938,ALCAR,1
+89568938,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 89568938,Maca,1
 89568938,Alpha-GPC,2
 89568938,Theacrine (aka Teacrine),3
@@ -13996,7 +14481,7 @@ userID,itemID,rating
 89568938,Nicotine,10
 89568938,Magnesium,8
 89568938,Boswellia,1
-89568938,Carnitine / Acetyl-L-Carnitine,2
+89568938,Carnitine / Acetyl-L-Carnitine (ALCAR),2
 89568938,Niacin,6
 89568938,5-HTP,2
 89568938,Ashwagandha,6
@@ -14041,7 +14526,7 @@ userID,itemID,rating
 89634656,Rhodiola,8
 89634656,Kava,3
 89634656,Zembrin,0
-89634656,ALCAR,6
+89634656,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 89634656,Sulbutiamine,5
 89634656,Coluracetam,6
 89634656,Ginseng,1
@@ -14160,7 +14645,7 @@ userID,itemID,rating
 9011177,Niacin,2
 9011177,Creatine,7
 9011177,Trying to get less sleep,0
-9011177,ALCAR,5
+9011177,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 9011177,Curcumin,1
 9011177,Omega-3 Supplements,6
 9011177,Magnesium,0
@@ -14174,7 +14659,7 @@ userID,itemID,rating
 9031716,Creatine,0
 9031716,Ketogenic diet,7
 9031716,Psilocybin (microdose),9
-9031716,ALCAR,5
+9031716,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 9031716,Methylphenidate (Ritalin),6
 9031716,Bacopa,4
 9031716,"SSRIs (Prozac, Lexapro...)",0
@@ -14197,7 +14682,7 @@ userID,itemID,rating
 90442458,Cordyceps,3
 90442458,5-HTP,0
 90442458,Lion's Mane,4
-90442458,ALCAR,6
+90442458,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 90442458,Ashwagandha,5
 90442458,Adderall,7
 90442458,CBD,10
@@ -14224,7 +14709,7 @@ userID,itemID,rating
 90462537,Phenibut,2
 90462537,Creatine,3
 90462537,Curcumin,2
-90462537,Carnitine / Acetyl-L-Carnitine,3
+90462537,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 90462537,Ashwagandha,4
 90462537,Lion's Mane,4
 90462537,Alpha-GPC,6
@@ -14240,6 +14725,10 @@ userID,itemID,rating
 90462537,DMHA,8
 90462537,5-HTP,6
 90462537,Nicotine,2
+90679471,Bright lights in morning / Dawn simulator,0
+90679471,Intermittent fasting,7
+90679471,Cold shower / Ice bath,2
+90679471,Caffeine,5
 90723305,Alpha-GPC,0
 90723305,Phenylpiracetam,2
 90723305,Modafinil,2
@@ -14270,7 +14759,7 @@ userID,itemID,rating
 90723305,Tyrosine,5
 90723305,Dextroamphetamine (Dexedrine),4
 90723305,Creatine,0
-90723305,ALCAR,0
+90723305,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 90723305,Selegiline (L-deprenyl),0
 90723305,"Fermented drinks (Kefir, Kombucha...)",0
 90723305,Caffeine,0
@@ -14359,7 +14848,7 @@ userID,itemID,rating
 9145015,Bromantane,3
 9145015,Magnesium,4
 9145015,Zembrin,4
-9145015,ALCAR,3
+9145015,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 9145015,Phenylpiracetam,6
 9145015,Bright lights in morning / Dawn simulator,5
 9145015,Lion's Mane,1
@@ -14373,7 +14862,7 @@ userID,itemID,rating
 91591616,Weightlifting,8
 91591616,Creatine,10
 91591616,Nicotine,7
-91721335,ALCAR,6
+91721335,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 91721335,Creatine,7
 91721335,Phenylpiracetam,6
 91721335,Ashwagandha,4
@@ -14418,7 +14907,7 @@ userID,itemID,rating
 91820365,Sulbutiamine,5
 91820365,Pramiracetam,10
 91820365,Phenylpiracetam,10
-91820365,ALCAR,5
+91820365,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 91820365,Tyrosine,7
 91820365,Piracetam,6
 91820365,Choline,5
@@ -14467,7 +14956,7 @@ userID,itemID,rating
 91909930,No Fap (or otherwise avoiding masturbation),5
 91909930,Ketogenic diet,9
 91909930,Bacopa,6
-91909930,ALCAR,3
+91909930,Carnitine / Acetyl-L-Carnitine (ALCAR),3
 91909930,Caffeine,7
 91909930,Ashwagandha,7
 91909930,Omega-3 Supplements,6
@@ -14587,7 +15076,7 @@ userID,itemID,rating
 92393697,Methylphenidate (Ritalin),10
 92393697,Polygala tenuifolia,6
 92393697,Omega-3 Supplements,1
-92393697,ALCAR,1
+92393697,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 92393697,Trying to get more sleep,6
 92393697,Phenylpiracetam,2
 92393697,Bright lights in morning / Dawn simulator,3
@@ -14620,8 +15109,8 @@ userID,itemID,rating
 92651016,Ketogenic diet,10
 92651016,Theanine,7
 92651016,Curcumin,0
-92651016,Carnitine / Acetyl-L-Carnitine,0
-92651016,ALCAR,0
+92651016,Carnitine / Acetyl-L-Carnitine (ALCAR),0
+92651016,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 92651016,Melatonin,5
 92651016,Trying to get more sleep,5
 92651016,Inositol,5
@@ -14920,7 +15409,7 @@ userID,itemID,rating
 94874648,Pregenolone,4
 94874648,Bright lights in morning / Dawn simulator,0
 94874648,No Fap (or otherwise avoiding masturbation),0
-94874648,ALCAR,1
+94874648,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 94874648,N-acetyl Cysteine (NAC),0
 94874648,Tyrosine,0
 94874648,Choline,0
@@ -14929,7 +15418,7 @@ userID,itemID,rating
 94874648,N-Acetyl-L-Tyrosine,0
 94874648,Glycine,0
 94874648,Melatonin,0
-94874648,Carnitine / Acetyl-L-Carnitine,1
+94874648,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 94874648,Trying to get less sleep,0
 94874648,5-HTP,1
 94874648,Probiotics,0
@@ -14947,7 +15436,7 @@ userID,itemID,rating
 94911347,CBD,0
 94911347,Red reishi mushrooms,0
 94911347,Bacopa,0
-94911347,Carnitine / Acetyl-L-Carnitine,0
+94911347,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 94911347,Melatonin,0
 94911347,Rhodiola,0
 94911347,Uridine,0
@@ -14959,7 +15448,7 @@ userID,itemID,rating
 94911347,Kava,0
 94911347,Alpha-GPC,0
 94911347,5-HTP,0
-94911347,ALCAR,0
+94911347,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 94911347,GABA,0
 94911347,Lemon balm,0
 94911347,Choline,0
@@ -15014,7 +15503,7 @@ userID,itemID,rating
 94936086,Piracetam,0
 94936086,Nicotinamide mononucleotide,0
 94936086,Trying to get less sleep,0
-94936086,ALCAR,0
+94936086,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 94936086,Rhodiola,0
 94936086,Agmatine,0
 94936086,Trying to get more sleep,0
@@ -15025,7 +15514,7 @@ userID,itemID,rating
 94936086,Ginkgo Biloba,0
 94936086,N-acetyl Cysteine (NAC),0
 94936086,Aniracetam,0
-94936086,Carnitine / Acetyl-L-Carnitine,0
+94936086,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 94936086,"7,8-dihydroxyflavone",0
 94936086,Berberine,0
 94936086,Phenylpiracetam,0
@@ -15055,7 +15544,7 @@ userID,itemID,rating
 95141452,Psilocybin (microdose),5
 95198544,Maca,5
 95198544,Cordyceps,5
-95198544,Carnitine / Acetyl-L-Carnitine,5
+95198544,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 95198544,Alpha-GPC,4
 95198544,White jelly mushrooms,2
 95198544,No Fap (or otherwise avoiding masturbation),9
@@ -15179,7 +15668,7 @@ userID,itemID,rating
 95603457,Probiotics,0
 95603457,Omega-3 Supplements,8
 95603457,Melatonin,7
-95603457,ALCAR,0
+95603457,Carnitine / Acetyl-L-Carnitine (ALCAR),0
 95603457,"Fermented drinks (Kefir, Kombucha...)",0
 95847398,Huperzine-A,0
 95847398,Magnesium,0
@@ -15254,7 +15743,7 @@ userID,itemID,rating
 96034873,Aniracetam,6
 96034873,BPC-157,5
 96034873,Maca,7
-96034873,ALCAR,7
+96034873,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 96034873,Alpha-GPC,5
 96034873,Fasoracetam,5
 96034873,Inositol,5
@@ -15274,7 +15763,7 @@ userID,itemID,rating
 96034873,Piracetam,7
 96034873,Pramiracetam,5
 96034873,Oxiracetam,6
-96034873,Carnitine / Acetyl-L-Carnitine,8
+96034873,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 96034873,Glycine,6
 96034873,Creatine,9
 96034873,Tryptophan,5
@@ -15301,9 +15790,9 @@ userID,itemID,rating
 96080349,Trying to get less sleep,0
 96120782,Melatonin,5
 96120782,"Fermented drinks (Kefir, Kombucha...)",0
-96120782,Carnitine / Acetyl-L-Carnitine,7
+96120782,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 96120782,Curcumin,4
-96120782,ALCAR,7
+96120782,Carnitine / Acetyl-L-Carnitine (ALCAR),7
 96120782,Ketogenic diet,5
 96120782,No Fap (or otherwise avoiding masturbation),0
 96120782,Adrafinil,5
@@ -15340,7 +15829,7 @@ userID,itemID,rating
 96175676,Carnivore diet,2
 96175676,Probiotics,5
 96175676,Magnesium,2
-96175676,ALCAR,1
+96175676,Carnitine / Acetyl-L-Carnitine (ALCAR),1
 96175676,Noopept,7
 96175676,"Low intensity cardio (hiking, light jogging...)",6
 96175676,No Fap (or otherwise avoiding masturbation),6
@@ -15359,7 +15848,7 @@ userID,itemID,rating
 96175676,Phenylpiracetam,5
 96175676,Theanine,6
 961795,Theanine,10
-961795,ALCAR,5
+961795,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 961795,No Fap (or otherwise avoiding masturbation),8
 96276765,Melatonin,6
 96276765,No Fap (or otherwise avoiding masturbation),3
@@ -15378,7 +15867,7 @@ userID,itemID,rating
 96276765,Berberine,7
 96276765,Bright lights in morning / Dawn simulator,5
 96276765,Oxiracetam,6
-96276765,Carnitine / Acetyl-L-Carnitine,6
+96276765,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 96276765,5-HTP,2
 96276765,SAM-e,5
 96276765,N-Acetyl-L-Tyrosine,5
@@ -15396,7 +15885,7 @@ userID,itemID,rating
 96276765,Ashwagandha,5
 96276765,Rhodiola,7
 96276765,Cordyceps,8
-96276765,ALCAR,6
+96276765,Carnitine / Acetyl-L-Carnitine (ALCAR),6
 96276765,Coluracetam,6
 96276765,Inositol,2
 96276765,Glycine,3
@@ -15439,10 +15928,10 @@ userID,itemID,rating
 96513361,Trying to get more sleep,8
 96513361,Uridine,4
 96513361,Creatine,4
-96513361,ALCAR,4
+96513361,Carnitine / Acetyl-L-Carnitine (ALCAR),4
 96513361,Melatonin,6
 96513361,Theanine,3
-96513361,Carnitine / Acetyl-L-Carnitine,5
+96513361,Carnitine / Acetyl-L-Carnitine (ALCAR),5
 96513361,Piracetam,5
 96513361,Caffeine,7
 96513361,Coluracetam,8
@@ -15543,7 +16032,7 @@ userID,itemID,rating
 97784298,Fasoracetam,8
 97784298,Noopept,10
 97784298,Nicotine,8
-97784298,Carnitine / Acetyl-L-Carnitine,8
+97784298,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 97784298,Melatonin,8
 97784298,Piracetam,8
 97784298,Aniracetam,6
@@ -15592,7 +16081,7 @@ userID,itemID,rating
 97825568,Probiotics,10
 97825568,5-HTP,8
 97825568,LSD (microdose),10
-97825568,Carnitine / Acetyl-L-Carnitine,8
+97825568,Carnitine / Acetyl-L-Carnitine (ALCAR),8
 97825568,No Fap (or otherwise avoiding masturbation),7
 97825568,Theanine,5
 97825568,Ginkgo Biloba,5
@@ -15729,6 +16218,17 @@ userID,itemID,rating
 98716294,Ashwagandha,8
 98716294,Adderall,5
 98716294,Nicotine,7
+98727366,"Low intensity cardio (hiking, light jogging...)",8
+98727366,"High intensity cardio (HIIT, soccer...)",7
+98727366,Cold shower / Ice bath,7
+98727366,Omega-3 Supplements,5
+98727366,Weightlifting,8
+98727366,"Fermented drinks (Kefir, Kombucha...)",2
+98727366,Caffeine,7
+98727366,Bright lights in morning / Dawn simulator,6
+98727366,Meditation,8
+98727366,Lion's Mane,0
+98727366,Creatine,0
 98728694,Ashwagandha,2
 98728694,Magnesium,0
 98728694,Nicotine,0
