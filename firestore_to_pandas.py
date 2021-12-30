@@ -16,10 +16,15 @@ for key in keys:
 creds = service_account.Credentials.from_service_account_info(cred_dic)
 db = firestore.Client(credentials=creds, project="nootropics-2a049")
 
-users = list(db.collection(u'ratings').stream())
+ratings = list(db.collection(u'ratings').stream())
+users = list(db.collection(u'users').stream())
+
+ratings_dict = list(map(lambda x: x.to_dict(), ratings))
+df = pd.DataFrame(ratings_dict)
 
 users_dict = list(map(lambda x: x.to_dict(), users))
-df = pd.DataFrame(users_dict)
+df_users = pd.DataFrame(users_dict)
+df_users.to_csv("data/users.csv")
 
 start_time = 1638206167
 df = df[df["time"] > start_time]
