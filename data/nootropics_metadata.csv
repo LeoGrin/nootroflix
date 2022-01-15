@@ -17,10 +17,10 @@
 16;Boswellia;Boswellia;Boswellia;Herbs;;;;https://en.wikipedia.org/wiki/Boswellia;https://examine.com/supplements/boswellia-serrata/
 17;Bright lights in morning / Dawn simulator;Morning lights;Bright lights in morning / Dawn simulator;Lifestyle;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_blue_light;https://en.wikipedia.org/wiki/Dawn_simulation;
 18;Bromantane;Bromantane;Bromantane;Other;;;;https://en.wikipedia.org/wiki/Bromantane;
-19;Bupropion (Wellbutrin, Zyban...);Bupropion;Bupropion (Wellbutrin, Zyban...);Anti-depressants;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_bupropion;https://en.wikipedia.org/wiki/Bupropion;
+19;Bupropion (Wellbutrin, Zyban...);Bupropion;Bupropion (Wellbutrin, Zyban...);Anti-depressants;;1;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_bupropion;https://en.wikipedia.org/wiki/Bupropion;
 20;CBD;CBD;CBD;Plant-derived;;;;https://en.wikipedia.org/wiki/Cannabidiol;https://examine.com/supplements/cbd/
 21;Caffeine;Caffeine;Caffeine;Classic;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_caffeine;http://en.wikipedia.org/wiki/Caffeine;http://examine.com/supplements/Caffeine/
-22;"Carnitine / Acetyl-L-Carnitine;ALCAR";Carnitine / ALCAR;Carnitine / Acetyl-L-Carnitine (ALCAR);Nutrients;;;;https://en.wikipedia.org/wiki/Carnitine;https://examine.com/supplements/carnitine/
+22;"Carnitine / Acetyl-L-Carnitine;ALCAR;Carnitine / Acetyl-L-Carnitine (ALCAR)";Carnitine / ALCAR;Carnitine / Acetyl-L-Carnitine (ALCAR);Nutrients;;;;https://en.wikipedia.org/wiki/Carnitine;https://examine.com/supplements/carnitine/
 23;Carnivore diet;Carnivore diet;Carnivore diet;Lifestyle;;;;https://en.wikipedia.org/wiki/Monotrophic_diet#Carnivore_diet;
 24;Cerebrolysin;Cerebrolysin;Cerebrolysin;Peptides;;;;https://en.wikipedia.org/wiki/Cerebrolysin;
 25;Choline;Choline;Choline;Nutrients;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_cdp-choline;http://en.wikipedia.org/wiki/CDP-Choline;http://examine.com/supplements/CDP-choline/
@@ -63,17 +63,17 @@
 61;Melatonin;Melatonin;Melatonin;Classic;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_melatonin;https://en.wikipedia.org/wiki/Melatonin;https://examine.com/supplements/melatonin/
 62;Methylene blue;Methylene blue;Methylene blue;Other;;https://www.reddit.com/r/Nootropics/wiki/highrisk#wiki_methylene_blue;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_methylene_blue;https://en.wikipedia.org/wiki/Methylene_blue;
 63;Methylliberine (aka Dynamine);Methylliberine;Methylliberine (aka Dynamine);Other;;;;https://en.wikipedia.org/wiki/Methylliberine;
-64;Methylphenidate (Ritalin);Methylphenidate;Methylphenidate (Ritalin);Dopamine Modulators;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_methylphenidate_.28ritalin.29;http://en.wikipedia.org/wiki/Methylphenidate;
+64;Methylphenidate (Ritalin);Methylphenidate;Methylphenidate (Ritalin);Dopamine Modulators;;1;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_methylphenidate_.28ritalin.29;http://en.wikipedia.org/wiki/Methylphenidate;
 65;Modafinil;Modafinil;Modafinil;Modafinil variants;;https://www.reddit.com/r/Nootropics/wiki/highrisk#wiki_modafinil;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_modafinil;http://en.wikipedia.org/wiki/Modafinil;https://examine.com/supplements/modafinil/
 66;N-Acetyl-L-Tyrosine;N-Acetyl-L-Tyrosine;N-Acetyl-L-Tyrosine;"Nutrients;Amino acids";;;;https://en.wikipedia.org/wiki/N-Acetyl-L-tyrosine;https://examine.com/supplements/l-tyrosine/
 67;N-acetyl Cysteine (NAC);NAC;N-acetyl Cysteine (NAC);Other;;;;https://en.wikipedia.org/wiki/NAC;
-68;N-methyl-cyclazodone;N-methyl-cyclazodone;N-methyl-cyclazodone;Other;;;;https://en.wikipedia.org/wiki/Cyclazodone;
+68;N-methyl-cyclazodone;N-methyl-cyclazodone;N-methyl-cyclazodone;Other;;1;;https://en.wikipedia.org/wiki/Cyclazodone;
 69;NSI-189;NSI-189;NSI-189;Other;;;;https://en.wikipedia.org/wiki/NSI-189;
 70;Nefiracetam;Nefiracetam;Nefiracetam;Racetams;;;;https://en.wikipedia.org/wiki/Nefiracetam;https://examine.com/supplements/nefiracetam/
 71;Niacin;Niacin;Niacin;"Nutrients;Vitamins";;;;https://en.wikipedia.org/wiki/Niacin;
 72;Nicotinamide mononucleotide;Nicotinamide mononucleotide;Nicotinamide mononucleotide;Other;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_nicotinamide_mononucleotide;https://en.wikipedia.org/wiki/Nicotinamide_mononucleotide;https://examine.com/supplements/anti-aging-and-longevity/
 73;Nicotinamide riboside;Nicotinamide riboside;Nicotinamide riboside;Other;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_nicotinamide_riboside;https://en.wikipedia.org/wiki/Nicotinamide_riboside;https://examine.com/supplements/anti-aging-and-longevity/
-74;Nicotine;Nicotine;Nicotine;Classic;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_nicotine;http://en.wikipedia.org/wiki/Nicotine;http://examine.com/supplements/Nicotine/
+74;Nicotine;Nicotine;Nicotine;Classic;;1;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_nicotine;http://en.wikipedia.org/wiki/Nicotine;http://examine.com/supplements/Nicotine/
 75;No Fap (or otherwise avoiding masturbation);No Fap;No Fap (or otherwise avoiding masturbation);Lifestyle;;;;https://en.wikipedia.org/wiki/NoFap;
 76;Noopept;Noopept;Noopept;Peptides;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_noopept;http://en.wikipedia.org/wiki/Noopept;http://examine.com/supplements/Noopept/
 77;Omega-3 Supplements;Omega-3;Omega-3 Supplements;"Classic;Nutrients";;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_omega_3;http://en.wikipedia.org/wiki/Omega_3;
@@ -96,8 +96,8 @@
 93;Red reishi mushrooms;Red reishi mushrooms;Red reishi mushrooms;Mushrooms;;;;https://en.wikipedia.org/wiki/Lingzhi_(mushroom)#:~:text=Lingzhi%2C%20Ganoderma%20lingzhi%2C%20also%20known,cork%2Dlike%2C%20and%20flat.;
 94;Rhodiola;Rhodiola;Rhodiola;Herbs;;;https://www.reddit.com/r/Nootropics/wiki/index/#wiki_rhodiola_rosea;http://en.wikipedia.org/wiki/Rhodiola_rosea;http://examine.com/supplements/Rhodiola+Rosea/
 95;SAM-e;SAM-e;SAM-e;Other;;;;https://en.wikipedia.org/wiki/SAM-e;https://examine.com/supplements/s-adenosyl-methionine/
-96;SNRIs (Cymbalta, Effexor...);SNRIs;SNRIs (Cymbalta, Effexor...);Anti-depressants;;;;https://en.wikipedia.org/wiki/SNRIs;
-97;SSRIs (Prozac, Lexapro...);SSRIs;SSRIs (Prozac, Lexapro...);Anti-depressants;;;;https://en.wikipedia.org/wiki/SSRIs;
+96;SNRIs (Cymbalta, Effexor...);SNRIs;SNRIs (Cymbalta, Effexor...);Anti-depressants;;1;;https://en.wikipedia.org/wiki/SNRIs;
+97;SSRIs (Prozac, Lexapro...);SSRIs;SSRIs (Prozac, Lexapro...);Anti-depressants;;1;;https://en.wikipedia.org/wiki/SSRIs;
 98;Saffron;Saffron;Saffron;Herbs;;;;https://en.wikipedia.org/wiki/Saffron;https://examine.com/supplements/saffron/
 99;Sarcosine;Sarcosine;Sarcosine;"Nutrients;Amino acids";;;;https://en.wikipedia.org/wiki/Sarcosine;https://examine.com/supplements/sarcosine/
 100;Selank (or NA-Selank etc);Selank;Selank (or NA-Selank etc);Peptides;;https://www.reddit.com/r/Nootropics/wiki/highrisk#wiki_n-acetyl_selank;;https://en.wikipedia.org/wiki/Selank;

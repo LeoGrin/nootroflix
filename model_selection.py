@@ -27,8 +27,8 @@ data = Dataset.load_from_df(df_clean, reader)
 
 
 # We can now use this dataset as we please, e.g. calling cross_validate
-ALL_ALGO = False
-RANDOM_SEARCH = False
+ALL_ALGO = True
+RANDOM_SEARCH = True
 
 
 if ALL_ALGO:

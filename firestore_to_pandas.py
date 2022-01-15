@@ -47,7 +47,7 @@ df = df.set_index("userID").join(to_join)
 
 df = df[df["time"] == df["min_time"]]
 
-df = df[["itemID", "rating"]].reset_index()
+df = df[["itemID", "rating", "issue"]].reset_index()
 
 df_ssc = pd.read_csv("data/dataset_clean_right_names.csv")
 
@@ -78,8 +78,12 @@ total_df["itemID"] = list(map(lambda x: translation_dic[x], total_df["itemID"]))
 # total_df = total_df[total_df["itemID"].isin(nootropics_with_enough_ratings)]
 
 
-total_df.to_csv("data/total_df.csv", index=False)
+total_df[["userID", "itemID", "rating"]].to_csv("data/total_df.csv", index=False)
+
 
 df["itemID"] = list(map(lambda x: translation_dic[x], df["itemID"]))
 
-df.to_csv("data/new_df.csv", index=False)  # only new ratings
+df[["userID", "itemID", "rating"]].to_csv("data/new_df.csv", index=False)  # only new ratings
+
+df.to_csv("data/new_df_full.csv", index=False)  # only new ratings
+
