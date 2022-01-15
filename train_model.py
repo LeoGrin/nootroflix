@@ -71,7 +71,6 @@ def interpret_prediction(trainset, model, avalaible_nootropics, user_id, predict
 
 def predict(rating_dic):
     df_clean = pd.read_csv("data/total_df.csv")
-    df_clean["rating"] = list(map(lambda x: -2 if x == 0 else x, df_clean["rating"]))
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
     avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics]# if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
     #######################
@@ -96,7 +95,7 @@ def predict(rating_dic):
     total_df = df_clean.append(new_user_df)
 
     # A reader is still needed but only the rating_scale param is requiered.
-    reader = Reader(rating_scale=(-2, 10))
+    reader = Reader(rating_scale=(0, 10))
 
     # The columns must correspond to user id, item id and ratings (in that order).
     new_trainset = Dataset.load_from_df(total_df, reader).build_full_trainset()
