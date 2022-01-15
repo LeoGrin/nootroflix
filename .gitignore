@@ -5,3 +5,8 @@ data/nootropics_survey_reddit_converted_2.csv
 experiments/kelly.py
 .Rproj.user
 *.Rproj
+spotlight/
+recommenders/
+analysis/
+logs.txt
+
