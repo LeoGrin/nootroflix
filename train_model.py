@@ -80,7 +80,7 @@ def predict(rating_dic):
     #final_model = KNNBaseline(k=100, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
     final_model = KNNBaseline(**{'verbose': False, 'k': 100, 'min_k': 5,
                                  'sim_options': {'name': 'msd', 'user_based': False},
-                                 'bsl_options': {'method': 'sgd', 'n_epochs': 100, 'reg': 0}})
+                                 'bsl_options': {'method': 'sgd', 'n_epochs': 100}})
     #final_model = SVD(**{'n_factors': 10, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
 
     new_user_id = max(df_clean["userID"]) + 1 #TODO if merge
