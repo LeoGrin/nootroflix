@@ -334,9 +334,9 @@ if st.session_state["mode"] == "results":
             styled_names.append(make_name(row))
         new_result_df["Nootropic"] = styled_names
         new_result_df = new_result_df[["Nootropic", "Prediction", "Mean rating"]]
-        new_result_df.columns = ["Nootropic",
-                                 """<div title="The rating we predict you would enter if you tried the nootropic">Prediction</div>""",
-                                 """<div title="The mean of other users ratings">Mean rating</div>"""]
+        #new_result_df.columns = ["Nootropic",
+        #                         """<div title="The rating we predict you would enter if you tried the nootropic">Prediction</div>""",
+        #                         """<div title="The mean of other users ratings">Mean rating</div>"""]
         st.write(new_result_df.to_html(escape=False, index=False), unsafe_allow_html=True)#.style.format("{:.1f}").applymap(left_align))
 
 
