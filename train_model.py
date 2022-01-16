@@ -72,15 +72,15 @@ def interpret_prediction(trainset, model, avalaible_nootropics, user_id, predict
 def predict(rating_dic):
     df_clean = pd.read_csv("data/total_df.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
-    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics]# if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
+    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
     #######################
     # Fit surprise model
     #######################
 
     #final_model = KNNBaseline(k=100, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
-    final_model = KNNBaseline(**{'verbose': False, 'k': 100, 'min_k': 5,
+    final_model = KNNBaseline(**{'verbose': False, 'k': 50, 'min_k': 5, #check
                                  'sim_options': {'name': 'msd', 'user_based': False},
-                                 'bsl_options': {'method': 'sgd', 'n_epochs': 100}})
+                                 'bsl_options': {'method': 'sgd', 'n_epochs': 50}})
     #final_model = SVD(**{'n_factors': 10, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
 
     new_user_id = max(df_clean["userID"]) + 1 #TODO if merge
@@ -199,6 +199,7 @@ if __name__ == """__main__""":
                       'Emoxypine': None,
                       'Picamilon': None,
                       'Dihexa': None,
+                      'Epicorasimmunebooster': None,
                       'Epicorasimmunebooster': None,
                       'LSD': 0,
                       'Adderall': 8,
