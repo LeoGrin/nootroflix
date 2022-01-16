@@ -5,6 +5,7 @@ from surprise import Dataset
 from surprise import Reader
 from copy import deepcopy
 import streamlit as st
+from utils import load_database
 
 
 
@@ -70,9 +71,8 @@ def interpret_prediction(trainset, model, avalaible_nootropics, user_id, predict
         print(predicted_ratings[i])
 
 def predict(rating_dic):
-    df_clean = pd.read_csv("data/total_df.csv")
+    df_clean = load_database()
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
-    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
     #######################
     # Fit surprise model
     #######################
@@ -80,7 +80,7 @@ def predict(rating_dic):
     #final_model = KNNBaseline(k=100, min_k=2, sim_options={'name': 'pearson_baseline', 'user_based': True})
     final_model = KNNBaseline(**{'verbose': False, 'k': 50, 'min_k': 5, #check
                                  'sim_options': {'name': 'msd', 'user_based': False},
-                                 'bsl_options': {'method': 'sgd', 'n_epochs': 50}})
+                                 'bsl_options': {'method': 'sgd', 'n_epochs': 20}})
     #final_model = SVD(**{'n_factors': 10, 'n_epochs': 20, 'lr_all': 0.005, 'reg_all': 0.1})
 
     new_user_id = max(df_clean["userID"]) + 1 #TODO if merge
@@ -102,6 +102,8 @@ def predict(rating_dic):
 
     ## Fit the best model
     final_model.fit(new_trainset)
+
+
 
 
     predicted_ratings = []
@@ -139,23 +141,41 @@ def predict(rating_dic):
 
     return result_df.sort_values("Prediction", ascending=False, ignore_index=True)
 
-def evaluate(rating_dic):
-    df_clean = pd.read_csv("data/total_df.csv")
-    avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
-    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
 
+# def evaluate_2(new_user_id, final_model, rating_dic):
+#     df_clean = load_database()
+#     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
+#     final_model.sim -= np.eye(len(final_model.sim)) #check if necesseray
+#     predicted_ratings = []
+#     old_baseline_user = final_model.compute_baselines()[0][-1]
+#     rating_dic_copy = deepcopy(rating_dic)
+#     rated_avalaible_nootropics = [nootropic for nootropic in rating_dic.keys() if nootropic in avalaible_nootropics]
+#     for nootropic in rated_avalaible_nootropics[:10]:  # limit to 10 the number to prevent to much time to fit #TODO make it easier to compute
+#         rating_dic_copy.pop(nootropic)
+#         baseline_nootropic = 0
+#
+#         rating_dic_copy = deepcopy(rating_dic)
+#     for nootropic in avalaible_nootropics:
+#         loo_baseline_user = np.mean([rating - baseline_item for item in rating_dic.pop]) + reg / (len(rating_dic.pop))
+#
+#         predicted_ratings.append(final_model.predict(new_user_id, nootropic).est - old_baseline_user + loo_baseline_user)
+
+def evaluate(rating_dic):
+    df_clean = load_database()
+    avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
     loo_ratings = []
     rating_dic_copy = deepcopy(rating_dic)
     rated_avalaible_nootropics = [nootropic for nootropic in rating_dic.keys() if nootropic in avalaible_nootropics]
+    rated_avalaible_nootropics = np.random.choice(rated_avalaible_nootropics, min(len(rated_avalaible_nootropics), 10), replace=False)
     if len(rated_avalaible_nootropics) < 2:
         st.warning("Please rate more nootropics")
         return None
     else:
-        for nootropic in rated_avalaible_nootropics:
-                rating_dic_copy.pop(nootropic)
-                new_result_df = predict(rating_dic_copy)
-                loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Prediction"].values[0])
-                rating_dic_copy = deepcopy(rating_dic)
+        for nootropic in rated_avalaible_nootropics: #limit to 10 the number to prevent to much time to fit #TODO make it easier to compute
+            rating_dic_copy.pop(nootropic)
+            new_result_df = predict(rating_dic_copy)
+            loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Prediction"].values[0])
+            rating_dic_copy = deepcopy(rating_dic)
 
     #item_baselines_df = get_item_baseline()
     #item_baselines = item_baselines_df[item_baselines_df["nootropic"].isin(rating_dic.keys())]["item_baselines"].values
