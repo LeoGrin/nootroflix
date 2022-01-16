@@ -5,6 +5,7 @@ from surprise import Dataset
 from surprise import Reader
 from copy import deepcopy
 import streamlit as st
+from utils import load_database
 
 
 
@@ -70,7 +71,7 @@ def interpret_prediction(trainset, model, avalaible_nootropics, user_id, predict
         print(predicted_ratings[i])
 
 def predict(rating_dic):
-    df_clean = pd.read_csv("data/total_df.csv")
+    df_clean = load_database()
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
     avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
     #######################
@@ -140,7 +141,7 @@ def predict(rating_dic):
     return result_df.sort_values("Prediction", ascending=False, ignore_index=True)
 
 def evaluate(rating_dic):
-    df_clean = pd.read_csv("data/total_df.csv")
+    df_clean = load_database()
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
     avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
 
