@@ -4,9 +4,9 @@ from google.oauth2 import service_account
 import os
 
 
-LOAD_USERS = False
-LOAD_RATINGS = False
-LOAD_POSITIONS = True
+LOAD_USERS = True
+LOAD_RATINGS = True
+LOAD_POSITIONS = False
 # key_dict = json.loads(st.secrets["textkey"])
 # for heroku
 keys = ["project_id", "type", "private_key_id", "private_key",
