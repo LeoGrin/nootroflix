@@ -4,7 +4,7 @@ from surprise import SlopeOne, CoClustering, KNNWithZScore, KNNWithMeans, SVDpp,
 import surprise
 from surprise.model_selection import cross_validate, GridSearchCV
 from surprise import Reader, Dataset, KNNBaseline, SVD, accuracy
-from experiments.new_names import all_nootropics
+#from experiments.new_names import all_nootropics
 import numpy as np
 import json
 from sklearn.metrics import mean_squared_error
@@ -28,7 +28,7 @@ data = Dataset.load_from_df(df_clean, reader)
 
 # We can now use this dataset as we please, e.g. calling cross_validate
 ALL_ALGO = True
-RANDOM_SEARCH = True
+RANDOM_SEARCH = False
 
 
 if ALL_ALGO:
