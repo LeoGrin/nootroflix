@@ -368,7 +368,7 @@ if st.session_state["mode"] == "results":
             accuracy_df["nootropic"] = accuracy_df["nootropic_short"]
             accuracy_df = accuracy_df.drop(columns=["nootropic_short"])
             #
-            st.write("For each nootropic, we hid your rating to our model, and had the model try to guess it.")
+            st.write("For 10 nootropics, we hid your rating to our model, and had the model try to guess it.")
             st.caption("Some nootropics don't have enough data right now to be included.")
             st.table(accuracy_df.set_index("nootropic").style.format("{:.1f}").applymap(left_align))
             #print("saving...")
