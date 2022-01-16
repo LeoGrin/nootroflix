@@ -1,9 +1,10 @@
 scikit_surprise==1.1.1
+extra_streamlit_components==0.1.52
 pandas==1.2.5
 streamlit==1.3.0
-firebase_admin==5.1.0
 numpy==1.20.2
-extra_streamlit_components==0.1.52
+firebase_admin==5.1.0
 experiments==0.1.0
 protobuf==3.19.3
-scikit_learn==1.0.1
+scikit_learn==1.0.2
+surprise==0.1
