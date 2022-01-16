@@ -19,6 +19,9 @@ from firebase_admin.firestore import SERVER_TIMESTAMP
 #                            "accuracy_check": accuracy_check,
 #                          "time":time}, ignore_index=True)
 #     df.to_csv(database, index=False)
+@st.cache
+def load_database():
+    return pd.read_csv("data/total_df.csv")
 
 def save_new_ratings(rating_dic, issues_dic, question_dic, is_true_ratings, accuracy_check, user_id, pseudo, time, collection_ratings, collection_users):
     for item in rating_dic.keys():
