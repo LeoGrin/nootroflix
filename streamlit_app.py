@@ -12,6 +12,7 @@ import pandas as pd
 
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
+
 @st.cache()
 def get_metadata(path):
     df = pd.read_csv(path, sep=";")
@@ -43,9 +44,6 @@ if deployed:
 session_id = get_report_ctx().session_id
 cookie_manager = stx.CookieManager()
 
-if "counter" not in st.session_state:
-    st.session_state.counter = 1 #weird hack to allow scrolling to the top on refresh
-
 
 if "already_run" not in st.session_state.keys():
     st.session_state.already_run = True
@@ -62,6 +60,7 @@ else:
         #print("cookie set")
     if "save_start" not in st.session_state.keys(): #now that we have a user_id, we can save the start time
         st.session_state.save_start = True
+        st.session_state.scroll = False  #weird hack to allow scrolling to the top on refresh
 
 if deployed and "save_start" in st.session_state.keys() and st.session_state.save_start: #check that we can save (we have a user_id) and we haven't already saved start
     save_position("start", user_id, session_id, time.time(), collection_position)
@@ -125,7 +124,7 @@ def go_to_mode(mode):
             if not key.startswith("permanent"):
                 st.session_state["permanent_" + key] = st.session_state[key]
 
-        st.session_state.counter += 1
+        st.session_state.scroll = True
         if deployed:
             save_position(mode, user_id, session_id, time.time(), collection_position)
 
@@ -271,6 +270,7 @@ if st.session_state["mode"] == "questions":
         with col2:
             st.form_submit_button("Get results!", on_click=go_to_mode("results"))
 
+
 if st.session_state["mode"] == "results":
     slider_dic = {}
     radio_dic = {}
@@ -296,7 +296,6 @@ if st.session_state["mode"] == "results":
     st.caption("Some nootropics don't have enough data right now to be included.")
     st.caption(""" ⚠️"Nootropic" is used here in a broad sense, and some of these substances present a risk of side effects or addiction.""")
     with st.spinner('Loading...'):
-        print("predict")
         new_result_df = predict(slider_dic)
 
         new_result_df = new_result_df.merge(pd.read_csv("data/nootropics_metadata.csv", sep=";"), on="nootropic", how="left")
@@ -359,6 +358,8 @@ if st.session_state["mode"] == "results":
     else:
         with st.spinner('Loading...'):
             accuracy_df = evaluate(slider_dic)
+
+        st.session_state.scroll = False
         if not accuracy_df is None:
             # Replace by short results
             accuracy_df = accuracy_df.merge(
@@ -382,14 +383,12 @@ if st.session_state["mode"] == "results":
     st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
 
 
-
-
-components.html(
-    f"""
-        <p>{st.session_state.counter}</p>
-        <script>
-            window.parent.document.querySelector('section.main').scrollTo(0, 0);
-        </script>
-    """,
-    height=0
-)
+if "scroll" in st.session_state.keys() and st.session_state.scroll:
+    components.html(
+        f"""
+            <script>
+                window.parent.document.querySelector('section.main').scrollTo(0, 0);
+            </script>
+        """,
+        height=0
+    )
