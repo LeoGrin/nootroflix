@@ -153,10 +153,10 @@ def evaluate(rating_dic):
         return None
     else:
         for nootropic in rated_avalaible_nootropics:
-                rating_dic_copy.pop(nootropic)
-                new_result_df = predict(rating_dic_copy)
-                loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Prediction"].values[0])
-                rating_dic_copy = deepcopy(rating_dic)
+            rating_dic_copy.pop(nootropic)
+            new_result_df = predict(rating_dic_copy)
+            loo_ratings.append(new_result_df[new_result_df["nootropic"] == nootropic]["Prediction"].values[0])
+            rating_dic_copy = deepcopy(rating_dic)
 
     #item_baselines_df = get_item_baseline()
     #item_baselines = item_baselines_df[item_baselines_df["nootropic"].isin(rating_dic.keys())]["item_baselines"].values
