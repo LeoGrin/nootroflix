@@ -2,7 +2,7 @@ scikit_surprise==1.1.1
 pandas==1.2.5
 streamlit==1.3.0
 firebase_admin==5.1.0
-numpy==1.20.2
+numpy==1.20.0
 extra_streamlit_components==0.1.52
 experiments==0.1.0
 protobuf==3.19.3
