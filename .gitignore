@@ -15,3 +15,6 @@ old/
 model_selection/
 .env
 experiments/
+.DS_store
+.idea/
+trash
