@@ -19,6 +19,7 @@ def train_model():
     # train the model once and save everything we need in cache
     df_clean = load_database()
     avalaible_nootropics = np.unique(df_clean["itemID"])
+    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
     final_model = KNNBaseline(**{'verbose': False, 'k': 50, 'min_k': 5,  # check
                                  'sim_options': {'name': 'msd', 'user_based': False},
                                  'bsl_options': {'method': 'sgd', 'n_epochs': 500}})
