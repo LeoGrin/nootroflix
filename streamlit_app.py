@@ -1,11 +1,8 @@
 import streamlit as st
-import extra_streamlit_components as stx
 import datetime
 import time
 from train_model import predict, evaluate
 from utils import save_new_ratings, generate_user_id, load_collection, save_position
-from streamlit.report_thread import get_report_ctx
-import streamlit.components.v1 as components
 import pandas as pd
 
 
@@ -36,35 +33,22 @@ def get_metadata(path):
 
 nootropics_dic, all_nootropics = get_metadata('data/nootropics_metadata.csv')
 
-deployed = True
-
-if deployed:
-    collection_ratings, collection_users, collection_position = load_collection()
-
-session_id = get_report_ctx().session_id
-cookie_manager = stx.CookieManager()
-
+user_id = 2
 
 if "already_run" not in st.session_state.keys():
     st.session_state.already_run = True
-    cookie_manager.get("userID")
 else:
-    user_id = cookie_manager.get("userID")
-    print(user_id)
     if not user_id:
+        print("no")
         #print("No username found, generating one...")
         #TODO simpler with session state?
-        user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id) #cached, refreshed if new session_id
+        #user_id = generate_user_id("data/dataset_clean_right_names.csv", session_id) #cached, refreshed if new session_id
         #print("UserID: {}".format(user_id))
-        cookie_manager.set("userID", user_id, expires_at=datetime.datetime(year=2050, month=2, day=2))
         #print("cookie set")
     if "save_start" not in st.session_state.keys(): #now that we have a user_id, we can save the start time
         st.session_state.save_start = True
         st.session_state.scroll = False  #weird hack to allow scrolling to the top on refresh
 
-if deployed and "save_start" in st.session_state.keys() and st.session_state.save_start: #check that we can save (we have a user_id) and we haven't already saved start
-    save_position("start", user_id, session_id, time.time(), collection_position)
-    st.session_state.save_start = False
 
 st.title(':brain: Nootroflix')
 original_title = '<p style="color:Pink; font-size: 20px;">Rate the nootropics you\'ve tried, and we\'ll tell you which one should work for you!</p>'
@@ -105,8 +89,6 @@ def go_to_mode(mode):
                 st.session_state["permanent_" + key] = st.session_state[key]
 
         st.session_state.scroll = True
-        if deployed:
-            save_position(mode, user_id, session_id, time.time(), collection_position)
 
     return callback_mode
 
@@ -301,18 +283,6 @@ if st.session_state["mode"] == "results":
         #                         """<div title="The mean of other users ratings">Mean rating</div>"""]
         st.write(new_result_df.to_html(escape=False, index=False), unsafe_allow_html=True)#.style.format("{:.1f}").applymap(left_align)
 
-
-    if deployed:
-        save_new_ratings(rating_dic=slider_dic,
-                     issues_dic = radio_dic,
-                     question_dic = question_dic,
-                     is_true_ratings=not st.session_state["permanent_not_true_ratings"],
-                     accuracy_check=False,
-                     user_id=user_id,
-                     pseudo = pseudo,
-                     time = time.time(),
-                     collection_ratings=collection_ratings,
-                     collection_users=collection_users)
     st.write("")
     st.header("🧠 How accurate is our model?")
     if len(slider_dic) < 2:
