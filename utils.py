@@ -19,11 +19,10 @@ from firebase_admin.firestore import SERVER_TIMESTAMP
 #                            "accuracy_check": accuracy_check,
 #                          "time":time}, ignore_index=True)
 #     df.to_csv(database, index=False)
-@st.cache
 def load_database():
     df_clean = pd.read_csv("data/total_df.csv")
     avalaible_nootropics = np.unique(df_clean["itemID"]) #we want to ignore nootropics that are not in the df
-    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
+    #avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 30]
     return df_clean[df_clean["itemID"].isin(avalaible_nootropics)]
 
 def save_new_ratings(rating_dic, issues_dic, question_dic, is_true_ratings, accuracy_check, user_id, pseudo, time, collection_ratings, collection_users):
@@ -56,7 +55,7 @@ def save_position(position, user_id, session_id, time, collection_position):
 
 
 
-@st.cache
+@st.cache(ttl=36000)
 def generate_user_id(dataset_path, session_id):
     #generate a user_id
     user_id = np.random.randint(1000, 1e8)
