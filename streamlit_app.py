@@ -13,7 +13,7 @@ import pandas as pd
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 
-@st.cache()
+@st.experimental_singleton()
 def get_metadata(path):
     df = pd.read_csv(path, sep=";")
     nootropics_dic = {}
@@ -36,7 +36,7 @@ def get_metadata(path):
 
 nootropics_dic, all_nootropics = get_metadata('data/nootropics_metadata.csv')
 
-deployed = True
+deployed = False
 
 if deployed:
     collection_ratings, collection_users, collection_position = load_collection()
