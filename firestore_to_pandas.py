@@ -24,8 +24,8 @@ if LOAD_USERS:
     users = list(db.collection(u'users').stream())
     users_dict = list(map(lambda x: x.to_dict(), users))
     df_users = pd.DataFrame(users_dict)
-    print(df_users)
-    #df_users.to_csv("data/users.csv")
+    #print(df_users)
+    df_users.to_csv("data/users.csv")
 
 if LOAD_RATINGS:
 
@@ -44,10 +44,6 @@ if LOAD_RATINGS:
 
     df = df[df["is_true_ratings"] == True]  # remove false ratings
 
-    print("Without ssc, true ratings")
-    print(len(df))
-    print(len(set(df["userID"].values)))
-
     to_join = df.groupby(['userID']).min("time")
 
     to_join = to_join.rename({"time": "min_time"}, axis=1)[["min_time"]]
@@ -57,6 +53,10 @@ if LOAD_RATINGS:
     df = df[df["time"] == df["min_time"]]
 
     df = df[["itemID", "rating", "issue", "time"]].reset_index()
+
+    print("Without ssc, true ratings and one set of ratings per user")
+    print(len(df))
+    print(len(set(df["userID"].values)))
 
     df_ssc = pd.read_csv("data/dataset_clean_right_names.csv")
 

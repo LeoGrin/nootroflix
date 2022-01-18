@@ -1,7 +1,9 @@
 library(tidyverse)
 
 df_ratings <- read_csv("data/new_df.csv")
-df_users <- read_csv("data/users.csv") %>% 
+
+df_users <- read_csv("data/users.csv", col_types=c(.default = "?", 
+                                                   userID = "c")) %>% 
   mutate(focus = if_else(is.na(focus), for_focus, focus),
          cognition = if_else(is.na(cognition), for_cognition, cognition),
          mood = if_else(is.na(mood), for_mood, mood),
@@ -11,7 +13,7 @@ df_users <- read_csv("data/users.csv") %>%
 
 df_metadata <- read_delim("data/nootropics_metadata.csv", delim=";")
 
-#df_users %>% write_csv("data/users_fixed.csv")
+df_users %>% write_csv("data/users_fixed.csv")
 
 df_ratings %>%
   left_join(df_users %>% mutate(userID = as.numeric(userID)), by = c("userID")) %>% 
