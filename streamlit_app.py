@@ -36,7 +36,7 @@ def get_metadata(path):
 
 nootropics_dic, all_nootropics = get_metadata('data/nootropics_metadata.csv')
 
-deployed = False
+deployed = True
 
 if deployed:
     collection_ratings, collection_users, collection_position = load_collection()
@@ -69,17 +69,6 @@ if deployed and "save_start" in st.session_state.keys() and st.session_state.sav
 st.title(':brain: Nootroflix')
 original_title = '<p style="color:Pink; font-size: 20px;">Rate the nootropics you\'ve tried, and we\'ll tell you which one should work for you!</p>'
 st.markdown(original_title, unsafe_allow_html=True)
-#col1, col2 = st.columns([1, 1.25])
-#with col1:
-#    st.markdown("**Your results await at the bottom of the page **")
-#with col2:
-#    st.image("images/arrow.png", width=25)
-#st.text("")
-
-#if st.button("More infos"):
-#    st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
-#    st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
-#    st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
 
 if "mode" not in st.session_state.keys():
     st.session_state["mode"] = "selection"
@@ -98,16 +87,7 @@ def go_to_mode_rating():
             if "permanent_slider_{}".format(nootropic_name) in st.session_state.keys():
                 del st.session_state["permanent_slider_{}".format(nootropic_name)]
                 del st.session_state["permanent_radio_{}".format(nootropic_name)]
-            #if "permanent_checkbox_{}".format(nootropic_name) in st.session_state.keys():
-            #    del st.session_state["permanent_checkbox_{}".format(nootropic_name)]
-    # for key in st.session_state.keys():
-    #     if key.startswith("checkbox") and not st.session_state[key]:
-    #         nootropic_name = key.split("_")[-1]
-    #         if "permanent_slider_{}".format(nootropic_name) in st.session_state.keys():
-    #             del st.session_state["permanent_slider_{}".format(nootropic_name)]
-    #             del st.session_state["permanent_radio_{}".format(nootropic_name)]
-    #         if "permanent_checkbox_{}".format(nootropic_name) in st.session_state.keys():
-    #             del st.session_state["permanent_{}".format(key)]
+
     #Check that at least one nootropic is selected
     for key in st.session_state.keys():
         if key.startswith("checkbox"):
@@ -213,25 +193,6 @@ if st.session_state["mode"] == "rating":
         with col2:
             st.form_submit_button("Next", on_click=go_to_mode("questions"))
 
-# for i, nootropic in enumerate(classic_nootropics):
-#     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
-#     if checkbox_dic[nootropic]:
-#         slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
-#         radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
-# st.write("")
-# st.header("🧠 Other nootropics")
-# for i, nootropic in enumerate(weird_nootropics):
-#     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
-#     if checkbox_dic[nootropic]:
-#         slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
-#         radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
-# st.header("🧠 Lifestyle")
-# st.caption("Please rate cognitive improvement only")
-# for i, nootropic in enumerate(lifestyle_nootropics):
-#     checkbox_dic[nootropic] = st.checkbox("I've tried {}".format(nootropic))
-#     if checkbox_dic[nootropic]:
-#         slider_dic[nootropic] = st.slider("{} rating".format(nootropic), min_value=0, max_value=10)
-#         radio_dic[nootropic] = st.selectbox("Issues with {}".format(nootropic), possible_issues_list)
 if st.session_state["mode"] == "questions":
     question_form = st.form("question-form")
     with question_form:
