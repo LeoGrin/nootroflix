@@ -297,6 +297,7 @@ if st.session_state["mode"] == "results":
     st.caption(""" ⚠️"Nootropic" is used here in a broad sense, and some of these substances present a risk of side effects or addiction.""")
     with st.spinner('Loading...'):
         new_result_df = predict(slider_dic)
+        new_result_df = new_result_df.sort_values("Prediction", ascending=False, ignore_index=True)
 
         new_result_df = new_result_df.merge(pd.read_csv("data/nootropics_metadata.csv", sep=";"), on="nootropic", how="left")
         new_result_df["Prediction"] = new_result_df["Prediction"].apply(lambda x:round(x, 1))
@@ -358,7 +359,6 @@ if st.session_state["mode"] == "results":
     else:
         with st.spinner('Loading...'):
             accuracy_df = evaluate(slider_dic)
-
         st.session_state.scroll = False
         if not accuracy_df is None:
             # Replace by short results
@@ -368,7 +368,7 @@ if st.session_state["mode"] == "results":
             accuracy_df["nootropic"] = accuracy_df["nootropic_short"]
             accuracy_df = accuracy_df.drop(columns=["nootropic_short"])
             #
-            st.write("For 10 nootropics, we hid your rating to our model, and had the model try to guess it.")
+            st.write("For each nootropics, we hid your rating to our model, and had the model try to guess it.")
             st.caption("Some nootropics don't have enough data right now to be included.")
             st.table(accuracy_df.set_index("nootropic").style.format("{:.1f}").applymap(left_align))
             #print("saving...")
