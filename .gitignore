@@ -4,9 +4,14 @@ data/nootropics_survey_reddit_converted.csv
 data/nootropics_survey_reddit_converted_2.csv
 experiments/kelly.py
 .Rproj.user
+.Rhistory
 *.Rproj
 spotlight/
 recommenders/
 analysis/
 logs.txt
-
+old/
+.ipynb_checkpoints/
+model_selection/
+.env
+experiments/
