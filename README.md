@@ -1,5 +1,5 @@
-# Nootropics recommendation
+https://www.nootroflix.com/
 
-INSERT LINK
+# What is Nootroflix?
 
-Code for the nootropics recommendation system.
+Nootroflix is a recommender system for nootropics.
