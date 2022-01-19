@@ -313,9 +313,9 @@ def deploy():
         st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
         st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
 
-        for key in st.session_state.keys():
-            if key != "mode":
-                del st.session_state[key]
+        del accuracy_df, new_result_df
+        import gc
+        gc.collect()
 
 if __name__ == "__main__":
     deploy()
