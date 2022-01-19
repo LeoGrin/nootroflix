@@ -313,7 +313,10 @@ def deploy():
         st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
         st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
 
-        del accuracy_df, new_result_df
+        # Remove references from global scope
+        for name in dir():
+            if not name.startswith('_'):
+                del globals()[name]
         import gc
         gc.collect()
 
