@@ -108,8 +108,6 @@ def predict(rating_dic):
 
     mean_ratings = [mean_ratings_dic[a] for a in noot_to_rate]
 
-    del avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper
-
 
     return pd.DataFrame({"nootropic": noot_to_rate,
                          "Prediction": predicted_ratings,
@@ -153,9 +151,6 @@ def evaluate(rating_dic):
             pred = rating_upper
         loo_ratings.append(pred)
     mean_ratings = [mean_ratings_dic[noot] for noot in rated_avalaible_nootropics]
-
-    del avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper
-
 
     return pd.DataFrame({"nootropic": [noot for noot in rated_avalaible_nootropics],
                          "Your rating": [rating_dic[nootropic] for nootropic in rated_avalaible_nootropics],
