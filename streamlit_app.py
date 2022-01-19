@@ -10,7 +10,6 @@ import pandas as pd
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 
-@st.experimental_singleton()
 def get_metadata(path):
     df = pd.read_csv(path, sep=";")
     nootropics_dic = {}
@@ -312,14 +311,3 @@ if st.session_state["mode"] == "results":
     st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
     st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
     st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
-
-
-if "scroll" in st.session_state.keys() and st.session_state.scroll:
-    components.html(
-        f"""
-            <script>
-                window.parent.document.querySelector('section.main').scrollTo(0, 0);
-            </script>
-        """,
-        height=0
-    )
