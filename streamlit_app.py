@@ -136,6 +136,11 @@ def deploy():
     original_title = '<p style="color:Pink; font-size: 20px;">Rate the nootropics you\'ve tried, and we\'ll tell you which one should work for you!</p>'
     st.markdown(original_title, unsafe_allow_html=True)
 
+    collection_ratings, collection_users, collection_position = load_collection()
+
+    if collection_users:
+        print("yes")
+
     st.header("🧠 Your results")
     st.write("Our model predicted these ratings for you:")
     st.caption("Some nootropics don't have enough data right now to be included.")
