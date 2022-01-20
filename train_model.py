@@ -74,42 +74,43 @@ def predict(rating_dic):
     :param rating_dic: a dictionary of the form {itemID: rating}
     :return: DataFrame containing itemID, predictions, mean_ratings
     """
-    avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = train_model()
+    #avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = train_model()
     mean_ratings_dic = compute_mean_ratings()
+    #
+    # user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid(a)] for a in rating_dic.keys()])
+    # user_baseline /= (1 + 0.02)
+    # # print(final_model.compute_baselines()[0][-1])
+    #
+    # predicted_ratings = []
+    # noot_to_rate = [noot for noot in avalaible_nootropics if noot not in rating_dic.keys()]
+    # for nootropic in noot_to_rate:
+    #     inner_id = raw_to_iid(nootropic)
+    #     pred = user_baseline + item_baselines_inner[inner_id]
+    #     to_add = 0
+    #     n_neighbors_used = 0
+    #     sim_sum = 0
+    #     similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rating_dic.keys()]
+    #     for idx in np.argsort(similarities)[::-1][:k]:
+    #         item = list(rating_dic.keys())[idx]
+    #         id_item = raw_to_iid(item)
+    #         if similarities[idx] > 0:
+    #             to_add += similarities[idx] * (rating_dic[item] - item_baselines_inner[id_item] - user_baseline)
+    #             n_neighbors_used += 1
+    #             sim_sum += similarities[idx]
+    #     if n_neighbors_used >= min_k:
+    #         pred += to_add / sim_sum
+    #     if pred < rating_lower:
+    #         pred = rating_lower
+    #     if pred > rating_upper:
+    #         pred = rating_upper
+    #     predicted_ratings.append(pred)
+    #
+    mean_ratings = [mean_ratings_dic[a] for a in mean_ratings_dic.keys()]
+    nootropics = [key for key in mean_ratings_dic.keys()]
 
-    user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid(a)] for a in rating_dic.keys()])
-    user_baseline /= (1 + 0.02)
-    # print(final_model.compute_baselines()[0][-1])
 
-    predicted_ratings = []
-    noot_to_rate = [noot for noot in avalaible_nootropics if noot not in rating_dic.keys()]
-    for nootropic in noot_to_rate:
-        inner_id = raw_to_iid(nootropic)
-        pred = user_baseline + item_baselines_inner[inner_id]
-        to_add = 0
-        n_neighbors_used = 0
-        sim_sum = 0
-        similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rating_dic.keys()]
-        for idx in np.argsort(similarities)[::-1][:k]:
-            item = list(rating_dic.keys())[idx]
-            id_item = raw_to_iid(item)
-            if similarities[idx] > 0:
-                to_add += similarities[idx] * (rating_dic[item] - item_baselines_inner[id_item] - user_baseline)
-                n_neighbors_used += 1
-                sim_sum += similarities[idx]
-        if n_neighbors_used >= min_k:
-            pred += to_add / sim_sum
-        if pred < rating_lower:
-            pred = rating_lower
-        if pred > rating_upper:
-            pred = rating_upper
-        predicted_ratings.append(pred)
-
-    mean_ratings = [mean_ratings_dic[a] for a in noot_to_rate]
-
-
-    return pd.DataFrame({"nootropic": noot_to_rate,
-                         "Prediction": predicted_ratings,
+    return pd.DataFrame({"nootropic": nootropics,
+                         "Prediction": mean_ratings,
                          "Mean rating": mean_ratings})
 
 def evaluate(rating_dic):
