@@ -2,6 +2,7 @@ import streamlit as st
 from train_model import predict
 import pandas as pd
 
+
 def get_metadata(path):
     df = pd.read_csv(path, sep=";")
     nootropics_dic = {}
@@ -111,6 +112,7 @@ def make_name(row):
 
     return styled_name
 
+
 def deploy():
     st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto",
                        menu_items=None)
@@ -138,8 +140,6 @@ def deploy():
         """ ⚠️"Nootropic" is used here in a broad sense, and some of these substances present a risk of side effects or addiction.""")
     with st.spinner('Loading...'):
         new_result_df = predict(rating_example)
-
-        #new_result_df = pd.DataFrame({"nootropic":list(rating_example.keys()), "rating":list(rating_example.values())})
         new_result_df = new_result_df.sort_values("Prediction", ascending=False, ignore_index=True)
 
         new_result_df = new_result_df.merge(pd.read_csv("data/nootropics_metadata.csv", sep=";"), on="nootropic",
@@ -151,8 +151,9 @@ def deploy():
         styled_names = []
         for i, row in new_result_df.iterrows():
             styled_names.append(make_name(row))
+            st.session_state[row["nootropic_short"]] = row["Prediction"]
         new_result_df["Nootropic"] = styled_names
-        new_result_df = new_result_df[["Nootropic", "Prediction"]]
+        new_result_df = new_result_df[["Nootropic", "Prediction", "Mean rating"]]
         # new_result_df.columns = ["Nootropic",
         #                         """<div title="The rating we predict you would enter if you tried the nootropic">Prediction</div>""",
         #                         """<div title="The mean of other users ratings">Mean rating</div>"""]
@@ -166,8 +167,5 @@ def deploy():
         st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
         st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
 
-
-
 if __name__ == "__main__":
     deploy()
-    print("end")
