@@ -14,8 +14,8 @@ def compute_mean_ratings():
 def train_model():
     # train the model once and save everything we need in cache
     df_clean = load_database()
-    avalaible_nootropics = np.unique(df_clean["itemID"])
-    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
+    avalaible_nootropics_total = np.unique(df_clean["itemID"])
+    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics_total if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
     k = 50
     min_k = 5
     rating_lower = 0
@@ -30,7 +30,7 @@ def train_model():
         1]  # mean rating + item baseline ?
     similarity_matrix = final_model.compute_similarities()
 
-    raw_to_iid = {a: new_trainset.to_inner_iid(a) for a in avalaible_nootropics}
+    raw_to_iid = {a: new_trainset.to_inner_iid(a) for a in avalaible_nootropics_total}
 
     del df_clean, final_model, new_trainset
 
