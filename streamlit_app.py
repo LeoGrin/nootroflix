@@ -1,6 +1,7 @@
 import streamlit as st
 from train_model import predict, evaluate
 import pandas as pd
+from utils import *
 
 
 def get_metadata(path):
@@ -116,6 +117,8 @@ def make_name(row):
 def deploy():
     st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto",
                        menu_items=None)
+
+
 
 
     rating_example = {'Modafinil': 6,
