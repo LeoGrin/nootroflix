@@ -143,19 +143,19 @@ def deploy():
         #new_result_df = predict(rating_example)
 
         new_result_df = pd.DataFrame({"nootropic":list(rating_example.keys()), "rating":list(rating_example.values())})
-        new_result_df = new_result_df.sort_values("Prediction", ascending=False, ignore_index=True)
+        new_result_df = new_result_df.sort_values("rating", ascending=False, ignore_index=True)
 
         new_result_df = new_result_df.merge(pd.read_csv("data/nootropics_metadata.csv", sep=";"), on="nootropic",
                                             how="left")
-        new_result_df["Prediction"] = new_result_df["Prediction"].apply(lambda x: round(x, 1))
-        new_result_df["Mean rating"] = new_result_df["Mean rating"].apply(lambda x: round(x, 1))
+        #new_result_df["Prediction"] = new_result_df["Prediction"].apply(lambda x: round(x, 1))
+        #new_result_df["Mean rating"] = new_result_df["Mean rating"].apply(lambda x: round(x, 1))
         # new_result_df["Boost"] = new_result_df["Boost"].apply(lambda x: round(x, 1))
 
         styled_names = []
         for i, row in new_result_df.iterrows():
             styled_names.append(make_name(row))
-        new_result_df["Nootropic"] = styled_names
-        new_result_df = new_result_df[["Nootropic", "Prediction", "Mean rating"]]
+        new_result_df["nootropic"] = styled_names
+        new_result_df = new_result_df[["nootropic", "rating"]]
         # new_result_df.columns = ["Nootropic",
         #                         """<div title="The rating we predict you would enter if you tried the nootropic">Prediction</div>""",
         #                         """<div title="The mean of other users ratings">Mean rating</div>"""]
