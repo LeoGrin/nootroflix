@@ -1,8 +1,5 @@
 import streamlit as st
-import datetime
-import time
 from train_model import predict, evaluate
-from utils import save_new_ratings, generate_user_id, load_collection, save_position
 import pandas as pd
 
 
@@ -304,7 +301,7 @@ def deploy():
 
         st.write("")
         st.header("🧠 How accurate is our model?")
-        if len(slider_dic) < 2:
+        if True:
             st.warning("Please rate more nootropics")
         else:
             with st.spinner('Loading...'):

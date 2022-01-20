@@ -3,7 +3,6 @@ import numpy as np
 from surprise import KNNBaseline
 from surprise import Dataset
 from surprise import Reader
-import streamlit as st
 from utils import load_database
 
 def compute_mean_ratings():
