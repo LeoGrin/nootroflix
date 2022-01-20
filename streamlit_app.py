@@ -115,7 +115,6 @@ def make_name(row):
 
     return styled_name
 
-@profile
 def deploy():
     st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto",
                        menu_items=None)
