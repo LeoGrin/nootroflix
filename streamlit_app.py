@@ -1,5 +1,5 @@
 import streamlit as st
-from train_model import predict
+from train_model import predict, evaluate
 import pandas as pd
 
 
@@ -159,6 +159,25 @@ def deploy():
         #                         """<div title="The mean of other users ratings">Mean rating</div>"""]
         st.write(new_result_df.to_html(escape=False, index=False),
                  unsafe_allow_html=True)  # .style.format("{:.1f}").applymap(left_align)
+
+        st.write("")
+        st.header("🧠 How accurate is our model?")
+        with st.spinner('Loading...'):
+            accuracy_df = evaluate(rating_example)
+        st.session_state.scroll = False
+        if not accuracy_df is None:
+            # Replace by short results
+            accuracy_df = accuracy_df.merge(
+                pd.read_csv("data/nootropics_metadata.csv", sep=";")[["nootropic", "nootropic_short"]],
+                on="nootropic",
+                how="left")
+            accuracy_df["nootropic"] = accuracy_df["nootropic_short"]
+            accuracy_df = accuracy_df.drop(columns=["nootropic_short"])
+            #
+            st.write("For each nootropics, we hid your rating to our model, and had the model try to guess it.")
+            st.caption("Some nootropics don't have enough data right now to be included.")
+            st.table(accuracy_df.set_index("nootropic"))
+            # print("saving...")
 
         st.write("")
         st.write("")

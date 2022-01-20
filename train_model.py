@@ -132,18 +132,18 @@ def evaluate(rating_dic):
     loo_ratings = []
     # Predict without refitting, and without considering one rating each time (for the user baseline and for the similarities)
     for nootropic_to_remove in rated_avalaible_nootropics:
-        user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid(a)] for a in rating_dic.keys() if
+        user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid[a]] for a in rating_dic.keys() if
                                  a != nootropic_to_remove])
         user_baseline /= (1 + 0.02)
-        inner_id = raw_to_iid(nootropic_to_remove)
+        inner_id = raw_to_iid[nootropic_to_remove]
         pred = user_baseline + item_baselines_inner[inner_id]
         to_add = 0
         n_neighbors_used = 0
         sim_sum = 0
-        similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rating_dic.keys()]
+        similarities = [similarity_matrix[inner_id, raw_to_iid[item]] for item in rating_dic.keys()]
         for idx in np.argsort(similarities)[::-1][:k]:
             item = list(rating_dic.keys())[idx]
-            id_item = raw_to_iid(item)
+            id_item = raw_to_iid[item]
             if item != nootropic_to_remove:
                 if similarities[idx] > 0:
                     to_add += similarities[idx] * (rating_dic[item] - item_baselines_inner[id_item] - user_baseline)
