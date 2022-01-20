@@ -140,7 +140,9 @@ def deploy():
     st.caption(
         """ ⚠️"Nootropic" is used here in a broad sense, and some of these substances present a risk of side effects or addiction.""")
     with st.spinner('Loading...'):
-        new_result_df = predict(rating_example)
+        #new_result_df = predict(rating_example)
+
+        new_result_df = pd.DataFrame({"nootropic":list(rating_example.keys()), "rating":list(rating_example.values())})
         new_result_df = new_result_df.sort_values("Prediction", ascending=False, ignore_index=True)
 
         new_result_df = new_result_df.merge(pd.read_csv("data/nootropics_metadata.csv", sep=";"), on="nootropic",
