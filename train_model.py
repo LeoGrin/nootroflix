@@ -6,6 +6,7 @@ from surprise import Reader
 import streamlit as st
 from utils import load_database
 
+
 def compute_mean_ratings():
     df_clean = load_database()
     df_clean = df_clean.groupby(["itemID"])['rating'].mean()

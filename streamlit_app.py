@@ -156,8 +156,8 @@ def deploy():
         # new_result_df.columns = ["Nootropic",
         #                         """<div title="The rating we predict you would enter if you tried the nootropic">Prediction</div>""",
         #                         """<div title="The mean of other users ratings">Mean rating</div>"""]
-        #st.write(new_result_df.to_html(escape=False, index=False),
-        #         unsafe_allow_html=True)  # .style.format("{:.1f}").applymap(left_align)
+        st.write(new_result_df.to_html(escape=False, index=False),
+                 unsafe_allow_html=True)  # .style.format("{:.1f}").applymap(left_align)
 
         st.write("")
         st.write("")
