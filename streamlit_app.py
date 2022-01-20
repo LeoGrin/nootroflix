@@ -1,6 +1,7 @@
 import streamlit as st
 from train_model import predict
 import pandas as pd
+import gc
 
 
 def get_metadata(path):
@@ -171,3 +172,4 @@ def deploy():
 
 if __name__ == "__main__":
     deploy()
+    gc.collect()
