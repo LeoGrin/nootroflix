@@ -2,6 +2,8 @@ import streamlit as st
 from train_model import predict
 import pandas as pd
 import gc
+from memory_profiler import profile
+
 
 
 def get_metadata(path):
@@ -113,7 +115,7 @@ def make_name(row):
 
     return styled_name
 
-
+@profile
 def deploy():
     st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto",
                        menu_items=None)
@@ -140,27 +142,27 @@ def deploy():
     st.caption(
         """ ⚠️"Nootropic" is used here in a broad sense, and some of these substances present a risk of side effects or addiction.""")
     with st.spinner('Loading...'):
-        #new_result_df = predict(rating_example)
+        new_result_df = predict(rating_example)
 
-        new_result_df = pd.DataFrame({"nootropic":list(rating_example.keys()), "rating":list(rating_example.values())})
-        new_result_df = new_result_df.sort_values("rating", ascending=False, ignore_index=True)
+        #new_result_df = pd.DataFrame({"nootropic":list(rating_example.keys()), "rating":list(rating_example.values())})
+        new_result_df = new_result_df.sort_values("Prediction", ascending=False, ignore_index=True)
 
         new_result_df = new_result_df.merge(pd.read_csv("data/nootropics_metadata.csv", sep=";"), on="nootropic",
                                             how="left")
-        #new_result_df["Prediction"] = new_result_df["Prediction"].apply(lambda x: round(x, 1))
-        #new_result_df["Mean rating"] = new_result_df["Mean rating"].apply(lambda x: round(x, 1))
+        new_result_df["Prediction"] = new_result_df["Prediction"].apply(lambda x: round(x, 1))
+        new_result_df["Mean rating"] = new_result_df["Mean rating"].apply(lambda x: round(x, 1))
         # new_result_df["Boost"] = new_result_df["Boost"].apply(lambda x: round(x, 1))
 
         styled_names = []
         for i, row in new_result_df.iterrows():
             styled_names.append(make_name(row))
-        new_result_df["nootropic"] = styled_names
-        new_result_df = new_result_df[["nootropic", "rating"]]
+        new_result_df["Nootropic"] = styled_names
+        new_result_df = new_result_df[["Nootropic", "Prediction"]]
         # new_result_df.columns = ["Nootropic",
         #                         """<div title="The rating we predict you would enter if you tried the nootropic">Prediction</div>""",
         #                         """<div title="The mean of other users ratings">Mean rating</div>"""]
-        st.write(new_result_df.to_html(escape=False, index=False),
-                 unsafe_allow_html=True)  # .style.format("{:.1f}").applymap(left_align)
+        #st.write(new_result_df.to_html(escape=False, index=False),
+        #         unsafe_allow_html=True)  # .style.format("{:.1f}").applymap(left_align)
 
         st.write("")
         st.write("")
@@ -174,4 +176,4 @@ def deploy():
 
 if __name__ == "__main__":
     deploy()
-    gc.collect()
+    print("end")
