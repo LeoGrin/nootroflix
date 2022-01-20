@@ -331,8 +331,6 @@ def deploy():
         st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
         st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
 
-        del new_result_df
-        gc.collect()
 
 
 if __name__ == "__main__":
