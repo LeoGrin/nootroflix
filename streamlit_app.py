@@ -1,7 +1,6 @@
 import streamlit as st
-from train_model import predict, evaluate
+from train_model import predict
 import pandas as pd
-import gc
 
 
 def get_metadata(path):
@@ -331,6 +330,7 @@ def deploy():
         st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
         st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
 
+        del new_result_df
 
 
 if __name__ == "__main__":
