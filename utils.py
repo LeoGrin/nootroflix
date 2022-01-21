@@ -55,7 +55,6 @@ def save_position(position, user_id, session_id, time, collection_position):
 
 
 
-@st.cache(ttl=36000)
 def generate_user_id(dataset_path, session_id):
     #generate a user_id
     user_id = np.random.randint(1000, 1e8)
@@ -65,7 +64,6 @@ def generate_user_id(dataset_path, session_id):
         user_id = np.random.randint(1000, 1e8)
     return user_id
 
-@st.experimental_singleton
 def load_collection():
     keys = ["project_id", "type", "private_key_id", "private_key",
             "client_email", "client_id", "auth_uri", "token_uri",

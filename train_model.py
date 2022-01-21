@@ -6,14 +6,11 @@ from surprise import Reader
 import streamlit as st
 from utils import load_database
 
-@st.experimental_singleton
 def compute_mean_ratings():
     df_clean = load_database()
     df_clean = df_clean.groupby(["itemID"])['rating'].mean()
     return df_clean.to_dict()
 
-
-@st.experimental_singleton
 def train_model():
     # train the model once and save everything we need in cache
     df_clean = load_database()
@@ -111,6 +108,7 @@ def predict(rating_dic):
 
     mean_ratings = [mean_ratings_dic[a] for a in noot_to_rate]
 
+
     return pd.DataFrame({"nootropic": noot_to_rate,
                          "Prediction": predicted_ratings,
                          "Mean rating": mean_ratings})
@@ -153,6 +151,7 @@ def evaluate(rating_dic):
             pred = rating_upper
         loo_ratings.append(pred)
     mean_ratings = [mean_ratings_dic[noot] for noot in rated_avalaible_nootropics]
+
     return pd.DataFrame({"nootropic": [noot for noot in rated_avalaible_nootropics],
                          "Your rating": [rating_dic[nootropic] for nootropic in rated_avalaible_nootropics],
                          "Predicted rating": loo_ratings,
