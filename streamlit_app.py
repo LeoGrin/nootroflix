@@ -312,6 +312,7 @@ def deploy():
         st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
         st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
         st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
+        st.legacy_caching.caching.clear_cache()
 
 if __name__ == "__main__":
     deploy()
