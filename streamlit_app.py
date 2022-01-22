@@ -1,13 +1,9 @@
 import streamlit as st
-import datetime
-import time
-from train_model import predict, evaluate
-from utils import save_new_ratings, generate_user_id, load_collection, save_position
 import pandas as pd
 
 
 
-st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
+#st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 
 def get_metadata(path):
@@ -50,8 +46,8 @@ else:
 
 
 st.title(':brain: Nootroflix')
-original_title = '<p style="color:Pink; font-size: 20px;">Rate the nootropics you\'ve tried, and we\'ll tell you which one should work for you!</p>'
-st.markdown(original_title, unsafe_allow_html=True)
+#original_title = '<p style="color:Pink; font-size: 20px;">Rate the nootropics you\'ve tried, and we\'ll tell you which one should work for you!</p>'
+#st.markdown(original_title, unsafe_allow_html=True)
 
 if "mode" not in st.session_state.keys():
     st.session_state["mode"] = "selection"
@@ -64,12 +60,12 @@ def go_to_mode_rating():
             if key.startswith("checkbox") and nootropic_name in key and st.session_state[key]:
                 selected = True
                 break
-        st.session_state["permanent_checkbox_{}".format(nootropic_name)] = selected
+        st.session_state["pretido_checkbox_{}".format(nootropic_name)] = selected
         # Delete previous rating from session state if a nootropic is not selected
         if not selected:
-            if "permanent_slider_{}".format(nootropic_name) in st.session_state.keys():
-                del st.session_state["permanent_slider_{}".format(nootropic_name)]
-                del st.session_state["permanent_radio_{}".format(nootropic_name)]
+            if "pretido_slider_{}".format(nootropic_name) in st.session_state.keys():
+                del st.session_state["pretido_slider_{}".format(nootropic_name)]
+                del st.session_state["pretido_radio_{}".format(nootropic_name)]
 
     #Check that at least one nootropic is selected
     for key in st.session_state.keys():
@@ -84,8 +80,8 @@ def go_to_mode(mode):
         st.session_state["mode"] = mode
         #Save inputs in session state
         for key in st.session_state.keys():
-            if not key.startswith("permanent"):
-                st.session_state["permanent_" + key] = st.session_state[key]
+            if not key.startswith("pretido"):
+                st.session_state["pretido_" + key] = st.session_state[key]
 
         st.session_state.scroll = True
 
@@ -94,20 +90,20 @@ def go_to_mode(mode):
 def retrieve_widget_value(key):
     #allows to retrieve values chosen for going back
     #the reason is session states linked to widget disappear on reruns
-    if "permanent_{}".format(key) in st.session_state.keys():
-        st.session_state[key] = st.session_state["permanent_{}".format(key)]
+    if "pretido_{}".format(key) in st.session_state.keys():
+        st.session_state[key] = st.session_state["pretido_{}".format(key)]
     #if a nootropic has been selected in a different type section, select it for all types
-    #if key.startswith("checkbox_") and "permanent_checkbox_{}".format(key.split("_")[-1]) in st.session_state.keys():
+    #if key.startswith("checkbox_") and "pretido_checkbox_{}".format(key.split("_")[-1]) in st.session_state.keys():
     #    print(key)
     #    print(key.split("_")[-1])
-    #    print(st.session_state["permanent_checkbox_{}".format(key.split("_")[-1])])
-    #    st.session_state[key] = st.session_state["permanent_checkbox_{}".format(key.split("_")[-1])]
+    #    print(st.session_state["pretido_checkbox_{}".format(key.split("_")[-1])])
+    #    st.session_state[key] = st.session_state["pretido_checkbox_{}".format(key.split("_")[-1])]
 
 def reset_selection():
     for key in st.session_state.keys():
-        if key.startswith("checkbox") or key.startswith("permanent_checkbox"):
+        if key.startswith("checkbox") or key.startswith("pretido_checkbox"):
             st.session_state[key] = False
-        elif key.startswith("permanent_"):
+        elif key.startswith("pretido_"):
             del st.session_state[key]
 
 if st.session_state["mode"] == "selection":
@@ -156,7 +152,7 @@ def deploy():
             cols = st.columns(2)
             i = 0
             for nootropic in all_nootropics:
-                    if st.session_state["permanent_checkbox_{}".format(nootropic)] or st.session_state["permanent_select_box_selection"] == nootropic:
+                    if st.session_state["pretido_checkbox_{}".format(nootropic)] or st.session_state["pretido_select_box_selection"] == nootropic:
                         with cols[i % 2]:
                             i += 1
                             retrieve_widget_value("slider_{}".format(nootropic))
@@ -219,13 +215,13 @@ def deploy():
         radio_dic = {}
         question_dic = {}
         for key in st.session_state.keys():
-            if key.startswith("permanent_slider"):
-                slider_dic[key[len("permanent_slider_"):]] = st.session_state[key]
-            elif key.startswith("permanent_radio_"):
-                radio_dic[key[len("permanent_radio_"):]] = st.session_state[key]
-            elif key.startswith("permanent_question_"):
-                question_dic[key[len("permanent_question_"):]] = st.session_state[key]
-        question_dic["permanent_favorite_noot"] = st.session_state["permanent_favorite_noot"]
+            if key.startswith("pretido_slider"):
+                slider_dic[key[len("pretido_slider_"):]] = st.session_state[key]
+            elif key.startswith("pretido_radio_"):
+                radio_dic[key[len("pretido_radio_"):]] = st.session_state[key]
+            elif key.startswith("pretido_question_"):
+                question_dic[key[len("pretido_question_"):]] = st.session_state[key]
+        question_dic["pretido_favorite_noot"] = st.session_state["pretido_favorite_noot"]
 
         #pseudo = st.text_input("Pseudo")
         pseudo = "default"
