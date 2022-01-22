@@ -277,7 +277,8 @@ def deploy():
             # for i, row in new_result_df.iterrows():
             #     styled_names.append(make_name(row))
             # new_result_df["Nootropic"] = styled_names
-            new_result_df = new_result_df[["Nootropic", "Prediction", "Mean rating"]]
+            #new_result_df = new_result_df[["Nootropic", "Prediction", "Mean rating"]]
+
             #new_result_df.columns = ["Nootropic",
             #                         """<div title="The rating we predict you would enter if you tried the nootropic">Prediction</div>""",
             #                         """<div title="The mean of other users ratings">Mean rating</div>"""]
