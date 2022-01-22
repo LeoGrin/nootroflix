@@ -4,6 +4,7 @@ import time
 from train_model import predict, evaluate
 from utils import save_new_ratings, generate_user_id, load_collection, save_position
 import pandas as pd
+from memory_profiler import profile
 
 
 
@@ -133,6 +134,7 @@ if st.session_state["mode"] == "selection":
         st.write("")
         st.form_submit_button("Next", on_click=go_to_mode_rating)
 
+@profile
 def deploy():
     if st.session_state["mode"] == "rating":
         st.subheader("Please rate the net benefit of each nootropic for you:")
@@ -312,7 +314,6 @@ def deploy():
         st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
         st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
         st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
-        st.legacy_caching.caching.clear_cache()
 
 if __name__ == "__main__":
     deploy()
