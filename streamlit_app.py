@@ -26,7 +26,11 @@ def get_metadata(path):
     return nootropics_dic, all_nootropics
 
 
-nootropics_dic, all_nootropics = get_metadata('data/nootropics_metadata.csv')
+#nootropics_dic, all_nootropics = get_metadata('data/nootropics_metadata.csv')
+
+all_nootropics = ["Caffeine", "Modafinil", "Morphine"]
+
+nootropics_dic = {"Stimulants": ["Caffeine", "Modafinil"], "Anti-depressants": ["Morphine"]}
 
 user_id = 2
 
