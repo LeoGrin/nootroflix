@@ -1,6 +1,7 @@
 .streamlit/secrets.toml
 /data/*
 !/data/nootropics_metadata.csv
+!/data/dataset_clean_right_names.csv
 experiments/kelly.py
 .Rproj.user
 .Rhistory
