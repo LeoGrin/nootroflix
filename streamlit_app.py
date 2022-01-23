@@ -7,10 +7,6 @@ from utils import save_new_ratings, generate_user_id, load_collection, save_posi
 from streamlit.report_thread import get_report_ctx
 import streamlit.components.v1 as components
 import pandas as pd
-import tracemalloc
-
-tracemalloc.start()
-
 
 
 st.set_page_config(page_title="️Nootroflix", page_icon=":brain:", layout="centered", initial_sidebar_state="auto", menu_items=None)
@@ -261,11 +257,8 @@ if st.session_state["mode"] == "results":
     st.caption(""" ⚠️"Nootropic" is used here in a broad sense, and some of these substances present a risk of side effects or addiction.""")
     with st.spinner('Loading...'):
         st.write("no predictions")
-        snapshot1 = tracemalloc.take_snapshot()
         new_result_df = predict(slider_dic)
-        snapshot2 = tracemalloc.take_snapshot()
         new_result_df = new_result_df.sort_values("Prediction", ascending=False, ignore_index=True)
-
         new_result_df = new_result_df.merge(pd.read_csv("data/nootropics_metadata.csv", sep=";"), on="nootropic", how="left")
         new_result_df["Prediction"] = new_result_df["Prediction"].apply(lambda x:round(x, 1))
         new_result_df["Mean rating"] = new_result_df["Mean rating"].apply(lambda x: round(x, 1))
@@ -349,12 +342,6 @@ if st.session_state["mode"] == "results":
     st.write("Our algorithm matches you to people with similar ratings, and tells you other nootropics they liked.")
     st.write("The initial data comes from the 2016 SlateStarCodex Nootropics survey results.")
     st.write("Some of the question are inspired by the 2016 and 2020 SlateStarCodex nootropics surveys.")
-    print("DIFFERENCE")
-    top_stats = snapshot2.compare_to(snapshot1, 'lineno')
-
-    print("[ Top 10 differences ]")
-    for stat in top_stats[:10]:
-        print(stat)
 
 
 if "scroll" in st.session_state.keys() and st.session_state.scroll:
@@ -366,12 +353,3 @@ if "scroll" in st.session_state.keys() and st.session_state.scroll:
         """,
         height=0
     )
-
-
-# ... run your application ...
-
-snapshot = tracemalloc.take_snapshot()
-top_stats = snapshot.statistics('lineno')
-print("[ Top 10 ]")
-for stat in top_stats[:20]:
-    print(stat)

@@ -5,6 +5,7 @@ from surprise import Dataset
 from surprise import Reader
 import streamlit as st
 from utils import load_database
+import pickle
 
 def compute_mean_ratings():
     df_clean = load_database()
@@ -79,8 +80,12 @@ def predict(rating_dic):
     :param rating_dic: a dictionary of the form {itemID: rating}
     :return: DataFrame containing itemID, predictions, mean_ratings
     """
-    avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = train_model()
-    mean_ratings_dic = compute_mean_ratings()
+    #avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = train_model()
+    #mean_ratings_dic = compute_mean_ratings()
+    with open('saved_objects/mean_ratings.pickle', 'rb') as f:
+        mean_ratings_dic = pickle.load(f)
+    with open('saved_objects/model_and_all.pickle', 'rb') as f:
+        avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = pickle.load(f)
 
     user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid[a]] for a in rating_dic.keys()])
     user_baseline /= (1 + 0.02)
