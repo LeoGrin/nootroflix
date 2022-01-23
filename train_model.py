@@ -6,19 +6,17 @@ from surprise import Reader
 import streamlit as st
 from utils import load_database
 
-@st.experimental_singleton
 def compute_mean_ratings():
     df_clean = load_database()
     df_clean = df_clean.groupby(["itemID"])['rating'].mean()
     return df_clean.to_dict()
 
 
-@st.experimental_singleton
 def train_model():
     # train the model once and save everything we need in cache
     df_clean = load_database()
-    avalaible_nootropics = np.unique(df_clean["itemID"])
-    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
+    avalaible_nootropics_total = np.unique(df_clean["itemID"])
+    avalaible_nootropics = [nootropic for nootropic in avalaible_nootropics_total if len(df_clean[df_clean["itemID"] == nootropic]) > 40]
     k = 50
     min_k = 5
     rating_lower = 0
@@ -29,10 +27,13 @@ def train_model():
     reader = Reader(rating_scale=(rating_lower, rating_upper))
     new_trainset = Dataset.load_from_df(df_clean, reader).build_full_trainset()
     final_model.fit(new_trainset)
-    item_baselines_inner = final_model.default_prediction() + final_model.compute_baselines()[
-        1]  # mean rating + item baseline ?
+    item_baselines_inner = final_model.default_prediction() + final_model.compute_baselines()[1]  # mean rating + item baseline ?
     similarity_matrix = final_model.compute_similarities()
-    return avalaible_nootropics, item_baselines_inner, similarity_matrix, new_trainset.to_inner_iid, k, min_k, rating_lower, rating_upper
+    raw_to_iid = {}
+    for nootropic in avalaible_nootropics_total:
+        raw_to_iid[nootropic] = new_trainset.to_inner_iid(nootropic)
+
+    return avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper
 
 
 # def interpret_prediction(trainset, model, avalaible_nootropics, user_id, predicted_ratings, rating_dic, item_baselines_user):
@@ -81,22 +82,22 @@ def predict(rating_dic):
     avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = train_model()
     mean_ratings_dic = compute_mean_ratings()
 
-    user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid(a)] for a in rating_dic.keys()])
+    user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid[a]] for a in rating_dic.keys()])
     user_baseline /= (1 + 0.02)
     # print(final_model.compute_baselines()[0][-1])
 
     predicted_ratings = []
     noot_to_rate = [noot for noot in avalaible_nootropics if noot not in rating_dic.keys()]
     for nootropic in noot_to_rate:
-        inner_id = raw_to_iid(nootropic)
+        inner_id = raw_to_iid[nootropic]
         pred = user_baseline + item_baselines_inner[inner_id]
         to_add = 0
         n_neighbors_used = 0
         sim_sum = 0
-        similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rating_dic.keys()]
+        similarities = [similarity_matrix[inner_id, raw_to_iid[item]] for item in rating_dic.keys()]
         for idx in np.argsort(similarities)[::-1][:k]:
             item = list(rating_dic.keys())[idx]
-            id_item = raw_to_iid(item)
+            id_item = raw_to_iid[item]
             if similarities[idx] > 0:
                 to_add += similarities[idx] * (rating_dic[item] - item_baselines_inner[id_item] - user_baseline)
                 n_neighbors_used += 1
