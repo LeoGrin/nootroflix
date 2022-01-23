@@ -55,7 +55,7 @@ def save_position(position, user_id, session_id, time, collection_position):
 
 
 
-@st.cache(ttl=36000)
+@st.cache(ttl=3600)
 def generate_user_id(dataset_path, session_id):
     #generate a user_id
     user_id = np.random.randint(1000, 1e8)

@@ -1,7 +1,6 @@
 .streamlit/secrets.toml
-data/nootropics_survey_reddit.csv
-data/nootropics_survey_reddit_converted.csv
-data/nootropics_survey_reddit_converted_2.csv
+data/
+!data/nootropics_metadata.csv
 experiments/kelly.py
 .Rproj.user
 .Rhistory
