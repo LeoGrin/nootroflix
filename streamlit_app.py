@@ -299,7 +299,7 @@ if st.session_state["mode"] == "results":
         #new_result_df.columns = ["Nootropic",
         #                         """<div title="The rating we predict you would enter if you tried the nootropic">Prediction</div>""",
         #                         """<div title="The mean of other users ratings">Mean rating</div>"""]
-        st.write(new_result_df.to_html(escape=False, index=False), unsafe_allow_html=True)#.style.format("{:.1f}").applymap(left_align)
+        #st.write(new_result_df.to_html(escape=False, index=False), unsafe_allow_html=True)#.style.format("{:.1f}").applymap(left_align)
 
 
     if deployed:
@@ -331,7 +331,7 @@ if st.session_state["mode"] == "results":
             #
             st.write("For each nootropics, we hid your rating to our model, and had the model try to guess it.")
             st.caption("Some nootropics don't have enough data right now to be included.")
-            st.table(accuracy_df.set_index("nootropic").style.format("{:.1f}").applymap(left_align))
+            #st.table(accuracy_df.set_index("nootropic").style.format("{:.1f}").applymap(left_align))
             #print("saving...")
 
     st.button("Back", on_click=go_to_mode("questions"), key="results_2")
