@@ -1,2 +1,2 @@
 # Contents of Procfile
-web: streamlit run --server.enableCORS false --server.port $PORT streamlit_app.py
+web: streamlit run --server.port $PORT streamlit_app.py
