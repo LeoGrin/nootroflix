@@ -36,7 +36,7 @@ def get_metadata(path):
 
 nootropics_dic, all_nootropics = get_metadata('data/nootropics_metadata.csv')
 
-deployed = True
+deployed = False
 
 if deployed:
     collection_ratings, collection_users, collection_position = load_collection()

@@ -4,16 +4,15 @@ from surprise import KNNBaseline
 from surprise import Dataset
 from surprise import Reader
 import streamlit as st
+import pickle
 from utils import load_database
 
-@st.experimental_singleton
 def compute_mean_ratings():
     df_clean = load_database()
     df_clean = df_clean.groupby(["itemID"])['rating'].mean()
     return df_clean.to_dict()
 
 
-@st.experimental_singleton
 def train_model():
     # train the model once and save everything we need in cache
     df_clean = load_database()
@@ -78,8 +77,14 @@ def predict(rating_dic):
     :param rating_dic: a dictionary of the form {itemID: rating}
     :return: DataFrame containing itemID, predictions, mean_ratings
     """
-    avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = train_model()
-    mean_ratings_dic = compute_mean_ratings()
+    #avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = train_model()
+    #mean_ratings_dic = compute_mean_ratings()
+    with open('saved_objects/mean_ratings.pickle', 'rb') as f:
+        mean_ratings_dic = pickle.load(f)
+    with open('saved_objects/model_and_all.pickle', 'rb') as f:
+        avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = pickle.load(f)
+
+
 
     user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid(a)] for a in rating_dic.keys()])
     user_baseline /= (1 + 0.02)
@@ -122,8 +127,13 @@ def evaluate(rating_dic):
     :param rating_dic: a dictionary of the form {itemID: rating}
     :return:
     """
-    avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = train_model()
-    mean_ratings_dic = compute_mean_ratings()
+    #avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = train_model()
+    #mean_ratings_dic = compute_mean_ratings()
+    with open('saved_objects/mean_ratings.pickle', 'rb') as f:
+        mean_ratings_dic = pickle.load(f)
+    with open('saved_objects/model_and_all.pickle', 'rb') as f:
+        avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = pickle.load(f)
+
     rated_avalaible_nootropics = [nootropic for nootropic in rating_dic.keys() if nootropic in avalaible_nootropics]
     loo_ratings = []
     # Predict without refitting, and without considering one rating each time (for the user baseline and for the similarities)
