@@ -11,6 +11,7 @@ experiments/kelly.py
 spotlight/
 cache/
 recommenders/
+analysis/saved_models
 logs.txt
 old/
 .ipynb_checkpoints/
