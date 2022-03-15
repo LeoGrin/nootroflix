@@ -1,0 +1,677 @@
+---
+title: "Analysing potential issues with nootropics"
+output:
+  html_document:
+    code_folding: hide
+    toc: true
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(lubridate)
+library(ggdist)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+theme_set(theme(plot.background = element_rect(fill="#fffff8"), #to incorporte into the main article
+                text = element_text(size = 16)))
+```
+
+```{r}
+df <- read_csv("../data/nootroflix_ratings_users_clean.csv")
+```
+
+
+# Bounds
+
+## Methodology
+
+In this part, I present the methodology I'll use in all this post.
+
+First, some changes that happened to Nootroflix, that we have to take into account:
+
+- In the first version of Nootroflix (for which there are the most ratings), the default answer for "issues with this nootropic" was "None / Unsure", and you could only select one issue.
+
+- In the subsequent versions, multi-selection was possible, and the default answer was just no selection (but you could select "None/Unsure")
+
+For the first version, we restrict our analysis to users with enough ratings (>15) and at least one nootropic for which they entered an issue (because a lot of people weren't entering issues). This probably is an underestimate, because some people might have entered one issue but not all issues they've had.
+
+For the second version, we can have upper and lower bounds for the probability of an issue, as well as an unbiased (but very noisy) estimate:
+
+- **lower bound**: number of people who reported this issue for this nootropic / number of people who tried this nootropic. To tighten the bound, we restrict our analysis to people who rated enough nootropics, and reported at least one issue.
+
+- **upper bound**:  number of people who reported this issue for this nootropic / number of people who answered the issue question for this nootropic (no empty selection). This is probably an upper bound because you're more likely to answer the "issues" question if you had an issue. To tighten the bound, we can restrict ourselves to users who have entered "None/Unsure" as an issue for at least one other nootropic.
+
+- **unbiased estimate**: Some users (169, with 1830 ratings) were kind enough to answer the issue question for every rating they made. If we restrict ourselves to these users, we should an unbiased estimate, assuming these users aren't too unusual.
+
+Let's see what it gives us for estimating the probability of addiction:
+
+```{r}
+df_new <- df %>% 
+  filter(str_detect(issue, "\\[")) %>% 
+    mutate(issue = str_remove(issue, "\\["),
+         issue = str_remove(issue, "\\]"),
+         issue = str_remove_all(issue, "\\'"),
+         issue = str_split(issue, ",")) %>% 
+  unnest(issue) %>%
+  mutate(issue = case_when(
+    issue == "" ~ "unknown",
+    str_detect(issue, "None") ~ "none",
+    str_detect(issue, "Developed addiction") ~ "addiction",
+    str_detect(issue, "Developed tolerance") ~ "tolerance",
+    str_detect(issue, "Other issues") ~ "other",
+    str_detect(issue, "Had to stop because of side effects") ~ "side_effects",
+    str_detect(issue, "Persistent side effects") ~ "long_term_side_effects"))
+
+df_old <- df %>% 
+  filter(!str_detect(issue, "\\[")) %>% 
+    mutate(issue = case_when(
+    issue == "" ~ "unknown",
+    str_detect(issue, "None") ~ "none",
+    str_detect(issue, "Developed addiction") ~ "addiction",
+    str_detect(issue, "Developed tolerance") ~ "tolerance",
+    str_detect(issue, "Other issues") ~ "other",
+    str_detect(issue, "Had to stop because of side effects") ~ "side_effects",
+    str_detect(issue, "Persistent side effects") ~ "long_term_side_effects"))
+
+```
+
+Using data from nootroflix first version:
+```{r}
+users_filling_issues <- (df_old %>% 
+                           group_by(userID) %>% 
+                           filter(n() > 15) %>%  #enough ratings
+                           ungroup() %>% 
+                           filter(issue != "none") %>%  #at least one not None
+                           select(userID) %>% 
+                           distinct)$userID
+
+estimate_old <- df_old %>% 
+  filter(userID %in% users_filling_issues) %>% 
+  group_by(itemID, issue) %>% 
+  summarise(count = n()) %>% 
+  mutate(count_total = sum(count)) %>% 
+  mutate(variant = "firt version")
+```
+
+Using data from Nootroflix second version:
+```{r}
+estimate_new_lower <- df_new %>% 
+  filter(userID %in% (df_new %>% 
+     group_by(userID) %>% 
+     filter(n() > 15) %>%  #enough ratings
+     ungroup() %>% 
+     filter(issue != "unknown") %>%  #at least one issue entered
+     select(userID) %>% 
+     distinct)$userID) %>% 
+  group_by(itemID, issue) %>%  #assume only one rating set per user
+  summarise(count = n()) %>%
+  mutate(count_total = sum(count)) %>% 
+  mutate(variant = "second version, lower")
+
+estimate_new_upper <- df_new %>% 
+  filter(userID %in% (df_new %>%
+     group_by(userID) %>%
+     filter(n() > 15) %>%  #enough ratings
+     ungroup() %>%
+     filter(issue == "none") %>%  #at least one time has entered none
+     select(userID) %>%
+     distinct)$userID) %>%
+  group_by(itemID, issue) %>%  #assume only one rating set per user
+  summarise(count = n()) %>% 
+  mutate(count_total = sum(count)) %>% 
+  pivot_wider(names_from = issue, values_from = count) %>% 
+  mutate_all(~replace_na(., 0)) %>% 
+  mutate(count_total = count_total - unknown) %>% 
+  pivot_longer(cols = c("none", "other", "side_effects", "addiction", "long_term_side_effects", "tolerance"), values_to= "count", names_to = "issue") %>% 
+  mutate(variant = "second version, upper")
+
+estimate_new_unbiased <- df_new %>% 
+  group_by(userID) %>% 
+  mutate(n_issues = sum(issue != "unknown")) %>% 
+  filter(n_issues == n()) %>% # we restrict ourselves to users who answered the issue question for every rating
+  ungroup() %>% 
+  group_by(itemID, issue) %>%  #assume only one rating set per user
+  summarise(count = n()) %>%
+  mutate(count_total = sum(count)) %>% 
+  mutate(variant = "second version, unbiased")
+```
+
+## Results
+
+The three estimates seem to give coherent results:
+
+```{r}
+estimate_new_upper %>% 
+  bind_rows(estimate_new_lower) %>% 
+  bind_rows(estimate_new_unbiased) %>% 
+  bind_rows(estimate_old) %>%  
+  mutate(nootropic = itemID) %>% 
+  mutate_all(~replace_na(., 0)) %>% 
+  filter(count_total > 0) %>% 
+  rowwise() %>%
+  mutate(prop =  prop.test(count, count_total, conf.level=0.95)$estimate,
+         prop_low = prop.test(count, count_total, conf.level=0.95)$conf.int[[1]],
+         prop_high = prop.test(count, count_total, conf.level=0.95)$conf.int[[2]]) %>% 
+  ungroup() %>% 
+  filter(issue == "side_effects") %>% 
+  mutate(nootropic = str_sub(nootropic, 1, 25)) %>% 
+  mutate(nootropic = fct_reorder(nootropic, prop)) %>% 
+  filter(prop_high - prop_low < 0.6) %>% 
+  group_by(nootropic) %>% 
+  filter(n() == 4) %>% 
+  ungroup() %>% 
+  #filter(nootropic %in% sample(levels(nootropic), 5)) %>% 
+  #group_by(nootropic) %>% 
+  #mutate(prop_mean = mean(prop)) %>% 
+  #ungroup() %>% 
+  #filter(rank(-prop) < 15) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x = prop, xmin=prop_low, xmax=prop_high, y=nootropic, color = variant), position=position_dodge2()) +
+  scale_x_log10() +
+  xlab("Probability of side effects") +
+  ylab("")
+
+```
+
+# Probabilistic model
+
+## Methodology
+
+To have only one estimate for each nootropic, we're going to build a probabilistic model taking into account non-response bias.
+
+We only observe reports, not actual issue, so we want to model both $P(report | issue, issue\_type, item, user, ui)$ and $P(issue | issue\_type, item, user, ui)$, with $ui$ begin Nootroflix version.
+
+Some assumption to simplify: 
+
+- $P(report | issue, issue\_type, item, user) = P(report | issue, user, ui)$, i.e the report probability doesn't depend on the nootropic nor on the type of issue (I'd like to investigate the latter when I have more time).
+
+- $P(issue | issue\_type, item, user) = P(issue | issue\_type, item)$
+
+We also decompose reports into 3 categories:
+
+- "none" (0) if the user has entered none (only for the second nootroflix version, as this was the default in the first version), or if the user has checked another issue for the same nootropic (for both Nootroflix versions)
+
+- "empty" (1) if the user hasn't responded (second Nootroflix version) or if the user has entered the default None (for the first nootroflix version). For the first version, we suppose that if a user has selected another issue, it didn't have other issues with the same nootropics (even if only one choice was possible).
+
+- "issue" (2) if the user has checked the issue
+
+We can now write the model:
+
+- $P(issue | issue\_type, item) = \mathcal{B}(p_{issue\_type, item})$. $p_{issue\_type, item}$ is what we want to estimate
+
+- $P(report = "none" |  issue, user, ui) = \mathbb{1}_{issue=False} inv\_logit(\beta^{none}_{ui} +  \beta^{none}_{user}))$
+
+- $P(report = "empty" | issue, user, ui) = \mathbb{1}_{issue=False} inv\_logit(\beta^{empty}_{user} + \beta^{empty}_{ui})) + \mathbb{1}_{issue=False} (1 - P(report = "none" |  issue,  user, ui))$
+
+- $P(report = "issue" | issue, user, ui) = \mathbb{1}_{issue=true} (1 - P(report = "empty" | issue, user, ui)) $
+
+Other modeling details: we use a hierarchical model for $p_{issue\_type, item}$, allowing to have some estimates for nootropics with few ratings, and we put a Beta priors on $\mathcal{B}_{users}$ to put more probability mass on users responding to most issues questions or none.
+
+You can check out the Stan code on the Github repo.
+
+```{r}
+df <- read_csv("../data/nootroflix_ratings_users_clean.csv") %>% 
+  select(itemID, userID, issue)
+
+df_new <- df %>% 
+  filter(str_detect(issue, "\\[")) %>% 
+  mutate(issue = str_remove(issue, "\\["),
+         issue = str_remove(issue, "\\]"),
+         issue = str_remove_all(issue, "\\'"),
+         issue = str_split(issue, ",")) %>% 
+  unnest(issue) %>% 
+  mutate(issue = case_when(
+    issue == "" ~ "empty", 
+    str_detect(issue, "None") ~ "none",
+    str_detect(issue, "Developed addiction") ~ "addiction",
+    str_detect(issue, "Developed tolerance") ~ "tolerance",
+    str_detect(issue, "Other issues") ~ "other",
+    str_detect(issue, "Had to stop because of side effects") ~ "side_effects",
+    str_detect(issue, "Persistent side effects") ~ "long_term_side_effects"))
+
+df_old <- df %>% 
+  filter(!str_detect(issue, "\\[")) %>% 
+  mutate(issue = case_when(
+    issue == "" ~ "empty",
+    str_detect(issue, "None") ~ "empty", #careful
+    str_detect(issue, "Developed addiction") ~ "addiction",
+    str_detect(issue, "Developed tolerance") ~ "tolerance",
+    str_detect(issue, "Other issues") ~ "other",
+    str_detect(issue, "Had to stop because of side effects") ~ "side_effects",
+    str_detect(issue, "Persistent side effects") ~ "long_term_side_effects"))
+
+df_for_stan <- df_old %>% 
+  mutate(ui = 1) %>% 
+  bind_rows(df_new %>% mutate(ui = 2)) %>% 
+  mutate(report= case_when(
+    issue == "none" ~ 0,
+    issue == "empty" ~ 1,
+    TRUE ~ 2))
+
+
+df_for_stan <- 
+  df_for_stan %>% 
+  complete(nesting(itemID, userID, ui), issue, fill=list(report=1)) %>%  # get a issue report for all possible issues for items tried by each user
+  #complete(nesting(itemID, userID), issue, fill=list(report=1)) %>%  # get a issue report for all possible issues for items tried by each user
+  group_by(userID, itemID) %>% 
+  mutate(has_checked_something = if_else(min(report) == 0 | max(report) == 2, T, F)) %>% 
+  mutate(report = if_else(report == 1 & has_checked_something, 0, report)) %>% 
+  filter(issue != "empty", issue != "none") %>% 
+  select(-has_checked_something)
+
+
+df_for_stan <- df_for_stan %>% 
+  mutate(userID = as.character(userID))
+```
+
+```{r}
+options(mc.cores = parallel::detectCores())
+library(cmdstanr)
+library(tidybayes)
+```
+
+```{r}
+data <- compose_data(df_for_stan %>% 
+                       mutate(users = userID, items=itemID,
+                              issues=issue, report=report, .keep="unused"))
+#mod <- cmdstan_model('analysis/issue_analysis.stan')
+#mod$check_syntax()
+#fit <- mod$sample(
+#  data = data, 
+#  chains=4,
+#  iter_warmup = 1000,
+#  iter_sampling = 1000)
+fit <- readRDS("saved_models/model_stan_final")
+```
+
+The stan fit is satisfactory, and as you'll see below, the results match nicely with the estimates computed above.
+
+```{r}
+estimates <- estimate_new_upper %>% 
+  bind_rows(estimate_new_lower) %>% 
+  bind_rows(estimate_new_unbiased) %>% 
+  bind_rows(estimate_old) %>%  
+  mutate(nootropic = itemID) %>% 
+  mutate_all(~replace_na(., 0)) %>% 
+  filter(count_total > 0) %>% 
+  rowwise() %>%
+  mutate(prop =  prop.test(count, count_total, conf.level=0.95)$estimate,
+         prop_low = prop.test(count, count_total, conf.level=0.95)$conf.int[[1]],
+         prop_high = prop.test(count, count_total, conf.level=0.95)$conf.int[[2]]) %>% 
+  ungroup()
+```
+
+## Results
+
+### Addiction
+
+```{r}
+estimates_addiction <- estimates %>% 
+  filter(issue == "addiction") %>% 
+  mutate(nootropic = fct_reorder(nootropic, prop)) %>% 
+  group_by(nootropic) %>% 
+  mutate(prop_mean = mean(prop)) %>% 
+  ungroup()
+
+
+df_fit_addiction <- fit %>% 
+  recover_types(df_for_stan %>% 
+                  mutate(users = userID, items=itemID,
+                         issues=issue, report=report, .keep="unused")) %>% 
+  spread_draws(item_issues_proba_true_issue[items, issues]) %>% 
+  filter(issues == "addiction") %>% 
+  mutate(items = as_factor(items)) %>% 
+  mutate(items = fct_reorder(items, item_issues_proba_true_issue)) %>% 
+  mutate(itemID=items, issue = issues) %>% 
+  group_by(itemID, issue) %>% 
+  summarise(prop = median(item_issues_proba_true_issue), 
+            prop_low = quantile(item_issues_proba_true_issue, 0.05),
+            prop_high = quantile(item_issues_proba_true_issue, 0.95)) %>% 
+  ungroup() %>% 
+  mutate(variant="stan model")
+
+#To show that the model preditions match nicely with the estimates computed above
+estimates_addiction %>% 
+  bind_rows(df_fit_addiction) %>% 
+  mutate(itemID = str_sub(itemID, 1, 25)) %>% 
+  group_by(variant) %>% 
+  filter(rank(-prop) < 15) %>% 
+  #group_by(itemID) %>% 
+  #filter(max(prop_high - prop_low) < 0.3) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID, color=variant), position=position_dodge2()) +
+  scale_x_log10() +
+  xlab("Log probability of addiction")+
+  ylab("")
+```
+
+
+```{r}
+df_fit_addiction %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) +
+  xlab("Probability of addiction") +
+  ylab("")
+
+ggsave("plots/issues_addiction.jpeg", width=10, height=10, units = "in", limitsize = F, dpi=300)
+
+  
+#All nootropics
+plot_addiction_full <- df_fit_addiction %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  #filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) + 
+  xlab("Probability of addiction") +
+  ylab("")
+
+ggsave("plots/issues_addiction_full.jpeg", width=10, height=50, units = "in", limitsize = F, dpi=300, plot=plot_addiction_full)
+
+
+```
+
+### Tolerance
+```{r}
+estimates_tolerance <- estimates %>% 
+  filter(issue == "tolerance") %>% 
+  mutate(nootropic = fct_reorder(nootropic, prop)) %>% 
+  group_by(nootropic) %>% 
+  mutate(prop_mean = mean(prop)) %>% 
+  ungroup()
+
+
+df_fit_tolerance <- fit %>% 
+  recover_types(df_for_stan %>% 
+                  mutate(users = userID, items=itemID,
+                         issues=issue, report=report, .keep="unused")) %>% 
+  spread_draws(item_issues_proba_true_issue[items, issues]) %>% 
+  filter(issues == "tolerance") %>% 
+  mutate(items = as_factor(items)) %>% 
+  mutate(items = fct_reorder(items, item_issues_proba_true_issue)) %>% 
+  mutate(itemID=items, issue = issues) %>% 
+  group_by(itemID, issue) %>% 
+  summarise(prop = median(item_issues_proba_true_issue), 
+            prop_low = quantile(item_issues_proba_true_issue, 0.05),
+            prop_high = quantile(item_issues_proba_true_issue, 0.95)) %>% 
+  ungroup() %>% 
+  mutate(variant="stan model")
+
+#To show that the model preditions match nicely with the estimates computed above
+estimates_tolerance %>% 
+  bind_rows(df_fit_tolerance) %>% 
+  mutate(itemID = str_sub(itemID, 1, 25)) %>% 
+  group_by(variant) %>% 
+  filter(rank(-prop) < 15) %>% 
+  #group_by(itemID) %>% 
+  #filter(max(prop_high - prop_low) < 0.3) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID, color=variant), position=position_dodge2()) +
+  scale_x_log10() +
+  xlab("Log probability of tolerance")+
+  ylab("")
+```
+
+
+```{r}
+df_fit_tolerance %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) +
+  xlab("Probability of tolerance") +
+  ylab("")
+
+
+ggsave("plots/issues_tolerance.jpeg", width=10, height=10, units = "in", limitsize = F, dpi=300)
+
+  
+#All nootropics
+plot_tolerance_full <- df_fit_tolerance %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  #filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) + 
+  xlab("Probability of tolerance") +
+  ylab("")
+
+ggsave("plots/issues_tolerance_full.jpeg", width=10, height=50, units = "in", limitsize = F, dpi=300, plot=plot_tolerance_full)
+
+
+```
+
+
+### Side-effects
+```{r}
+estimates_side_effects <- estimates %>% 
+  filter(issue == "side_effects") %>% 
+  mutate(nootropic = fct_reorder(nootropic, prop)) %>% 
+  group_by(nootropic) %>% 
+  mutate(prop_mean = mean(prop)) %>% 
+  ungroup()
+
+
+df_fit_side_effects <- fit %>% 
+  recover_types(df_for_stan %>% 
+                  mutate(users = userID, items=itemID,
+                         issues=issue, report=report, .keep="unused")) %>% 
+  spread_draws(item_issues_proba_true_issue[items, issues]) %>% 
+  filter(issues == "side_effects") %>% 
+  mutate(items = as_factor(items)) %>% 
+  mutate(items = fct_reorder(items, item_issues_proba_true_issue)) %>% 
+  mutate(itemID=items, issue = issues) %>% 
+  group_by(itemID, issue) %>% 
+  summarise(prop = median(item_issues_proba_true_issue), 
+            prop_low = quantile(item_issues_proba_true_issue, 0.05),
+            prop_high = quantile(item_issues_proba_true_issue, 0.95)) %>% 
+  ungroup() %>% 
+  mutate(variant="stan model")
+
+#To show that the model preditions match nicely with the estimates computed above
+estimates_side_effects %>% 
+  bind_rows(df_fit_side_effects) %>% 
+  mutate(itemID = str_sub(itemID, 1, 25)) %>% 
+  group_by(variant) %>% 
+  filter(rank(-prop) < 15) %>% 
+  #group_by(itemID) %>% 
+  #filter(max(prop_high - prop_low) < 0.3) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID, color=variant), position=position_dodge2()) +
+  scale_x_log10()+
+  xlab("Log proba of stopping because side effects") +
+  ylab("")
+```
+
+
+```{r}
+df_fit_side_effects %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) +
+  xlab("Proba of stopping because side effects") +
+  ylab("")
+
+
+ggsave("plots/issues_side_effects.jpeg", width=10, height=10, units = "in", limitsize = F, dpi=300)
+
+  
+#All nootropics
+plot_side_effects_full <- df_fit_side_effects %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  #filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) + 
+  xlab("Proba of stopping because side effects") +
+  ylab("")
+
+ggsave("plots/issues_side_effects_full.jpeg", width=10, height=50, units = "in", limitsize = F, dpi=300, plot=plot_side_effects_full)
+
+
+```
+
+
+### Long term Side-effects
+```{r}
+estimates_long_term_side_effects <- estimates %>% 
+  filter(issue == "long_term_side_effects") %>% 
+  mutate(nootropic = fct_reorder(nootropic, prop)) %>% 
+  group_by(nootropic) %>% 
+  mutate(prop_mean = mean(prop)) %>% 
+  ungroup()
+
+
+df_fit_long_term_side_effects <- fit %>% 
+  recover_types(df_for_stan %>% 
+                  mutate(users = userID, items=itemID,
+                         issues=issue, report=report, .keep="unused")) %>% 
+  spread_draws(item_issues_proba_true_issue[items, issues]) %>% 
+  filter(issues == "long_term_side_effects") %>% 
+  mutate(items = as_factor(items)) %>% 
+  mutate(items = fct_reorder(items, item_issues_proba_true_issue)) %>% 
+  mutate(itemID=items, issue = issues) %>% 
+  group_by(itemID, issue) %>% 
+  summarise(prop = median(item_issues_proba_true_issue), 
+            prop_low = quantile(item_issues_proba_true_issue, 0.05),
+            prop_high = quantile(item_issues_proba_true_issue, 0.95)) %>% 
+  ungroup() %>% 
+  mutate(variant="stan model")
+
+#To show that the model preditions match nicely with the estimates computed above
+estimates_long_term_side_effects %>% 
+  bind_rows(df_fit_long_term_side_effects) %>% 
+  mutate(itemID = str_sub(itemID, 1, 25)) %>%
+  group_by(variant) %>% 
+  filter(rank(-prop) < 15) %>% 
+  #group_by(itemID) %>% 
+  #filter(max(prop_high - prop_low) < 0.3) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID, color=variant), position=position_dodge2()) +
+  scale_x_log10()+
+  xlab("Log probability of long-term side effects") +
+  ylab("")
+```
+
+```{r}
+df_fit_long_term_side_effects %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) +
+  xlab("Probability of long-term side effects") +
+  ylab("")
+
+ggsave("plots/issues_long_term_side_effects.jpeg", width=10, height=10, units = "in", limitsize = F, dpi=300)
+
+  
+#All nootropics
+plot_long_term_side_effects_full <- df_fit_long_term_side_effects %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  #filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) + 
+  xlab("Probability of long-term side effects") +
+  ylab("")
+
+ggsave("plots/issues_long_term_side_effects_full.jpeg", width=10, height=50, units = "in", limitsize = F, dpi=300, plot=plot_long_term_side_effects_full)
+
+
+```
+
+### Other issues
+```{r}
+estimates_other <- estimates %>% 
+  filter(issue == "other") %>% 
+  mutate(nootropic = fct_reorder(nootropic, prop)) %>% 
+  group_by(nootropic) %>% 
+  mutate(prop_mean = mean(prop)) %>% 
+  ungroup()
+
+
+df_fit_other <- fit %>% 
+  recover_types(df_for_stan %>% 
+                  mutate(users = userID, items=itemID,
+                         issues=issue, report=report, .keep="unused")) %>% 
+  spread_draws(item_issues_proba_true_issue[items, issues]) %>% 
+  filter(issues == "other") %>% 
+  mutate(items = as_factor(items)) %>% 
+  mutate(items = fct_reorder(items, item_issues_proba_true_issue)) %>% 
+  mutate(itemID=items, issue = issues) %>% 
+  group_by(itemID, issue) %>% 
+  summarise(prop = median(item_issues_proba_true_issue), 
+            prop_low = quantile(item_issues_proba_true_issue, 0.05),
+            prop_high = quantile(item_issues_proba_true_issue, 0.95)) %>% 
+  ungroup() %>% 
+  mutate(variant="stan model")
+
+#To show that the model preditions match nicely with the estimates computed above
+estimates_other %>% 
+  bind_rows(df_fit_other) %>%
+  mutate(itemID = str_sub(itemID, 1, 25)) %>%
+  group_by(variant) %>% 
+  filter(rank(-prop) < 15) %>% 
+  #filter(min(prop_high - prop_low) < 0.02) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID, color=variant), position=position_dodge2()) +
+  scale_x_log10() + 
+  xlab("Log probability of other issues")+
+  ylab("")
+```
+
+
+```{r}
+df_fit_other %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) + 
+  xlab("Probability of other issues") +
+  ylab("")
+
+ggsave("plots/issues_other.jpeg", width=10, height=10, units = "in", limitsize = F, dpi=300)
+
+  
+#All nootropics
+plot_others_full <- df_fit_other %>% 
+  mutate(itemID = as_factor(itemID)) %>% 
+  mutate(itemID = fct_reorder(itemID, prop)) %>% 
+  #filter(rank(-prop) < 20) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x=prop, xmax=prop_high, xmin=prop_low, y = itemID)) + 
+  xlab("Probability of other issues") +
+  ylab("")
+
+ggsave("plots/issues_other_full.jpeg", width=10, height=50, units = "in", limitsize = F, dpi=300, plot=plot_others_full)
+```
+
+
+```{r}
+# Save all results in a big table
+ fit %>% 
+  recover_types(df_for_stan %>% 
+                  mutate(users = userID, items=itemID,
+                         issues=issue, report=report, .keep="unused")) %>% 
+  spread_draws(item_issues_proba_true_issue[items, issues]) %>% 
+  mutate(items = as_factor(items)) %>% 
+  mutate(nootropic=items, issue = issues) %>% 
+  group_by(nootropic, issue) %>% 
+  summarise(prop = median(item_issues_proba_true_issue), 
+            prop_low = quantile(item_issues_proba_true_issue, 0.05),
+            prop_high = quantile(item_issues_proba_true_issue, 0.95)) %>% 
+  ungroup() %>% 
+  mutate(variant="stan model") %>% 
+  select(nootropic, issue, variant, prop, prop_low, prop_high) %>% 
+  bind_rows(estimates) %>% 
+  write_csv("analysis_results/issues_summary.csv")
+
+```
+

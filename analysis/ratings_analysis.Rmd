@@ -1,0 +1,293 @@
+---
+title: "Analysing nootroflix ratings"
+output: 
+  html_document:
+    code_folding: hide
+    toc: true
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(rstanarm)
+library(tidybayes)
+options(mc.cores = parallel::detectCores())
+theme_set(theme(plot.background = element_rect(fill="#fffff8"), #to incorporte into the main article
+                text = element_text(size = 16)))
+```
+
+```{r}
+df <- read_csv("../data/nootroflix_ssc_ratings_clean.csv") %>% 
+  mutate(itemID = str_replace_all(itemID, ",", "-")) # prevent bug
+```
+
+# Aggregated nootropics effect
+
+
+## First variant: estimating the mean rating for each nootropic
+
+To adjust for the fact that different users might have different rating scales, we fit a Bayesian multilevel linear regression (with default weakly informative priors): each user and each nootropic gets his own intercept (more or less close the the mean intercept, depending on the quantity of data). What we're interested in in the intercept for each nootropic.
+
+```{r, cache=TRUE}
+l <- stan_glmer(rating ~ (1 | itemID) + (1 | userID), data = df,
+                family = gaussian(link = "identity"))
+```
+
+```{r}
+saveRDS(l, "saved_models/mean_ratings")
+to_plot <- l %>%
+  spread_draws(`(Intercept)`, b[,group])%>%
+  filter(str_detect(group, "itemID:")) %>% 
+  mutate(group = str_remove(group, "itemID:")) %>% 
+  median_qi(condition_mean = `(Intercept)` + b, .width = c(.95, .66)) %>%
+  mutate(nootropic = group, estimated_mean_rating = condition_mean) %>% 
+  mutate(nootropic = str_replace_all(nootropic, "_", " ")) %>% 
+  mutate(nootropic = fct_reorder(nootropic, condition_mean))
+
+```
+
+```{r}
+to_plot %>% 
+  filter(rank(estimated_mean_rating) < min(rank(estimated_mean_rating)) + 30 | rank(estimated_mean_rating) > max(rank(estimated_mean_rating)) - 30) %>% 
+  #filter(group %in% (to_plot %>% filter(.width==0.95) %>% filter(.upper > 4.5))$group) %>% 
+  ggplot(aes(y = nootropic, x = estimated_mean_rating, xmin = .lower, xmax = .upper)) +
+  geom_pointinterval() + 
+  xlab("Estimated mean rating") + 
+  ylab("")
+
+
+ggsave("plots/ratings_mean.jpeg", width=10, height=10, units = "in", limitsize = F, dpi=300)
+
+
+plot_full <- to_plot %>% 
+  #filter(group %in% (to_plot %>% filter(.width==0.95) %>% filter(.upper > 4.5))$group) %>% 
+  ggplot(aes(y = nootropic, x = estimated_mean_rating, xmin = .lower, xmax = .upper)) +
+  geom_pointinterval() +
+  xlab("Estimated mean rating") + 
+  ylab("")
+
+
+
+
+ggsave("plots/ratings_mean_full.jpeg", width=10, height=50, units = "in", limitsize = F, dpi=300, plot=plot_full)
+
+
+#ggsave("ratings_mean_low.jpeg", width=10, height=20, units = "in", limitsize = F, dpi=100)
+```
+
+
+## Second variant: estimating the probability of positive effect for each nootropic
+
+Given the scale we use, the estimated mean rating is not so easy to interpret. What we also do is to estimate the probablity that the effect of a nootropic is positive. For the scale used in the SSC survey and for Nootroflix, 0 corresponds to a neutral or negative effect, and higher ratings correspond to more-or-less confidence in a positive effect. 
+
+To this aim, we replace the linear regression above by a logistic regression. To make sure that our results are not biased by the people who haven't read the scale description (and might rate a negative effect higher than zero), we say that a nootropic had a positive effect on a user if its rating was more than the user's minimum rating (and we remove users with too few ratings).
+
+```{r, cache=TRUE}
+l_effective <- stan_glmer(is_effective ~ (1 | itemID) + (1 | userID), data =  df %>% 
+                            group_by(userID) %>% 
+                            mutate(n_ratings = n(), min_rating = min(rating)) %>% 
+                            filter(n_ratings > 10) %>% 
+                            mutate(is_effective = if_else(rating > min_rating, 1, 0)),
+                            family = binomial(link = "logit"))
+```
+```{r}
+saveRDS(l_effective, "saved_models/effective_ratings")
+to_plot_effective <- l_effective %>%
+  spread_draws(`(Intercept)`, b[,group])%>%
+  filter(str_detect(group, "itemID:")) %>% 
+  mutate(group = str_remove(group, "itemID:")) %>% 
+  mutate(condition_mean = `(Intercept)` + b, proba = exp(condition_mean) / (1 + exp(condition_mean))) %>% 
+  median_qi(proba, .width = c(.95, .66)) %>%
+  mutate(nootropic = group) %>% 
+  mutate(nootropic = str_replace_all(nootropic, "_", " ")) %>% 
+  mutate(nootropic = fct_reorder(nootropic, proba))
+
+#Only best and wort
+to_plot_effective %>% 
+    filter(rank(proba) < min(rank(proba)) + 30 | rank(proba) > max(rank(proba)) - 30) %>% 
+  #filter(group %in% (to_plot %>% filter(.width==0.95) %>% filter(.upper > 2))$group) %>% 
+  ggplot(aes(y = nootropic, x = proba, xmin = .lower, xmax = .upper)) +
+  geom_pointinterval() +
+  xlab("Probability of positive effect") + 
+  ylab("")
+
+ggsave("plots/ratings_effective.jpeg", width=10, height=10, units = "in", limitsize = F, dpi=300)
+
+  
+#All nootropics
+plot_effective_full <- to_plot_effective %>% 
+  #filter(group %in% (to_plot %>% filter(.width==0.95) %>% filter(.upper > 2))$group) %>% 
+  ggplot(aes(y = nootropic, x = proba, xmin = .lower, xmax = .upper)) +
+  geom_pointinterval() +
+  xlab("Probability of positive effect") + 
+  ylab("")
+
+ggsave("plots/ratings_effective_full.jpeg", width=10, height=50, units = "in", limitsize = F, dpi=300, plot=plot_effective_full)
+
+
+```
+
+
+## Third variant: estimating the probablity of life-changing effect for each nootropic
+
+Another interesting thing to estimate is the probability that a nootropic will change your life, defined in my scale as a rating of 10. Note that probably not all users have read the scale description properly, so some people may have rated 10 for a very useful nootropic, but nonetheless not life-changing, which means our estimate is probably biased upwards.
+
+```{r, cache=TRUE}
+l_life_changing <- stan_glmer(life_changing ~ (1 | itemID) + (1 | userID), data =  df %>% 
+                            mutate(life_changing = if_else(rating == 10, 1, 0)),
+                            family = binomial(link = "logit"))
+```
+
+```{r}
+saveRDS(l_life_changing, "saved_models/life-changing-ratings")
+
+to_plot_life_changing <- l_life_changing %>%
+  spread_draws(`(Intercept)`, b[,group])%>%
+  filter(str_detect(group, "itemID:")) %>% 
+  mutate(group = str_remove(group, "itemID:")) %>% 
+  mutate(condition_mean = `(Intercept)` + b, proba = exp(condition_mean) / (1 + exp(condition_mean))) %>% 
+  median_qi(proba, .width = c(.95, .66)) %>%
+  mutate(nootropic = group) %>% 
+  mutate(nootropic = str_replace_all(nootropic, "_", " ")) %>% 
+  mutate(nootropic = fct_reorder(nootropic, proba))
+
+#Only best
+to_plot_life_changing %>% 
+  #filter(rank(proba) < min(rank(proba)) + 30 | rank(proba) > max(rank(proba)) - 30) %>%
+  filter(rank(proba) > max(rank(proba)) - 60) %>%
+  #filter(group %in% (to_plot %>% filter(.width==0.95) %>% filter(.upper < 4.5))$group) %>% 
+  ggplot(aes(y = nootropic, x = proba, xmin = .lower, xmax = .upper)) +
+  geom_pointinterval() +
+  xlab("Probability of being life-changing") + 
+  ylab("")
+
+ggsave("plots/ratings_life_changing.jpeg", width=10, height=10, units = "in", limitsize = F, dpi=300)
+
+  
+#All nootropics
+plot_life_changing_full <- to_plot_life_changing %>% 
+  #filter(group %in% (to_plot %>% filter(.width==0.95) %>% filter(.upper < 4.5))$group) %>% 
+  ggplot(aes(y = nootropic, x = proba, xmin = .lower, xmax = .upper)) +
+  geom_pointinterval() + 
+  xlab("Probability of being life-changing") + 
+  ylab("")
+
+
+
+ggsave("plots/ratings_life_changing_full.jpeg", width=10, height=50, units = "in", limitsize = F, dpi=300, plot=plot_life_changing_full)
+
+```
+
+```{r}
+to_plot %>% 
+  filter(.width==0.95) %>% 
+  mutate(estimated_mean_rating.lower = .lower, estimated_mean_rating.upper = .upper) %>% 
+  select(nootropic, estimated_mean_rating, estimated_mean_rating.lower, estimated_mean_rating.upper) %>% 
+  left_join(to_plot_effective %>% 
+              filter(.width==0.95) %>% 
+              mutate(proba_effective = proba, proba_effective.lower = .lower, proba_effective.upper = .upper) %>% 
+              select(nootropic, proba_effective, proba_effective.lower, proba_effective.upper), on = "nootropic") %>% 
+  left_join(to_plot_life_changing %>% 
+              filter(.width==0.95) %>% 
+              mutate(proba_life_changing = proba, proba_life_changing.lower = .lower, proba_life_changing.upper = .upper) %>% 
+              select(nootropic, proba_life_changing, proba_life_changing.lower, proba_life_changing.upper), on = "nootropic") %>% 
+  write_csv("analysis_results/results_summary.csv")
+```
+
+
+
+# Nootropics effect per usage
+
+We want to evaluate the effectiveness of each nootropic for different goals. We haven't asked users to rate each nootropic several times for every goal, so instead, we try to correlate the rating for a nootropic with the indicator that a user is/was pursuing a particular goal. 
+
+Note: The results seem hard to interpret, and shouldn't be trusted. See the main post for an explanation.
+
+```{r}
+df <- read_csv("../data/nootroflix_ratings_users_clean.csv")
+df <- df %>% 
+  mutate(
+    motivation = case_when(
+    motivation == "Yes, a major reason" ~ 3,
+    motivation == "Yes, a minor reason" ~ 1,
+    motivation == "Not at all a reason" ~ 0),
+    focus = case_when(
+      focus == "Yes, a major reason" ~ 3,
+      focus == "Yes, a minor reason" ~ 1,
+      focus == "Not at all a reason" ~ 0),
+    mood = case_when(
+      mood == "Yes, a major reason" ~ 3,
+      mood == "Yes, a minor reason" ~ 1,
+      mood == "Not at all a reason" ~ 0),
+    anxiety = case_when(
+      anxiety == "Yes, a major reason" ~ 3,
+      anxiety == "Yes, a minor reason" ~ 1,
+      anxiety == "Not at all a reason" ~ 0),
+    cognition = case_when(
+      cognition == "Yes, a major reason" ~ 3,
+      cognition == "Yes, a minor reason" ~ 1,
+      cognition == "Not at all a reason" ~ 0),
+    libido = case_when(
+      libido == "Yes, a major reason" ~ 3,
+      libido == "Yes, a minor reason" ~ 1,
+      libido == "Not at all a reason" ~ 0)
+    )
+```
+```{r, cache=TRUE}
+l_goals <- stan_glmer(rating ~ (1 + anxiety + focus + motivation + libido + cognition + mood | itemID) + (1 | userID),
+                     data=df %>%
+                       filter(anxiety + cognition + focus + motivation + libido + mood > 0), # check that the user has entered non-default for  at least one goal
+                     family = gaussian(link = "identity"))
+```
+
+```{r}
+saveRDS(l_goals, "saved_models/goals-ratings")
+
+# l_goals %>%
+#   spread_draws(b[term,group]) %>%
+#   filter(term == "anxiety", str_detect(group, "itemID")) %>%
+#   mutate(group = str_remove(group, "itemID:")) %>%
+#   median_qi(condition_mean = b, .width = c(.95, .66)) %>%
+#   mutate(group = fct_reorder(group, condition_mean)) %>%
+#   filter(.lower >= 0 | .upper <= 0) %>%
+#   ggplot(aes(y = group, x = condition_mean, xmin = .lower, xmax = .upper)) +
+#   geom_pointinterval()
+```
+
+```{r}
+# l_goals %>%
+#   spread_draws(b[term,group]) %>%
+#   filter(term == "libido", str_detect(group, "itemID")) %>%
+#   mutate(group = str_remove(group, "itemID:")) %>%
+#   median_qi(condition_mean = b, .width = c(.95, .66)) %>%
+#   mutate(group = fct_reorder(group, condition_mean)) %>%
+#   filter(.lower >= 0 | .upper <= 0) %>%
+#   ggplot(aes(y = group, x = condition_mean, xmin = .lower, xmax = .upper)) +
+#   geom_pointinterval()
+```
+
+
+```{r}
+l_goals %>%
+  spread_draws(b[term,group]) %>%
+  filter(term == "anxiety" | term == "(Intercept)", str_detect(group, "itemID")) %>%
+  mutate(group = str_remove(group, "itemID:")) %>%
+  pivot_wider(names_from = term, values_from=b) %>%
+  mutate(without_issue = `(Intercept)`, anxiety_minor = without_issue + anxiety, anxiety_major = without_issue + 3 * anxiety, difference = anxiety_minor - without_issue) %>%
+  select(-`(Intercept)`, -anxiety) %>%
+  left_join(l_goals %>%
+  spread_draws(`(Intercept)`), by = c(".chain", ".iteration", ".draw")) %>%
+  mutate(without_issue = without_issue + `(Intercept)`, anxiety_minor = anxiety_minor + `(Intercept)`, anxiety_major = anxiety_major + `(Intercept)`) %>% #add baseline intercept
+  pivot_longer(cols = c("without_issue", "anxiety_minor", "anxiety_major"), names_to = "setting", values_to="estimated_rating") %>%
+  group_by(group, setting) %>%
+  median_qi(estimated_rating, difference, .width = c(.95, .66)) %>%
+  ungroup() %>%
+  filter(abs(difference) > 0.15) %>%
+  mutate(group = fct_reorder(group, difference)) %>%
+  ggplot(aes(y = group, x = estimated_rating, xmin = estimated_rating.lower, xmax = estimated_rating.upper, color=setting, group = setting)) +
+  geom_pointinterval(position = position_dodge())
+
+ggsave("plots/ratings_anxiety.jpeg", width=10, height=10, units = "in", limitsize = F, dpi=300)
+```
