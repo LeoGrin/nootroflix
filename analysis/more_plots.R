@@ -6,6 +6,21 @@ theme_set(theme(plot.background = element_rect(fill="#fffff8"), #to incorporte i
 
 df <- read_csv("data/nootroflix_ssc_ratings_clean.csv")
 
+df_issues <- read_csv("analysis/analysis_results/issues_summary.csv")
+
+df_issues %>% 
+  left_join(df_metadata %>% 
+              select(nootropic, type), on="nootropic") %>% 
+  filter(str_detect("Peptides", type) | nootropic == "Modafinil" | nootropic == "Ginseng") %>% 
+  filter(variant=="stan model") %>% 
+  ggplot() +
+  geom_pointrange(aes(y=nootropic, x = prop, xmax=prop_high, xmin=prop_low, color=issue), position = position_dodge2(width=0.5)) +
+  ylab("")+
+  xlab("Probability of issue")
+
+ggsave("analysis/plots/issues_peptides.jpeg", width=10, height=6, units = "in", limitsize = F, dpi=300)
+df %>%
+
 df %>% 
   select(userID, itemID, rating, issue) %>% 
   write_csv("data/data_with_ssc.csv")
@@ -16,16 +31,60 @@ df_results <- read_csv("analysis/analysis_results/results_summary.csv")# %>%
   #mutate(nootropic = str_replace(nootropic, "- ", ", ")) %>% 
   #mutate(nootropic = if_else(nootropic == "7-8-dihydroxyflavone", "7,8-dihydroxyflavone", nootropic))
 
+df_results %>% 
+  filter(count_without_ssc > 10) %>% 
+  #filter(rank(-count) < 70) %>% 
+  ggplot() +
+  #scale_x_reverse() + 
+  ggrepel::geom_text_repel(aes(x = count, y = estimated_mean_rating, label=nootropic)) +
+  annotate("rect", xmin = 300, xmax = +Inf,  ymin = -Inf, ymax = 4.5,   fill = "red", alpha=0.1) +
+  annotate("rect", xmin = 0, xmax = 300,  ymin = 4.5, ymax = +Inf,   fill = "green", alpha=0.1) + 
+  scale_x_log10()
+
+ggsave("analysis/plots/ggrepel_mean_ratings.jpeg", width=13, height=10, units = "in", limitsize = F, dpi=300)
+
+
+df_results %>% 
+  filter(count_without_ssc > 10) %>% 
+  #filter(rank(-count) < 70) %>% 
+  ggplot() +
+  #scale_x_reverse() + 
+  ggrepel::geom_text_repel(aes(x = count, y = proba_life_changing, label=nootropic)) +
+  annotate("rect", xmin = 300, xmax = +Inf,  ymin = 0, ymax = 0.02,   fill = "red", alpha=0.1) +
+  annotate("rect", xmin = 0, xmax = 300,  ymin = 0.02, ymax = +Inf,   fill = "green", alpha=0.1) + 
+  scale_x_log10() + 
+  scale_y_log10()
+
+ggsave("analysis/plots/ggrepel_life_changing_ratings.jpeg", width=13, height=10, units = "in", limitsize = F, dpi=300)
+
+
+
+df %>% 
+  filter(str_detect(itemID, "LSD")) %>% 
+  ggplot() +
+  geom_histogram(aes(x = rating)) +
+  facet_wrap(~itemID)
+
+ggsave("analysis/plots/l_micro_rating_distrib.jpeg", width=6, height=4, units = "in", limitsize = F, dpi=300)
+
+df %>% 
+  filter(str_detect(itemID, "Psilocybin")) %>% 
+  ggplot() +
+  geom_histogram(aes(x = rating)) +
+  facet_wrap(~itemID)
+
+ggsave("analysis/plots/p_micro_rating_distrib.jpeg", width=6, height=4, units = "in", limitsize = F, dpi=300)
+
 
 # df_results %>%
 #   left_join(
 #     df %>%
 #     mutate(nootropic = itemID) %>%
 #     group_by(nootropic) %>%
-#     summarise(count = n()) %>%
-#     select(nootropic, count),
+#     summarise(count_without_ssc = n()) %>%
+#     select(nootropic, count_without_ssc),
 #     by = c("nootropic")) %>%
-#   relocate(nootropic, count) %>% 
+#   relocate(nootropic, count, count_without_ssc) %>%
 #   write_csv("analysis/analysis_results/results_summary.csv")
 
 View(df_results)
@@ -217,9 +276,51 @@ df_issues %>%
 ggsave("analysis/plots/issues_diets.jpeg", width=10, height=6, units = "in", limitsize = F, dpi=300)
 
 
-# Peptides
+# Stimulant
 
-df %>%
+df_results %>% 
+  left_join(df_metadata %>% select(nootropic, type)) %>% 
+  # mutate(type = if_else(nootropic == "P21" | nootropic == "BPC-157", "Peptides", type)) %>% 
+  filter(type == "Dopamine Modulators"  |nootropic == "Modafinil") %>% 
+  mutate(nootropic = as_factor(nootropic)) %>% 
+  mutate(nootropic =  fct_reorder(nootropic, estimated_mean_rating)) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x = estimated_mean_rating, xmax = estimated_mean_rating.upper, xmin = estimated_mean_rating.lower, y = nootropic)) + 
+  theme(legend.position="none") +
+  xlab("Estimated mean rating") + 
+  ylab("")
+
+ggsave("analysis/plots/stimulant_mean_ratings.jpeg", width=10, height=5, units = "in", limitsize = F, dpi=300)
+
+df_results %>% 
+  left_join(df_metadata %>% select(nootropic, type)) %>% 
+  # mutate(type = if_else(nootropic == "P21" | nootropic == "BPC-157", "Peptides", type)) %>% 
+  filter(type == "Dopamine Modulators"  |nootropic == "Modafinil") %>% 
+  mutate(nootropic = as_factor(nootropic)) %>% 
+  mutate(nootropic =  fct_reorder(nootropic, proba_life_changing)) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x = proba_life_changing, xmax = proba_life_changing.upper, xmin = proba_life_changing.lower, y = nootropic)) + 
+  theme(legend.position="none") +
+  xlab("Probability of being life-changing") + 
+  ylab("")
+
+ggsave("analysis/plots/stimulant_life_changing.jpeg", width=10, height=5, units = "in", limitsize = F, dpi=300)
+
+
+
+df_issues %>% 
+  left_join(df_metadata %>% select(nootropic, type)) %>% 
+  # mutate(type = if_else(nootropic == "P21" | nootropic == "BPC-157", "Peptides", type)) %>% 
+  filter(type == "Dopamine Modulators"  |nootropic == "Modafinil") %>% 
+  filter(variant == "stan model") %>% 
+  #filter(issue %in% c("side_effects", "long_term_side_effects")) %>% 
+  #mutate(nootropic = fct_reorder(nootropic, prop)) %>% 
+  ggplot() +
+  geom_pointrange(aes(x = prop, xmax = prop_high, xmin=prop_low, y=nootropic, color=issue), position = position_dodge2(width=0.2))+
+  xlab("Probability of issue") + 
+  ylab("")
+
+ggsave("analysis/plots/stimulant_issues.jpeg", width=10, height=6, units = "in", limitsize = F, dpi=300)
 
 
 

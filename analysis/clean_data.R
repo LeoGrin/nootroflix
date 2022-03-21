@@ -25,3 +25,10 @@ df_nootroflix_ratings %>%
   right_join(df_nootroflix_users, by=c("userID", "time")) %>% 
   write_csv("data/nootroflix_ratings_users_clean.csv")
   
+
+
+
+### Make a summary table
+
+df_issues <- read_csv("analysis/analysis_results/issues_summary.csv")
+df_results <- read_csv("analysis/analysis_results/results_summary.csv")
