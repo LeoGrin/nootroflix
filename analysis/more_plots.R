@@ -6,6 +6,19 @@ theme_set(theme(plot.background = element_rect(fill="#fffff8"), #to incorporte i
 
 df <- read_csv("data/nootroflix_ssc_ratings_clean.csv")
 
+df %>% 
+  filter(userID > 10000) %>% 
+  left_join(df_metadata %>% 
+              select(nootropic, type), by=c("itemID" = "nootropic")) %>% 
+  filter(type == "Anti-depressants") %>% 
+  group_by(userID) %>% 
+  mutate(count = n()) %>% 
+  filter(itemID == "Bupropion (Wellbutrin, Zyban...)") %>% 
+  select(itemID, userID, count) %>% 
+  ungroup() %>% 
+  summarise(median = median(count), mean=mean(count))
+
+
 df_issues <- read_csv("analysis/analysis_results/issues_summary.csv")
 
 df_issues %>% 
@@ -321,6 +334,109 @@ df_issues %>%
   ylab("")
 
 ggsave("analysis/plots/stimulant_issues.jpeg", width=10, height=6, units = "in", limitsize = F, dpi=300)
+
+
+# Racetams
+
+df_results %>% 
+  left_join(df_metadata %>% select(nootropic, type)) %>% 
+  # mutate(type = if_else(nootropic == "P21" | nootropic == "BPC-157", "Peptides", type)) %>% 
+  filter(type == "Racetams"  |nootropic == "Modafinil") %>% 
+  mutate(nootropic = as_factor(nootropic)) %>% 
+  mutate(nootropic =  fct_reorder(nootropic, estimated_mean_rating)) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x = estimated_mean_rating, xmax = estimated_mean_rating.upper, xmin = estimated_mean_rating.lower, y = nootropic, color = type=="Racetams")) + 
+  theme(legend.position="none") +
+  xlab("Estimated mean rating") + 
+  ylab("")
+
+ggsave("analysis/plots/racetams_mean_ratings.jpeg", width=10, height=5, units = "in", limitsize = F, dpi=300)
+
+df_results %>% 
+  left_join(df_metadata %>% select(nootropic, type)) %>% 
+  # mutate(type = if_else(nootropic == "P21" | nootropic == "BPC-157", "Peptides", type)) %>% 
+  filter(type == "Racetams"  |nootropic == "Modafinil") %>% 
+  mutate(nootropic = as_factor(nootropic)) %>% 
+  mutate(nootropic =  fct_reorder(nootropic, proba_life_changing)) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x = proba_life_changing, xmax = proba_life_changing.upper, xmin = proba_life_changing.lower, y = nootropic, color = type=="Racetams")) + 
+  theme(legend.position="none") +
+  xlab("Probability of being life-changing") + 
+  ylab("")
+
+ggsave("analysis/plots/racetams_life_changing.jpeg", width=10, height=5, units = "in", limitsize = F, dpi=300)
+
+
+
+df_issues %>% 
+  left_join(df_metadata %>% select(nootropic, type)) %>% 
+  # mutate(type = if_else(nootropic == "P21" | nootropic == "BPC-157", "Peptides", type)) %>% 
+  filter(type == "Racetams") %>% 
+  filter(variant == "stan model") %>% 
+  #filter(issue %in% c("side_effects", "long_term_side_effects")) %>% 
+  #mutate(nootropic = fct_reorder(nootropic, prop)) %>% 
+  ggplot() +
+  geom_pointrange(aes(x = prop, xmax = prop_high, xmin=prop_low, y=nootropic, color=issue), position = position_dodge2(width=0.3))+
+  xlab("Probability of issue") + 
+  ylab("")
+
+ggsave("analysis/plots/racetams_issues.jpeg", width=10, height=6, units = "in", limitsize = F, dpi=300)
+
+
+# Anti depressant
+
+anti_depressant_list <- c("Bright lights in morning / Dawn simulator", "SAM-e", "Zembrin", "Polygala tenuifolia",
+                          "St John's Wort", "Omega-3 Supplements", "Tryptophan")
+
+df_results %>% 
+  left_join(df_metadata %>% select(nootropic, type)) %>% 
+  # mutate(type = if_else(nootropic == "P21" | nootropic == "BPC-157", "Peptides", type)) %>% 
+  filter(type == "Anti-depressants" | nootropic %in% anti_depressant_list) %>% 
+  mutate(nootropic = as_factor(nootropic)) %>% 
+  mutate(nootropic =  fct_reorder(nootropic, estimated_mean_rating)) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x = estimated_mean_rating, xmax = estimated_mean_rating.upper, xmin = estimated_mean_rating.lower, y = nootropic)) + 
+  theme(legend.position="none") +
+  xlab("Estimated mean rating") + 
+  ylab("")
+
+ggsave("analysis/plots/antidepressant_mean_ratings.jpeg", width=10, height=6, units = "in", limitsize = F, dpi=300)
+
+df_results %>% 
+  left_join(df_metadata %>% select(nootropic, type)) %>% 
+  # mutate(type = if_else(nootropic == "P21" | nootropic == "BPC-157", "Peptides", type)) %>% 
+  filter(type == "Anti-depressants" | nootropic %in% anti_depressant_list) %>% 
+  mutate(nootropic = as_factor(nootropic)) %>% 
+  mutate(nootropic =  fct_reorder(nootropic, proba_life_changing)) %>% 
+  ggplot() +
+  geom_pointinterval(aes(x = proba_life_changing, xmax = proba_life_changing.upper, xmin = proba_life_changing.lower, y = nootropic)) + 
+  theme(legend.position="none") +
+  xlab("Probability of being life-changing") + 
+  ylab("")
+
+ggsave("analysis/plots/antidepressant_life_changing.jpeg", width=10, height=6, units = "in", limitsize = F, dpi=300)
+
+
+
+df_issues %>% 
+  left_join(df_metadata %>% select(nootropic, type)) %>% 
+  # mutate(type = if_else(nootropic == "P21" | nootropic == "BPC-157", "Peptides", type)) %>% 
+  filter(type == "Anti-depressants" | nootropic %in% anti_depressant_list) %>% 
+  filter(variant == "stan model") %>% 
+  #filter(issue %in% c("side_effects", "long_term_side_effects")) %>% 
+  #mutate(nootropic = fct_reorder(nootropic, prop)) %>% 
+  ggplot() +
+  geom_pointrange(aes(x = prop, xmax = prop_high, xmin=prop_low, y=nootropic, color=issue), position = position_dodge2(width=0.3))+
+  xlab("Probability of issue") + 
+  ylab("")
+
+ggsave("analysis/plots/antidepressant_issues.jpeg", width=10, height=7, units = "in", limitsize = F, dpi=300)
+
+View(df %>% 
+  mutate(ssc = userID < 10000) %>% 
+  #filter(itemID == "Tianeptine") %>% 
+  group_by(ssc, itemID) %>% 
+  summarise(mean = mean(rating), median = median(rating), count = n()))
 
 
 

@@ -32,3 +32,5 @@ df_nootroflix_ratings %>%
 
 df_issues <- read_csv("analysis/analysis_results/issues_summary.csv")
 df_results <- read_csv("analysis/analysis_results/results_summary.csv")
+
+df_issues

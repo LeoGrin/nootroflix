@@ -3,6 +3,7 @@
 !/data/nootropics_metadata.csv
 !/data/data_with_ssc.csv
 !/data/data_without_ssc.csv
+analysis/ratings_analysis_cache/
 experiments/kelly.py
 .Rproj.user
 .Rhistory
