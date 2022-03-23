@@ -18,7 +18,7 @@ def get_metadata(path):
     df = pd.read_csv(path, sep=";")
     nootropics_dic = {}
     all_types = []
-    original_types = ["Classic", "Racetams", "Nutrients", "Amino acids", "Vitamins", "Hormones", "Proteins", "Herbs", "Mushrooms", "Plant-derived", "Dopamine Modulators", "Peptides", "Modafinil variants", "Psychedelics", "Anti-depressants", "Lifestyle", "Other"]
+    original_types = ["Classic", "Racetams", "Nutrients", "Amino acids", "Vitamins", "Hormones", "Herbs", "Mushrooms", "Plant-derived", "Dopamine Modulators", "Peptides", "Modafinil variants", "Psychedelics", "Anti-depressants", "Lifestyle", "Other"]
     types = {"Most common nootropics":["Classic"], "Racetams and derivatives":["Racetams"], "Modafinil variants":["Modafinil variants"], "Psychedelics":["Psychedelics"],
              "Dopamine Modulators": ["Dopamine Modulators"], "Herbs and plant derived compounds":['Herbs', "Plant-derived"], "Mushrooms": ["Mushrooms"],
              "Peptides": ["Peptides"], "Nutrients":["Nutrients"],
