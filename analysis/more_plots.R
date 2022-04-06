@@ -52,7 +52,9 @@ df_results %>%
   ggrepel::geom_text_repel(aes(x = count, y = estimated_mean_rating, label=nootropic)) +
   annotate("rect", xmin = 300, xmax = +Inf,  ymin = -Inf, ymax = 4.5,   fill = "red", alpha=0.1) +
   annotate("rect", xmin = 0, xmax = 300,  ymin = 4.5, ymax = +Inf,   fill = "green", alpha=0.1) + 
-  scale_x_log10()
+  scale_x_log10() +
+  xlab("Number of ratings") +
+  ylab("Estimated mean rating")
 
 ggsave("analysis/plots/ggrepel_mean_ratings.jpeg", width=13, height=10, units = "in", limitsize = F, dpi=300)
 
@@ -66,7 +68,9 @@ df_results %>%
   annotate("rect", xmin = 300, xmax = +Inf,  ymin = 0, ymax = 0.02,   fill = "red", alpha=0.1) +
   annotate("rect", xmin = 0, xmax = 300,  ymin = 0.02, ymax = +Inf,   fill = "green", alpha=0.1) + 
   scale_x_log10() + 
-  scale_y_log10()
+  scale_y_log10() +
+  xlab("Number of ratings") +
+  ylab("Probablity of being life changing")
 
 ggsave("analysis/plots/ggrepel_life_changing_ratings.jpeg", width=13, height=10, units = "in", limitsize = F, dpi=300)
 
@@ -434,10 +438,11 @@ ggsave("analysis/plots/antidepressant_issues.jpeg", width=10, height=7, units = 
 
 View(df %>% 
   mutate(ssc = userID < 10000) %>% 
-  #filter(itemID == "Tianeptine") %>% 
-  group_by(ssc, itemID) %>% 
+  filter(ssc == F) %>% 
+  #filter(itemID %in% "Tianeptine") %>% 
+  group_by(itemID) %>% 
   summarise(mean = mean(rating), median = median(rating), count = n()))
 
 
 
-
+df
