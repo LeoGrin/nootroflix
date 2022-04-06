@@ -108,7 +108,7 @@ def predict(rating_dic):
         sim_sum = 0
         similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rated_noots_in_training_set]
         for idx in np.argsort(similarities)[::-1][:k]:
-            item = list(rating_dic.keys())[idx]
+            item = list(rated_noots_in_training_set)[idx]
             id_item = raw_to_iid(item)
             if similarities[idx] > 0:
                 to_add += similarities[idx] * (rating_dic[item] - item_baselines_inner[id_item] - user_baseline)
@@ -165,7 +165,7 @@ def evaluate(rating_dic):
         sim_sum = 0
         similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rated_noots_in_training_set]
         for idx in np.argsort(similarities)[::-1][:k]:
-            item = list(rating_dic.keys())[idx]
+            item = list(rated_noots_in_training_set)[idx]
             id_item = raw_to_iid(item)
             if item != nootropic_to_remove:
                 if similarities[idx] > 0:
