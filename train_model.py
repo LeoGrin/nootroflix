@@ -84,9 +84,17 @@ def predict(rating_dic):
     with open('saved_objects/model_and_all.pickle', 'rb') as f:
         avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = pickle.load(f)
 
+    # Handle when some nootropics aren't in the trainset
+    rated_noots_in_training_set = []
+    for item in rating_dic.keys():
+        try:
+            raw_to_iid(item)
+            rated_noots_in_training_set.append(item)
+        except:
+            pass
 
 
-    user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid(a)] for a in rating_dic.keys()])
+    user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid(a)] for a in rated_noots_in_training_set])
     user_baseline /= (1 + 0.02)
     # print(final_model.compute_baselines()[0][-1])
 
@@ -98,7 +106,7 @@ def predict(rating_dic):
         to_add = 0
         n_neighbors_used = 0
         sim_sum = 0
-        similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rating_dic.keys()]
+        similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rated_noots_in_training_set]
         for idx in np.argsort(similarities)[::-1][:k]:
             item = list(rating_dic.keys())[idx]
             id_item = raw_to_iid(item)
@@ -135,10 +143,19 @@ def evaluate(rating_dic):
         avalaible_nootropics, item_baselines_inner, similarity_matrix, raw_to_iid, k, min_k, rating_lower, rating_upper = pickle.load(f)
 
     rated_avalaible_nootropics = [nootropic for nootropic in rating_dic.keys() if nootropic in avalaible_nootropics]
+    # Handle when some nootropics aren't in the trainset
+    rated_noots_in_training_set = []
+    for item in rating_dic.keys():
+        try:
+            raw_to_iid(item)
+            rated_noots_in_training_set.append(item)
+        except:
+            pass
+
     loo_ratings = []
     # Predict without refitting, and without considering one rating each time (for the user baseline and for the similarities)
     for nootropic_to_remove in rated_avalaible_nootropics:
-        user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid(a)] for a in rating_dic.keys() if
+        user_baseline = np.mean([rating_dic[a] - item_baselines_inner[raw_to_iid(a)] for a in rated_noots_in_training_set if
                                  a != nootropic_to_remove])
         user_baseline /= (1 + 0.02)
         inner_id = raw_to_iid(nootropic_to_remove)
@@ -146,7 +163,7 @@ def evaluate(rating_dic):
         to_add = 0
         n_neighbors_used = 0
         sim_sum = 0
-        similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rating_dic.keys()]
+        similarities = [similarity_matrix[inner_id, raw_to_iid(item)] for item in rated_noots_in_training_set]
         for idx in np.argsort(similarities)[::-1][:k]:
             item = list(rating_dic.keys())[idx]
             id_item = raw_to_iid(item)
